@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>wakegi.js</title>
+<script type="text/javascript" src="../libs/wakegi.js"></script>
+<style type="text/css">
+.block {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+</style>
+</head>
+<body>
+<strong>userAgent</strong>
+<p id="ua" class="block"></p>
+
+<strong>appVersion</strong>
+<p id="app" class="block"></p>
+
+<strong>Firefox</strong>
+<p id="ie" class="block"></p>
+
+<script type="text/javascript">
+  ( function ( window ){
+    "use strict";
+    var
+      document = window.document,
+      ua = document.getElementById( "ua" ),
+      ie = document.getElementById( "ie" ),
+      app = document.getElementById( "app" ),
+
+      wakegi = window.wakegi,
+      Browser = wakegi.Browser;
+
+    ua.innerHTML = Browser.ua();
+    app.innerHTML = Browser.app();
+
+    ie.innerHTML += 'Firefox.is: ' + Browser.Firefox.is() + '<br>';
+    ie.innerHTML += 'Firefox.build: ' + Browser.Firefox.build() + '<br>';
+    ie.innerHTML += 'Firefox.version: ' + Browser.Firefox.version() + '<br>';
+    ie.innerHTML += 'Firefox.major: ' + Browser.Firefox.major() + '<br>';
+    ie.innerHTML += 'Firefox.numbers: ' + Browser.Firefox.numbers() + '<br>';
+
+  }( window ) );
+</script>
+</body>
+</html>

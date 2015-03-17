@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>/Users/inazuma15/web/www/inazumatv.js.library/wakegi.js/src/device/Android.js</title>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
+    <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
+    <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
+    <link rel="shortcut icon" type="image/png" href="../assets/favicon.png">
+    <script src="http://yui.yahooapis.com/combo?3.9.1/build/yui/yui-min.js"></script>
+</head>
+<body class="yui3-skin-sam">
+
+<div id="doc">
+    <div id="hd" class="yui3-g header">
+        <div class="yui3-u-3-4">
+            
+                <h1><img src="../assets/css/logo.png" title=""></h1>
+            
+        </div>
+        <div class="yui3-u-1-4 version">
+            <em>API Docs for: </em>
+        </div>
+    </div>
+    <div id="bd" class="yui3-g">
+
+        <div class="yui3-u-1-4">
+            <div id="docs-sidebar" class="sidebar apidocs">
+                <div id="api-list">
+    <h2 class="off-left">APIs</h2>
+    <div id="api-tabview" class="tabview">
+        <ul class="tabs">
+            <li><a href="#api-classes">Classes</a></li>
+            <li><a href="#api-modules">Modules</a></li>
+        </ul>
+
+        <div id="api-tabview-filter">
+            <input type="search" id="api-filter" placeholder="Type to filter APIs">
+        </div>
+
+        <div id="api-tabview-panel">
+            <ul id="api-classes" class="apis classes">
+            
+                <li><a href="../classes/Android.html">Android</a></li>
+            
+                <li><a href="../classes/Browser.html">Browser</a></li>
+            
+                <li><a href="../classes/Chrome.html">Chrome</a></li>
+            
+                <li><a href="../classes/CriOS.html">CriOS</a></li>
+            
+                <li><a href="../classes/Css3.html">Css3</a></li>
+            
+                <li><a href="../classes/Firefox.html">Firefox</a></li>
+            
+                <li><a href="../classes/IE.html">IE</a></li>
+            
+                <li><a href="../classes/iOS.html">iOS</a></li>
+            
+                <li><a href="../classes/Mac.html">Mac</a></li>
+            
+                <li><a href="../classes/Mobile.html">Mobile</a></li>
+            
+                <li><a href="../classes/Safari.html">Safari</a></li>
+            
+                <li><a href="../classes/Touch.html">Touch</a></li>
+            
+                <li><a href="../classes/Transform.html">Transform</a></li>
+            
+                <li><a href="../classes/Transition.html">Transition</a></li>
+            
+                <li><a href="../classes/Windows.html">Windows</a></li>
+            
+            </ul>
+
+            <ul id="api-modules" class="apis modules">
+            
+                <li><a href="../modules/Browser.html">Browser</a></li>
+            
+                <li><a href="../modules/wakegi.html">wakegi</a></li>
+            
+            </ul>
+        </div>
+    </div>
+</div>
+
+            </div>
+        </div>
+        <div class="yui3-u-3-4">
+                <div id="api-options">
+        Show:
+        <label for="api-show-inherited">
+            <input type="checkbox" id="api-show-inherited" checked>
+            Inherited
+        </label>
+
+        <label for="api-show-protected">
+            <input type="checkbox" id="api-show-protected">
+            Protected
+        </label>
+
+        <label for="api-show-private">
+            <input type="checkbox" id="api-show-private">
+            Private
+        </label>
+        <label for="api-show-deprecated">
+            <input type="checkbox" id="api-show-deprecated">
+            Deprecated
+        </label>
+
+    </div>
+
+
+            <div class="apidocs">
+                <div id="docs-main">
+                    <div class="content">
+                        <h1 class="file-heading">File: /Users/inazuma15/web/www/inazumatv.js.library/wakegi.js/src/device/Android.js</h1>
+
+<div class="file">
+    <pre class="code prettyprint linenums">
+/**
+ * license inazumatv.com
+ * author (at)taikiken / http://inazumatv.com
+ * date 2015/03/17 - 21:16
+ *
+ * Copyright (c) 2011-2015 inazumatv.com, inc.
+ *
+ * Distributed under the terms of the MIT license.
+ * http://www.opensource.org/licenses/mit-license.html
+ *
+ * This notice shall be included in all copies or substantial portions of the Software.
+ *
+ * @submodule Browser
+ */
+( function ( window ){
+  &quot;use strict&quot;;
+  var
+    wakegi = window.wakegi,
+    Browser = wakegi.Browser;
+
+  Browser.Android = ( function (){
+    var
+      numbers = [ -1, -1, -1 ],
+      standard,
+      android,
+      phone,
+      tablet,
+      hd,
+      version, major, build;
+
+    /**
+     * Android detection
+     * @class Android
+     * @constructor
+     */
+    function Android () {
+      throw new Error( &quot;Android can&#x27;t create instance.&quot; );
+    }
+
+    var p = Android.prototype;
+
+    p.constructor = Android;
+
+    /**
+     * @method init
+     * @static
+     */
+    Android.init = function () {
+      var ua;
+
+      if ( typeof android === &quot;undefined&quot; ) {
+        // need initialize
+        ua = Browser.ua();
+
+        android = !!ua.match(/android/i);
+        phone = false;
+        tablet = false;
+        standard = false;
+        hd = false;
+
+        if ( android ) {
+
+          hd = window.innerWidth &gt;= 1024 || window.innerHeight &gt;= 1024;
+          // http://googlewebmastercentral.blogspot.jp/2011/03/mo-better-to-also-detect-mobile-user.html
+          phone = !!ua.match(/mobile/i);
+
+          if ( !phone ) {
+
+            tablet = true;
+
+          }//phone
+
+          // Android 標準ブラウザ
+          standard = !!ua.match(/safari/i) &amp;&amp; !!ua.match(/version/i);
+
+        }//android
+
+      }//undefined
+
+    };
+
+    /**
+     * @method calculate
+     * @static
+     */
+    Android.calculate = function () {
+      var
+        versions = [],
+        nums, int, float, i, limit, num;
+
+      if ( typeof version === &quot;undefined&quot; ) {
+        // version undefined
+        build = &quot;&quot;;
+        version = -1;
+        major = -1;
+
+        if ( Android.is() ) {
+
+          nums = Browser.app().match(/Android (\d+)\.(\d+)\.?(\d+)?/);
+
+          if ( Array.isArray( nums ) ) {
+            // 結果が配列
+            int = wakegi.int;
+            float = wakegi.float;
+
+            for ( i = 1, limit = nums.length; i &lt; limit; i++ ) {
+
+              num = nums[ i ];
+
+              if ( typeof num !== &quot;undefined&quot; ) {
+                // num defined
+                versions.push( int( num, 10 ) );
+
+              } else {
+
+                versions.push( 0 );
+
+              }
+
+            }
+
+            build = versions.join( &quot;.&quot; );
+            major = versions[ 0 ];
+            numbers = versions;
+            version = float( versions[ 0 ] + &quot;.&quot; + versions[ 1 ] + versions[ 2 ] );
+
+          }// Array
+
+        }// Android
+      }// undefined
+    };
+
+    /**
+     * @method is
+     * @static
+     * @return {boolean}
+     */
+    Android.is = function () {
+
+      Android.init();
+      return android;
+
+    };
+
+    /**
+     * Android 標準ブラウザ
+     * @method standard
+     * @static
+     * @return {boolean}
+     */
+    Android.standard = function () {
+
+      Android.init();
+      return standard;
+
+    };
+
+    /**
+     * Android Phone
+     * @method phone
+     * @static
+     * @return {boolean}
+     */
+    Android.phone = function () {
+
+      Android.init();
+      return phone;
+
+    };
+
+    /**
+     * Android Tablet
+     * @method tablet
+     * @static
+     * @return {boolean}
+     */
+    Android.tablet = function () {
+
+      Android.init();
+      return tablet;
+
+    };
+
+    /**
+     * Android HD 端末
+     * @method hd
+     * @static
+     * @return {boolean}
+     */
+    Android.hd = function () {
+
+      Android.init();
+      return hd;
+
+    };
+
+    /**
+     *
+     * @method version
+     * @static
+     * @return {float} N.NN で返します
+     */
+    Android.version = function () {
+
+      Android.calculate();
+      return version;
+
+    };
+
+    /**
+     *
+     * @method build
+     * @static
+     * @return {string} NN.NN.NN 型（文字）で返します
+     */
+    Android.build = function () {
+
+      Android.calculate();
+      return build;
+
+    };
+
+    /**
+     * @method major
+     * @static
+     * @return {int}
+     */
+    Android.major = function () {
+
+      Android.calculate();
+      return major;
+
+    };
+    /**
+     * @method numbers
+     * @static
+     * @return {*[]} [major: int, minor: int, build: int] 形式で返します
+     */
+    Android.numbers = function () {
+
+      Android.calculate();
+      return numbers;
+
+    };
+
+    /**
+     * @method number
+     * @deprecated instead of Android.numbers
+     * @static
+     * @return {*[]} [major: int, minor: int, build: int] 形式で返します
+     */
+    Android.number = function () {
+      // 互換のために残します
+      return Android.numbers();
+
+    };
+
+    return Android;
+  }() );
+}( window ) );
+    </pre>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../assets/vendor/prettify/prettify-min.js"></script>
+<script>prettyPrint();</script>
+<script src="../assets/js/yui-prettify.js"></script>
+<script src="../assets/../api.js"></script>
+<script src="../assets/js/api-filter.js"></script>
+<script src="../assets/js/api-list.js"></script>
+<script src="../assets/js/api-search.js"></script>
+<script src="../assets/js/apidocs.js"></script>
+</body>
+</html>

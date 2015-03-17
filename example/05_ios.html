@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>wakegi.js</title>
+<script type="text/javascript" src="../libs/wakegi.js"></script>
+<style type="text/css">
+.block {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+</style>
+</head>
+<body>
+<strong>userAgent</strong>
+<p id="ua" class="block"></p>
+
+<strong>appVersion</strong>
+<p id="app" class="block"></p>
+
+<strong>iOS</strong>
+<p id="ie" class="block"></p>
+
+<script type="text/javascript">
+  ( function ( window ){
+    "use strict";
+    var
+      document = window.document,
+      ua = document.getElementById( "ua" ),
+      ie = document.getElementById( "ie" ),
+      app = document.getElementById( "app" ),
+
+      wakegi = window.wakegi,
+      Browser = wakegi.Browser;
+
+    ua.innerHTML = Browser.ua();
+    app.innerHTML = Browser.app();
+
+    ie.innerHTML += 'iOS.is: ' + Browser.iOS.is() + '<br>';
+    ie.innerHTML += 'iOS.build: ' + Browser.iOS.build() + '<br>';
+    ie.innerHTML += 'iOS.version: ' + Browser.iOS.version() + '<br>';
+    ie.innerHTML += 'iOS.major: ' + Browser.iOS.major() + '<br>';
+    ie.innerHTML += 'iOS.numbers: ' + Browser.iOS.numbers() + '<br>';
+    ie.innerHTML += 'iOS.iPhone: ' + Browser.iOS.iPhone() + '<br>';
+    ie.innerHTML += 'iOS.iPad: ' + Browser.iOS.iPad() + '<br>';
+    ie.innerHTML += 'iOS.iPod: ' + Browser.iOS.iPod() + '<br>';
+    ie.innerHTML += 'iOS.standalone: ' + Browser.iOS.standalone() + '<br>';
+
+  }( window ) );
+</script>
+</body>
+</html>

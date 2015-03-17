@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>wakegi.js</title>
+<script type="text/javascript" src="../libs/wakegi.js"></script>
+<style type="text/css">
+.block {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+</style>
+</head>
+<body>
+<strong>userAgent</strong>
+<p id="ua" class="block"></p>
+
+<strong>appVersion</strong>
+<p id="app" class="block"></p>
+
+<strong>IE</strong>
+<p id="ie" class="block"></p>
+
+<script type="text/javascript">
+  ( function ( window ){
+    "use strict";
+    var
+      document = window.document,
+      ua = document.getElementById( "ua" ),
+      ie = document.getElementById( "ie" ),
+      app = document.getElementById( "app" ),
+
+      wakegi = window.wakegi,
+      Browser = wakegi.Browser;
+
+    ua.innerHTML = Browser.ua();
+    app.innerHTML = Browser.app();
+
+    ie.innerHTML += 'IE.is: ' + Browser.IE.is() + '<br>';
+    ie.innerHTML += 'IE.is6: ' + Browser.IE.is6() + '<br>';
+    ie.innerHTML += 'IE.is7: ' + Browser.IE.is7() + '<br>';
+    ie.innerHTML += 'IE.is8: ' + Browser.IE.is8() + '<br>';
+    ie.innerHTML += 'IE.is9: ' + Browser.IE.is9() + '<br>';
+    ie.innerHTML += 'IE.is10: ' + Browser.IE.is10() + '<br>';
+    ie.innerHTML += 'IE.is11: ' + Browser.IE.is11() + '<br>';
+    ie.innerHTML += 'IE.legacy: ' + Browser.IE.legacy() + '<br>';
+    ie.innerHTML += 'IE.version: ' + Browser.IE.version() + '<br>';
+    ie.innerHTML += 'IE.major: ' + Browser.IE.major() + '<br>';
+
+  }( window ) );
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>wakegi.js</title>
+<script type="text/javascript" src="../libs/wakegi.js"></script>
+<style type="text/css">
+.block {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+</style>
+</head>
+<body>
+<strong>userAgent</strong>
+<p id="ua" class="block"></p>
+
+<strong>appVersion</strong>
+<p id="app" class="block"></p>
+
+<strong>Android</strong>
+<p id="ie" class="block"></p>
+
+<script type="text/javascript">
+  ( function ( window ){
+    "use strict";
+    var
+      document = window.document,
+      ua = document.getElementById( "ua" ),
+      ie = document.getElementById( "ie" ),
+      app = document.getElementById( "app" ),
+
+      wakegi = window.wakegi,
+      Browser = wakegi.Browser;
+
+    ua.innerHTML = Browser.ua();
+    app.innerHTML = Browser.app();
+
+    ie.innerHTML += 'Android.is: ' + Browser.Android.is() + '<br>';
+    ie.innerHTML += 'Android.build: ' + Browser.Android.build() + '<br>';
+    ie.innerHTML += 'Android.version: ' + Browser.Android.version() + '<br>';
+    ie.innerHTML += 'Android.major: ' + Browser.Android.major() + '<br>';
+    ie.innerHTML += 'Android.numbers: ' + Browser.Android.numbers() + '<br>';
+    ie.innerHTML += 'Android.phone: ' + Browser.Android.phone() + '<br>';
+    ie.innerHTML += 'Android.tablet: ' + Browser.Android.tablet() + '<br>';
+    ie.innerHTML += 'Android.hd: ' + Browser.Android.hd() + '<br>';
+    ie.innerHTML += 'Android.standard: ' + Browser.Android.standard() + '<br>';
+
+  }( window ) );
+</script>
+</body>
+</html>
