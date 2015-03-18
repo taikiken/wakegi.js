@@ -120,7 +120,7 @@
     };
 
     /**
-     * @method
+     * @method major
      * @static
      * @return {int}
      */

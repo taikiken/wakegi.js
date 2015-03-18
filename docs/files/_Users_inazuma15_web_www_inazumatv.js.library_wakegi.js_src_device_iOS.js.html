@@ -51,6 +51,8 @@
             
                 <li><a href="../classes/Css3.html">Css3</a></li>
             
+                <li><a href="../classes/Element.html">Element</a></li>
+            
                 <li><a href="../classes/Firefox.html">Firefox</a></li>
             
                 <li><a href="../classes/IE.html">IE</a></li>
@@ -179,7 +181,7 @@
         ios = ipad || ipod || iphone;
 
         // アプリ内コンテンツ
-        webＶiew = ios &amp;&amp; !iOS.standalone() &amp;&amp; !ua.match(/safari/i);
+        webＶiew = ios &amp;&amp; !iOS.standalone() &amp;&amp; !Browser.matchSafari();
 
       }
 

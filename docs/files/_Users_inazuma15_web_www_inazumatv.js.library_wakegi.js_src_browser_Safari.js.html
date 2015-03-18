@@ -51,6 +51,8 @@
             
                 <li><a href="../classes/Css3.html">Css3</a></li>
             
+                <li><a href="../classes/Element.html">Element</a></li>
+            
                 <li><a href="../classes/Firefox.html">Firefox</a></li>
             
                 <li><a href="../classes/IE.html">IE</a></li>
@@ -177,7 +179,7 @@
 
         } else {
           // check userAgent
-          safari = !!Browser.ua().match(/safari/i);
+          safari = Browser.matchSafari();
 
         }
 

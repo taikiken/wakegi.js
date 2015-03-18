@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>/Users/inazuma15/web/www/inazumatv.js.library/wakegi.js/src/device/Mobile.js</title>
+    <title>/Users/inazuma15/web/www/inazumatv.js.library/wakegi.js/src/document/Element.js</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
@@ -116,14 +116,14 @@
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-                        <h1 class="file-heading">File: /Users/inazuma15/web/www/inazumatv.js.library/wakegi.js/src/device/Mobile.js</h1>
+                        <h1 class="file-heading">File: /Users/inazuma15/web/www/inazumatv.js.library/wakegi.js/src/document/Element.js</h1>
 
 <div class="file">
     <pre class="code prettyprint linenums">
 /**
  * license inazumatv.com
  * author (at)taikiken / http://inazumatv.com
- * date 2015/03/17 - 23:29
+ * date 2015/03/18 - 13:09
  *
  * Copyright (c) 2011-2015 inazumatv.com, inc.
  *
@@ -137,72 +137,64 @@
 ( function ( window ){
   &quot;use strict&quot;;
   var
+    document = window.document,
     wakegi = window.wakegi,
     Browser = wakegi.Browser;
 
-  Browser.Mobile = ( function (){
+  Browser.Element = ( function (){
     var
-      iOS = Browser.iOS,
-      Android = Browser.Android;
+      touch,
+      querySelector;
 
     /**
-     * Mobile detection, iOS or Android
-     * @class Mobile
+     * HTMLElement detection
+     * @class Element
      * @constructor
      */
-    function Mobile () {
-      throw new Error( &quot;Mobile can&#x27;t create instance.&quot; );
+    function Element () {
+      throw new Error( &quot;Element can&#x27;t create instance.&quot; );
     }
 
-    var p = Mobile.prototype;
+    var p = Element.prototype;
 
-    p.constructor = Mobile;
+    p.constructor = Element;
 
     /**
-     * @method is
+     * @method touch
      * @static
      * @return {boolean}
      */
-    Mobile.is = function () {
+    Element.touch = function () {
 
-      return iOS.is() || Android.is();
+      if ( typeof touch === &quot;undefined&quot; ) {
+        // touch undefined
+        // http://perfectionkills.com/detecting-event-support-without-browser-sniffing/
+        // http://stackoverflow.com/questions/2915833/how-to-check-browser-for-touchstart-support-using-js-jquery#answer-2915912
+        touch = &#x27;ontouchstart&#x27; in document.documentElement;
+      }
 
+      return touch;
     };
+
     /**
-     * @method phone
+     * @method querySelector
      * @static
      * @return {boolean}
      */
-    Mobile.phone = function () {
-      return iOS.iPhone() || iOS.iPod() || Android.phone();
-    };
-    /**
-     * @method tablet
-     * @static
-     * @return {boolean}
-     */
-    Mobile.tablet = function () {
-      return iOS.iPad() || Android.tablet();
-    };
-    /**
-     * window.onload 後に実行して下さい
-     * @method hideBar
-     * @static
-     */
-    Mobile.hideBar = function () {
-      setTimeout( function (){ scrollBy( 0, 1 ); }, 0 );
-    };
-    /**
-     * @method hideURLBar
-     * @deprecated instead of Mobile.hideBar
-     * @static
-     */
-    Mobile.hideURLBar = function () {
-      Mobile.hideBar();
+    Element.querySelector = function () {
+
+      if ( typeof querySelector === &quot;undefined&quot; ) {
+        // querySelector undefined
+
+        querySelector = typeof document.querySelector !== &quot;undefined&quot;;
+      }
+
+      return querySelector;
     };
 
-      return Mobile;
+    return Element;
   }() );
+
 }( window ) );
     </pre>
 </div>

@@ -51,6 +51,8 @@
             
                 <li><a href="../classes/Css3.html">Css3</a></li>
             
+                <li><a href="../classes/Element.html">Element</a></li>
+            
                 <li><a href="../classes/Firefox.html">Firefox</a></li>
             
                 <li><a href="../classes/IE.html">IE</a></li>
@@ -191,7 +193,7 @@
           }//phone
 
           // Android 標準ブラウザ
-          standard = !!ua.match(/safari/i) &amp;&amp; !!ua.match(/version/i);
+          standard = Browser.matchSafari() &amp;&amp; !!ua.match(/version/i);
 
         }//android
 

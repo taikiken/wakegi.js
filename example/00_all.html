@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>wakegi.js</title>
+<script type="text/javascript" src="../libs/wakegi.js"></script>
+<style type="text/css">
+.block {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+</style>
+</head>
+<body>
+<strong>userAgent</strong>
+<p id="ua" class="block"></p>
+
+<strong>appVersion</strong>
+<p id="app" class="block"></p>
+
+<strong>All</strong>
+<p id="ie" class="block"></p>
+
+<script type="text/javascript">
+  ( function ( window ){
+    "use strict";
+    var
+      document = window.document,
+      ua = document.getElementById( "ua" ),
+      ie = document.getElementById( "ie" ),
+      app = document.getElementById( "app" ),
+
+      wakegi = window.wakegi,
+      Browser = wakegi.Browser;
+
+    ua.innerHTML = Browser.ua();
+    app.innerHTML = Browser.app();
+
+    ie.innerHTML += 'IE.is: ' + Browser.IE.is() + '<br>';
+    ie.innerHTML += 'IE.is6: ' + Browser.IE.is6() + '<br>';
+    ie.innerHTML += 'IE.is7: ' + Browser.IE.is7() + '<br>';
+    ie.innerHTML += 'IE.is8: ' + Browser.IE.is8() + '<br>';
+    ie.innerHTML += 'IE.is9: ' + Browser.IE.is9() + '<br>';
+    ie.innerHTML += 'IE.is10: ' + Browser.IE.is10() + '<br>';
+    ie.innerHTML += 'IE.is11: ' + Browser.IE.is11() + '<br>';
+    ie.innerHTML += 'IE.legacy: ' + Browser.IE.legacy() + '<br>';
+    ie.innerHTML += 'IE.version: ' + Browser.IE.version() + '<br>';
+    ie.innerHTML += 'IE.major: ' + Browser.IE.major() + '<br>';
+    ie.innerHTML += '*****************************************<br>';
+    ie.innerHTML += 'Chrome.is: ' + Browser.Chrome.is() + '<br>';
+    ie.innerHTML += 'Chrome.build: ' + Browser.Chrome.build() + '<br>';
+    ie.innerHTML += 'Chrome.version: ' + Browser.Chrome.version() + '<br>';
+    ie.innerHTML += 'Chrome.major: ' + Browser.Chrome.major() + '<br>';
+    ie.innerHTML += 'Chrome.numbers: ' + Browser.Chrome.numbers() + '<br>';
+    ie.innerHTML += '*****************************************<br>';
+    ie.innerHTML += 'Firefox.is: ' + Browser.Firefox.is() + '<br>';
+    ie.innerHTML += 'Firefox.build: ' + Browser.Firefox.build() + '<br>';
+    ie.innerHTML += 'Firefox.version: ' + Browser.Firefox.version() + '<br>';
+    ie.innerHTML += 'Firefox.major: ' + Browser.Firefox.major() + '<br>';
+    ie.innerHTML += 'Firefox.numbers: ' + Browser.Firefox.numbers() + '<br>';
+    ie.innerHTML += '*****************************************<br>';
+    ie.innerHTML += 'Safari.is: ' + Browser.Safari.is() + '<br>';
+    ie.innerHTML += 'Safari.build: ' + Browser.Safari.build() + '<br>';
+    ie.innerHTML += 'Safari.version: ' + Browser.Safari.version() + '<br>';
+    ie.innerHTML += 'Safari.major: ' + Browser.Safari.major() + '<br>';
+    ie.innerHTML += 'Safari.numbers: ' + Browser.Safari.numbers() + '<br>';
+    ie.innerHTML += '*****************************************<br>';
+    ie.innerHTML += 'iOS.is: ' + Browser.iOS.is() + '<br>';
+    ie.innerHTML += 'iOS.build: ' + Browser.iOS.build() + '<br>';
+    ie.innerHTML += 'iOS.version: ' + Browser.iOS.version() + '<br>';
+    ie.innerHTML += 'iOS.major: ' + Browser.iOS.major() + '<br>';
+    ie.innerHTML += 'iOS.numbers: ' + Browser.iOS.numbers() + '<br>';
+    ie.innerHTML += 'iOS.iPhone: ' + Browser.iOS.iPhone() + '<br>';
+    ie.innerHTML += 'iOS.iPad: ' + Browser.iOS.iPad() + '<br>';
+    ie.innerHTML += 'iOS.iPod: ' + Browser.iOS.iPod() + '<br>';
+    ie.innerHTML += 'iOS.standalone: ' + Browser.iOS.standalone() + '<br>';
+    ie.innerHTML += '*****************************************<br>';
+    ie.innerHTML += 'Android.is: ' + Browser.Android.is() + '<br>';
+    ie.innerHTML += 'Android.build: ' + Browser.Android.build() + '<br>';
+    ie.innerHTML += 'Android.version: ' + Browser.Android.version() + '<br>';
+    ie.innerHTML += 'Android.major: ' + Browser.Android.major() + '<br>';
+    ie.innerHTML += 'Android.numbers: ' + Browser.Android.numbers() + '<br>';
+    ie.innerHTML += 'Android.phone: ' + Browser.Android.phone() + '<br>';
+    ie.innerHTML += 'Android.tablet: ' + Browser.Android.tablet() + '<br>';
+    ie.innerHTML += 'Android.hd: ' + Browser.Android.hd() + '<br>';
+    ie.innerHTML += 'Android.standard: ' + Browser.Android.standard() + '<br>';
+    ie.innerHTML += '*****************************************<br>';
+    ie.innerHTML += 'Css3.transition: ' + Browser.Css3.transition() + '<br>';
+    ie.innerHTML += 'Css3.transform: ' + Browser.Css3.transform() + '<br>';
+    ie.innerHTML += 'Css3.matchMedia: ' + Browser.Css3.matchMedia() + '<br>';
+    ie.innerHTML += 'Css3.orientationChange: ' + Browser.Css3.orientationChange() + '<br>';
+    ie.innerHTML += 'Css3.orientation: ' + Browser.Css3.orientation() + '<br>';
+    ie.innerHTML += '*****************************************<br>';
+    ie.innerHTML += 'Element.touch: ' + Browser.Element.touch() + '<br>';
+    ie.innerHTML += 'Element.querySelector: ' + Browser.Element.querySelector() + '<br>';
+
+  }( window ) );
+</script>
+</body>
+</html>

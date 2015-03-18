@@ -57,7 +57,7 @@
 
         } else {
           // check userAgent
-          safari = !!Browser.ua().match(/safari/i);
+          safari = Browser.matchSafari();
 
         }
 

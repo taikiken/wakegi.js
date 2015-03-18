@@ -59,7 +59,7 @@
         ios = ipad || ipod || iphone;
 
         // アプリ内コンテンツ
-        webＶiew = ios && !iOS.standalone() && !ua.match(/safari/i);
+        webＶiew = ios && !iOS.standalone() && !Browser.matchSafari();
 
       }
 

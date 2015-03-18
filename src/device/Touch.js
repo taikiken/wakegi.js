@@ -22,7 +22,7 @@
 
     /**
      * @class Touch
-     * @deprecated instead of Browser
+     * @deprecated instead of Element
      * @constructor
      */
     function Touch () {
@@ -33,24 +33,9 @@
 
     p.constructor = Touch;
 
-    ///**
-    // * @method init
-    // * @static
-    // */
-    //Touch.init = function () {
-    //
-    //  if ( typeof touch === "undefined" ) {
-    //    // touch undefined
-    //    // http://perfectionkills.com/detecting-event-support-without-browser-sniffing/
-    //    // http://stackoverflow.com/questions/2915833/how-to-check-browser-for-touchstart-support-using-js-jquery#answer-2915912
-    //    touch = 'ontouchstart' in document.documentElement;
-    //  }
-    //
-    //};
-
     /**
      * @method is
-     * @deprecated instead of Browser.touch
+     * @deprecated instead of Element.touch
      * @static
      * @return {boolean}
      */

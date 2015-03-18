@@ -51,6 +51,8 @@
             
                 <li><a href="../classes/Css3.html">Css3</a></li>
             
+                <li><a href="../classes/Element.html">Element</a></li>
+            
                 <li><a href="../classes/Firefox.html">Firefox</a></li>
             
                 <li><a href="../classes/IE.html">IE</a></li>
@@ -142,7 +144,7 @@
 
     /**
      * @class Touch
-     * @deprecated instead of Browser
+     * @deprecated instead of Element
      * @constructor
      */
     function Touch () {
@@ -153,24 +155,9 @@
 
     p.constructor = Touch;
 
-    ///**
-    // * @method init
-    // * @static
-    // */
-    //Touch.init = function () {
-    //
-    //  if ( typeof touch === &quot;undefined&quot; ) {
-    //    // touch undefined
-    //    // http://perfectionkills.com/detecting-event-support-without-browser-sniffing/
-    //    // http://stackoverflow.com/questions/2915833/how-to-check-browser-for-touchstart-support-using-js-jquery#answer-2915912
-    //    touch = &#x27;ontouchstart&#x27; in document.documentElement;
-    //  }
-    //
-    //};
-
     /**
      * @method is
-     * @deprecated instead of Browser.touch
+     * @deprecated instead of Element.touch
      * @static
      * @return {boolean}
      */

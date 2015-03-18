@@ -51,6 +51,8 @@
             
                 <li><a href="../classes/Css3.html">Css3</a></li>
             
+                <li><a href="../classes/Element.html">Element</a></li>
+            
                 <li><a href="../classes/Firefox.html">Firefox</a></li>
             
                 <li><a href="../classes/IE.html">IE</a></li>
@@ -142,7 +144,10 @@
   Browser.Css3 = ( function (){
     var
       transition,
-      transform;
+      transform,
+      matchMedia,
+      onorientationchange,
+      orientation;
 
     /**
      * CSS3 detection
@@ -170,7 +175,7 @@
 
       if ( typeof transition === &quot;undefined&quot; ) {
         // transition undefined
-        p = document.createElement( &quot;p&quot; );
+        p = document.createElement( &quot;p&quot; ).style;
         transition = &quot;transition&quot; in p ||
           &quot;WebkitTransition&quot; in p ||
           &quot;MozTransition&quot; in p ||
@@ -191,7 +196,7 @@
 
       if ( typeof transform === &quot;undefined&quot; ) {
         // transform undefined
-        p = document.createElement( &quot;p&quot; );
+        p = document.createElement( &quot;p&quot; ).style;
         transform = &quot;transform&quot; in p ||
           &quot;WebkitTransform&quot; in p ||
           &quot;MozTransform&quot; in p ||
@@ -200,6 +205,52 @@
       }
 
       return transform;
+    };
+
+    /**
+     * @method matchMedia
+     * @static
+     * @return {boolean}
+     */
+    Css3.matchMedia = function () {
+
+      if ( typeof matchMedia === &quot;undefined&quot; ) {
+        // matchMedia undefined
+        matchMedia = typeof window.matchMedia === &quot;function&quot;;
+
+      }
+
+      return matchMedia;
+    };
+    /**
+     * @method orientationChange
+     * @static
+     * @return {boolean}
+     */
+    Css3.orientationChange = function () {
+
+      if ( typeof onorientationchange === &quot;undefined&quot; ) {
+        // onorientationchange undefined
+        onorientationchange = &quot;onorientationchange&quot; in window;
+
+      }
+
+      return onorientationchange;
+    };
+    /**
+     * @method orientation
+     * @static
+     * @return {boolean}
+     */
+    Css3.orientation = function () {
+
+      if ( typeof orientation === &quot;undefined&quot; ) {
+        // onorientationchange undefined
+        orientation = &quot;orientation&quot; in window;
+
+      }
+
+      return orientation;
     };
 
     return Css3;

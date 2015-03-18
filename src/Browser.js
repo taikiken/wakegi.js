@@ -81,36 +81,18 @@
 
     };
     /**
-     * @method matchMedia
+     * userAgent regular expression of Safari
+     * @method matchSafari
      * @static
      * @return {boolean}
      */
-    Browser.matchMedia = function () {
+    Browser.matchSafari = function () {
 
-      if ( typeof matchMedia === "undefined" ) {
-        // matchMedia defined
-        matchMedia = typeof matchMedia === "function";
-      }
+      Browser.init();
+      return !!ua.match(/safari/i);
 
-      return matchMedia;
     };
 
-    /**
-     * @method touch
-     * @static
-     * @return {boolean}
-     */
-    Browser.touch = function () {
-
-      if ( typeof touch === "undefined" ) {
-        // touch undefined
-        // http://perfectionkills.com/detecting-event-support-without-browser-sniffing/
-        // http://stackoverflow.com/questions/2915833/how-to-check-browser-for-touchstart-support-using-js-jquery#answer-2915912
-        touch = 'ontouchstart' in document.documentElement;
-      }
-
-      return touch;
-    };
 
     return Browser;
   }() );

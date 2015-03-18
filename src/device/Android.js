@@ -71,7 +71,7 @@
           }//phone
 
           // Android 標準ブラウザ
-          standard = !!ua.match(/safari/i) && !!ua.match(/version/i);
+          standard = Browser.matchSafari() && !!ua.match(/version/i);
 
         }//android
 

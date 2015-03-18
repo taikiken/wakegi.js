@@ -22,7 +22,10 @@
   Browser.Css3 = ( function (){
     var
       transition,
-      transform;
+      transform,
+      matchMedia,
+      onorientationchange,
+      orientation;
 
     /**
      * CSS3 detection
@@ -50,7 +53,7 @@
 
       if ( typeof transition === "undefined" ) {
         // transition undefined
-        p = document.createElement( "p" );
+        p = document.createElement( "p" ).style;
         transition = "transition" in p ||
           "WebkitTransition" in p ||
           "MozTransition" in p ||
@@ -71,7 +74,7 @@
 
       if ( typeof transform === "undefined" ) {
         // transform undefined
-        p = document.createElement( "p" );
+        p = document.createElement( "p" ).style;
         transform = "transform" in p ||
           "WebkitTransform" in p ||
           "MozTransform" in p ||
@@ -80,6 +83,52 @@
       }
 
       return transform;
+    };
+
+    /**
+     * @method matchMedia
+     * @static
+     * @return {boolean}
+     */
+    Css3.matchMedia = function () {
+
+      if ( typeof matchMedia === "undefined" ) {
+        // matchMedia undefined
+        matchMedia = typeof window.matchMedia === "function";
+
+      }
+
+      return matchMedia;
+    };
+    /**
+     * @method orientationChange
+     * @static
+     * @return {boolean}
+     */
+    Css3.orientationChange = function () {
+
+      if ( typeof onorientationchange === "undefined" ) {
+        // onorientationchange undefined
+        onorientationchange = "onorientationchange" in window;
+
+      }
+
+      return onorientationchange;
+    };
+    /**
+     * @method orientation
+     * @static
+     * @return {boolean}
+     */
+    Css3.orientation = function () {
+
+      if ( typeof orientation === "undefined" ) {
+        // onorientationchange undefined
+        orientation = "orientation" in window;
+
+      }
+
+      return orientation;
     };
 
     return Css3;

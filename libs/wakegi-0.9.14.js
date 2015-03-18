@@ -10,7 +10,7 @@
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
- * @build Wed Mar 18 2015 00:05:41 GMT+0900 (JST)
+ * @build Wed Mar 18 2015 15:49:53 GMT+0900 (JST)
  * @version 0.9.14
  *
  * @module wakegi
@@ -118,36 +118,18 @@ wakegi.float = parseFloat;
 
     };
     /**
-     * @method matchMedia
+     * userAgent regular expression of Safari
+     * @method matchSafari
      * @static
      * @return {boolean}
      */
-    Browser.matchMedia = function () {
+    Browser.matchSafari = function () {
 
-      if ( typeof matchMedia === "undefined" ) {
-        // matchMedia defined
-        matchMedia = typeof matchMedia === "function";
-      }
+      Browser.init();
+      return !!ua.match(/safari/i);
 
-      return matchMedia;
     };
 
-    /**
-     * @method touch
-     * @static
-     * @return {boolean}
-     */
-    Browser.touch = function () {
-
-      if ( typeof touch === "undefined" ) {
-        // touch undefined
-        // http://perfectionkills.com/detecting-event-support-without-browser-sniffing/
-        // http://stackoverflow.com/questions/2915833/how-to-check-browser-for-touchstart-support-using-js-jquery#answer-2915912
-        touch = 'ontouchstart' in document.documentElement;
-      }
-
-      return touch;
-    };
 
     return Browser;
   }() );
@@ -176,7 +158,10 @@ wakegi.float = parseFloat;
   Browser.Css3 = ( function (){
     var
       transition,
-      transform;
+      transform,
+      matchMedia,
+      onorientationchange,
+      orientation;
 
     /**
      * CSS3 detection
@@ -204,7 +189,7 @@ wakegi.float = parseFloat;
 
       if ( typeof transition === "undefined" ) {
         // transition undefined
-        p = document.createElement( "p" );
+        p = document.createElement( "p" ).style;
         transition = "transition" in p ||
           "WebkitTransition" in p ||
           "MozTransition" in p ||
@@ -225,7 +210,7 @@ wakegi.float = parseFloat;
 
       if ( typeof transform === "undefined" ) {
         // transform undefined
-        p = document.createElement( "p" );
+        p = document.createElement( "p" ).style;
         transform = "transform" in p ||
           "WebkitTransform" in p ||
           "MozTransform" in p ||
@@ -234,6 +219,52 @@ wakegi.float = parseFloat;
       }
 
       return transform;
+    };
+
+    /**
+     * @method matchMedia
+     * @static
+     * @return {boolean}
+     */
+    Css3.matchMedia = function () {
+
+      if ( typeof matchMedia === "undefined" ) {
+        // matchMedia undefined
+        matchMedia = typeof window.matchMedia === "function";
+
+      }
+
+      return matchMedia;
+    };
+    /**
+     * @method orientationChange
+     * @static
+     * @return {boolean}
+     */
+    Css3.orientationChange = function () {
+
+      if ( typeof onorientationchange === "undefined" ) {
+        // onorientationchange undefined
+        onorientationchange = "onorientationchange" in window;
+
+      }
+
+      return onorientationchange;
+    };
+    /**
+     * @method orientation
+     * @static
+     * @return {boolean}
+     */
+    Css3.orientation = function () {
+
+      if ( typeof orientation === "undefined" ) {
+        // onorientationchange undefined
+        orientation = "orientation" in window;
+
+      }
+
+      return orientation;
     };
 
     return Css3;
@@ -343,6 +374,82 @@ wakegi.float = parseFloat;
 /**
  * license inazumatv.com
  * author (at)taikiken / http://inazumatv.com
+ * date 2015/03/18 - 13:09
+ *
+ * Copyright (c) 2011-2015 inazumatv.com, inc.
+ *
+ * Distributed under the terms of the MIT license.
+ * http://www.opensource.org/licenses/mit-license.html
+ *
+ * This notice shall be included in all copies or substantial portions of the Software.
+ *
+ * @submodule Browser
+ */
+( function ( window ){
+  "use strict";
+  var
+    document = window.document,
+    wakegi = window.wakegi,
+    Browser = wakegi.Browser;
+
+  Browser.Element = ( function (){
+    var
+      touch,
+      querySelector;
+
+    /**
+     * HTMLElement detection
+     * @class Element
+     * @constructor
+     */
+    function Element () {
+      throw new Error( "Element can't create instance." );
+    }
+
+    var p = Element.prototype;
+
+    p.constructor = Element;
+
+    /**
+     * @method touch
+     * @static
+     * @return {boolean}
+     */
+    Element.touch = function () {
+
+      if ( typeof touch === "undefined" ) {
+        // touch undefined
+        // http://perfectionkills.com/detecting-event-support-without-browser-sniffing/
+        // http://stackoverflow.com/questions/2915833/how-to-check-browser-for-touchstart-support-using-js-jquery#answer-2915912
+        touch = 'ontouchstart' in document.documentElement;
+      }
+
+      return touch;
+    };
+
+    /**
+     * @method querySelector
+     * @static
+     * @return {boolean}
+     */
+    Element.querySelector = function () {
+
+      if ( typeof querySelector === "undefined" ) {
+        // querySelector undefined
+
+        querySelector = typeof document.querySelector !== "undefined";
+      }
+
+      return querySelector;
+    };
+
+    return Element;
+  }() );
+
+}( window ) );
+/**
+ * license inazumatv.com
+ * author (at)taikiken / http://inazumatv.com
  * date 2015/03/17 - 19:34
  *
  * Copyright (c) 2011-2015 inazumatv.com, inc.
@@ -401,7 +508,7 @@ wakegi.float = parseFloat;
         ios = ipad || ipod || iphone;
 
         // アプリ内コンテンツ
-        webＶiew = ios && !iOS.standalone() && !ua.match(/safari/i);
+        webＶiew = ios && !iOS.standalone() && !Browser.matchSafari();
 
       }
 
@@ -665,7 +772,7 @@ wakegi.float = parseFloat;
           }//phone
 
           // Android 標準ブラウザ
-          standard = !!ua.match(/safari/i) && !!ua.match(/version/i);
+          standard = Browser.matchSafari() && !!ua.match(/version/i);
 
         }//android
 
@@ -1009,7 +1116,7 @@ wakegi.float = parseFloat;
 
     /**
      * @class Touch
-     * @deprecated instead of Browser
+     * @deprecated instead of Element
      * @constructor
      */
     function Touch () {
@@ -1020,24 +1127,9 @@ wakegi.float = parseFloat;
 
     p.constructor = Touch;
 
-    ///**
-    // * @method init
-    // * @static
-    // */
-    //Touch.init = function () {
-    //
-    //  if ( typeof touch === "undefined" ) {
-    //    // touch undefined
-    //    // http://perfectionkills.com/detecting-event-support-without-browser-sniffing/
-    //    // http://stackoverflow.com/questions/2915833/how-to-check-browser-for-touchstart-support-using-js-jquery#answer-2915912
-    //    touch = 'ontouchstart' in document.documentElement;
-    //  }
-    //
-    //};
-
     /**
      * @method is
-     * @deprecated instead of Browser.touch
+     * @deprecated instead of Element.touch
      * @static
      * @return {boolean}
      */
@@ -1528,7 +1620,7 @@ wakegi.float = parseFloat;
     };
 
     /**
-     * @method
+     * @method major
      * @static
      * @return {int}
      */
@@ -1716,7 +1808,7 @@ wakegi.float = parseFloat;
     };
 
     /**
-     * @method
+     * @method major
      * @static
      * @return {int}
      */
@@ -1864,7 +1956,7 @@ wakegi.float = parseFloat;
     };
 
     /**
-     * @method
+     * @method major
      * @static
      * @return {int}
      */
@@ -1963,7 +2055,7 @@ wakegi.float = parseFloat;
 
         } else {
           // check userAgent
-          safari = !!Browser.ua().match(/safari/i);
+          safari = Browser.matchSafari();
 
         }
 
