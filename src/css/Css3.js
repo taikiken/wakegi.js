@@ -25,7 +25,8 @@
       transform,
       matchMedia,
       onorientationchange,
-      orientation;
+      orientation,
+      backgroundSize;
 
     /**
      * CSS3 detection
@@ -129,6 +130,21 @@
       }
 
       return orientation;
+    };
+    /**
+     * @method backgroundSize
+     * @static
+     * @return {boolean}
+     */
+    Css3.backgroundSize = function () {
+
+      if ( typeof backgroundSize === "undefined" ) {
+        // backgroundSize undefined
+        backgroundSize = "backgroundSize" in document.documentElement.style;
+
+      }
+
+      return backgroundSize;
     };
 
     return Css3;
