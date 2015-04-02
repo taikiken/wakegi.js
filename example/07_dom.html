@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>wakegi.js</title>
+<script type="text/javascript" src="../libs/wakegi.js"></script>
+<style type="text/css">
+.block {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+</style>
+</head>
+<body>
+<strong>userAgent</strong>
+<p id="ua" class="block"></p>
+
+<strong>appVersion</strong>
+<p id="app" class="block"></p>
+
+<strong>Dom</strong>
+<p id="ie" class="block"></p>
+
+<script type="text/javascript">
+  ( function ( window ){
+    "use strict";
+    var
+      document = window.document,
+      ua = document.getElementById( "ua" ),
+      ie = document.getElementById( "ie" ),
+      app = document.getElementById( "app" ),
+
+      wakegi = window.wakegi,
+      Browser = wakegi.Browser,
+      Dom = wakegi.Dom;
+
+    ua.innerHTML = Browser.ua();
+    app.innerHTML = Browser.app();
+
+    ie.innerHTML += 'border: ' + Dom.getStyle( ie, 'border' ) + '<br>';
+    ie.innerHTML += 'border-style: ' + Dom.getStyle( ie, 'border-style' ) + '<br>';
+    ie.innerHTML += 'border-width: ' + Dom.getStyle( ie, 'border-width' ) + '<br>';
+    ie.innerHTML += 'border-color: ' + Dom.getStyle( ie, 'border-color' ) + '<br>';
+    ie.innerHTML += 'padding: ' + Dom.getStyle( ie, 'padding' ) + '<br>';
+    ie.innerHTML += 'margin: ' + Dom.getStyle( ie, 'margin' ) + '<br>';
+    ie.innerHTML += 'margin-bottom: ' + Dom.getStyle( ie, 'margin-bottom' ) + '<br>';
+    ie.innerHTML += 'color: ' + Dom.getStyle( ie, 'color' ) + '<br>';
+    ie.innerHTML += 'transform: ' + Dom.getStyle( ie, 'transform' ) + '<br>';
+    ie.innerHTML += 'transition: ' + Dom.getStyle( ie, 'transition' ) + '<br>';
+    ie.innerHTML += 'transition-duration: ' + Dom.getStyle( ie, 'transition-duration' ) + '<br>';
+    ie.innerHTML += 'transitionDuration: ' + Dom.getStyle( ie, 'transitionDuration' ) + '<br>';
+
+    Dom.addClass( ie, "red" );
+    Dom.addClass( ie, "black" );
+
+    Dom.removeClass( ie, "white" );
+    Dom.removeClass( ie, "red" );
+    Dom.removeClass( ie, "black" );
+    Dom.removeClass( ie, "block" );
+
+    Dom.addClass( ie, "black" );
+    Dom.addClass( ie, "block" );
+
+    Dom.removeClass( ie, "black" );
+
+  }( window ) );
+</script>
+</body>
+</html>

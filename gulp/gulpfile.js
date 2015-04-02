@@ -88,6 +88,7 @@ scripts.push( dir.src + '/css/Transform.js' );
 
 // document
 scripts.push( dir.src + '/document/Element.js' );
+scripts.push( dir.src + '/document/Dom.js' );
 
 // device
 scripts.push( dir.src + '/device/iOS.js' );

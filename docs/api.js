@@ -6,6 +6,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "Chrome",
         "CriOS",
         "Css3",
+        "Dom",
         "Element",
         "Firefox",
         "IE",
