@@ -21,6 +21,9 @@
 <strong>Dom</strong>
 <p id="ie" class="block"></p>
 
+<strong>Styles</strong>
+<p id="styles" class="block"></p>
+
 <script type="text/javascript">
   ( function ( window ){
     "use strict";
@@ -29,6 +32,7 @@
       ua = document.getElementById( "ua" ),
       ie = document.getElementById( "ie" ),
       app = document.getElementById( "app" ),
+      styles = document.getElementById( "styles" ),
 
       wakegi = window.wakegi,
       Browser = wakegi.Browser,
@@ -52,6 +56,24 @@
     ie.innerHTML += 'transitionDuration: ' + Dom.getStyle( ie, 'transitionDuration' ) + '<br>';
     ie.innerHTML += 'width: ' + Dom.getStyle( ie, 'width' ) + '<br>';
     ie.innerHTML += 'background: ' + Dom.getStyle( ie, 'background' ) + '<br>';
+    ie.innerHTML += 'getStyle: ' + Dom.getStyle( ie, '' ) + '<br>';
+    ie.innerHTML += 'getComputedStyle: ' + window.getComputedStyle( ie, '' ) + '<br>';
+
+    var css = Dom.getStyle( ie, '' ),
+      key, val;
+
+    for ( key in css ) {
+//      console.log( "css ", key, css.hasOwnProperty( key ) );
+
+      if ( Browser.IE.is() || css.hasOwnProperty( key ) ) {
+
+        val = css[ key ];
+        styles.innerHTML += '<strong>' + key + ': </strong>' + val + '<br>';
+
+      }
+    }
+
+//    console.log( "window.getComputedStyle( ie, '' )", window.getComputedStyle( ie, '' ) );
 
     Dom.addClass( ie, "red" );
     Dom.addClass( ie, "black" );
