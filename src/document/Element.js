@@ -102,7 +102,7 @@
 
       if ( typeof webgl === "undefined" ) {
 
-        // querySelector undefined
+        // webgl undefined
         webgl = Element.canvas();
 
         if ( webgl ) {

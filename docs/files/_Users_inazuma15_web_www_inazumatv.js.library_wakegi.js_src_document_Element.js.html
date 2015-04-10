@@ -146,7 +146,9 @@
   Browser.Element = ( function (){
     var
       touch,
-      querySelector;
+      querySelector,
+      canvas,
+      webgl;
 
     /**
      * HTMLElement detection
@@ -176,6 +178,7 @@
       }
 
       return touch;
+
     };
 
     /**
@@ -186,12 +189,64 @@
     Element.querySelector = function () {
 
       if ( typeof querySelector === &quot;undefined&quot; ) {
-        // querySelector undefined
 
+        // querySelector undefined
         querySelector = typeof document.querySelector !== &quot;undefined&quot;;
+
       }
 
       return querySelector;
+
+    };
+
+    /**
+     * @method canvas
+     * @static
+     * @return {boolean}
+     */
+    Element.canvas = function () {
+
+      if ( typeof canvas === &quot;undefined&quot; ) {
+
+        // querySelector undefined
+        canvas = !!window.CanvasRenderingContext2D;
+
+      }
+
+      return canvas;
+
+    };
+
+    /**
+     * @method webgl
+     * @static
+     * @return {boolean}
+     */
+    Element.webgl = function () {
+
+      if ( typeof webgl === &quot;undefined&quot; ) {
+
+        // webgl undefined
+        webgl = Element.canvas();
+
+        if ( webgl ) {
+
+          try {
+
+            webgl = !!window.WebGLRenderingContext &amp;&amp; !!document.createElement( &#x27;canvas&#x27; ).getContext( &#x27;experimental-webgl&#x27; );
+
+          } catch( e ) {
+
+            webgl = false;
+
+          }
+
+        }
+
+      }
+
+      return webgl;
+
     };
 
     return Element;

@@ -10,7 +10,7 @@
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
- * @build 4/10/2015, 5:20:19 PM
+ * @build 4/10/2015, 5:22:09 PM
  * @version 0.9.18
  *
  * @module wakegi
@@ -491,7 +491,7 @@ wakegi.float = parseFloat;
 
       if ( typeof webgl === "undefined" ) {
 
-        // querySelector undefined
+        // webgl undefined
         webgl = Element.canvas();
 
         if ( webgl ) {
