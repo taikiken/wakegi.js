@@ -22,7 +22,9 @@
   Browser.Element = ( function (){
     var
       touch,
-      querySelector;
+      querySelector,
+      canvas,
+      webgl;
 
     /**
      * HTMLElement detection
@@ -52,6 +54,7 @@
       }
 
       return touch;
+
     };
 
     /**
@@ -62,12 +65,64 @@
     Element.querySelector = function () {
 
       if ( typeof querySelector === "undefined" ) {
-        // querySelector undefined
 
+        // querySelector undefined
         querySelector = typeof document.querySelector !== "undefined";
+
       }
 
       return querySelector;
+
+    };
+
+    /**
+     * @method canvas
+     * @static
+     * @return {boolean}
+     */
+    Element.canvas = function () {
+
+      if ( typeof canvas === "undefined" ) {
+
+        // querySelector undefined
+        canvas = !!window.CanvasRenderingContext2D;
+
+      }
+
+      return canvas;
+
+    };
+
+    /**
+     * @method webgl
+     * @static
+     * @return {boolean}
+     */
+    Element.webgl = function () {
+
+      if ( typeof webgl === "undefined" ) {
+
+        // querySelector undefined
+        webgl = Element.canvas();
+
+        if ( webgl ) {
+
+          try {
+
+            webgl = !!window.WebGLRenderingContext && !!document.createElement( 'canvas' ).getContext( 'experimental-webgl' );
+
+          } catch( e ) {
+
+            webgl = false;
+
+          }
+
+        }
+
+      }
+
+      return webgl;
+
     };
 
     return Element;

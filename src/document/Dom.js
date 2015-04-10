@@ -27,6 +27,11 @@
      * @param {HTMLElement} element
      */
     function Dom ( element ) {
+      /**
+       * @property _element
+       * @type {HTMLElement}
+       * @private
+       */
       this._element = element;
     }
 

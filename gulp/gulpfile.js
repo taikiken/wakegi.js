@@ -10,11 +10,9 @@
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  */
+/*jslint node: true */
 // ----------------------------------------------------------------
 "use strict";
-
-// node Module
-var require = require;
 
 // Gulp Module
 var gulp = require( 'gulp' );
