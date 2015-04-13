@@ -10,8 +10,8 @@
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
- * @build 4/13/2015, 6:03:28 PM
- * @version 0.9.21
+ * @build 4/10/2015, 6:25:57 PM
+ * @version 0.9.19
  *
  * @module wakegi
  */
@@ -511,25 +511,6 @@ wakegi.float = parseFloat;
       }
 
       return webgl;
-
-    };
-
-    /**
-     * querySelector が使えるブラウザだけ使用可能
-     * @method find
-     * @param {string} searchKey
-     * @return {*} HTMLElement を返します
-     */
-    Element.find = function ( searchKey ) {
-      var result;
-
-      if ( Element.querySelector() ) {
-
-        result = document.querySelector( searchKey );
-
-      }
-
-      return result;
 
     };
 
@@ -1105,7 +1086,6 @@ wakegi.float = parseFloat;
 
   Browser.Android = ( function (){
     var
-      _max = Math.max,
       numbers = [ -1, -1, -1 ],
       standard,
       android,
@@ -1132,7 +1112,7 @@ wakegi.float = parseFloat;
      * @static
      */
     Android.init = function () {
-      var ua, max;
+      var ua;
 
       if ( typeof android === "undefined" ) {
         // need initialize
@@ -1146,8 +1126,7 @@ wakegi.float = parseFloat;
 
         if ( android ) {
 
-          max = _max( window.innerWidth,  window.innerHeight );
-          hd = max >= 1024;
+          hd = window.innerWidth >= 1024 || window.innerHeight >= 1024;
           // http://googlewebmastercentral.blogspot.jp/2011/03/mo-better-to-also-detect-mobile-user.html
           phone = !!ua.match(/mobile/i);
 

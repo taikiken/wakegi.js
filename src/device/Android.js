@@ -20,6 +20,7 @@
 
   Browser.Android = ( function (){
     var
+      _max = Math.max,
       numbers = [ -1, -1, -1 ],
       standard,
       android,
@@ -46,7 +47,7 @@
      * @static
      */
     Android.init = function () {
-      var ua;
+      var ua, max;
 
       if ( typeof android === "undefined" ) {
         // need initialize
@@ -60,7 +61,8 @@
 
         if ( android ) {
 
-          hd = window.innerWidth >= 1024 || window.innerHeight >= 1024;
+          max = _max( window.innerWidth,  window.innerHeight );
+          hd = max >= 1024;
           // http://googlewebmastercentral.blogspot.jp/2011/03/mo-better-to-also-detect-mobile-user.html
           phone = !!ua.match(/mobile/i);
 

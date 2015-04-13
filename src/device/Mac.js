@@ -44,7 +44,7 @@
 
       if ( typeof mac === "undefined" ) {
         // mac undefined
-        mac = !iOS.is() && !!wakegi.ua().match(/mac os x/i);
+        mac = !iOS.is() && !!Browser.ua().match(/mac os x/i);
       }
 
     };

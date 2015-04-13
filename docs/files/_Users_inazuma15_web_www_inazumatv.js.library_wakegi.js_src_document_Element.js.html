@@ -249,6 +249,25 @@
 
     };
 
+    /**
+     * querySelector が使えるブラウザだけ使用可能
+     * @method find
+     * @param {string} searchKey
+     * @return {*} HTMLElement を返します
+     */
+    Element.find = function ( searchKey ) {
+      var result;
+
+      if ( Element.querySelector() ) {
+
+        result = document.querySelector( searchKey );
+
+      }
+
+      return result;
+
+    };
+
     return Element;
   }() );
 

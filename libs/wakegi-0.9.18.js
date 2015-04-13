@@ -10,7 +10,7 @@
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
- * @build 4/10/2015, 5:22:09 PM
+ * @build 4/10/2015, 6:23:50 PM
  * @version 0.9.18
  *
  * @module wakegi
@@ -1327,139 +1327,6 @@ wakegi.float = parseFloat;
 /**
  * license inazumatv.com
  * author (at)taikiken / http://inazumatv.com
- * date 2015/03/17 - 23:00
- *
- * Copyright (c) 2011-2015 inazumatv.com, inc.
- *
- * Distributed under the terms of the MIT license.
- * http://www.opensource.org/licenses/mit-license.html
- *
- * This notice shall be included in all copies or substantial portions of the Software.
- *
- * @submodule Browser
- */
-( function ( window ){
-  "use strict";
-  var
-    wakegi = window.wakegi,
-    Browser = wakegi.Browser;
-
-  Browser.Mac = ( function (){
-    var
-      iOS = Browser.iOS,
-      mac;
-
-    /**
-     * Mac detection
-     * @class Mac
-     * @constructor
-     */
-    function Mac () {
-      throw new Error( "Mac can't create instance." );
-    }
-
-    var p = Mac.prototype;
-
-    p.constructor = Mac;
-
-    /**
-     * @method init
-     * @static
-     */
-    Mac.init = function () {
-
-      if ( typeof mac === "undefined" ) {
-        // mac undefined
-        mac = !iOS.is() && !!wakegi.ua().match(/mac os x/i);
-      }
-
-    };
-
-    /**
-     * @method is
-     * @static
-     * @return {boolean}
-     */
-    Mac.is = function () {
-
-      Mac.init();
-      return mac;
-
-    };
-
-    return Mac;
-  }() );
-
-}( window ) );
-/**
- * license inazumatv.com
- * author (at)taikiken / http://inazumatv.com
- * date 2015/03/17 - 23:05
- *
- * Copyright (c) 2011-2015 inazumatv.com, inc.
- *
- * Distributed under the terms of the MIT license.
- * http://www.opensource.org/licenses/mit-license.html
- *
- * This notice shall be included in all copies or substantial portions of the Software.
- *
- * @submodule Browser
- */
-( function ( window ){
-  "use strict";
-  var
-    wakegi = window.wakegi,
-    Browser = wakegi.Browser;
-
-  Browser.Windows = ( function (){
-    var
-      windows;
-
-    /**
-     * windows detection
-     * @class Windows
-     * @constructor
-     */
-    function Windows () {
-      throw new Error( "Windows can't create instance." );
-    }
-
-    var p = Windows.prototype;
-
-    p.constructor = Windows;
-
-    /**
-     * @method init
-     * @static
-     */
-    Windows.init = function () {
-
-      if ( typeof windows === "undefined" ) {
-        // windows undefined
-        windows = !!wakegi.ua().match(/windows/i);
-      }
-
-    };
-
-    /**
-     * @method is
-     * @static
-     * @return {boolean}
-     */
-    Windows.is = function () {
-
-      Windows.init();
-      return windows;
-
-    };
-
-    return Windows;
-  }() );
-
-}( window ) );
-/**
- * license inazumatv.com
- * author (at)taikiken / http://inazumatv.com
  * date 2015/03/17 - 23:16
  *
  * Copyright (c) 2011-2015 inazumatv.com, inc.
@@ -1591,6 +1458,139 @@ wakegi.float = parseFloat;
 
       return Mobile;
   }() );
+}( window ) );
+/**
+ * license inazumatv.com
+ * author (at)taikiken / http://inazumatv.com
+ * date 2015/03/17 - 23:00
+ *
+ * Copyright (c) 2011-2015 inazumatv.com, inc.
+ *
+ * Distributed under the terms of the MIT license.
+ * http://www.opensource.org/licenses/mit-license.html
+ *
+ * This notice shall be included in all copies or substantial portions of the Software.
+ *
+ * @submodule Browser
+ */
+( function ( window ){
+  "use strict";
+  var
+    wakegi = window.wakegi,
+    Browser = wakegi.Browser;
+
+  Browser.Mac = ( function (){
+    var
+      iOS = Browser.iOS,
+      mac;
+
+    /**
+     * Mac detection
+     * @class Mac
+     * @constructor
+     */
+    function Mac () {
+      throw new Error( "Mac can't create instance." );
+    }
+
+    var p = Mac.prototype;
+
+    p.constructor = Mac;
+
+    /**
+     * @method init
+     * @static
+     */
+    Mac.init = function () {
+
+      if ( typeof mac === "undefined" ) {
+        // mac undefined
+        mac = !iOS.is() && !!wakegi.ua().match(/mac os x/i);
+      }
+
+    };
+
+    /**
+     * @method is
+     * @static
+     * @return {boolean}
+     */
+    Mac.is = function () {
+
+      Mac.init();
+      return mac;
+
+    };
+
+    return Mac;
+  }() );
+
+}( window ) );
+/**
+ * license inazumatv.com
+ * author (at)taikiken / http://inazumatv.com
+ * date 2015/03/17 - 23:05
+ *
+ * Copyright (c) 2011-2015 inazumatv.com, inc.
+ *
+ * Distributed under the terms of the MIT license.
+ * http://www.opensource.org/licenses/mit-license.html
+ *
+ * This notice shall be included in all copies or substantial portions of the Software.
+ *
+ * @submodule Browser
+ */
+( function ( window ){
+  "use strict";
+  var
+    wakegi = window.wakegi,
+    Browser = wakegi.Browser;
+
+  Browser.Windows = ( function (){
+    var
+      windows;
+
+    /**
+     * windows detection
+     * @class Windows
+     * @constructor
+     */
+    function Windows () {
+      throw new Error( "Windows can't create instance." );
+    }
+
+    var p = Windows.prototype;
+
+    p.constructor = Windows;
+
+    /**
+     * @method init
+     * @static
+     */
+    Windows.init = function () {
+
+      if ( typeof windows === "undefined" ) {
+        // windows undefined
+        windows = !!wakegi.ua().match(/windows/i);
+      }
+
+    };
+
+    /**
+     * @method is
+     * @static
+     * @return {boolean}
+     */
+    Windows.is = function () {
+
+      Windows.init();
+      return windows;
+
+    };
+
+    return Windows;
+  }() );
+
 }( window ) );
 /**
  * license inazumatv.com

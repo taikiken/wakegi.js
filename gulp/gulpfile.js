@@ -91,10 +91,11 @@ scripts.push( dir.src + '/document/Dom.js' );
 // device
 scripts.push( dir.src + '/device/iOS.js' );
 scripts.push( dir.src + '/device/Android.js' );
-scripts.push( dir.src + '/device/Mac.js' );
-scripts.push( dir.src + '/device/Windows.js' );
 scripts.push( dir.src + '/device/Touch.js' );
 scripts.push( dir.src + '/device/Mobile.js' );
+
+scripts.push( dir.src + '/device/Mac.js' );
+scripts.push( dir.src + '/device/Windows.js' );
 
 // ua
 scripts.push( dir.src + '/browser/IE.js' );

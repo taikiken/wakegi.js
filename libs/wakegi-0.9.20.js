@@ -10,8 +10,8 @@
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
- * @build 4/13/2015, 6:03:28 PM
- * @version 0.9.21
+ * @build 4/13/2015, 6:02:03 PM
+ * @version 0.9.20
  *
  * @module wakegi
  */

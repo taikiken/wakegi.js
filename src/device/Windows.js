@@ -43,7 +43,7 @@
 
       if ( typeof windows === "undefined" ) {
         // windows undefined
-        windows = !!wakegi.ua().match(/windows/i);
+        windows = !!Browser.ua().match(/windows/i);
       }
 
     };
