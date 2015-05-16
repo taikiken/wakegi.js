@@ -124,7 +124,7 @@
     Css3.orientation = function () {
 
       if ( typeof orientation === "undefined" ) {
-        // onorientationchange undefined
+        // orientation undefined
         orientation = "orientation" in window;
 
       }
