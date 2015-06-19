@@ -11,6 +11,7 @@
  * This notice shall be included in all copies or substantial portions of the Software.
  *
  * @module wakegi
+ * @submodule Dom
  */
 ( function ( window ){
   "use strict";

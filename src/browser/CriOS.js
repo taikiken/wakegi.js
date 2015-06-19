@@ -12,7 +12,8 @@
  *
  * iOS Chrome
  *
- * @submodule Browser
+ * @module Browser
+ * @submodule CriOS
  */
 ( function ( window ){
   "use strict";

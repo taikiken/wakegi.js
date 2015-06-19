@@ -10,7 +10,8 @@
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
- * @submodule Browser
+ * @module Browser
+ * @submodule Css3
  */
 ( function ( window ){
   "use strict";

@@ -10,20 +10,19 @@
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
+ * @module wakegi
+ * @submodule Browser
  */
 ( function ( window ){
   "use strict";
   var
-    document = window.document,
     wakegi = window.wakegi;
 
   wakegi.Browser = ( function (){
     var
       navigator = window.navigator,
       ua,
-      app,
-      matchMedia,
-      touch;
+      app;
 
     /**
      * Browser 基本機能

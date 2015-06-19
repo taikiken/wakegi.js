@@ -10,7 +10,7 @@
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
- * @build 4/13/2015, 6:03:28 PM
+ * @build 2015-06-19 14:38:03
  * @version 0.9.21
  *
  * @module wakegi
@@ -47,20 +47,19 @@ wakegi.float = parseFloat;
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
+ * @module wakegi
+ * @submodule Browser
  */
 ( function ( window ){
   "use strict";
   var
-    document = window.document,
     wakegi = window.wakegi;
 
   wakegi.Browser = ( function (){
     var
       navigator = window.navigator,
       ua,
-      app,
-      matchMedia,
-      touch;
+      app;
 
     /**
      * Browser 基本機能
@@ -146,7 +145,8 @@ wakegi.float = parseFloat;
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
- * @submodule Browser
+ * @module Browser
+ * @submodule Css3
  */
 ( function ( window ){
   "use strict";
@@ -260,7 +260,7 @@ wakegi.float = parseFloat;
     Css3.orientation = function () {
 
       if ( typeof orientation === "undefined" ) {
-        // onorientationchange undefined
+        // orientation undefined
         orientation = "orientation" in window;
 
       }
@@ -299,7 +299,8 @@ wakegi.float = parseFloat;
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
- * @submodule Browser
+ * @module Browser
+ * @submodule Transition
  */
 ( function ( window ){
   "use strict";
@@ -349,7 +350,8 @@ wakegi.float = parseFloat;
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
- * @submodule Browser
+ * @module Browser
+ * @submodule Transform
  */
 ( function ( window ){
   "use strict";
@@ -399,7 +401,8 @@ wakegi.float = parseFloat;
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
- * @submodule Browser
+ * @module Browser
+ * @submodule Element
  */
 ( function ( window ){
   "use strict";
@@ -550,6 +553,7 @@ wakegi.float = parseFloat;
  * This notice shall be included in all copies or substantial portions of the Software.
  *
  * @module wakegi
+ * @submodule Dom
  */
 ( function ( window ){
   "use strict";
@@ -843,7 +847,8 @@ wakegi.float = parseFloat;
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
- * @submodule Browser
+ * @module Browser
+ * @submodule iOS
  */
 ( function ( window ){
   "use strict";
@@ -1095,7 +1100,8 @@ wakegi.float = parseFloat;
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
- * @submodule Browser
+ * @module Browser
+ * @submodule Android
  */
 ( function ( window ){
   "use strict";
@@ -1357,7 +1363,8 @@ wakegi.float = parseFloat;
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
- * @submodule Browser
+ * @module Browser
+ * @submodule Touch
  */
 ( function ( window ){
   "use strict";
@@ -1408,7 +1415,8 @@ wakegi.float = parseFloat;
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
- * @submodule Browser
+ * @module Browser
+ * @submodule Mobile
  */
 ( function ( window ){
   "use strict";
@@ -1492,7 +1500,8 @@ wakegi.float = parseFloat;
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
- * @submodule Browser
+ * @module Browser
+ * @submodule Mac
  */
 ( function ( window ){
   "use strict";
@@ -1559,7 +1568,8 @@ wakegi.float = parseFloat;
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
- * @submodule Browser
+ * @module Browser
+ * @submodule Windows
  */
 ( function ( window ){
   "use strict";
@@ -1625,7 +1635,8 @@ wakegi.float = parseFloat;
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
- * @submodule Browser
+ * @module Browser
+ * @submodule IE
  */
 ( function ( window ){
   "use strict";
@@ -1881,7 +1892,8 @@ wakegi.float = parseFloat;
  *
  * iOS Chrome
  *
- * @submodule Browser
+ * @module Browser
+ * @submodule CriOS
  */
 ( function ( window ){
   "use strict";
@@ -2044,7 +2056,8 @@ wakegi.float = parseFloat;
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
- * @submodule Browser
+ * @module Browser
+ * @submodule Chrome
  */
 ( function ( window ){
   "use strict";
@@ -2232,7 +2245,8 @@ wakegi.float = parseFloat;
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
- * @submodule Browser
+ * @module Browser
+ * @submodule Firefox
  */
 ( function ( window ){
   "use strict";
@@ -2394,7 +2408,8 @@ wakegi.float = parseFloat;
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
- * @submodule Browser
+ * @module Browser
+ * @submodule Safari
  */
 ( function ( window ){
   "use strict";

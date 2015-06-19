@@ -10,7 +10,8 @@
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
- * @submodule Browser
+ * @module Browser
+ * @submodule iOS
  */
 ( function ( window ){
   "use strict";
