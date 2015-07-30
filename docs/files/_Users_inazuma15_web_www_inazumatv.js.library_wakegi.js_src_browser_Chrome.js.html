@@ -91,6 +91,8 @@
             
                 <li><a href="../modules/Dom.html">Dom</a></li>
             
+                <li><a href="../modules/Edge.html">Edge</a></li>
+            
                 <li><a href="../modules/Element.html">Element</a></li>
             
                 <li><a href="../modules/Firefox.html">Firefox</a></li>
@@ -169,6 +171,7 @@
  * @module Browser
  * @submodule Chrome
  */
+/*jslint -W016*/
 ( function ( window ){
   &quot;use strict&quot;;
   var
@@ -179,8 +182,10 @@
     var
       CriOS = Browser.CriOS,
       Android = Browser.Android,
+      Edge = Browser.Edge,
       numbers = [ -1, -1, -1, -1 ],
       crios,
+      edge,
       chrome, version, major, build;
 
     /**
@@ -189,7 +194,7 @@
      * @constructor
      */
     function Chrome () {
-      throw new Error( &quot;Chrome can&#x27;t create instance.&quot; );
+      throw new Error( &#x27;Chrome can\&#x27;t create instance.&#x27; );
     }
 
     var p = Chrome.prototype;
@@ -202,18 +207,25 @@
      */
     Chrome.init = function () {
 
-      if ( typeof chrome === &quot;undefined&quot; ) {
+      if ( typeof chrome === &#x27;undefined&#x27; ) {
+
         // need initialize
         crios = CriOS.is();
+        edge = Edge.is();
         chrome = false;
 
-        if ( crios ) {
-          // iOS Chrome
-          chrome = true;
+        if ( !edge ) {
 
-        } else if ( !Android.standard() ) {
-          // check userAgent
-          chrome = !!Browser.ua().match(/chrome/i);
+          if ( crios ) {
+            // iOS Chrome
+            chrome = true;
+
+          } else if ( !Android.standard() ) {
+
+            // check userAgent
+            chrome = !!Browser.ua().match(/chrome/i);
+
+          }
 
         }
 
@@ -226,13 +238,14 @@
      * @static
      */
     Chrome.calculate = function () {
+
       var
         versions = [],
         nums, int, float, i, limit;
 
       //Chrome.init();
 
-      if ( typeof version === &quot;undefined&quot; ) {
+      if ( typeof version === &#x27;undefined&#x27; ) {
         // version undefined
         build = &quot;&quot;;
         version = -1;
@@ -250,16 +263,16 @@
               int = wakegi.int;
               float = wakegi.float;
 
-              for ( i = 1, limit = nums.length; i &lt; limit; i++ ) {
+              for ( i = 1, limit = nums.length; i &lt; limit; i = (i+1)|0 ) {
 
                 versions.push( int( nums[ i ], 10 ) );
 
               }
 
-              build = versions.join( &quot;.&quot; );
+              build = versions.join( &#x27;.&#x27; );
               major = versions[ 0 ];
               numbers = versions;
-              version = float( versions[ 0 ] + &quot;.&quot; + versions[ 1 ] + versions[ 2 ] + versions[ 3 ] );
+              version = float( versions[ 0 ] + &#x27;.&#x27; + versions[ 1 ] + versions[ 2 ] + versions[ 3 ] );
 
             }// Array
 

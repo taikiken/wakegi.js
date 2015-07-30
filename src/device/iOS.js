@@ -13,6 +13,7 @@
  * @module Browser
  * @submodule iOS
  */
+/*jslint -W016*/
 ( function ( window ){
   "use strict";
   var
@@ -35,7 +36,7 @@
      * @constructor
      */
     function iOS () {
-      throw new Error( "iOS can't create instance." );
+      throw new Error( 'iOS can\'t create instance.' );
     }
 
     var p = iOS.prototype;
@@ -47,9 +48,11 @@
      * @static
      */
     iOS.init = function () {
+
       var ua;
 
-      if ( typeof ios === "undefined" ) {
+      if ( typeof ios === 'undefined' ) {
+
         // need initialize
         ua = Browser.ua();
 
@@ -71,11 +74,12 @@
      * @static
      */
     iOS.calculate = function () {
+
       var
         versions = [],
         nums, int, float, i, limit, num;
 
-      if ( typeof version === "undefined" ) {
+      if ( typeof version === 'undefined' ) {
         // version undefined
         build = "";
         version = -1;
@@ -90,11 +94,11 @@
             int = wakegi.int;
             float = wakegi.float;
 
-            for ( i = 1, limit = nums.length; i < limit; i++ ) {
+            for ( i = 1, limit = nums.length; i < limit; i = (i+1)|0 ) {
 
               num = nums[ i ];
 
-              if ( typeof num !== "undefined" ) {
+              if ( typeof num !== 'undefined' ) {
                   // num defined
                 versions.push( int( num, 10 ) );
 
@@ -106,16 +110,17 @@
 
             }
 
-            build = versions.join( "." );
+            build = versions.join( '.' );
             major = versions[ 0 ];
             numbers = versions;
-            version = float( versions[ 0 ] + "." + versions[ 1 ] + versions[ 2 ] );
+            version = float( versions[ 0 ] + '.' + versions[ 1 ] + versions[ 2 ] );
 
           }// Array
 
         }//iOS
 
       }//undefined
+
     };
 
     /**
@@ -135,8 +140,10 @@
      * @return {boolean}
      */
     iOS.iPhone = function () {
+
       iOS.init();
       return iphone;
+
     };
     /**
      * @method iPad
@@ -144,8 +151,10 @@
      * @return {boolean}
      */
     iOS.iPad = function () {
+
       iOS.init();
       return ipad;
+
     };
     /**
      * @method iPod
@@ -153,8 +162,10 @@
      * @return {boolean}
      */
     iOS.iPod = function () {
+
       iOS.init();
       return ipod;
+
     };
     /**
      * @method standalone
@@ -162,8 +173,10 @@
      * @return {Function|boolean}
      */
     iOS.standalone = function () {
+
       var navigator = Browser.navigator();
       return !!navigator.standalone ? navigator.standalone : false;
+
     };
 
     /**
@@ -175,6 +188,7 @@
     iOS.fullScreen = function () {
 
       return iOS.standalone();
+
     };
 
     /**
@@ -233,6 +247,7 @@
      * @return {*[]} [major: int, minor: int, build: int] 形式で返します
      */
     iOS.number = function () {
+
       // 互換のために残します
       return iOS.numbers();
 
@@ -244,8 +259,10 @@
      * @return {boolean}
      */
     iOS.webView = function () {
+
       iOS.init();
       return webＶiew;
+
     };
 
     return iOS;

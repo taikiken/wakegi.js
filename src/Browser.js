@@ -30,7 +30,7 @@
      * @constructor
      */
     function Browser () {
-      throw new Error( "Browser can't create instance." );
+      throw new Error( 'Browser can\'t create instance.' );
     }
 
     var p = Browser.prototype;
@@ -42,7 +42,7 @@
      */
     Browser.init = function () {
 
-      if ( typeof ua === "undefined" || typeof app === "undefined" ) {
+      if ( typeof ua === 'undefined' || typeof app === 'undefined' ) {
           // ua undefined
         ua = navigator.userAgent;
         app = navigator.appVersion;

@@ -29,7 +29,7 @@
      * @constructor
      */
     function Transform () {
-      throw new Error( "Transform can't create instance." );
+      throw new Error( 'Transform can\'t create instance.' );
     }
 
     var p = Transform.prototype;
@@ -42,7 +42,9 @@
      * @return {boolean}
      */
     Transform.is = function () {
+
       return Css3.transform();
+
     };
 
     return Transform;

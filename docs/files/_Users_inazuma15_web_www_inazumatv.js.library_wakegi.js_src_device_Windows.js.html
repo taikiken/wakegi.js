@@ -91,6 +91,8 @@
             
                 <li><a href="../modules/Dom.html">Dom</a></li>
             
+                <li><a href="../modules/Edge.html">Edge</a></li>
+            
                 <li><a href="../modules/Element.html">Element</a></li>
             
                 <li><a href="../modules/Firefox.html">Firefox</a></li>
@@ -185,11 +187,10 @@
      * @constructor
      */
     function Windows () {
-      throw new Error( &quot;Windows can&#x27;t create instance.&quot; );
+      throw new Error( &#x27;Windows can\&#x27;t create instance.&#x27; );
     }
 
     var p = Windows.prototype;
-
     p.constructor = Windows;
 
     /**
@@ -198,7 +199,7 @@
      */
     Windows.init = function () {
 
-      if ( typeof windows === &quot;undefined&quot; ) {
+      if ( typeof windows === &#x27;undefined&#x27; ) {
         // windows undefined
         windows = !!Browser.ua().match(/windows/i);
       }

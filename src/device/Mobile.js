@@ -30,11 +30,10 @@
      * @constructor
      */
     function Mobile () {
-      throw new Error( "Mobile can't create instance." );
+      throw new Error( 'Mobile can\'t create instance.' );
     }
 
     var p = Mobile.prototype;
-
     p.constructor = Mobile;
 
     /**
@@ -53,7 +52,9 @@
      * @return {boolean}
      */
     Mobile.phone = function () {
+
       return iOS.iPhone() || iOS.iPod() || Android.phone();
+
     };
     /**
      * @method tablet
@@ -61,7 +62,9 @@
      * @return {boolean}
      */
     Mobile.tablet = function () {
+
       return iOS.iPad() || Android.tablet();
+
     };
     /**
      * window.onload 後に実行して下さい
@@ -69,7 +72,9 @@
      * @static
      */
     Mobile.hideBar = function () {
+
       setTimeout( function (){ scrollBy( 0, 1 ); }, 0 );
+
     };
     /**
      * @method hideURLBar
@@ -77,7 +82,9 @@
      * @static
      */
     Mobile.hideURLBar = function () {
+
       Mobile.hideBar();
+
     };
 
       return Mobile;

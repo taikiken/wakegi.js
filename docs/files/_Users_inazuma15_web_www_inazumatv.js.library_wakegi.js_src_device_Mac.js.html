@@ -91,6 +91,8 @@
             
                 <li><a href="../modules/Dom.html">Dom</a></li>
             
+                <li><a href="../modules/Edge.html">Edge</a></li>
+            
                 <li><a href="../modules/Element.html">Element</a></li>
             
                 <li><a href="../modules/Firefox.html">Firefox</a></li>
@@ -186,7 +188,7 @@
      * @constructor
      */
     function Mac () {
-      throw new Error( &quot;Mac can&#x27;t create instance.&quot; );
+      throw new Error( &#x27;Mac can\&#x27;t create instance.&#x27; );
     }
 
     var p = Mac.prototype;
@@ -199,7 +201,7 @@
      */
     Mac.init = function () {
 
-      if ( typeof mac === &quot;undefined&quot; ) {
+      if ( typeof mac === &#x27;undefined&#x27; ) {
         // mac undefined
         mac = !iOS.is() &amp;&amp; !!Browser.ua().match(/mac os x/i);
       }

@@ -33,7 +33,7 @@
      * @constructor
      */
     function Element () {
-      throw new Error( "Element can't create instance." );
+      throw new Error( 'Element can\'t create instance.' );
     }
 
     var p = Element.prototype;
@@ -47,7 +47,7 @@
      */
     Element.touch = function () {
 
-      if ( typeof touch === "undefined" ) {
+      if ( typeof touch === 'undefined' ) {
         // touch undefined
         // http://perfectionkills.com/detecting-event-support-without-browser-sniffing/
         // http://stackoverflow.com/questions/2915833/how-to-check-browser-for-touchstart-support-using-js-jquery#answer-2915912
@@ -65,10 +65,10 @@
      */
     Element.querySelector = function () {
 
-      if ( typeof querySelector === "undefined" ) {
+      if ( typeof querySelector === 'undefined' ) {
 
         // querySelector undefined
-        querySelector = typeof document.querySelector !== "undefined";
+        querySelector = typeof document.querySelector !== 'undefined';
 
       }
 
@@ -83,7 +83,7 @@
      */
     Element.canvas = function () {
 
-      if ( typeof canvas === "undefined" ) {
+      if ( typeof canvas === 'undefined' ) {
 
         // querySelector undefined
         canvas = !!window.CanvasRenderingContext2D;
@@ -101,7 +101,7 @@
      */
     Element.webgl = function () {
 
-      if ( typeof webgl === "undefined" ) {
+      if ( typeof webgl === 'undefined' ) {
 
         // webgl undefined
         webgl = Element.canvas();
@@ -133,6 +133,7 @@
      * @return {*} HTMLElement を返します
      */
     Element.find = function ( searchKey ) {
+
       var result;
 
       if ( Element.querySelector() ) {

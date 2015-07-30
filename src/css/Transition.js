@@ -29,7 +29,7 @@
      * @constructor
      */
     function Transition () {
-      throw new Error( "Transition can't create instance." );
+      throw new Error( 'Transition can\'t create instance.' );
     }
 
     var p = Transition.prototype;
@@ -42,7 +42,9 @@
      * @return {boolean}
      */
     Transition.is = function () {
+
       return Css3.transition();
+
     };
 
     return Transition;

@@ -13,6 +13,7 @@
  * @module Browser
  * @submodule Chrome
  */
+/*jslint -W016*/
 ( function ( window ){
   "use strict";
   var
@@ -23,8 +24,10 @@
     var
       CriOS = Browser.CriOS,
       Android = Browser.Android,
+      Edge = Browser.Edge,
       numbers = [ -1, -1, -1, -1 ],
       crios,
+      edge,
       chrome, version, major, build;
 
     /**
@@ -33,7 +36,7 @@
      * @constructor
      */
     function Chrome () {
-      throw new Error( "Chrome can't create instance." );
+      throw new Error( 'Chrome can\'t create instance.' );
     }
 
     var p = Chrome.prototype;
@@ -46,18 +49,25 @@
      */
     Chrome.init = function () {
 
-      if ( typeof chrome === "undefined" ) {
+      if ( typeof chrome === 'undefined' ) {
+
         // need initialize
         crios = CriOS.is();
+        edge = Edge.is();
         chrome = false;
 
-        if ( crios ) {
-          // iOS Chrome
-          chrome = true;
+        if ( !edge ) {
 
-        } else if ( !Android.standard() ) {
-          // check userAgent
-          chrome = !!Browser.ua().match(/chrome/i);
+          if ( crios ) {
+            // iOS Chrome
+            chrome = true;
+
+          } else if ( !Android.standard() ) {
+
+            // check userAgent
+            chrome = !!Browser.ua().match(/chrome/i);
+
+          }
 
         }
 
@@ -70,13 +80,14 @@
      * @static
      */
     Chrome.calculate = function () {
+
       var
         versions = [],
         nums, int, float, i, limit;
 
       //Chrome.init();
 
-      if ( typeof version === "undefined" ) {
+      if ( typeof version === 'undefined' ) {
         // version undefined
         build = "";
         version = -1;
@@ -94,16 +105,16 @@
               int = wakegi.int;
               float = wakegi.float;
 
-              for ( i = 1, limit = nums.length; i < limit; i++ ) {
+              for ( i = 1, limit = nums.length; i < limit; i = (i+1)|0 ) {
 
                 versions.push( int( nums[ i ], 10 ) );
 
               }
 
-              build = versions.join( "." );
+              build = versions.join( '.' );
               major = versions[ 0 ];
               numbers = versions;
-              version = float( versions[ 0 ] + "." + versions[ 1 ] + versions[ 2 ] + versions[ 3 ] );
+              version = float( versions[ 0 ] + '.' + versions[ 1 ] + versions[ 2 ] + versions[ 3 ] );
 
             }// Array
 

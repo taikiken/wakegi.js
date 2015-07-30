@@ -35,7 +35,7 @@
      * @constructor
      */
     function Css3 () {
-      throw new Error( "Css3 can't create instance." );
+      throw new Error( 'Css3 can\'t create instance.' );
     }
 
     var p = Css3.prototype;
@@ -51,19 +51,24 @@
      * @return {boolean}
      */
     Css3.transition = function () {
+
       var p;
 
-      if ( typeof transition === "undefined" ) {
+      if ( typeof transition === 'undefined' ) {
+
         // transition undefined
         p = document.createElement( "p" ).style;
+
         transition = "transition" in p ||
           "WebkitTransition" in p ||
           "MozTransition" in p ||
           "msTransition" in p ||
           "OTransition" in p;
+
       }
 
       return transition;
+
     };
     /**
      * CSS3 transform detection
@@ -72,11 +77,14 @@
      * @return {boolean}
      */
     Css3.transform = function () {
+
       var p;
 
-      if ( typeof transform === "undefined" ) {
+      if ( typeof transform === 'undefined' ) {
+
         // transform undefined
         p = document.createElement( "p" ).style;
+
         transform = "transform" in p ||
           "WebkitTransform" in p ||
           "MozTransform" in p ||
@@ -85,6 +93,7 @@
       }
 
       return transform;
+
     };
 
     /**
@@ -94,9 +103,10 @@
      */
     Css3.matchMedia = function () {
 
-      if ( typeof matchMedia === "undefined" ) {
+      if ( typeof matchMedia === 'undefined' ) {
+
         // matchMedia undefined
-        matchMedia = typeof window.matchMedia === "function";
+        matchMedia = typeof window.matchMedia === 'function';
 
       }
 
@@ -109,13 +119,15 @@
      */
     Css3.orientationChange = function () {
 
-      if ( typeof onorientationchange === "undefined" ) {
+      if ( typeof onorientationchange === 'undefined' ) {
+
         // onorientationchange undefined
-        onorientationchange = "onorientationchange" in window;
+        onorientationchange = 'onorientationchange' in window;
 
       }
 
       return onorientationchange;
+
     };
     /**
      * @method orientation
@@ -124,9 +136,10 @@
      */
     Css3.orientation = function () {
 
-      if ( typeof orientation === "undefined" ) {
+      if ( typeof orientation === 'undefined' ) {
+
         // orientation undefined
-        orientation = "orientation" in window;
+        orientation = 'orientation' in window;
 
       }
 
@@ -139,13 +152,15 @@
      */
     Css3.backgroundSize = function () {
 
-      if ( typeof backgroundSize === "undefined" ) {
+      if ( typeof backgroundSize === 'undefined' ) {
+
         // backgroundSize undefined
-        backgroundSize = "backgroundSize" in document.documentElement.style;
+        backgroundSize = 'backgroundSize' in document.documentElement.style;
 
       }
 
       return backgroundSize;
+
     };
 
     return Css3;

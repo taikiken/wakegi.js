@@ -13,6 +13,7 @@
  * @module Browser
  * @submodule Android
  */
+/*jslint -W016*/
 ( function ( window ){
   "use strict";
   var
@@ -36,7 +37,7 @@
      * @constructor
      */
     function Android () {
-      throw new Error( "Android can't create instance." );
+      throw new Error( 'Android can\'t create instance.' );
     }
 
     var p = Android.prototype;
@@ -50,7 +51,7 @@
     Android.init = function () {
       var ua, max;
 
-      if ( typeof android === "undefined" ) {
+      if ( typeof android === 'undefined' ) {
         // need initialize
         ua = Browser.ua();
 
@@ -87,13 +88,14 @@
      * @static
      */
     Android.calculate = function () {
+
       var
         versions = [],
         nums, int, float, i, limit, num;
 
-      if ( typeof version === "undefined" ) {
+      if ( typeof version === 'undefined' ) {
         // version undefined
-        build = "";
+        build = '';
         version = -1;
         major = -1;
 
@@ -106,11 +108,11 @@
             int = wakegi.int;
             float = wakegi.float;
 
-            for ( i = 1, limit = nums.length; i < limit; i++ ) {
+            for ( i = 1, limit = nums.length; i < limit; i = (i+1)|0 ) {
 
               num = nums[ i ];
 
-              if ( typeof num !== "undefined" ) {
+              if ( typeof num !== 'undefined' ) {
                 // num defined
                 versions.push( int( num, 10 ) );
 
@@ -130,7 +132,9 @@
           }// Array
 
         }// Android
+
       }// undefined
+
     };
 
     /**

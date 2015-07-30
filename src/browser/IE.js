@@ -29,7 +29,7 @@
      * @constructor
      */
     function IE () {
-      throw new Error( "IE can't create instance." );
+      throw new Error( 'IE can\'t create instance.' );
     }
 
     var p = IE.prototype;
@@ -44,15 +44,16 @@
       var ua;
 
       if (
-        typeof ie === "undefined" ||
-        typeof ie6 === "undefined" ||
-        typeof ie7 === "undefined" ||
-        typeof ie8 === "undefined" ||
-        typeof ie9 === "undefined" ||
-        typeof ie10 === "undefined" ||
-        typeof ie11 === "undefined"
+        typeof ie === 'undefined' ||
+        typeof ie6 === 'undefined' ||
+        typeof ie7 === 'undefined' ||
+        typeof ie8 === 'undefined' ||
+        typeof ie9 === 'undefined' ||
+        typeof ie10 === 'undefined' ||
+        typeof ie11 === 'undefined'
 
       ) {
+
         // need initialize
         ua = Browser.ua();
 
@@ -94,6 +95,7 @@
           }// ie10
 
         } else {
+
           // not /msie/
           ie11 = !!ua.match(/trident\/[7]/i) && !!ua.match(/rv:[11]/i);
           ie = ie11;
@@ -108,9 +110,11 @@
      * @static
      */
     IE.calculate = function () {
+
       IE.init();
 
-      if ( typeof version === "undefined" ) {
+      if ( typeof version === 'undefined' ) {
+
         // version undefined
         version = -1;
 
@@ -154,8 +158,10 @@
      * @return {boolean}
      */
     IE.is = function () {
+
       IE.init();
       return ie;
+
     };
 
     /**
@@ -164,8 +170,10 @@
      * @return {boolean}
      */
     IE.is6 = function () {
+
       IE.init();
       return ie6;
+
     };
 
     /**
@@ -174,8 +182,10 @@
      * @return {boolean}
      */
     IE.is7 = function () {
+
       IE.init();
       return ie7;
+
     };
 
     /**
@@ -184,8 +194,10 @@
      * @return {boolean}
      */
     IE.is8 = function () {
+
       IE.init();
       return ie8;
+
     };
 
     /**
@@ -194,8 +206,10 @@
      * @return {boolean}
      */
     IE.is9 = function () {
+
       IE.init();
       return ie9;
+
     };
 
     /**
@@ -204,8 +218,10 @@
      * @return {boolean}
      */
     IE.is10 = function () {
+
       IE.init();
       return ie10;
+
     };
 
     /**
@@ -214,8 +230,10 @@
      * @return {boolean}
      */
     IE.is11 = function () {
+
       IE.init();
       return ie11;
+
     };
 
     /**
@@ -225,8 +243,10 @@
      * @return {int}
      */
     IE.version = function () {
+
       IE.calculate();
       return version;
+
     };
 
     /**
@@ -236,7 +256,9 @@
      * @return {int}
      */
     IE.major = function () {
+
       return IE.version();
+
     };
 
     /**
@@ -246,8 +268,10 @@
      * @return {boolean}
      */
     IE.legacy = function () {
+
       IE.init();
       return ie6 || ie7 || ie8;
+
     };
 
     return IE;

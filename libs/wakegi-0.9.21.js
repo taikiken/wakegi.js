@@ -10,7 +10,7 @@
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
- * @build 2015-06-19 14:38:03
+ * @build 2015-07-30 19:16:33
  * @version 0.9.21
  *
  * @module wakegi
@@ -67,7 +67,7 @@ wakegi.float = parseFloat;
      * @constructor
      */
     function Browser () {
-      throw new Error( "Browser can't create instance." );
+      throw new Error( 'Browser can\'t create instance.' );
     }
 
     var p = Browser.prototype;
@@ -79,7 +79,7 @@ wakegi.float = parseFloat;
      */
     Browser.init = function () {
 
-      if ( typeof ua === "undefined" || typeof app === "undefined" ) {
+      if ( typeof ua === 'undefined' || typeof app === 'undefined' ) {
           // ua undefined
         ua = navigator.userAgent;
         app = navigator.appVersion;
@@ -170,7 +170,7 @@ wakegi.float = parseFloat;
      * @constructor
      */
     function Css3 () {
-      throw new Error( "Css3 can't create instance." );
+      throw new Error( 'Css3 can\'t create instance.' );
     }
 
     var p = Css3.prototype;
@@ -186,19 +186,24 @@ wakegi.float = parseFloat;
      * @return {boolean}
      */
     Css3.transition = function () {
+
       var p;
 
-      if ( typeof transition === "undefined" ) {
+      if ( typeof transition === 'undefined' ) {
+
         // transition undefined
         p = document.createElement( "p" ).style;
+
         transition = "transition" in p ||
           "WebkitTransition" in p ||
           "MozTransition" in p ||
           "msTransition" in p ||
           "OTransition" in p;
+
       }
 
       return transition;
+
     };
     /**
      * CSS3 transform detection
@@ -207,11 +212,14 @@ wakegi.float = parseFloat;
      * @return {boolean}
      */
     Css3.transform = function () {
+
       var p;
 
-      if ( typeof transform === "undefined" ) {
+      if ( typeof transform === 'undefined' ) {
+
         // transform undefined
         p = document.createElement( "p" ).style;
+
         transform = "transform" in p ||
           "WebkitTransform" in p ||
           "MozTransform" in p ||
@@ -220,6 +228,7 @@ wakegi.float = parseFloat;
       }
 
       return transform;
+
     };
 
     /**
@@ -229,9 +238,10 @@ wakegi.float = parseFloat;
      */
     Css3.matchMedia = function () {
 
-      if ( typeof matchMedia === "undefined" ) {
+      if ( typeof matchMedia === 'undefined' ) {
+
         // matchMedia undefined
-        matchMedia = typeof window.matchMedia === "function";
+        matchMedia = typeof window.matchMedia === 'function';
 
       }
 
@@ -244,13 +254,15 @@ wakegi.float = parseFloat;
      */
     Css3.orientationChange = function () {
 
-      if ( typeof onorientationchange === "undefined" ) {
+      if ( typeof onorientationchange === 'undefined' ) {
+
         // onorientationchange undefined
-        onorientationchange = "onorientationchange" in window;
+        onorientationchange = 'onorientationchange' in window;
 
       }
 
       return onorientationchange;
+
     };
     /**
      * @method orientation
@@ -259,9 +271,10 @@ wakegi.float = parseFloat;
      */
     Css3.orientation = function () {
 
-      if ( typeof orientation === "undefined" ) {
+      if ( typeof orientation === 'undefined' ) {
+
         // orientation undefined
-        orientation = "orientation" in window;
+        orientation = 'orientation' in window;
 
       }
 
@@ -274,13 +287,15 @@ wakegi.float = parseFloat;
      */
     Css3.backgroundSize = function () {
 
-      if ( typeof backgroundSize === "undefined" ) {
+      if ( typeof backgroundSize === 'undefined' ) {
+
         // backgroundSize undefined
-        backgroundSize = "backgroundSize" in document.documentElement.style;
+        backgroundSize = 'backgroundSize' in document.documentElement.style;
 
       }
 
       return backgroundSize;
+
     };
 
     return Css3;
@@ -318,7 +333,7 @@ wakegi.float = parseFloat;
      * @constructor
      */
     function Transition () {
-      throw new Error( "Transition can't create instance." );
+      throw new Error( 'Transition can\'t create instance.' );
     }
 
     var p = Transition.prototype;
@@ -331,7 +346,9 @@ wakegi.float = parseFloat;
      * @return {boolean}
      */
     Transition.is = function () {
+
       return Css3.transition();
+
     };
 
     return Transition;
@@ -369,7 +386,7 @@ wakegi.float = parseFloat;
      * @constructor
      */
     function Transform () {
-      throw new Error( "Transform can't create instance." );
+      throw new Error( 'Transform can\'t create instance.' );
     }
 
     var p = Transform.prototype;
@@ -382,7 +399,9 @@ wakegi.float = parseFloat;
      * @return {boolean}
      */
     Transform.is = function () {
+
       return Css3.transform();
+
     };
 
     return Transform;
@@ -424,7 +443,7 @@ wakegi.float = parseFloat;
      * @constructor
      */
     function Element () {
-      throw new Error( "Element can't create instance." );
+      throw new Error( 'Element can\'t create instance.' );
     }
 
     var p = Element.prototype;
@@ -438,7 +457,7 @@ wakegi.float = parseFloat;
      */
     Element.touch = function () {
 
-      if ( typeof touch === "undefined" ) {
+      if ( typeof touch === 'undefined' ) {
         // touch undefined
         // http://perfectionkills.com/detecting-event-support-without-browser-sniffing/
         // http://stackoverflow.com/questions/2915833/how-to-check-browser-for-touchstart-support-using-js-jquery#answer-2915912
@@ -456,10 +475,10 @@ wakegi.float = parseFloat;
      */
     Element.querySelector = function () {
 
-      if ( typeof querySelector === "undefined" ) {
+      if ( typeof querySelector === 'undefined' ) {
 
         // querySelector undefined
-        querySelector = typeof document.querySelector !== "undefined";
+        querySelector = typeof document.querySelector !== 'undefined';
 
       }
 
@@ -474,7 +493,7 @@ wakegi.float = parseFloat;
      */
     Element.canvas = function () {
 
-      if ( typeof canvas === "undefined" ) {
+      if ( typeof canvas === 'undefined' ) {
 
         // querySelector undefined
         canvas = !!window.CanvasRenderingContext2D;
@@ -492,7 +511,7 @@ wakegi.float = parseFloat;
      */
     Element.webgl = function () {
 
-      if ( typeof webgl === "undefined" ) {
+      if ( typeof webgl === 'undefined' ) {
 
         // webgl undefined
         webgl = Element.canvas();
@@ -524,6 +543,7 @@ wakegi.float = parseFloat;
      * @return {*} HTMLElement を返します
      */
     Element.find = function ( searchKey ) {
+
       var result;
 
       if ( Element.querySelector() ) {
@@ -559,7 +579,7 @@ wakegi.float = parseFloat;
   "use strict";
 
   var
-    document = window.document,
+    //document = window.document,
     wakegi = window.wakegi;
 
   wakegi.Dom = ( function (){
@@ -570,24 +590,28 @@ wakegi.float = parseFloat;
      * @param {HTMLElement} element
      */
     function Dom ( element ) {
+
       /**
        * @property _element
        * @type {HTMLElement}
        * @private
        */
       this._element = element;
+
     }
 
     var p = Dom.prototype;
-
     p.constructor = Dom;
+
     /**
      * @method hasClass
      * @param {string} className
      * @return {boolean}
      */
     p.hasClass = function ( className ) {
+
       return Dom.hasClass( this._element, className );
+
     };
     /**
      * @method addClass
@@ -595,8 +619,10 @@ wakegi.float = parseFloat;
      * @return {Dom}
      */
     p.addClass = function ( className ) {
+
       Dom.addClass( this._element, className );
       return this;
+
     };
     /**
      * @method removeClass
@@ -604,8 +630,10 @@ wakegi.float = parseFloat;
      * @return {Dom}
      */
     p.removeClass = function ( className ) {
+
       Dom.removeClass( this._element, className );
       return this;
+
     };
     /**
      * @method style
@@ -625,7 +653,9 @@ wakegi.float = parseFloat;
      * @return {boolean}
      */
     Dom.hasClass = function ( element, className ) {
-      return !!element.className.match( new RegExp( className, "i" ) );
+
+      return !!element.className.match( new RegExp( className, 'i' ) );
+
     };
     /**
      * @method addClass
@@ -635,8 +665,9 @@ wakegi.float = parseFloat;
      * @return {Dom}
      */
     Dom.addClass = function ( element, className ) {
+
       var
-        names = "",
+        names = '',
         space;
 
       if ( !Dom.hasClass( element, className ) ) {
@@ -656,6 +687,7 @@ wakegi.float = parseFloat;
       }
 
       return Dom;
+
     };
     /**
      * @method removeClass
@@ -665,26 +697,29 @@ wakegi.float = parseFloat;
      * @return {Dom}
      */
     Dom.removeClass = function ( element, className ) {
+
       var
-        names = "";
+        names = '';
 
       //console.log( "Element.removeClass ", className, Element.hasClass( element, className ) );
 
       if ( Dom.hasClass( element, className ) ) {
+
         // found class name
         names = element.className;
         // class を削除して 2 spaces を 1 space へ
-        names = names.replace( className, "" ).split( "  " ).join( " " );
+        names = names.replace( className, '' ).split( '  ' ).join( ' ' );
 
-        if ( names.substr( 0, 1 ) === " " ) {
+        // 先頭の半角space削除
+        if ( names.substr( 0, 1 ) === ' ' ) {
 
           names = names.substr( 1 );
 
         }
 
-        if ( names === " " ) {
+        if ( names === ' ' ) {
           // space のみになったら空へ
-          names = "";
+          names = '';
 
         }
 
@@ -707,6 +742,7 @@ wakegi.float = parseFloat;
      *    指定されている時は CSS 設定値(string)を返します
      */
     Dom.styleCompute = function ( defaultView, el, styleProp ) {
+
       var
         style = defaultView.getComputedStyle( el, null );
 
@@ -718,6 +754,7 @@ wakegi.float = parseFloat;
       }
 
       return style;
+
     };
     /**
      * currentStyle を使い HTMLElement style value を取得します
@@ -728,6 +765,7 @@ wakegi.float = parseFloat;
      * @return {*}
      */
     Dom.styleCurrent = function ( el, styleProp ) {
+
       var
         style = el.currentStyle,
         value;
@@ -736,7 +774,9 @@ wakegi.float = parseFloat;
         // IE
         // sanitize property name to camelCase
         styleProp = styleProp.replace(/\-(\w)/g, function( str, letter ) {
+
           return letter.toUpperCase();
+
         });
 
         value = style[ styleProp ];
@@ -745,7 +785,10 @@ wakegi.float = parseFloat;
         if ( /^\d+(em|pt|%|ex)?$/i.test( value ) ) {
 
           return ( function( value ) {
-            var oldLeft = el.style.left, oldRsLeft = el.runtimeStyle.left;
+
+            var
+              oldLeft = el.style.left,
+              oldRsLeft = el.runtimeStyle.left;
 
             el.runtimeStyle.left = el.currentStyle.left;
             el.style.left = value || 0;
@@ -850,6 +893,7 @@ wakegi.float = parseFloat;
  * @module Browser
  * @submodule iOS
  */
+/*jslint -W016*/
 ( function ( window ){
   "use strict";
   var
@@ -872,7 +916,7 @@ wakegi.float = parseFloat;
      * @constructor
      */
     function iOS () {
-      throw new Error( "iOS can't create instance." );
+      throw new Error( 'iOS can\'t create instance.' );
     }
 
     var p = iOS.prototype;
@@ -884,9 +928,11 @@ wakegi.float = parseFloat;
      * @static
      */
     iOS.init = function () {
+
       var ua;
 
-      if ( typeof ios === "undefined" ) {
+      if ( typeof ios === 'undefined' ) {
+
         // need initialize
         ua = Browser.ua();
 
@@ -908,11 +954,12 @@ wakegi.float = parseFloat;
      * @static
      */
     iOS.calculate = function () {
+
       var
         versions = [],
         nums, int, float, i, limit, num;
 
-      if ( typeof version === "undefined" ) {
+      if ( typeof version === 'undefined' ) {
         // version undefined
         build = "";
         version = -1;
@@ -927,11 +974,11 @@ wakegi.float = parseFloat;
             int = wakegi.int;
             float = wakegi.float;
 
-            for ( i = 1, limit = nums.length; i < limit; i++ ) {
+            for ( i = 1, limit = nums.length; i < limit; i = (i+1)|0 ) {
 
               num = nums[ i ];
 
-              if ( typeof num !== "undefined" ) {
+              if ( typeof num !== 'undefined' ) {
                   // num defined
                 versions.push( int( num, 10 ) );
 
@@ -943,16 +990,17 @@ wakegi.float = parseFloat;
 
             }
 
-            build = versions.join( "." );
+            build = versions.join( '.' );
             major = versions[ 0 ];
             numbers = versions;
-            version = float( versions[ 0 ] + "." + versions[ 1 ] + versions[ 2 ] );
+            version = float( versions[ 0 ] + '.' + versions[ 1 ] + versions[ 2 ] );
 
           }// Array
 
         }//iOS
 
       }//undefined
+
     };
 
     /**
@@ -972,8 +1020,10 @@ wakegi.float = parseFloat;
      * @return {boolean}
      */
     iOS.iPhone = function () {
+
       iOS.init();
       return iphone;
+
     };
     /**
      * @method iPad
@@ -981,8 +1031,10 @@ wakegi.float = parseFloat;
      * @return {boolean}
      */
     iOS.iPad = function () {
+
       iOS.init();
       return ipad;
+
     };
     /**
      * @method iPod
@@ -990,8 +1042,10 @@ wakegi.float = parseFloat;
      * @return {boolean}
      */
     iOS.iPod = function () {
+
       iOS.init();
       return ipod;
+
     };
     /**
      * @method standalone
@@ -999,8 +1053,10 @@ wakegi.float = parseFloat;
      * @return {Function|boolean}
      */
     iOS.standalone = function () {
+
       var navigator = Browser.navigator();
       return !!navigator.standalone ? navigator.standalone : false;
+
     };
 
     /**
@@ -1012,6 +1068,7 @@ wakegi.float = parseFloat;
     iOS.fullScreen = function () {
 
       return iOS.standalone();
+
     };
 
     /**
@@ -1070,6 +1127,7 @@ wakegi.float = parseFloat;
      * @return {*[]} [major: int, minor: int, build: int] 形式で返します
      */
     iOS.number = function () {
+
       // 互換のために残します
       return iOS.numbers();
 
@@ -1081,8 +1139,10 @@ wakegi.float = parseFloat;
      * @return {boolean}
      */
     iOS.webView = function () {
+
       iOS.init();
       return webＶiew;
+
     };
 
     return iOS;
@@ -1103,6 +1163,7 @@ wakegi.float = parseFloat;
  * @module Browser
  * @submodule Android
  */
+/*jslint -W016*/
 ( function ( window ){
   "use strict";
   var
@@ -1126,7 +1187,7 @@ wakegi.float = parseFloat;
      * @constructor
      */
     function Android () {
-      throw new Error( "Android can't create instance." );
+      throw new Error( 'Android can\'t create instance.' );
     }
 
     var p = Android.prototype;
@@ -1140,7 +1201,7 @@ wakegi.float = parseFloat;
     Android.init = function () {
       var ua, max;
 
-      if ( typeof android === "undefined" ) {
+      if ( typeof android === 'undefined' ) {
         // need initialize
         ua = Browser.ua();
 
@@ -1177,13 +1238,14 @@ wakegi.float = parseFloat;
      * @static
      */
     Android.calculate = function () {
+
       var
         versions = [],
         nums, int, float, i, limit, num;
 
-      if ( typeof version === "undefined" ) {
+      if ( typeof version === 'undefined' ) {
         // version undefined
-        build = "";
+        build = '';
         version = -1;
         major = -1;
 
@@ -1196,11 +1258,11 @@ wakegi.float = parseFloat;
             int = wakegi.int;
             float = wakegi.float;
 
-            for ( i = 1, limit = nums.length; i < limit; i++ ) {
+            for ( i = 1, limit = nums.length; i < limit; i = (i+1)|0 ) {
 
               num = nums[ i ];
 
-              if ( typeof num !== "undefined" ) {
+              if ( typeof num !== 'undefined' ) {
                 // num defined
                 versions.push( int( num, 10 ) );
 
@@ -1220,7 +1282,9 @@ wakegi.float = parseFloat;
           }// Array
 
         }// Android
+
       }// undefined
+
     };
 
     /**
@@ -1380,11 +1444,10 @@ wakegi.float = parseFloat;
      * @constructor
      */
     function Touch () {
-      throw new Error( "Touch can't create instance." );
+      throw new Error( 'Touch can\'t create instance.' );
     }
 
     var p = Touch.prototype;
-
     p.constructor = Touch;
 
     /**
@@ -1395,11 +1458,12 @@ wakegi.float = parseFloat;
      */
     Touch.is = function () {
 
-      return Browser.touch();
+      return Element.touch();
 
     };
 
     return Touch;
+
   }() );
 
 }( window ) );
@@ -1435,11 +1499,10 @@ wakegi.float = parseFloat;
      * @constructor
      */
     function Mobile () {
-      throw new Error( "Mobile can't create instance." );
+      throw new Error( 'Mobile can\'t create instance.' );
     }
 
     var p = Mobile.prototype;
-
     p.constructor = Mobile;
 
     /**
@@ -1458,7 +1521,9 @@ wakegi.float = parseFloat;
      * @return {boolean}
      */
     Mobile.phone = function () {
+
       return iOS.iPhone() || iOS.iPod() || Android.phone();
+
     };
     /**
      * @method tablet
@@ -1466,7 +1531,9 @@ wakegi.float = parseFloat;
      * @return {boolean}
      */
     Mobile.tablet = function () {
+
       return iOS.iPad() || Android.tablet();
+
     };
     /**
      * window.onload 後に実行して下さい
@@ -1474,7 +1541,9 @@ wakegi.float = parseFloat;
      * @static
      */
     Mobile.hideBar = function () {
+
       setTimeout( function (){ scrollBy( 0, 1 ); }, 0 );
+
     };
     /**
      * @method hideURLBar
@@ -1482,7 +1551,9 @@ wakegi.float = parseFloat;
      * @static
      */
     Mobile.hideURLBar = function () {
+
       Mobile.hideBar();
+
     };
 
       return Mobile;
@@ -1520,7 +1591,7 @@ wakegi.float = parseFloat;
      * @constructor
      */
     function Mac () {
-      throw new Error( "Mac can't create instance." );
+      throw new Error( 'Mac can\'t create instance.' );
     }
 
     var p = Mac.prototype;
@@ -1533,7 +1604,7 @@ wakegi.float = parseFloat;
      */
     Mac.init = function () {
 
-      if ( typeof mac === "undefined" ) {
+      if ( typeof mac === 'undefined' ) {
         // mac undefined
         mac = !iOS.is() && !!Browser.ua().match(/mac os x/i);
       }
@@ -1587,11 +1658,10 @@ wakegi.float = parseFloat;
      * @constructor
      */
     function Windows () {
-      throw new Error( "Windows can't create instance." );
+      throw new Error( 'Windows can\'t create instance.' );
     }
 
     var p = Windows.prototype;
-
     p.constructor = Windows;
 
     /**
@@ -1600,7 +1670,7 @@ wakegi.float = parseFloat;
      */
     Windows.init = function () {
 
-      if ( typeof windows === "undefined" ) {
+      if ( typeof windows === 'undefined' ) {
         // windows undefined
         windows = !!Browser.ua().match(/windows/i);
       }
@@ -1620,6 +1690,159 @@ wakegi.float = parseFloat;
     };
 
     return Windows;
+  }() );
+
+}( window ) );
+/**
+ * license inazumatv.com
+ * author (at)taikiken / http://inazumatv.com
+ * date 15/07/30 - 17:59
+ *
+ * Copyright (c) 2011-2015 inazumatv.com, inc.
+ *
+ * Distributed under the terms of the MIT license.
+ * http://www.opensource.org/licenses/mit-license.html
+ *
+ * This notice shall be included in all copies or substantial portions of the Software.
+ *
+ * @module Browser
+ * @submodule Edge
+ */
+/*jslint -W016*/
+( function ( window ) {
+
+  "use strict";
+
+  var
+    wakegi = window.wakegi,
+    Browser = wakegi.Browser;
+
+  Browser.Edge = ( function () {
+
+    var
+      edge,
+      numbers = [ -1, -1 ],
+      version, major, build;
+
+    function Edge () {
+      throw new Error( 'Edge can\'t create instance.' );
+    }
+
+    var p = Edge.prototype;
+    p.constructor = Edge;
+
+    Edge.init = function () {
+
+      if ( typeof edge === 'undefined' ) {
+
+        edge = !!Browser.ua().match(/edge/i);
+
+      }
+
+    };
+
+    Edge.calculate = function () {
+
+      var
+        versions = [],
+        nums, int, float, i, limit;
+
+      if ( typeof version === 'undefined' ) {
+
+        build = '';
+        version = -1;
+        major = -1;
+
+        if ( Edge.is() ) {
+
+          nums = Browser.ua().match(/edge\/(\d+)\.?(\d+)?/i)
+
+          if ( Array.isArray( nums ) ) {
+
+            // 結果が配列
+            int = wakegi.int;
+            float = wakegi.float;
+
+            // 先頭削除 Edge/12.n
+            for ( i = 1, limit = nums.length; i < limit; i = (i+1)|0 ) {
+
+              versions.push( int( nums[ i ], 10 ) );
+
+            }
+
+            build = versions.join( '.' );
+            major = versions[ 0 ];
+            version = float( versions[ 0 ] + '.' + versions[ 1 ] );
+            numbers = versions;
+
+          }
+
+        }
+
+      }
+
+    };
+
+    Edge.is = function () {
+
+      Edge.init();
+      return edge;
+
+    };
+
+    /**
+     *
+     * @method version
+     * @static
+     * @return {float} N.NN で返します
+     */
+    Edge.version = function () {
+
+      Edge.calculate();
+      return version;
+
+    };
+
+    /**
+     * @method major
+     * @static
+     * @return {int}
+     */
+    Edge.major = function () {
+
+      Edge.calculate();
+      return major;
+
+    };
+
+    /**
+     *
+     * @method build
+     * @static
+     * @return {string} NN.NN.NN.NN 型（文字）で返します
+     */
+    Edge.build = function () {
+
+      Edge.calculate();
+      return build;
+
+    };
+
+    /**
+     * @method numbers
+     * @static
+     * @return {*[]} [major: int, minor: int, build: int] 形式で返します
+     */
+    Edge.numbers = function () {
+
+      Edge.calculate();
+      return numbers;
+
+    };
+
+
+    return Edge;
+
   }() );
 
 }( window ) );
@@ -1654,7 +1877,7 @@ wakegi.float = parseFloat;
      * @constructor
      */
     function IE () {
-      throw new Error( "IE can't create instance." );
+      throw new Error( 'IE can\'t create instance.' );
     }
 
     var p = IE.prototype;
@@ -1669,15 +1892,16 @@ wakegi.float = parseFloat;
       var ua;
 
       if (
-        typeof ie === "undefined" ||
-        typeof ie6 === "undefined" ||
-        typeof ie7 === "undefined" ||
-        typeof ie8 === "undefined" ||
-        typeof ie9 === "undefined" ||
-        typeof ie10 === "undefined" ||
-        typeof ie11 === "undefined"
+        typeof ie === 'undefined' ||
+        typeof ie6 === 'undefined' ||
+        typeof ie7 === 'undefined' ||
+        typeof ie8 === 'undefined' ||
+        typeof ie9 === 'undefined' ||
+        typeof ie10 === 'undefined' ||
+        typeof ie11 === 'undefined'
 
       ) {
+
         // need initialize
         ua = Browser.ua();
 
@@ -1719,6 +1943,7 @@ wakegi.float = parseFloat;
           }// ie10
 
         } else {
+
           // not /msie/
           ie11 = !!ua.match(/trident\/[7]/i) && !!ua.match(/rv:[11]/i);
           ie = ie11;
@@ -1733,9 +1958,11 @@ wakegi.float = parseFloat;
      * @static
      */
     IE.calculate = function () {
+
       IE.init();
 
-      if ( typeof version === "undefined" ) {
+      if ( typeof version === 'undefined' ) {
+
         // version undefined
         version = -1;
 
@@ -1779,8 +2006,10 @@ wakegi.float = parseFloat;
      * @return {boolean}
      */
     IE.is = function () {
+
       IE.init();
       return ie;
+
     };
 
     /**
@@ -1789,8 +2018,10 @@ wakegi.float = parseFloat;
      * @return {boolean}
      */
     IE.is6 = function () {
+
       IE.init();
       return ie6;
+
     };
 
     /**
@@ -1799,8 +2030,10 @@ wakegi.float = parseFloat;
      * @return {boolean}
      */
     IE.is7 = function () {
+
       IE.init();
       return ie7;
+
     };
 
     /**
@@ -1809,8 +2042,10 @@ wakegi.float = parseFloat;
      * @return {boolean}
      */
     IE.is8 = function () {
+
       IE.init();
       return ie8;
+
     };
 
     /**
@@ -1819,8 +2054,10 @@ wakegi.float = parseFloat;
      * @return {boolean}
      */
     IE.is9 = function () {
+
       IE.init();
       return ie9;
+
     };
 
     /**
@@ -1829,8 +2066,10 @@ wakegi.float = parseFloat;
      * @return {boolean}
      */
     IE.is10 = function () {
+
       IE.init();
       return ie10;
+
     };
 
     /**
@@ -1839,8 +2078,10 @@ wakegi.float = parseFloat;
      * @return {boolean}
      */
     IE.is11 = function () {
+
       IE.init();
       return ie11;
+
     };
 
     /**
@@ -1850,8 +2091,10 @@ wakegi.float = parseFloat;
      * @return {int}
      */
     IE.version = function () {
+
       IE.calculate();
       return version;
+
     };
 
     /**
@@ -1861,7 +2104,9 @@ wakegi.float = parseFloat;
      * @return {int}
      */
     IE.major = function () {
+
       return IE.version();
+
     };
 
     /**
@@ -1871,8 +2116,10 @@ wakegi.float = parseFloat;
      * @return {boolean}
      */
     IE.legacy = function () {
+
       IE.init();
       return ie6 || ie7 || ie8;
+
     };
 
     return IE;
@@ -1895,13 +2142,16 @@ wakegi.float = parseFloat;
  * @module Browser
  * @submodule CriOS
  */
+/*jslint -W016*/
 ( function ( window ){
   "use strict";
+
   var
     wakegi = window.wakegi,
     Browser = wakegi.Browser;
 
-  Browser.CriOS = ( function (){
+  Browser.CriOS = ( function () {
+
     var
       numbers = [ -1, -1, -1, -1 ],
       crios, version, major, build;
@@ -1912,7 +2162,7 @@ wakegi.float = parseFloat;
      * @constructor
      */
     function CriOS () {
-      throw new Error( "CriOS can't create instance." );
+      throw new Error( 'CriOS can\'t create instance.' );
     }
 
     var p = CriOS.prototype;
@@ -1925,7 +2175,7 @@ wakegi.float = parseFloat;
      */
     CriOS.init = function () {
 
-      if ( typeof crios === "undefined" ) {
+      if ( typeof crios === 'undefined' ) {
 
         crios = !!Browser.ua().match(/crios/i);
 
@@ -1944,7 +2194,7 @@ wakegi.float = parseFloat;
 
       //CriOS.init();
 
-      if ( typeof version === "undefined" ) {
+      if ( typeof version === 'undefined' ) {
         // version undefined
         build = "";
         version = -1;
@@ -1959,16 +2209,16 @@ wakegi.float = parseFloat;
             int = wakegi.int;
             float = wakegi.float;
 
-            for ( i = 1, limit = nums.length; i < limit; i++ ) {
+            for ( i = 1, limit = nums.length; i < limit; i = (i+1)|0 ) {
 
               versions.push( int( nums[ i ], 10 ) );
 
             }
 
-            build = versions.join( "." );
+            build = versions.join( '.' );
             major = versions[ 0 ];
             numbers = versions;
-            version = float( versions[ 0 ] + "." + versions[ 1 ] + versions[ 2 ] + versions[ 3 ] );
+            version = float( versions[ 0 ] + '.' + versions[ 1 ] + versions[ 2 ] + versions[ 3 ] );
 
           }
 
@@ -2059,6 +2309,7 @@ wakegi.float = parseFloat;
  * @module Browser
  * @submodule Chrome
  */
+/*jslint -W016*/
 ( function ( window ){
   "use strict";
   var
@@ -2069,8 +2320,10 @@ wakegi.float = parseFloat;
     var
       CriOS = Browser.CriOS,
       Android = Browser.Android,
+      Edge = Browser.Edge,
       numbers = [ -1, -1, -1, -1 ],
       crios,
+      edge,
       chrome, version, major, build;
 
     /**
@@ -2079,7 +2332,7 @@ wakegi.float = parseFloat;
      * @constructor
      */
     function Chrome () {
-      throw new Error( "Chrome can't create instance." );
+      throw new Error( 'Chrome can\'t create instance.' );
     }
 
     var p = Chrome.prototype;
@@ -2092,18 +2345,25 @@ wakegi.float = parseFloat;
      */
     Chrome.init = function () {
 
-      if ( typeof chrome === "undefined" ) {
+      if ( typeof chrome === 'undefined' ) {
+
         // need initialize
         crios = CriOS.is();
+        edge = Edge.is();
         chrome = false;
 
-        if ( crios ) {
-          // iOS Chrome
-          chrome = true;
+        if ( !edge ) {
 
-        } else if ( !Android.standard() ) {
-          // check userAgent
-          chrome = !!Browser.ua().match(/chrome/i);
+          if ( crios ) {
+            // iOS Chrome
+            chrome = true;
+
+          } else if ( !Android.standard() ) {
+
+            // check userAgent
+            chrome = !!Browser.ua().match(/chrome/i);
+
+          }
 
         }
 
@@ -2116,13 +2376,14 @@ wakegi.float = parseFloat;
      * @static
      */
     Chrome.calculate = function () {
+
       var
         versions = [],
         nums, int, float, i, limit;
 
       //Chrome.init();
 
-      if ( typeof version === "undefined" ) {
+      if ( typeof version === 'undefined' ) {
         // version undefined
         build = "";
         version = -1;
@@ -2140,16 +2401,16 @@ wakegi.float = parseFloat;
               int = wakegi.int;
               float = wakegi.float;
 
-              for ( i = 1, limit = nums.length; i < limit; i++ ) {
+              for ( i = 1, limit = nums.length; i < limit; i = (i+1)|0 ) {
 
                 versions.push( int( nums[ i ], 10 ) );
 
               }
 
-              build = versions.join( "." );
+              build = versions.join( '.' );
               major = versions[ 0 ];
               numbers = versions;
-              version = float( versions[ 0 ] + "." + versions[ 1 ] + versions[ 2 ] + versions[ 3 ] );
+              version = float( versions[ 0 ] + '.' + versions[ 1 ] + versions[ 2 ] + versions[ 3 ] );
 
             }// Array
 
@@ -2248,6 +2509,7 @@ wakegi.float = parseFloat;
  * @module Browser
  * @submodule Firefox
  */
+/*jslint -W016*/
 ( function ( window ){
   "use strict";
   var
@@ -2265,7 +2527,7 @@ wakegi.float = parseFloat;
      * @constructor
      */
     function Firefox () {
-      throw new Error( "Firefox can't create instance." );
+      throw new Error( 'Firefox can\'t create instance.' );
     }
 
     var p = Firefox.prototype;
@@ -2278,7 +2540,7 @@ wakegi.float = parseFloat;
      */
     Firefox.init = function () {
 
-      if ( typeof firefox === "undefined" ) {
+      if ( typeof firefox === 'undefined' ) {
         // need initialize
 
         // check userAgent
@@ -2293,13 +2555,15 @@ wakegi.float = parseFloat;
      * @static
      */
     Firefox.calculate = function () {
+
       var
         versions = [],
         nums, int, float, i, limit;
 
-      if ( typeof version === "undefined" ) {
+      if ( typeof version === 'undefined' ) {
+
         // version undefined
-        build = "";
+        build = '';
         version = -1;
         major = -1;
 
@@ -2309,25 +2573,28 @@ wakegi.float = parseFloat;
           nums = Browser.ua().match( /Firefox\/(\d+)\.?(\d+)?/ );
 
           if ( Array.isArray( nums ) ) {
+
             // 結果が配列
             int = wakegi.int;
             float = wakegi.float;
 
-            for ( i = 1, limit = nums.length; i < limit; i++ ) {
+            for ( i = 1, limit = nums.length; i < limit; i = (i+1)|0 ) {
 
-              versions.push( int( nums[i], 10 ) );
+              versions.push( int( nums[ i ], 10 ) );
 
             }
 
-            build = versions.join( "." );
+            build = versions.join( '.' );
             major = versions[ 0 ];
-            version = float( versions[ 0 ] + "." + versions[1] );
+            version = float( versions[ 0 ] + '.' + versions[ 1 ] );
             numbers = versions;
+
           }
 
         }// firefox
 
       }// undefined
+
     };
 
     /**
@@ -2411,6 +2678,7 @@ wakegi.float = parseFloat;
  * @module Browser
  * @submodule Safari
  */
+/*jslint -W016*/
 ( function ( window ){
   "use strict";
   var
@@ -2422,8 +2690,9 @@ wakegi.float = parseFloat;
       CriOS = Browser.CriOS,
       Chrome = Browser.Chrome,
       Android = Browser.Android,
+      Edge = Browser.Edge,
       numbers = [ -1, -1, -1 ],
-      crios, chrome,
+      crios, chrome, edge,
       safari, version, major, build;
 
     /**
@@ -2432,7 +2701,7 @@ wakegi.float = parseFloat;
      * @constructor
      */
     function Safari () {
-      throw new Error( "Safari can't create instance." );
+      throw new Error( 'Safari can\'t create instance.' );
     }
 
     var p = Safari.prototype;
@@ -2445,12 +2714,14 @@ wakegi.float = parseFloat;
      */
     Safari.init = function () {
 
-      if ( typeof safari === "undefined" ) {
+      if ( typeof safari === 'undefined' ) {
+
         // need initialize
         crios = CriOS.is();
         chrome = Chrome.is();
+        edge = Edge.is();
 
-        if ( crios || chrome || Android.standard() ) {
+        if ( crios || chrome || edge || Android.standard() ) {
           // Chrome(iOS, Android), Android standard
           safari = false;
 
@@ -2469,17 +2740,20 @@ wakegi.float = parseFloat;
      * @static
      */
     Safari.calculate = function () {
+
       var
         versions = [],
         nums, int, float, i, limit, num;
 
-      if ( typeof version === "undefined" ) {
+      if ( typeof version === 'undefined' ) {
+
         // version undefined
         build = "";
         version = -1;
         major = -1;
 
         if ( Safari.is() ) {
+
           // Safari
           nums = Browser.app().match(/Version\/(\d+)\.(\d+)\.?(\d+)?/);
 
@@ -2488,24 +2762,26 @@ wakegi.float = parseFloat;
             int = wakegi.int;
             float = wakegi.float;
 
-            for ( i = 1, limit = nums.length; i < limit; i++ ) {
+            for ( i = 1, limit = nums.length; i < limit; i = (i+1)|0 ) {
 
               num = nums[ i ];
 
-              if ( typeof num !== "undefined" ) {
+              if ( typeof num !== 'undefined' ) {
+
                 // num defined
                 versions.push( int( num, 10 ) );
 
               } else {
 
                 versions.push( 0 );
+
               }
 
             }
 
 
-            build = versions.join( "." );
-            version = float( versions[ 0 ] + "." + versions[ 1 ] + versions[ 2 ] );
+            build = versions.join( '.' );
+            version = float( versions[ 0 ] + '.' + versions[ 1 ] + versions[ 2 ] );
             major = versions[ 0 ];
             numbers = versions;
 
@@ -2597,6 +2873,7 @@ wakegi.float = parseFloat;
      * @return {*[]} [major: int, minor: int, build: int] 形式で返します
      */
     Safari.number = function () {
+
       // 互換のために残します
       return Safari.numbers();
 

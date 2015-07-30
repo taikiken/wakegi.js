@@ -91,6 +91,8 @@
             
                 <li><a href="../modules/Dom.html">Dom</a></li>
             
+                <li><a href="../modules/Edge.html">Edge</a></li>
+            
                 <li><a href="../modules/Element.html">Element</a></li>
             
                 <li><a href="../modules/Firefox.html">Firefox</a></li>
@@ -171,13 +173,16 @@
  * @module Browser
  * @submodule CriOS
  */
+/*jslint -W016*/
 ( function ( window ){
   &quot;use strict&quot;;
+
   var
     wakegi = window.wakegi,
     Browser = wakegi.Browser;
 
-  Browser.CriOS = ( function (){
+  Browser.CriOS = ( function () {
+
     var
       numbers = [ -1, -1, -1, -1 ],
       crios, version, major, build;
@@ -188,7 +193,7 @@
      * @constructor
      */
     function CriOS () {
-      throw new Error( &quot;CriOS can&#x27;t create instance.&quot; );
+      throw new Error( &#x27;CriOS can\&#x27;t create instance.&#x27; );
     }
 
     var p = CriOS.prototype;
@@ -201,7 +206,7 @@
      */
     CriOS.init = function () {
 
-      if ( typeof crios === &quot;undefined&quot; ) {
+      if ( typeof crios === &#x27;undefined&#x27; ) {
 
         crios = !!Browser.ua().match(/crios/i);
 
@@ -220,7 +225,7 @@
 
       //CriOS.init();
 
-      if ( typeof version === &quot;undefined&quot; ) {
+      if ( typeof version === &#x27;undefined&#x27; ) {
         // version undefined
         build = &quot;&quot;;
         version = -1;
@@ -235,16 +240,16 @@
             int = wakegi.int;
             float = wakegi.float;
 
-            for ( i = 1, limit = nums.length; i &lt; limit; i++ ) {
+            for ( i = 1, limit = nums.length; i &lt; limit; i = (i+1)|0 ) {
 
               versions.push( int( nums[ i ], 10 ) );
 
             }
 
-            build = versions.join( &quot;.&quot; );
+            build = versions.join( &#x27;.&#x27; );
             major = versions[ 0 ];
             numbers = versions;
-            version = float( versions[ 0 ] + &quot;.&quot; + versions[ 1 ] + versions[ 2 ] + versions[ 3 ] );
+            version = float( versions[ 0 ] + &#x27;.&#x27; + versions[ 1 ] + versions[ 2 ] + versions[ 3 ] );
 
           }
 

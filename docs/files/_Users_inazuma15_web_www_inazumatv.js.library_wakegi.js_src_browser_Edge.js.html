@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>/Users/inazuma15/web/www/inazumatv.js.library/wakegi.js/src/browser/Safari.js</title>
+    <title>/Users/inazuma15/web/www/inazumatv.js.library/wakegi.js/src/browser/Edge.js</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
@@ -152,14 +152,14 @@
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-                        <h1 class="file-heading">File: /Users/inazuma15/web/www/inazumatv.js.library/wakegi.js/src/browser/Safari.js</h1>
+                        <h1 class="file-heading">File: /Users/inazuma15/web/www/inazumatv.js.library/wakegi.js/src/browser/Edge.js</h1>
 
 <div class="file">
     <pre class="code prettyprint linenums">
 /**
  * license inazumatv.com
  * author (at)taikiken / http://inazumatv.com
- * date 2015/03/17 - 18:06
+ * date 15/07/30 - 17:59
  *
  * Copyright (c) 2011-2015 inazumatv.com, inc.
  *
@@ -169,58 +169,76 @@
  * This notice shall be included in all copies or substantial portions of the Software.
  *
  * @module Browser
- * @submodule Safari
+ * @submodule Edge
  */
 /*jslint -W016*/
-( function ( window ){
+( function ( window ) {
+
   &quot;use strict&quot;;
+
   var
     wakegi = window.wakegi,
     Browser = wakegi.Browser;
 
-  Browser.Safari = ( function (){
-    var
-      CriOS = Browser.CriOS,
-      Chrome = Browser.Chrome,
-      Android = Browser.Android,
-      Edge = Browser.Edge,
-      numbers = [ -1, -1, -1 ],
-      crios, chrome, edge,
-      safari, version, major, build;
+  Browser.Edge = ( function () {
 
-    /**
-     * Safari detection
-     * @class Safari
-     * @constructor
-     */
-    function Safari () {
-      throw new Error( &#x27;Safari can\&#x27;t create instance.&#x27; );
+    var
+      edge,
+      numbers = [ -1, -1 ],
+      version, major, build;
+
+    function Edge () {
+      throw new Error( &#x27;Edge can\&#x27;t create instance.&#x27; );
     }
 
-    var p = Safari.prototype;
+    var p = Edge.prototype;
+    p.constructor = Edge;
 
-    p.constructor = Safari;
+    Edge.init = function () {
 
-    /**
-     * @method init
-     * @static
-     */
-    Safari.init = function () {
+      if ( typeof edge === &#x27;undefined&#x27; ) {
 
-      if ( typeof safari === &#x27;undefined&#x27; ) {
+        edge = !!Browser.ua().match(/edge/i);
 
-        // need initialize
-        crios = CriOS.is();
-        chrome = Chrome.is();
-        edge = Edge.is();
+      }
 
-        if ( crios || chrome || edge || Android.standard() ) {
-          // Chrome(iOS, Android), Android standard
-          safari = false;
+    };
 
-        } else {
-          // check userAgent
-          safari = Browser.matchSafari();
+    Edge.calculate = function () {
+
+      var
+        versions = [],
+        nums, int, float, i, limit;
+
+      if ( typeof version === &#x27;undefined&#x27; ) {
+
+        build = &#x27;&#x27;;
+        version = -1;
+        major = -1;
+
+        if ( Edge.is() ) {
+
+          nums = Browser.ua().match(/edge\/(\d+)\.?(\d+)?/i);
+
+          if ( Array.isArray( nums ) ) {
+
+            // 結果が配列
+            int = wakegi.int;
+            float = wakegi.float;
+
+            // 先頭削除 Edge/12.n
+            for ( i = 1, limit = nums.length; i &lt; limit; i = (i+1)|0 ) {
+
+              versions.push( int( nums[ i ], 10 ) );
+
+            }
+
+            build = versions.join( &#x27;.&#x27; );
+            major = versions[ 0 ];
+            version = float( versions[ 0 ] + &#x27;.&#x27; + versions[ 1 ] );
+            numbers = versions;
+
+          }
 
         }
 
@@ -228,85 +246,11 @@
 
     };
 
-    /**
-     * @method calculate
-     * @static
-     */
-    Safari.calculate = function () {
+    Edge.is = function () {
 
-      var
-        versions = [],
-        nums, int, float, i, limit, num;
+      Edge.init();
+      return edge;
 
-      if ( typeof version === &#x27;undefined&#x27; ) {
-
-        // version undefined
-        build = &quot;&quot;;
-        version = -1;
-        major = -1;
-
-        if ( Safari.is() ) {
-
-          // Safari
-          nums = Browser.app().match(/Version\/(\d+)\.(\d+)\.?(\d+)?/);
-
-          if ( Array.isArray( nums ) ) {
-            // 結果が配列
-            int = wakegi.int;
-            float = wakegi.float;
-
-            for ( i = 1, limit = nums.length; i &lt; limit; i = (i+1)|0 ) {
-
-              num = nums[ i ];
-
-              if ( typeof num !== &#x27;undefined&#x27; ) {
-
-                // num defined
-                versions.push( int( num, 10 ) );
-
-              } else {
-
-                versions.push( 0 );
-
-              }
-
-            }
-
-
-            build = versions.join( &#x27;.&#x27; );
-            version = float( versions[ 0 ] + &#x27;.&#x27; + versions[ 1 ] + versions[ 2 ] );
-            major = versions[ 0 ];
-            numbers = versions;
-
-          }// Array
-
-        }// safari
-
-      }// undefined
-
-    };
-
-    /**
-     * @method is
-     * @static
-     * @return {boolean}
-     */
-    Safari.is = function () {
-
-      Safari.init();
-      return safari;
-
-    };
-
-    /**
-     * @method set
-     * @static
-     * @param {boolean} bool
-     */
-    Safari.set = function ( bool ) {
-
-      Safari.init();
-      safari = bool;
     };
 
     /**
@@ -315,9 +259,9 @@
      * @static
      * @return {float} N.NN で返します
      */
-    Safari.version = function () {
+    Edge.version = function () {
 
-      Safari.calculate();
+      Edge.calculate();
       return version;
 
     };
@@ -327,9 +271,9 @@
      * @static
      * @return {int}
      */
-    Safari.major = function () {
+    Edge.major = function () {
 
-      Safari.calculate();
+      Edge.calculate();
       return major;
 
     };
@@ -340,9 +284,9 @@
      * @static
      * @return {string} NN.NN.NN.NN 型（文字）で返します
      */
-    Safari.build = function () {
+    Edge.build = function () {
 
-      Safari.calculate();
+      Edge.calculate();
       return build;
 
     };
@@ -352,28 +296,18 @@
      * @static
      * @return {*[]} [major: int, minor: int, build: int] 形式で返します
      */
-    Safari.numbers = function () {
+    Edge.numbers = function () {
 
-      Safari.calculate();
+      Edge.calculate();
       return numbers;
 
     };
 
-    /**
-     * @method number
-     * @deprecated instead of Safari.numbers
-     * @static
-     * @return {*[]} [major: int, minor: int, build: int] 形式で返します
-     */
-    Safari.number = function () {
 
-      // 互換のために残します
-      return Safari.numbers();
+    return Edge;
 
-    };
-
-    return Safari;
   }() );
+
 }( window ) );
     </pre>
 </div>

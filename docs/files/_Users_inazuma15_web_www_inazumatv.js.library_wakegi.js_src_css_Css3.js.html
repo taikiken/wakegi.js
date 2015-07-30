@@ -91,6 +91,8 @@
             
                 <li><a href="../modules/Dom.html">Dom</a></li>
             
+                <li><a href="../modules/Edge.html">Edge</a></li>
+            
                 <li><a href="../modules/Element.html">Element</a></li>
             
                 <li><a href="../modules/Firefox.html">Firefox</a></li>
@@ -191,7 +193,7 @@
      * @constructor
      */
     function Css3 () {
-      throw new Error( &quot;Css3 can&#x27;t create instance.&quot; );
+      throw new Error( &#x27;Css3 can\&#x27;t create instance.&#x27; );
     }
 
     var p = Css3.prototype;
@@ -207,19 +209,24 @@
      * @return {boolean}
      */
     Css3.transition = function () {
+
       var p;
 
-      if ( typeof transition === &quot;undefined&quot; ) {
+      if ( typeof transition === &#x27;undefined&#x27; ) {
+
         // transition undefined
         p = document.createElement( &quot;p&quot; ).style;
+
         transition = &quot;transition&quot; in p ||
           &quot;WebkitTransition&quot; in p ||
           &quot;MozTransition&quot; in p ||
           &quot;msTransition&quot; in p ||
           &quot;OTransition&quot; in p;
+
       }
 
       return transition;
+
     };
     /**
      * CSS3 transform detection
@@ -228,11 +235,14 @@
      * @return {boolean}
      */
     Css3.transform = function () {
+
       var p;
 
-      if ( typeof transform === &quot;undefined&quot; ) {
+      if ( typeof transform === &#x27;undefined&#x27; ) {
+
         // transform undefined
         p = document.createElement( &quot;p&quot; ).style;
+
         transform = &quot;transform&quot; in p ||
           &quot;WebkitTransform&quot; in p ||
           &quot;MozTransform&quot; in p ||
@@ -241,6 +251,7 @@
       }
 
       return transform;
+
     };
 
     /**
@@ -250,9 +261,10 @@
      */
     Css3.matchMedia = function () {
 
-      if ( typeof matchMedia === &quot;undefined&quot; ) {
+      if ( typeof matchMedia === &#x27;undefined&#x27; ) {
+
         // matchMedia undefined
-        matchMedia = typeof window.matchMedia === &quot;function&quot;;
+        matchMedia = typeof window.matchMedia === &#x27;function&#x27;;
 
       }
 
@@ -265,13 +277,15 @@
      */
     Css3.orientationChange = function () {
 
-      if ( typeof onorientationchange === &quot;undefined&quot; ) {
+      if ( typeof onorientationchange === &#x27;undefined&#x27; ) {
+
         // onorientationchange undefined
-        onorientationchange = &quot;onorientationchange&quot; in window;
+        onorientationchange = &#x27;onorientationchange&#x27; in window;
 
       }
 
       return onorientationchange;
+
     };
     /**
      * @method orientation
@@ -280,9 +294,10 @@
      */
     Css3.orientation = function () {
 
-      if ( typeof orientation === &quot;undefined&quot; ) {
+      if ( typeof orientation === &#x27;undefined&#x27; ) {
+
         // orientation undefined
-        orientation = &quot;orientation&quot; in window;
+        orientation = &#x27;orientation&#x27; in window;
 
       }
 
@@ -295,13 +310,15 @@
      */
     Css3.backgroundSize = function () {
 
-      if ( typeof backgroundSize === &quot;undefined&quot; ) {
+      if ( typeof backgroundSize === &#x27;undefined&#x27; ) {
+
         // backgroundSize undefined
-        backgroundSize = &quot;backgroundSize&quot; in document.documentElement.style;
+        backgroundSize = &#x27;backgroundSize&#x27; in document.documentElement.style;
 
       }
 
       return backgroundSize;
+
     };
 
     return Css3;

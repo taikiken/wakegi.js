@@ -1,7 +1,7 @@
 /**
  * license inazumatv.com
  * author (at)taikiken / http://inazumatv.com
- * date 2015/03/17 - 18:29
+ * date 15/07/30 - 17:59
  *
  * Copyright (c) 2011-2015 inazumatv.com, inc.
  *
@@ -11,54 +11,42 @@
  * This notice shall be included in all copies or substantial portions of the Software.
  *
  * @module Browser
- * @submodule Firefox
+ * @submodule Edge
  */
 /*jslint -W016*/
-( function ( window ){
+( function ( window ) {
+
   "use strict";
+
   var
     wakegi = window.wakegi,
     Browser = wakegi.Browser;
 
-  Browser.Firefox = ( function (){
-    var
-      numbers = [ -1, -1 ],
-      firefox, version, major, build;
+  Browser.Edge = ( function () {
 
-    /**
-     * Firefox detection
-     * @class Firefox
-     * @constructor
-     */
-    function Firefox () {
-      throw new Error( 'Firefox can\'t create instance.' );
+    var
+      edge,
+      numbers = [ -1, -1 ],
+      version, major, build;
+
+    function Edge () {
+      throw new Error( 'Edge can\'t create instance.' );
     }
 
-    var p = Firefox.prototype;
+    var p = Edge.prototype;
+    p.constructor = Edge;
 
-    p.constructor = Firefox;
+    Edge.init = function () {
 
-    /**
-     * @method init
-     * @static
-     */
-    Firefox.init = function () {
+      if ( typeof edge === 'undefined' ) {
 
-      if ( typeof firefox === 'undefined' ) {
-        // need initialize
-
-        // check userAgent
-        firefox = !!Browser.ua().match(/firefox/i);
+        edge = !!Browser.ua().match(/edge/i);
 
       }
 
     };
 
-    /**
-     * @method calculate
-     * @static
-     */
-    Firefox.calculate = function () {
+    Edge.calculate = function () {
 
       var
         versions = [],
@@ -66,15 +54,13 @@
 
       if ( typeof version === 'undefined' ) {
 
-        // version undefined
         build = '';
         version = -1;
         major = -1;
 
-        if ( Firefox.is() ) {
-          // firefox
+        if ( Edge.is() ) {
 
-          nums = Browser.ua().match( /Firefox\/(\d+)\.?(\d+)?/ );
+          nums = Browser.ua().match(/edge\/(\d+)\.?(\d+)?/i);
 
           if ( Array.isArray( nums ) ) {
 
@@ -82,6 +68,7 @@
             int = wakegi.int;
             float = wakegi.float;
 
+            // 先頭削除 Edge/12.n
             for ( i = 1, limit = nums.length; i < limit; i = (i+1)|0 ) {
 
               versions.push( int( nums[ i ], 10 ) );
@@ -95,21 +82,16 @@
 
           }
 
-        }// firefox
+        }
 
-      }// undefined
+      }
 
     };
 
-    /**
-     * @method is
-     * @static
-     * @return {boolean}
-     */
-    Firefox.is = function () {
+    Edge.is = function () {
 
-      Firefox.init();
-      return firefox;
+      Edge.init();
+      return edge;
 
     };
 
@@ -119,9 +101,9 @@
      * @static
      * @return {float} N.NN で返します
      */
-    Firefox.version = function () {
+    Edge.version = function () {
 
-      Firefox.calculate();
+      Edge.calculate();
       return version;
 
     };
@@ -131,9 +113,9 @@
      * @static
      * @return {int}
      */
-    Firefox.major = function () {
+    Edge.major = function () {
 
-      Firefox.calculate();
+      Edge.calculate();
       return major;
 
     };
@@ -144,9 +126,9 @@
      * @static
      * @return {string} NN.NN.NN.NN 型（文字）で返します
      */
-    Firefox.build = function () {
+    Edge.build = function () {
 
-      Firefox.calculate();
+      Edge.calculate();
       return build;
 
     };
@@ -156,14 +138,16 @@
      * @static
      * @return {*[]} [major: int, minor: int, build: int] 形式で返します
      */
-    Firefox.numbers = function () {
+    Edge.numbers = function () {
 
-      Firefox.calculate();
+      Edge.calculate();
       return numbers;
 
     };
 
-    return Firefox;
+
+    return Edge;
+
   }() );
 
 }( window ) );

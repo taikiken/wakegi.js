@@ -17,7 +17,7 @@
   "use strict";
 
   var
-    document = window.document,
+    //document = window.document,
     wakegi = window.wakegi;
 
   wakegi.Dom = ( function (){
@@ -28,24 +28,28 @@
      * @param {HTMLElement} element
      */
     function Dom ( element ) {
+
       /**
        * @property _element
        * @type {HTMLElement}
        * @private
        */
       this._element = element;
+
     }
 
     var p = Dom.prototype;
-
     p.constructor = Dom;
+
     /**
      * @method hasClass
      * @param {string} className
      * @return {boolean}
      */
     p.hasClass = function ( className ) {
+
       return Dom.hasClass( this._element, className );
+
     };
     /**
      * @method addClass
@@ -53,8 +57,10 @@
      * @return {Dom}
      */
     p.addClass = function ( className ) {
+
       Dom.addClass( this._element, className );
       return this;
+
     };
     /**
      * @method removeClass
@@ -62,8 +68,10 @@
      * @return {Dom}
      */
     p.removeClass = function ( className ) {
+
       Dom.removeClass( this._element, className );
       return this;
+
     };
     /**
      * @method style
@@ -83,7 +91,9 @@
      * @return {boolean}
      */
     Dom.hasClass = function ( element, className ) {
-      return !!element.className.match( new RegExp( className, "i" ) );
+
+      return !!element.className.match( new RegExp( className, 'i' ) );
+
     };
     /**
      * @method addClass
@@ -93,8 +103,9 @@
      * @return {Dom}
      */
     Dom.addClass = function ( element, className ) {
+
       var
-        names = "",
+        names = '',
         space;
 
       if ( !Dom.hasClass( element, className ) ) {
@@ -114,6 +125,7 @@
       }
 
       return Dom;
+
     };
     /**
      * @method removeClass
@@ -123,26 +135,29 @@
      * @return {Dom}
      */
     Dom.removeClass = function ( element, className ) {
+
       var
-        names = "";
+        names = '';
 
       //console.log( "Element.removeClass ", className, Element.hasClass( element, className ) );
 
       if ( Dom.hasClass( element, className ) ) {
+
         // found class name
         names = element.className;
         // class を削除して 2 spaces を 1 space へ
-        names = names.replace( className, "" ).split( "  " ).join( " " );
+        names = names.replace( className, '' ).split( '  ' ).join( ' ' );
 
-        if ( names.substr( 0, 1 ) === " " ) {
+        // 先頭の半角space削除
+        if ( names.substr( 0, 1 ) === ' ' ) {
 
           names = names.substr( 1 );
 
         }
 
-        if ( names === " " ) {
+        if ( names === ' ' ) {
           // space のみになったら空へ
-          names = "";
+          names = '';
 
         }
 
@@ -165,6 +180,7 @@
      *    指定されている時は CSS 設定値(string)を返します
      */
     Dom.styleCompute = function ( defaultView, el, styleProp ) {
+
       var
         style = defaultView.getComputedStyle( el, null );
 
@@ -176,6 +192,7 @@
       }
 
       return style;
+
     };
     /**
      * currentStyle を使い HTMLElement style value を取得します
@@ -186,6 +203,7 @@
      * @return {*}
      */
     Dom.styleCurrent = function ( el, styleProp ) {
+
       var
         style = el.currentStyle,
         value;
@@ -194,7 +212,9 @@
         // IE
         // sanitize property name to camelCase
         styleProp = styleProp.replace(/\-(\w)/g, function( str, letter ) {
+
           return letter.toUpperCase();
+
         });
 
         value = style[ styleProp ];
@@ -203,7 +223,10 @@
         if ( /^\d+(em|pt|%|ex)?$/i.test( value ) ) {
 
           return ( function( value ) {
-            var oldLeft = el.style.left, oldRsLeft = el.runtimeStyle.left;
+
+            var
+              oldLeft = el.style.left,
+              oldRsLeft = el.runtimeStyle.left;
 
             el.runtimeStyle.left = el.currentStyle.left;
             el.style.left = value || 0;

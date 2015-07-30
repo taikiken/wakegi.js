@@ -91,6 +91,8 @@
             
                 <li><a href="../modules/Dom.html">Dom</a></li>
             
+                <li><a href="../modules/Edge.html">Edge</a></li>
+            
                 <li><a href="../modules/Element.html">Element</a></li>
             
                 <li><a href="../modules/Firefox.html">Firefox</a></li>
@@ -186,7 +188,7 @@
      * @constructor
      */
     function Browser () {
-      throw new Error( &quot;Browser can&#x27;t create instance.&quot; );
+      throw new Error( &#x27;Browser can\&#x27;t create instance.&#x27; );
     }
 
     var p = Browser.prototype;
@@ -198,7 +200,7 @@
      */
     Browser.init = function () {
 
-      if ( typeof ua === &quot;undefined&quot; || typeof app === &quot;undefined&quot; ) {
+      if ( typeof ua === &#x27;undefined&#x27; || typeof app === &#x27;undefined&#x27; ) {
           // ua undefined
         ua = navigator.userAgent;
         app = navigator.appVersion;

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>/Users/inazuma15/web/www/inazumatv.js.library/wakegi.js/src/browser/Safari.js</title>
+    <title>Edge</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
@@ -152,230 +152,44 @@
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-                        <h1 class="file-heading">File: /Users/inazuma15/web/www/inazumatv.js.library/wakegi.js/src/browser/Safari.js</h1>
+                        <h1>Edge Module</h1>
+<div class="box clearfix meta">
+    
 
-<div class="file">
-    <pre class="code prettyprint linenums">
-/**
- * license inazumatv.com
- * author (at)taikiken / http://inazumatv.com
- * date 2015/03/17 - 18:06
- *
- * Copyright (c) 2011-2015 inazumatv.com, inc.
- *
- * Distributed under the terms of the MIT license.
- * http://www.opensource.org/licenses/mit-license.html
- *
- * This notice shall be included in all copies or substantial portions of the Software.
- *
- * @module Browser
- * @submodule Safari
- */
-/*jslint -W016*/
-( function ( window ){
-  &quot;use strict&quot;;
-  var
-    wakegi = window.wakegi,
-    Browser = wakegi.Browser;
+    
 
-  Browser.Safari = ( function (){
-    var
-      CriOS = Browser.CriOS,
-      Chrome = Browser.Chrome,
-      Android = Browser.Android,
-      Edge = Browser.Edge,
-      numbers = [ -1, -1, -1 ],
-      crios, chrome, edge,
-      safari, version, major, build;
+    
+        <div class="foundat">
+            Defined in: <a href="../files/_Users_inazuma15_web_www_inazumatv.js.library_wakegi.js_src_browser_Edge.js.html#l1"><code>&#x2F;Users&#x2F;inazuma15&#x2F;web&#x2F;www&#x2F;inazumatv.js.library&#x2F;wakegi.js&#x2F;src&#x2F;browser&#x2F;Edge.js:1</code></a>
+        </div>
+    
 
-    /**
-     * Safari detection
-     * @class Safari
-     * @constructor
-     */
-    function Safari () {
-      throw new Error( &#x27;Safari can\&#x27;t create instance.&#x27; );
-    }
-
-    var p = Safari.prototype;
-
-    p.constructor = Safari;
-
-    /**
-     * @method init
-     * @static
-     */
-    Safari.init = function () {
-
-      if ( typeof safari === &#x27;undefined&#x27; ) {
-
-        // need initialize
-        crios = CriOS.is();
-        chrome = Chrome.is();
-        edge = Edge.is();
-
-        if ( crios || chrome || edge || Android.standard() ) {
-          // Chrome(iOS, Android), Android standard
-          safari = false;
-
-        } else {
-          // check userAgent
-          safari = Browser.matchSafari();
-
-        }
-
-      }
-
-    };
-
-    /**
-     * @method calculate
-     * @static
-     */
-    Safari.calculate = function () {
-
-      var
-        versions = [],
-        nums, int, float, i, limit, num;
-
-      if ( typeof version === &#x27;undefined&#x27; ) {
-
-        // version undefined
-        build = &quot;&quot;;
-        version = -1;
-        major = -1;
-
-        if ( Safari.is() ) {
-
-          // Safari
-          nums = Browser.app().match(/Version\/(\d+)\.(\d+)\.?(\d+)?/);
-
-          if ( Array.isArray( nums ) ) {
-            // 結果が配列
-            int = wakegi.int;
-            float = wakegi.float;
-
-            for ( i = 1, limit = nums.length; i &lt; limit; i = (i+1)|0 ) {
-
-              num = nums[ i ];
-
-              if ( typeof num !== &#x27;undefined&#x27; ) {
-
-                // num defined
-                versions.push( int( num, 10 ) );
-
-              } else {
-
-                versions.push( 0 );
-
-              }
-
-            }
+    
+</div>
 
 
-            build = versions.join( &#x27;.&#x27; );
-            version = float( versions[ 0 ] + &#x27;.&#x27; + versions[ 1 ] + versions[ 2 ] );
-            major = versions[ 0 ];
-            numbers = versions;
 
-          }// Array
+<div class="box intro">
+    <p>license inazumatv.com
+author (at)taikiken / <a href="http://inazumatv.com">http://inazumatv.com</a>
+date 15/07/30 - 17:59</p>
+<p>Copyright (c) 2011-2015 inazumatv.com, inc.</p>
+<p>Distributed under the terms of the MIT license.
+<a href="http://www.opensource.org/licenses/mit-license.html">http://www.opensource.org/licenses/mit-license.html</a></p>
+<p>This notice shall be included in all copies or substantial portions of the Software.</p>
 
-        }// safari
+</div>
 
-      }// undefined
 
-    };
 
-    /**
-     * @method is
-     * @static
-     * @return {boolean}
-     */
-    Safari.is = function () {
+<div class="yui3-g">
+    <div class="yui3-u-1-2">
+        
+    </div>
 
-      Safari.init();
-      return safari;
-
-    };
-
-    /**
-     * @method set
-     * @static
-     * @param {boolean} bool
-     */
-    Safari.set = function ( bool ) {
-
-      Safari.init();
-      safari = bool;
-    };
-
-    /**
-     *
-     * @method version
-     * @static
-     * @return {float} N.NN で返します
-     */
-    Safari.version = function () {
-
-      Safari.calculate();
-      return version;
-
-    };
-
-    /**
-     * @method major
-     * @static
-     * @return {int}
-     */
-    Safari.major = function () {
-
-      Safari.calculate();
-      return major;
-
-    };
-
-    /**
-     *
-     * @method build
-     * @static
-     * @return {string} NN.NN.NN.NN 型（文字）で返します
-     */
-    Safari.build = function () {
-
-      Safari.calculate();
-      return build;
-
-    };
-
-    /**
-     * @method numbers
-     * @static
-     * @return {*[]} [major: int, minor: int, build: int] 形式で返します
-     */
-    Safari.numbers = function () {
-
-      Safari.calculate();
-      return numbers;
-
-    };
-
-    /**
-     * @method number
-     * @deprecated instead of Safari.numbers
-     * @static
-     * @return {*[]} [major: int, minor: int, build: int] 形式で返します
-     */
-    Safari.number = function () {
-
-      // 互換のために残します
-      return Safari.numbers();
-
-    };
-
-    return Safari;
-  }() );
-}( window ) );
-    </pre>
+    <div class="yui3-u-1-2">
+        
+    </div>
 </div>
 
                     </div>

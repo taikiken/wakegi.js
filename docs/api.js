@@ -56,6 +56,11 @@ YUI.add("yuidoc-meta", function(Y) {
             "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/04/02 - 20:40\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software."
         },
         {
+            "displayName": "Edge",
+            "name": "Edge",
+            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 15/07/30 - 17:59\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software."
+        },
+        {
             "displayName": "Element",
             "name": "Element",
             "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/18 - 13:09\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software."

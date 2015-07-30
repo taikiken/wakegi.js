@@ -30,7 +30,7 @@
      * @constructor
      */
     function Mac () {
-      throw new Error( "Mac can't create instance." );
+      throw new Error( 'Mac can\'t create instance.' );
     }
 
     var p = Mac.prototype;
@@ -43,7 +43,7 @@
      */
     Mac.init = function () {
 
-      if ( typeof mac === "undefined" ) {
+      if ( typeof mac === 'undefined' ) {
         // mac undefined
         mac = !iOS.is() && !!Browser.ua().match(/mac os x/i);
       }

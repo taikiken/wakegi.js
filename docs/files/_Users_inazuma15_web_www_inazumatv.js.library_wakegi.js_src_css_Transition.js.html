@@ -91,6 +91,8 @@
             
                 <li><a href="../modules/Dom.html">Dom</a></li>
             
+                <li><a href="../modules/Edge.html">Edge</a></li>
+            
                 <li><a href="../modules/Element.html">Element</a></li>
             
                 <li><a href="../modules/Firefox.html">Firefox</a></li>
@@ -185,7 +187,7 @@
      * @constructor
      */
     function Transition () {
-      throw new Error( &quot;Transition can&#x27;t create instance.&quot; );
+      throw new Error( &#x27;Transition can\&#x27;t create instance.&#x27; );
     }
 
     var p = Transition.prototype;
@@ -198,7 +200,9 @@
      * @return {boolean}
      */
     Transition.is = function () {
+
       return Css3.transition();
+
     };
 
     return Transition;

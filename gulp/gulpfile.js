@@ -44,6 +44,8 @@ var yuidoc = require( 'gulp-yuidoc' );
 
 var replace = require('gulp-replace-task');
 
+var jshint = require('gulp-jshint');
+
 // ----------------------------------------------------------------
 // Directory
 var dir = require( './setting.json' );
@@ -98,6 +100,7 @@ scripts.push( dir.src + '/device/Mac.js' );
 scripts.push( dir.src + '/device/Windows.js' );
 
 // ua
+scripts.push( dir.src + '/browser/Edge.js' );
 scripts.push( dir.src + '/browser/IE.js' );
 scripts.push( dir.src + '/browser/CriOS.js' );
 scripts.push( dir.src + '/browser/Chrome.js' );
@@ -159,11 +162,20 @@ gulp.task( 'script-docs', function () {
     .pipe( gulp.dest( dir.docs ) );
 } );
 
+// Lint JavaScript
+gulp.task('js-hint', function () {
+  return gulp.src( dir.src + '/**/*.js' )
+    .pipe( jshint() )
+    .pipe( jshint.reporter('jshint-stylish'));
+});
+
+
 // ----------------------------------------------------------------
 // build
 gulp.task( 'script-build', function () {
 
   runSequence(
+    'js-hint',
     'script-concat',
     'script-min',
     'script-version'
@@ -175,6 +187,7 @@ gulp.task( 'script-build', function () {
 gulp.task( 'script-build-api', function () {
 
   runSequence(
+    'js-hint',
     'script-concat',
     'script-min',
     'script-version',

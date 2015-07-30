@@ -29,11 +29,10 @@
      * @constructor
      */
     function Windows () {
-      throw new Error( "Windows can't create instance." );
+      throw new Error( 'Windows can\'t create instance.' );
     }
 
     var p = Windows.prototype;
-
     p.constructor = Windows;
 
     /**
@@ -42,7 +41,7 @@
      */
     Windows.init = function () {
 
-      if ( typeof windows === "undefined" ) {
+      if ( typeof windows === 'undefined' ) {
         // windows undefined
         windows = !!Browser.ua().match(/windows/i);
       }

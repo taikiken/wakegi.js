@@ -27,11 +27,10 @@
      * @constructor
      */
     function Touch () {
-      throw new Error( "Touch can't create instance." );
+      throw new Error( 'Touch can\'t create instance.' );
     }
 
     var p = Touch.prototype;
-
     p.constructor = Touch;
 
     /**
@@ -42,11 +41,12 @@
      */
     Touch.is = function () {
 
-      return Browser.touch();
+      return Element.touch();
 
     };
 
     return Touch;
+
   }() );
 
 }( window ) );

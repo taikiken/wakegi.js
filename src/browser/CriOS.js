@@ -15,13 +15,16 @@
  * @module Browser
  * @submodule CriOS
  */
+/*jslint -W016*/
 ( function ( window ){
   "use strict";
+
   var
     wakegi = window.wakegi,
     Browser = wakegi.Browser;
 
-  Browser.CriOS = ( function (){
+  Browser.CriOS = ( function () {
+
     var
       numbers = [ -1, -1, -1, -1 ],
       crios, version, major, build;
@@ -32,7 +35,7 @@
      * @constructor
      */
     function CriOS () {
-      throw new Error( "CriOS can't create instance." );
+      throw new Error( 'CriOS can\'t create instance.' );
     }
 
     var p = CriOS.prototype;
@@ -45,7 +48,7 @@
      */
     CriOS.init = function () {
 
-      if ( typeof crios === "undefined" ) {
+      if ( typeof crios === 'undefined' ) {
 
         crios = !!Browser.ua().match(/crios/i);
 
@@ -64,7 +67,7 @@
 
       //CriOS.init();
 
-      if ( typeof version === "undefined" ) {
+      if ( typeof version === 'undefined' ) {
         // version undefined
         build = "";
         version = -1;
@@ -79,16 +82,16 @@
             int = wakegi.int;
             float = wakegi.float;
 
-            for ( i = 1, limit = nums.length; i < limit; i++ ) {
+            for ( i = 1, limit = nums.length; i < limit; i = (i+1)|0 ) {
 
               versions.push( int( nums[ i ], 10 ) );
 
             }
 
-            build = versions.join( "." );
+            build = versions.join( '.' );
             major = versions[ 0 ];
             numbers = versions;
-            version = float( versions[ 0 ] + "." + versions[ 1 ] + versions[ 2 ] + versions[ 3 ] );
+            version = float( versions[ 0 ] + '.' + versions[ 1 ] + versions[ 2 ] + versions[ 3 ] );
 
           }
 

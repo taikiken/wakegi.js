@@ -91,6 +91,8 @@
             
                 <li><a href="../modules/Dom.html">Dom</a></li>
             
+                <li><a href="../modules/Edge.html">Edge</a></li>
+            
                 <li><a href="../modules/Element.html">Element</a></li>
             
                 <li><a href="../modules/Firefox.html">Firefox</a></li>
@@ -169,6 +171,7 @@
  * @module Browser
  * @submodule iOS
  */
+/*jslint -W016*/
 ( function ( window ){
   &quot;use strict&quot;;
   var
@@ -191,7 +194,7 @@
      * @constructor
      */
     function iOS () {
-      throw new Error( &quot;iOS can&#x27;t create instance.&quot; );
+      throw new Error( &#x27;iOS can\&#x27;t create instance.&#x27; );
     }
 
     var p = iOS.prototype;
@@ -203,9 +206,11 @@
      * @static
      */
     iOS.init = function () {
+
       var ua;
 
-      if ( typeof ios === &quot;undefined&quot; ) {
+      if ( typeof ios === &#x27;undefined&#x27; ) {
+
         // need initialize
         ua = Browser.ua();
 
@@ -227,11 +232,12 @@
      * @static
      */
     iOS.calculate = function () {
+
       var
         versions = [],
         nums, int, float, i, limit, num;
 
-      if ( typeof version === &quot;undefined&quot; ) {
+      if ( typeof version === &#x27;undefined&#x27; ) {
         // version undefined
         build = &quot;&quot;;
         version = -1;
@@ -246,11 +252,11 @@
             int = wakegi.int;
             float = wakegi.float;
 
-            for ( i = 1, limit = nums.length; i &lt; limit; i++ ) {
+            for ( i = 1, limit = nums.length; i &lt; limit; i = (i+1)|0 ) {
 
               num = nums[ i ];
 
-              if ( typeof num !== &quot;undefined&quot; ) {
+              if ( typeof num !== &#x27;undefined&#x27; ) {
                   // num defined
                 versions.push( int( num, 10 ) );
 
@@ -262,16 +268,17 @@
 
             }
 
-            build = versions.join( &quot;.&quot; );
+            build = versions.join( &#x27;.&#x27; );
             major = versions[ 0 ];
             numbers = versions;
-            version = float( versions[ 0 ] + &quot;.&quot; + versions[ 1 ] + versions[ 2 ] );
+            version = float( versions[ 0 ] + &#x27;.&#x27; + versions[ 1 ] + versions[ 2 ] );
 
           }// Array
 
         }//iOS
 
       }//undefined
+
     };
 
     /**
@@ -291,8 +298,10 @@
      * @return {boolean}
      */
     iOS.iPhone = function () {
+
       iOS.init();
       return iphone;
+
     };
     /**
      * @method iPad
@@ -300,8 +309,10 @@
      * @return {boolean}
      */
     iOS.iPad = function () {
+
       iOS.init();
       return ipad;
+
     };
     /**
      * @method iPod
@@ -309,8 +320,10 @@
      * @return {boolean}
      */
     iOS.iPod = function () {
+
       iOS.init();
       return ipod;
+
     };
     /**
      * @method standalone
@@ -318,8 +331,10 @@
      * @return {Function|boolean}
      */
     iOS.standalone = function () {
+
       var navigator = Browser.navigator();
       return !!navigator.standalone ? navigator.standalone : false;
+
     };
 
     /**
@@ -331,6 +346,7 @@
     iOS.fullScreen = function () {
 
       return iOS.standalone();
+
     };
 
     /**
@@ -389,6 +405,7 @@
      * @return {*[]} [major: int, minor: int, build: int] 形式で返します
      */
     iOS.number = function () {
+
       // 互換のために残します
       return iOS.numbers();
 
@@ -400,8 +417,10 @@
      * @return {boolean}
      */
     iOS.webView = function () {
+
       iOS.init();
       return webＶiew;
+
     };
 
     return iOS;

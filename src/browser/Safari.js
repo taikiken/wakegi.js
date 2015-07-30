@@ -13,6 +13,7 @@
  * @module Browser
  * @submodule Safari
  */
+/*jslint -W016*/
 ( function ( window ){
   "use strict";
   var
@@ -24,8 +25,9 @@
       CriOS = Browser.CriOS,
       Chrome = Browser.Chrome,
       Android = Browser.Android,
+      Edge = Browser.Edge,
       numbers = [ -1, -1, -1 ],
-      crios, chrome,
+      crios, chrome, edge,
       safari, version, major, build;
 
     /**
@@ -34,7 +36,7 @@
      * @constructor
      */
     function Safari () {
-      throw new Error( "Safari can't create instance." );
+      throw new Error( 'Safari can\'t create instance.' );
     }
 
     var p = Safari.prototype;
@@ -47,12 +49,14 @@
      */
     Safari.init = function () {
 
-      if ( typeof safari === "undefined" ) {
+      if ( typeof safari === 'undefined' ) {
+
         // need initialize
         crios = CriOS.is();
         chrome = Chrome.is();
+        edge = Edge.is();
 
-        if ( crios || chrome || Android.standard() ) {
+        if ( crios || chrome || edge || Android.standard() ) {
           // Chrome(iOS, Android), Android standard
           safari = false;
 
@@ -71,17 +75,20 @@
      * @static
      */
     Safari.calculate = function () {
+
       var
         versions = [],
         nums, int, float, i, limit, num;
 
-      if ( typeof version === "undefined" ) {
+      if ( typeof version === 'undefined' ) {
+
         // version undefined
         build = "";
         version = -1;
         major = -1;
 
         if ( Safari.is() ) {
+
           // Safari
           nums = Browser.app().match(/Version\/(\d+)\.(\d+)\.?(\d+)?/);
 
@@ -90,24 +97,26 @@
             int = wakegi.int;
             float = wakegi.float;
 
-            for ( i = 1, limit = nums.length; i < limit; i++ ) {
+            for ( i = 1, limit = nums.length; i < limit; i = (i+1)|0 ) {
 
               num = nums[ i ];
 
-              if ( typeof num !== "undefined" ) {
+              if ( typeof num !== 'undefined' ) {
+
                 // num defined
                 versions.push( int( num, 10 ) );
 
               } else {
 
                 versions.push( 0 );
+
               }
 
             }
 
 
-            build = versions.join( "." );
-            version = float( versions[ 0 ] + "." + versions[ 1 ] + versions[ 2 ] );
+            build = versions.join( '.' );
+            version = float( versions[ 0 ] + '.' + versions[ 1 ] + versions[ 2 ] );
             major = versions[ 0 ];
             numbers = versions;
 
@@ -199,6 +208,7 @@
      * @return {*[]} [major: int, minor: int, build: int] 形式で返します
      */
     Safari.number = function () {
+
       // 互換のために残します
       return Safari.numbers();
 

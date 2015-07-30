@@ -91,6 +91,8 @@
             
                 <li><a href="../modules/Dom.html">Dom</a></li>
             
+                <li><a href="../modules/Edge.html">Edge</a></li>
+            
                 <li><a href="../modules/Element.html">Element</a></li>
             
                 <li><a href="../modules/Firefox.html">Firefox</a></li>
@@ -189,7 +191,7 @@
      * @constructor
      */
     function Element () {
-      throw new Error( &quot;Element can&#x27;t create instance.&quot; );
+      throw new Error( &#x27;Element can\&#x27;t create instance.&#x27; );
     }
 
     var p = Element.prototype;
@@ -203,7 +205,7 @@
      */
     Element.touch = function () {
 
-      if ( typeof touch === &quot;undefined&quot; ) {
+      if ( typeof touch === &#x27;undefined&#x27; ) {
         // touch undefined
         // http://perfectionkills.com/detecting-event-support-without-browser-sniffing/
         // http://stackoverflow.com/questions/2915833/how-to-check-browser-for-touchstart-support-using-js-jquery#answer-2915912
@@ -221,10 +223,10 @@
      */
     Element.querySelector = function () {
 
-      if ( typeof querySelector === &quot;undefined&quot; ) {
+      if ( typeof querySelector === &#x27;undefined&#x27; ) {
 
         // querySelector undefined
-        querySelector = typeof document.querySelector !== &quot;undefined&quot;;
+        querySelector = typeof document.querySelector !== &#x27;undefined&#x27;;
 
       }
 
@@ -239,7 +241,7 @@
      */
     Element.canvas = function () {
 
-      if ( typeof canvas === &quot;undefined&quot; ) {
+      if ( typeof canvas === &#x27;undefined&#x27; ) {
 
         // querySelector undefined
         canvas = !!window.CanvasRenderingContext2D;
@@ -257,7 +259,7 @@
      */
     Element.webgl = function () {
 
-      if ( typeof webgl === &quot;undefined&quot; ) {
+      if ( typeof webgl === &#x27;undefined&#x27; ) {
 
         // webgl undefined
         webgl = Element.canvas();
@@ -289,6 +291,7 @@
      * @return {*} HTMLElement を返します
      */
     Element.find = function ( searchKey ) {
+
       var result;
 
       if ( Element.querySelector() ) {
