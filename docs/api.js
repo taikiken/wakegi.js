@@ -7,6 +7,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "CriOS",
         "Css3",
         "Dom",
+        "Edge",
         "Element",
         "Firefox",
         "IE",

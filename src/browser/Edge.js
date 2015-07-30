@@ -29,6 +29,11 @@
       numbers = [ -1, -1 ],
       version, major, build;
 
+    /**
+     * @class Edge
+     * @static
+     * @constructor
+     */
     function Edge () {
       throw new Error( 'Edge can\'t create instance.' );
     }
@@ -36,6 +41,10 @@
     var p = Edge.prototype;
     p.constructor = Edge;
 
+    /**
+     * @method init
+     * @static
+     */
     Edge.init = function () {
 
       if ( typeof edge === 'undefined' ) {
@@ -46,6 +55,10 @@
 
     };
 
+    /**
+     * @method calculate
+     * @static
+     */
     Edge.calculate = function () {
 
       var
@@ -88,6 +101,11 @@
 
     };
 
+    /**
+     * @method is
+     * @static
+     * @return {boolean}
+     */
     Edge.is = function () {
 
       Edge.init();
@@ -124,7 +142,7 @@
      *
      * @method build
      * @static
-     * @return {string} NN.NN.NN.NN 型（文字）で返します
+     * @return {string} NN.NN 型（文字）で返します
      */
     Edge.build = function () {
 
@@ -136,7 +154,7 @@
     /**
      * @method numbers
      * @static
-     * @return {*[]} [major: int, minor: int, build: int] 形式で返します
+     * @return {[]} [major: int, minor: int] 形式で返します
      */
     Edge.numbers = function () {
 
