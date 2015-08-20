@@ -12,6 +12,12 @@
  *
  * iOS Chrome
  *
+ *
+ */
+
+/**
+ * iOS Chrome チェックを行います
+ *
  * @module Browser
  * @submodule CriOS
  */

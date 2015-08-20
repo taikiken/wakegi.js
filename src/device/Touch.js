@@ -10,6 +10,12 @@
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
+ *
+ */
+
+/**
+ * touch event 利用可能かを調べます
+ *
  * @module Browser
  * @submodule Touch
  */

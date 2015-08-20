@@ -3,6 +3,7 @@
     "description": "The wakegi.js API is a Browser detection.",
     "url": "https://github.com/taikiken/wakegi.js",
     "options": {
-        "outdir": "../docs"
+        "outdir": "../docs",
+        "paths": ["../src"]
     }
 }

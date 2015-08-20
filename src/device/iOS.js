@@ -10,6 +10,11 @@
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
+ */
+
+/**
+ * iOS バージョンチェック他を行います
+ *
  * @module Browser
  * @submodule iOS
  */

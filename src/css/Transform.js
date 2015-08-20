@@ -10,6 +10,12 @@
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
+ *
+ */
+
+/**
+ * deprecated instead of Css3
+ *
  * @module Browser
  * @submodule Transform
  */

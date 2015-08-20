@@ -10,6 +10,12 @@
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
+ *
+ */
+
+/**
+ * IE チェックを行います
+ *
  * @module Browser
  * @submodule IE
  */

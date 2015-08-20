@@ -10,9 +10,15 @@
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
+ */
+
+/**
+ * HTMLElement へ class を追加・削除・存在確認を行います
+ *
  * @module wakegi
  * @submodule Dom
- */
+ *
+ * */
 ( function ( window ){
   "use strict";
 
@@ -295,8 +301,15 @@
       //}
 
       var
-        defaultView = el.ownerDocument.defaultView,
+        ownerDocument = el.ownerDocument,
+        defaultView,
         result;
+
+      if ( !!ownerDocument ) {
+
+        defaultView = ownerDocument.defaultView;
+
+      }
 
       if ( !!defaultView && !!defaultView.getComputedStyle ) {
 

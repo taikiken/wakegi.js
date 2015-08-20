@@ -10,6 +10,14 @@
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
+ *
+ */
+
+/**
+ * Browser 機能を調べます
+ *
+ * 互換のために Browser を基点にした Class が存在します
+ *
  * @module wakegi
  * @submodule Browser
  */

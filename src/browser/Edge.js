@@ -10,6 +10,12 @@
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
+ *
+ */
+
+/**
+ * Windows 10 Edge Browser チェックを行います
+ *
  * @module Browser
  * @submodule Edge
  */

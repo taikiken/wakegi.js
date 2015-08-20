@@ -1,0 +1,2938 @@
+{
+    "project": {
+        "name": "wakegi.js API",
+        "description": "The wakegi.js API is a Browser detection.",
+        "url": "https://github.com/taikiken/wakegi.js"
+    },
+    "files": {
+        "src/browser/Chrome.js": {
+            "name": "src/browser/Chrome.js",
+            "modules": {
+                "Chrome": 1
+            },
+            "classes": {
+                "Chrome": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/browser/CriOS.js": {
+            "name": "src/browser/CriOS.js",
+            "modules": {
+                "CriOS": 1
+            },
+            "classes": {
+                "CriOS": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/browser/Edge.js": {
+            "name": "src/browser/Edge.js",
+            "modules": {
+                "Edge": 1
+            },
+            "classes": {
+                "Edge": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/browser/Firefox.js": {
+            "name": "src/browser/Firefox.js",
+            "modules": {
+                "Firefox": 1
+            },
+            "classes": {
+                "Firefox": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/browser/IE.js": {
+            "name": "src/browser/IE.js",
+            "modules": {
+                "IE": 1
+            },
+            "classes": {
+                "IE": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/browser/Safari.js": {
+            "name": "src/browser/Safari.js",
+            "modules": {
+                "Safari": 1
+            },
+            "classes": {
+                "Safari": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/css/Css3.js": {
+            "name": "src/css/Css3.js",
+            "modules": {
+                "Css3": 1
+            },
+            "classes": {
+                "Css3": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/css/Transform.js": {
+            "name": "src/css/Transform.js",
+            "modules": {
+                "Transform": 1
+            },
+            "classes": {
+                "Transform": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/css/Transition.js": {
+            "name": "src/css/Transition.js",
+            "modules": {
+                "Transition": 1
+            },
+            "classes": {
+                "Transition": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/device/Android.js": {
+            "name": "src/device/Android.js",
+            "modules": {
+                "Android": 1
+            },
+            "classes": {
+                "Android": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/device/Mac.js": {
+            "name": "src/device/Mac.js",
+            "modules": {
+                "Mac": 1
+            },
+            "classes": {
+                "Mac": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/device/Mobile.js": {
+            "name": "src/device/Mobile.js",
+            "modules": {
+                "Mobile": 1
+            },
+            "classes": {
+                "Mobile": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/device/Touch.js": {
+            "name": "src/device/Touch.js",
+            "modules": {
+                "Touch": 1
+            },
+            "classes": {
+                "Touch": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/device/Windows.js": {
+            "name": "src/device/Windows.js",
+            "modules": {
+                "Windows": 1
+            },
+            "classes": {
+                "Windows": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/device/iOS.js": {
+            "name": "src/device/iOS.js",
+            "modules": {
+                "iOS": 1
+            },
+            "classes": {
+                "iOS": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/document/Dataset.js": {
+            "name": "src/document/Dataset.js",
+            "modules": {
+                "Dataset": 1
+            },
+            "classes": {
+                "Dataset": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/document/Dom.js": {
+            "name": "src/document/Dom.js",
+            "modules": {
+                "Dom": 1
+            },
+            "classes": {
+                "Dom": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/document/Element.js": {
+            "name": "src/document/Element.js",
+            "modules": {
+                "Element": 1
+            },
+            "classes": {
+                "Element": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/document/Util.js": {
+            "name": "src/document/Util.js",
+            "modules": {
+                "Util": 1
+            },
+            "classes": {
+                "Util": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/Browser.js": {
+            "name": "src/Browser.js",
+            "modules": {
+                "Browser": 1
+            },
+            "classes": {
+                "Browser": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/wakegi.js": {
+            "name": "src/wakegi.js",
+            "modules": {
+                "wakegi": 1
+            },
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        }
+    },
+    "modules": {
+        "Browser": {
+            "name": "Browser",
+            "submodules": {
+                "Chrome": 1,
+                "CriOS": 1,
+                "Edge": 1,
+                "Firefox": 1,
+                "IE": 1,
+                "Safari": 1,
+                "Css3": 1,
+                "Transform": 1,
+                "Transition": 1,
+                "Android": 1,
+                "Mac": 1,
+                "Mobile": 1,
+                "Touch": 1,
+                "Windows": 1,
+                "iOS": 1,
+                "Element": 1
+            },
+            "classes": {
+                "Chrome": 1,
+                "CriOS": 1,
+                "Edge": 1,
+                "Firefox": 1,
+                "IE": 1,
+                "Safari": 1,
+                "Css3": 1,
+                "Transform": 1,
+                "Transition": 1,
+                "Android": 1,
+                "Mac": 1,
+                "Mobile": 1,
+                "Touch": 1,
+                "Windows": 1,
+                "iOS": 1,
+                "Element": 1,
+                "Browser": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "module": "wakegi",
+            "file": "src/Browser.js",
+            "line": 35,
+            "description": "Browser 機能を調べます\n\n互換のために Browser を基点にした Class が存在します"
+        },
+        "Chrome": {
+            "name": "Chrome",
+            "submodules": {},
+            "classes": {
+                "Chrome": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "Browser",
+            "namespace": "",
+            "file": "src/browser/Chrome.js",
+            "line": 39,
+            "description": "Chrome チェックを行います"
+        },
+        "CriOS": {
+            "name": "CriOS",
+            "submodules": {},
+            "classes": {
+                "CriOS": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "Browser",
+            "namespace": "",
+            "file": "src/browser/CriOS.js",
+            "line": 38,
+            "description": "iOS Chrome チェックを行います"
+        },
+        "Edge": {
+            "name": "Edge",
+            "submodules": {},
+            "classes": {
+                "Edge": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "Browser",
+            "namespace": "",
+            "file": "src/browser/Edge.js",
+            "line": 38,
+            "description": "Windows 10 Edge Browser チェックを行います"
+        },
+        "Firefox": {
+            "name": "Firefox",
+            "submodules": {},
+            "classes": {
+                "Firefox": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "Browser",
+            "namespace": "",
+            "file": "src/browser/Firefox.js",
+            "line": 34,
+            "description": "Firefox チェックを行います"
+        },
+        "IE": {
+            "name": "IE",
+            "submodules": {},
+            "classes": {
+                "IE": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "Browser",
+            "namespace": "",
+            "file": "src/browser/IE.js",
+            "line": 32,
+            "description": "IE チェックを行います"
+        },
+        "Safari": {
+            "name": "Safari",
+            "submodules": {},
+            "classes": {
+                "Safari": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "Browser",
+            "namespace": "",
+            "file": "src/browser/Safari.js",
+            "line": 39,
+            "description": "Safari チェックを行います"
+        },
+        "Css3": {
+            "name": "Css3",
+            "submodules": {},
+            "classes": {
+                "Css3": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "Browser",
+            "namespace": "",
+            "file": "src/css/Css3.js",
+            "line": 38,
+            "description": "CSS3 機能（一部のみ）が使用可能かを調べます"
+        },
+        "Transform": {
+            "name": "Transform",
+            "submodules": {},
+            "classes": {
+                "Transform": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "Browser",
+            "namespace": "",
+            "file": "src/css/Transform.js",
+            "line": 32,
+            "description": "deprecated instead of Css3"
+        },
+        "Transition": {
+            "name": "Transition",
+            "submodules": {},
+            "classes": {
+                "Transition": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "Browser",
+            "namespace": "",
+            "file": "src/css/Transition.js",
+            "line": 32,
+            "description": "deprecated instead of Css3"
+        },
+        "Android": {
+            "name": "Android",
+            "submodules": {},
+            "classes": {
+                "Android": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "Browser",
+            "namespace": "",
+            "file": "src/device/Android.js",
+            "line": 39,
+            "description": "Android のバージョンチェック他を行います"
+        },
+        "Mac": {
+            "name": "Mac",
+            "submodules": {},
+            "classes": {
+                "Mac": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "Browser",
+            "namespace": "",
+            "file": "src/device/Mac.js",
+            "line": 32,
+            "description": "Mac OS チェックを行います"
+        },
+        "Mobile": {
+            "name": "Mobile",
+            "submodules": {},
+            "classes": {
+                "Mobile": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "Browser",
+            "namespace": "",
+            "file": "src/device/Mobile.js",
+            "line": 33,
+            "description": "mobile (phone, tablet) チェックを行います"
+        },
+        "Touch": {
+            "name": "Touch",
+            "submodules": {},
+            "classes": {
+                "Touch": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "Browser",
+            "namespace": "",
+            "file": "src/device/Touch.js",
+            "line": 30,
+            "description": "touch event 利用可能かを調べます"
+        },
+        "Windows": {
+            "name": "Windows",
+            "submodules": {},
+            "classes": {
+                "Windows": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "Browser",
+            "namespace": "",
+            "file": "src/device/Windows.js",
+            "line": 32,
+            "description": "Windows OS チェックを行います"
+        },
+        "iOS": {
+            "name": "iOS",
+            "submodules": {},
+            "classes": {
+                "iOS": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "Browser",
+            "namespace": "",
+            "file": "src/device/iOS.js",
+            "line": 38,
+            "description": "iOS バージョンチェック他を行います"
+        },
+        "wakegi": {
+            "name": "wakegi",
+            "submodules": {
+                "Dataset": 1,
+                "Dom": 1,
+                "Util": 1
+            },
+            "classes": {
+                "Dataset": 1,
+                "Dom": 1,
+                "Util": 1,
+                "Browser": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "src/Browser.js",
+            "line": 35,
+            "description": "# Browser 機能を調べる\n# HTMLElement の CSS class 操作",
+            "type": "{{}|wakegi}"
+        },
+        "Dataset": {
+            "name": "Dataset",
+            "submodules": {},
+            "classes": {
+                "Dataset": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "wakegi",
+            "namespace": "",
+            "file": "src/document/Dataset.js",
+            "line": 32,
+            "description": "data-xxx を key, value に分解します"
+        },
+        "Dom": {
+            "name": "Dom",
+            "submodules": {},
+            "classes": {
+                "Dom": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "wakegi",
+            "namespace": "",
+            "file": "src/document/Dom.js",
+            "line": 31,
+            "description": "HTMLElement へ class を追加・削除・存在確認を行います"
+        },
+        "Element": {
+            "name": "Element",
+            "submodules": {},
+            "classes": {
+                "Element": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "Browser",
+            "namespace": "",
+            "file": "src/document/Element.js",
+            "line": 35,
+            "description": "Browser 毎の Element 機能を調べます"
+        },
+        "Util": {
+            "name": "Util",
+            "submodules": {},
+            "classes": {
+                "Util": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "wakegi",
+            "namespace": "",
+            "file": "src/document/Util.js",
+            "line": 30
+        }
+    },
+    "classes": {
+        "Chrome": {
+            "name": "Chrome",
+            "shortname": "Chrome",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Browser",
+            "submodule": "Chrome",
+            "namespace": "",
+            "file": "src/browser/Chrome.js",
+            "line": 39,
+            "description": "Chrome 判定",
+            "is_constructor": 1
+        },
+        "CriOS": {
+            "name": "CriOS",
+            "shortname": "CriOS",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Browser",
+            "submodule": "CriOS",
+            "namespace": "",
+            "file": "src/browser/CriOS.js",
+            "line": 38,
+            "description": "iOS Chrome 判定",
+            "is_constructor": 1
+        },
+        "Edge": {
+            "name": "Edge",
+            "shortname": "Edge",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Browser",
+            "submodule": "Edge",
+            "namespace": "",
+            "file": "src/browser/Edge.js",
+            "line": 38,
+            "static": 1,
+            "is_constructor": 1
+        },
+        "Firefox": {
+            "name": "Firefox",
+            "shortname": "Firefox",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Browser",
+            "submodule": "Firefox",
+            "namespace": "",
+            "file": "src/browser/Firefox.js",
+            "line": 34,
+            "description": "Firefox detection",
+            "is_constructor": 1
+        },
+        "IE": {
+            "name": "IE",
+            "shortname": "IE",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Browser",
+            "submodule": "IE",
+            "namespace": "",
+            "file": "src/browser/IE.js",
+            "line": 32,
+            "description": "IE detection",
+            "is_constructor": 1
+        },
+        "Safari": {
+            "name": "Safari",
+            "shortname": "Safari",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Browser",
+            "submodule": "Safari",
+            "namespace": "",
+            "file": "src/browser/Safari.js",
+            "line": 39,
+            "description": "Safari detection",
+            "is_constructor": 1
+        },
+        "Css3": {
+            "name": "Css3",
+            "shortname": "Css3",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Browser",
+            "submodule": "Css3",
+            "namespace": "",
+            "file": "src/css/Css3.js",
+            "line": 38,
+            "description": "CSS3 detection",
+            "is_constructor": 1
+        },
+        "Transform": {
+            "name": "Transform",
+            "shortname": "Transform",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Browser",
+            "submodule": "Transform",
+            "namespace": "",
+            "file": "src/css/Transform.js",
+            "line": 32,
+            "deprecated": true,
+            "deprecationMessage": "instead of Css3",
+            "is_constructor": 1
+        },
+        "Transition": {
+            "name": "Transition",
+            "shortname": "Transition",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Browser",
+            "submodule": "Transition",
+            "namespace": "",
+            "file": "src/css/Transition.js",
+            "line": 32,
+            "deprecated": true,
+            "deprecationMessage": "instead of Css3",
+            "is_constructor": 1
+        },
+        "Android": {
+            "name": "Android",
+            "shortname": "Android",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Browser",
+            "submodule": "Android",
+            "namespace": "",
+            "file": "src/device/Android.js",
+            "line": 39,
+            "description": "Android detection",
+            "is_constructor": 1
+        },
+        "Mac": {
+            "name": "Mac",
+            "shortname": "Mac",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Browser",
+            "submodule": "Mac",
+            "namespace": "",
+            "file": "src/device/Mac.js",
+            "line": 32,
+            "description": "Mac detection",
+            "is_constructor": 1
+        },
+        "Mobile": {
+            "name": "Mobile",
+            "shortname": "Mobile",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Browser",
+            "submodule": "Mobile",
+            "namespace": "",
+            "file": "src/device/Mobile.js",
+            "line": 33,
+            "description": "Mobile detection, iOS or Android",
+            "is_constructor": 1
+        },
+        "Touch": {
+            "name": "Touch",
+            "shortname": "Touch",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Browser",
+            "submodule": "Touch",
+            "namespace": "",
+            "file": "src/device/Touch.js",
+            "line": 30,
+            "deprecated": true,
+            "deprecationMessage": "instead of Element",
+            "is_constructor": 1
+        },
+        "Windows": {
+            "name": "Windows",
+            "shortname": "Windows",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Browser",
+            "submodule": "Windows",
+            "namespace": "",
+            "file": "src/device/Windows.js",
+            "line": 32,
+            "description": "windows detection",
+            "is_constructor": 1
+        },
+        "iOS": {
+            "name": "iOS",
+            "shortname": "iOS",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Browser",
+            "submodule": "iOS",
+            "namespace": "",
+            "file": "src/device/iOS.js",
+            "line": 38,
+            "description": "iOS detection",
+            "is_constructor": 1
+        },
+        "Dataset": {
+            "name": "Dataset",
+            "shortname": "Dataset",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "wakegi",
+            "submodule": "Dataset",
+            "namespace": "",
+            "file": "src/document/Dataset.js",
+            "line": 32,
+            "description": "tag の data属性を key: value 形式に分解します",
+            "static": 1,
+            "is_constructor": 1
+        },
+        "Dom": {
+            "name": "Dom",
+            "shortname": "Dom",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "wakegi",
+            "submodule": "Dom",
+            "namespace": "",
+            "file": "src/document/Dom.js",
+            "line": 31,
+            "is_constructor": 1,
+            "params": [
+                {
+                    "name": "element",
+                    "description": "",
+                    "type": "HTMLElement"
+                }
+            ]
+        },
+        "Element": {
+            "name": "Element",
+            "shortname": "Element",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Browser",
+            "submodule": "Element",
+            "namespace": "",
+            "file": "src/document/Element.js",
+            "line": 35,
+            "description": "HTMLElement detection",
+            "is_constructor": 1
+        },
+        "Util": {
+            "name": "Util",
+            "shortname": "Util",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "wakegi",
+            "submodule": "Util",
+            "namespace": "",
+            "file": "src/document/Util.js",
+            "line": 30,
+            "static": 1,
+            "is_constructor": 1
+        },
+        "Browser": {
+            "name": "Browser",
+            "shortname": "Browser",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "wakegi",
+            "submodule": "Browser",
+            "namespace": "",
+            "file": "src/Browser.js",
+            "line": 35,
+            "description": "Browser 基本機能",
+            "is_constructor": 1
+        }
+    },
+    "classitems": [
+        {
+            "file": "src/browser/Chrome.js",
+            "line": 1,
+            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 17:32\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
+            "class": "Chrome"
+        },
+        {
+            "file": "src/browser/Chrome.js",
+            "line": 52,
+            "itemtype": "method",
+            "name": "init",
+            "static": 1,
+            "class": "Chrome",
+            "module": "Browser",
+            "submodule": "Chrome"
+        },
+        {
+            "file": "src/browser/Chrome.js",
+            "line": 84,
+            "itemtype": "method",
+            "name": "calculate",
+            "static": 1,
+            "class": "Chrome",
+            "module": "Browser",
+            "submodule": "Chrome"
+        },
+        {
+            "file": "src/browser/Chrome.js",
+            "line": 142,
+            "itemtype": "method",
+            "name": "is",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "Chrome",
+            "module": "Browser",
+            "submodule": "Chrome"
+        },
+        {
+            "file": "src/browser/Chrome.js",
+            "line": 154,
+            "itemtype": "method",
+            "name": "version",
+            "static": 1,
+            "return": {
+                "description": "N.NNN で返します",
+                "type": "Float"
+            },
+            "class": "Chrome",
+            "module": "Browser",
+            "submodule": "Chrome"
+        },
+        {
+            "file": "src/browser/Chrome.js",
+            "line": 167,
+            "itemtype": "method",
+            "name": "build",
+            "static": 1,
+            "return": {
+                "description": "NN.NN.NN.NN 型（文字）で返します",
+                "type": "String"
+            },
+            "class": "Chrome",
+            "module": "Browser",
+            "submodule": "Chrome"
+        },
+        {
+            "file": "src/browser/Chrome.js",
+            "line": 180,
+            "itemtype": "method",
+            "name": "major",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Int"
+            },
+            "class": "Chrome",
+            "module": "Browser",
+            "submodule": "Chrome"
+        },
+        {
+            "file": "src/browser/Chrome.js",
+            "line": 192,
+            "itemtype": "method",
+            "name": "numbers",
+            "static": 1,
+            "return": {
+                "description": "[major: int, minor: int, build: int] 形式で返します",
+                "type": "*[]"
+            },
+            "class": "Chrome",
+            "module": "Browser",
+            "submodule": "Chrome"
+        },
+        {
+            "file": "src/browser/CriOS.js",
+            "line": 1,
+            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 14:43\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.\n\niOS Chrome",
+            "class": "CriOS",
+            "module": "Browser"
+        },
+        {
+            "file": "src/browser/CriOS.js",
+            "line": 51,
+            "itemtype": "method",
+            "name": "init",
+            "static": 1,
+            "class": "CriOS",
+            "module": "Browser",
+            "submodule": "CriOS"
+        },
+        {
+            "file": "src/browser/CriOS.js",
+            "line": 65,
+            "itemtype": "method",
+            "name": "calculate",
+            "static": 1,
+            "class": "CriOS",
+            "module": "Browser",
+            "submodule": "CriOS"
+        },
+        {
+            "file": "src/browser/CriOS.js",
+            "line": 110,
+            "itemtype": "method",
+            "name": "is",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "CriOS",
+            "module": "Browser",
+            "submodule": "CriOS"
+        },
+        {
+            "file": "src/browser/CriOS.js",
+            "line": 122,
+            "itemtype": "method",
+            "name": "version",
+            "static": 1,
+            "return": {
+                "description": "N.NNN で返します",
+                "type": "Float"
+            },
+            "class": "CriOS",
+            "module": "Browser",
+            "submodule": "CriOS"
+        },
+        {
+            "file": "src/browser/CriOS.js",
+            "line": 136,
+            "itemtype": "method",
+            "name": "build",
+            "static": 1,
+            "return": {
+                "description": "NN.NN.NN.NN 型（文字）で返します",
+                "type": "String"
+            },
+            "class": "CriOS",
+            "module": "Browser",
+            "submodule": "CriOS"
+        },
+        {
+            "file": "src/browser/CriOS.js",
+            "line": 149,
+            "itemtype": "method",
+            "name": "major",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Int"
+            },
+            "class": "CriOS",
+            "module": "Browser",
+            "submodule": "CriOS"
+        },
+        {
+            "file": "src/browser/CriOS.js",
+            "line": 161,
+            "itemtype": "method",
+            "name": "numbers",
+            "static": 1,
+            "return": {
+                "description": "[major: int, minor: int, build: int] 形式で返します",
+                "type": "*[]"
+            },
+            "class": "CriOS",
+            "module": "Browser",
+            "submodule": "CriOS"
+        },
+        {
+            "file": "src/browser/Edge.js",
+            "line": 1,
+            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 15/07/30 - 17:59\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
+            "class": "Edge",
+            "module": "Browser"
+        },
+        {
+            "file": "src/browser/Edge.js",
+            "line": 50,
+            "itemtype": "method",
+            "name": "init",
+            "static": 1,
+            "class": "Edge",
+            "module": "Browser",
+            "submodule": "Edge"
+        },
+        {
+            "file": "src/browser/Edge.js",
+            "line": 64,
+            "itemtype": "method",
+            "name": "calculate",
+            "static": 1,
+            "class": "Edge",
+            "module": "Browser",
+            "submodule": "Edge"
+        },
+        {
+            "file": "src/browser/Edge.js",
+            "line": 110,
+            "itemtype": "method",
+            "name": "is",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "Edge",
+            "module": "Browser",
+            "submodule": "Edge"
+        },
+        {
+            "file": "src/browser/Edge.js",
+            "line": 122,
+            "itemtype": "method",
+            "name": "version",
+            "static": 1,
+            "return": {
+                "description": "N.NN で返します",
+                "type": "Float"
+            },
+            "class": "Edge",
+            "module": "Browser",
+            "submodule": "Edge"
+        },
+        {
+            "file": "src/browser/Edge.js",
+            "line": 135,
+            "itemtype": "method",
+            "name": "major",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Int"
+            },
+            "class": "Edge",
+            "module": "Browser",
+            "submodule": "Edge"
+        },
+        {
+            "file": "src/browser/Edge.js",
+            "line": 147,
+            "itemtype": "method",
+            "name": "build",
+            "static": 1,
+            "return": {
+                "description": "NN.NN 型（文字）で返します",
+                "type": "String"
+            },
+            "class": "Edge",
+            "module": "Browser",
+            "submodule": "Edge"
+        },
+        {
+            "file": "src/browser/Edge.js",
+            "line": 160,
+            "itemtype": "method",
+            "name": "numbers",
+            "static": 1,
+            "return": {
+                "description": "[major: int, minor: int] 形式で返します",
+                "type": "[]"
+            },
+            "class": "Edge",
+            "module": "Browser",
+            "submodule": "Edge"
+        },
+        {
+            "file": "src/browser/Firefox.js",
+            "line": 1,
+            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 18:29\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
+            "class": "Firefox",
+            "module": "Browser"
+        },
+        {
+            "file": "src/browser/Firefox.js",
+            "line": 47,
+            "itemtype": "method",
+            "name": "init",
+            "static": 1,
+            "class": "Firefox",
+            "module": "Browser",
+            "submodule": "Firefox"
+        },
+        {
+            "file": "src/browser/Firefox.js",
+            "line": 63,
+            "itemtype": "method",
+            "name": "calculate",
+            "static": 1,
+            "class": "Firefox",
+            "module": "Browser",
+            "submodule": "Firefox"
+        },
+        {
+            "file": "src/browser/Firefox.js",
+            "line": 110,
+            "itemtype": "method",
+            "name": "is",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "Firefox",
+            "module": "Browser",
+            "submodule": "Firefox"
+        },
+        {
+            "file": "src/browser/Firefox.js",
+            "line": 122,
+            "itemtype": "method",
+            "name": "version",
+            "static": 1,
+            "return": {
+                "description": "N.NN で返します",
+                "type": "Float"
+            },
+            "class": "Firefox",
+            "module": "Browser",
+            "submodule": "Firefox"
+        },
+        {
+            "file": "src/browser/Firefox.js",
+            "line": 135,
+            "itemtype": "method",
+            "name": "major",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Int"
+            },
+            "class": "Firefox",
+            "module": "Browser",
+            "submodule": "Firefox"
+        },
+        {
+            "file": "src/browser/Firefox.js",
+            "line": 147,
+            "itemtype": "method",
+            "name": "build",
+            "static": 1,
+            "return": {
+                "description": "NN.NN.NN.NN 型（文字）で返します",
+                "type": "String"
+            },
+            "class": "Firefox",
+            "module": "Browser",
+            "submodule": "Firefox"
+        },
+        {
+            "file": "src/browser/Firefox.js",
+            "line": 160,
+            "itemtype": "method",
+            "name": "numbers",
+            "static": 1,
+            "return": {
+                "description": "[major: int, minor: int, build: int] 形式で返します",
+                "type": "*[]"
+            },
+            "class": "Firefox",
+            "module": "Browser",
+            "submodule": "Firefox"
+        },
+        {
+            "file": "src/browser/IE.js",
+            "line": 1,
+            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 14:16\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
+            "class": "IE",
+            "module": "Browser"
+        },
+        {
+            "file": "src/browser/IE.js",
+            "line": 45,
+            "itemtype": "method",
+            "name": "init",
+            "static": 1,
+            "class": "IE",
+            "module": "Browser",
+            "submodule": "IE"
+        },
+        {
+            "file": "src/browser/IE.js",
+            "line": 114,
+            "itemtype": "method",
+            "name": "calculate",
+            "static": 1,
+            "class": "IE",
+            "module": "Browser",
+            "submodule": "IE"
+        },
+        {
+            "file": "src/browser/IE.js",
+            "line": 161,
+            "itemtype": "method",
+            "name": "is",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "IE",
+            "module": "Browser",
+            "submodule": "IE"
+        },
+        {
+            "file": "src/browser/IE.js",
+            "line": 173,
+            "itemtype": "method",
+            "name": "is6",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "IE",
+            "module": "Browser",
+            "submodule": "IE"
+        },
+        {
+            "file": "src/browser/IE.js",
+            "line": 185,
+            "itemtype": "method",
+            "name": "is7",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "IE",
+            "module": "Browser",
+            "submodule": "IE"
+        },
+        {
+            "file": "src/browser/IE.js",
+            "line": 197,
+            "itemtype": "method",
+            "name": "is8",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "IE",
+            "module": "Browser",
+            "submodule": "IE"
+        },
+        {
+            "file": "src/browser/IE.js",
+            "line": 209,
+            "itemtype": "method",
+            "name": "is9",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "IE",
+            "module": "Browser",
+            "submodule": "IE"
+        },
+        {
+            "file": "src/browser/IE.js",
+            "line": 221,
+            "itemtype": "method",
+            "name": "is10",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "IE",
+            "module": "Browser",
+            "submodule": "IE"
+        },
+        {
+            "file": "src/browser/IE.js",
+            "line": 233,
+            "itemtype": "method",
+            "name": "is11",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "IE",
+            "module": "Browser",
+            "submodule": "IE"
+        },
+        {
+            "file": "src/browser/IE.js",
+            "line": 245,
+            "description": "version float型",
+            "itemtype": "method",
+            "name": "version",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Int"
+            },
+            "class": "IE",
+            "module": "Browser",
+            "submodule": "IE"
+        },
+        {
+            "file": "src/browser/IE.js",
+            "line": 258,
+            "description": "version 正数",
+            "itemtype": "method",
+            "name": "major",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Int"
+            },
+            "class": "IE",
+            "module": "Browser",
+            "submodule": "IE"
+        },
+        {
+            "file": "src/browser/IE.js",
+            "line": 270,
+            "description": "IE 8 or 7 or 6 判定",
+            "itemtype": "method",
+            "name": "legacy",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "IE",
+            "module": "Browser",
+            "submodule": "IE"
+        },
+        {
+            "file": "src/browser/Safari.js",
+            "line": 1,
+            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 18:06\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
+            "class": "Safari",
+            "module": "Browser"
+        },
+        {
+            "file": "src/browser/Safari.js",
+            "line": 52,
+            "itemtype": "method",
+            "name": "init",
+            "static": 1,
+            "class": "Safari",
+            "module": "Browser",
+            "submodule": "Safari"
+        },
+        {
+            "file": "src/browser/Safari.js",
+            "line": 79,
+            "itemtype": "method",
+            "name": "calculate",
+            "static": 1,
+            "class": "Safari",
+            "module": "Browser",
+            "submodule": "Safari"
+        },
+        {
+            "file": "src/browser/Safari.js",
+            "line": 137,
+            "itemtype": "method",
+            "name": "is",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "Safari",
+            "module": "Browser",
+            "submodule": "Safari"
+        },
+        {
+            "file": "src/browser/Safari.js",
+            "line": 149,
+            "itemtype": "method",
+            "name": "set",
+            "static": 1,
+            "params": [
+                {
+                    "name": "bool",
+                    "description": "",
+                    "type": "Boolean"
+                }
+            ],
+            "class": "Safari",
+            "module": "Browser",
+            "submodule": "Safari"
+        },
+        {
+            "file": "src/browser/Safari.js",
+            "line": 160,
+            "itemtype": "method",
+            "name": "version",
+            "static": 1,
+            "return": {
+                "description": "N.NN で返します",
+                "type": "Float"
+            },
+            "class": "Safari",
+            "module": "Browser",
+            "submodule": "Safari"
+        },
+        {
+            "file": "src/browser/Safari.js",
+            "line": 173,
+            "itemtype": "method",
+            "name": "major",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Int"
+            },
+            "class": "Safari",
+            "module": "Browser",
+            "submodule": "Safari"
+        },
+        {
+            "file": "src/browser/Safari.js",
+            "line": 185,
+            "itemtype": "method",
+            "name": "build",
+            "static": 1,
+            "return": {
+                "description": "NN.NN.NN.NN 型（文字）で返します",
+                "type": "String"
+            },
+            "class": "Safari",
+            "module": "Browser",
+            "submodule": "Safari"
+        },
+        {
+            "file": "src/browser/Safari.js",
+            "line": 198,
+            "itemtype": "method",
+            "name": "numbers",
+            "static": 1,
+            "return": {
+                "description": "[major: int, minor: int, build: int] 形式で返します",
+                "type": "*[]"
+            },
+            "class": "Safari",
+            "module": "Browser",
+            "submodule": "Safari"
+        },
+        {
+            "file": "src/browser/Safari.js",
+            "line": 210,
+            "itemtype": "method",
+            "name": "number",
+            "deprecated": true,
+            "deprecationMessage": "instead of Safari.numbers",
+            "static": 1,
+            "return": {
+                "description": "[major: int, minor: int, build: int] 形式で返します",
+                "type": "*[]"
+            },
+            "class": "Safari",
+            "module": "Browser",
+            "submodule": "Safari"
+        },
+        {
+            "file": "src/css/Css3.js",
+            "line": 1,
+            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 22:24\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
+            "class": "Css3",
+            "module": "Browser"
+        },
+        {
+            "file": "src/css/Css3.js",
+            "line": 53,
+            "description": "CSS3 transition detection",
+            "itemtype": "method",
+            "name": "transition",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "Css3",
+            "module": "Browser",
+            "submodule": "Css3"
+        },
+        {
+            "file": "src/css/Css3.js",
+            "line": 79,
+            "description": "CSS3 transform detection",
+            "itemtype": "method",
+            "name": "transform",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "Css3",
+            "module": "Browser",
+            "submodule": "Css3"
+        },
+        {
+            "file": "src/css/Css3.js",
+            "line": 105,
+            "itemtype": "method",
+            "name": "matchMedia",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "Css3",
+            "module": "Browser",
+            "submodule": "Css3"
+        },
+        {
+            "file": "src/css/Css3.js",
+            "line": 121,
+            "itemtype": "method",
+            "name": "orientationChange",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "Css3",
+            "module": "Browser",
+            "submodule": "Css3"
+        },
+        {
+            "file": "src/css/Css3.js",
+            "line": 138,
+            "itemtype": "method",
+            "name": "orientation",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "Css3",
+            "module": "Browser",
+            "submodule": "Css3"
+        },
+        {
+            "file": "src/css/Css3.js",
+            "line": 154,
+            "itemtype": "method",
+            "name": "backgroundSize",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "Css3",
+            "module": "Browser",
+            "submodule": "Css3"
+        },
+        {
+            "file": "src/css/Transform.js",
+            "line": 1,
+            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 22:57\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
+            "class": "Transform",
+            "module": "Browser"
+        },
+        {
+            "file": "src/css/Transform.js",
+            "line": 44,
+            "itemtype": "method",
+            "name": "is",
+            "deprecated": true,
+            "deprecationMessage": "instead of Css3.transform",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "Transform",
+            "module": "Browser",
+            "submodule": "Transform"
+        },
+        {
+            "file": "src/css/Transition.js",
+            "line": 1,
+            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 22:54\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
+            "class": "Transition",
+            "module": "Browser"
+        },
+        {
+            "file": "src/css/Transition.js",
+            "line": 44,
+            "itemtype": "method",
+            "name": "is",
+            "deprecated": true,
+            "deprecationMessage": "instead of Css3.transition",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "Transition",
+            "module": "Browser",
+            "submodule": "Transition"
+        },
+        {
+            "file": "src/device/Android.js",
+            "line": 1,
+            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 21:16\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
+            "class": "Android",
+            "module": "Browser"
+        },
+        {
+            "file": "src/device/Android.js",
+            "line": 52,
+            "itemtype": "method",
+            "name": "init",
+            "static": 1,
+            "class": "Android",
+            "module": "Browser",
+            "submodule": "Android"
+        },
+        {
+            "file": "src/device/Android.js",
+            "line": 91,
+            "itemtype": "method",
+            "name": "calculate",
+            "static": 1,
+            "class": "Android",
+            "module": "Browser",
+            "submodule": "Android"
+        },
+        {
+            "file": "src/device/Android.js",
+            "line": 145,
+            "itemtype": "method",
+            "name": "is",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "Android",
+            "module": "Browser",
+            "submodule": "Android"
+        },
+        {
+            "file": "src/device/Android.js",
+            "line": 157,
+            "description": "Android 標準ブラウザ",
+            "itemtype": "method",
+            "name": "standard",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "Android",
+            "module": "Browser",
+            "submodule": "Android"
+        },
+        {
+            "file": "src/device/Android.js",
+            "line": 170,
+            "description": "Android Phone",
+            "itemtype": "method",
+            "name": "phone",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "Android",
+            "module": "Browser",
+            "submodule": "Android"
+        },
+        {
+            "file": "src/device/Android.js",
+            "line": 183,
+            "description": "Android Tablet",
+            "itemtype": "method",
+            "name": "tablet",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "Android",
+            "module": "Browser",
+            "submodule": "Android"
+        },
+        {
+            "file": "src/device/Android.js",
+            "line": 196,
+            "description": "Android HD 端末",
+            "itemtype": "method",
+            "name": "hd",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "Android",
+            "module": "Browser",
+            "submodule": "Android"
+        },
+        {
+            "file": "src/device/Android.js",
+            "line": 209,
+            "itemtype": "method",
+            "name": "version",
+            "static": 1,
+            "return": {
+                "description": "N.NN で返します",
+                "type": "Float"
+            },
+            "class": "Android",
+            "module": "Browser",
+            "submodule": "Android"
+        },
+        {
+            "file": "src/device/Android.js",
+            "line": 222,
+            "itemtype": "method",
+            "name": "build",
+            "static": 1,
+            "return": {
+                "description": "NN.NN.NN 型（文字）で返します",
+                "type": "String"
+            },
+            "class": "Android",
+            "module": "Browser",
+            "submodule": "Android"
+        },
+        {
+            "file": "src/device/Android.js",
+            "line": 235,
+            "itemtype": "method",
+            "name": "major",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Int"
+            },
+            "class": "Android",
+            "module": "Browser",
+            "submodule": "Android"
+        },
+        {
+            "file": "src/device/Android.js",
+            "line": 246,
+            "itemtype": "method",
+            "name": "numbers",
+            "static": 1,
+            "return": {
+                "description": "[major: int, minor: int, build: int] 形式で返します",
+                "type": "*[]"
+            },
+            "class": "Android",
+            "module": "Browser",
+            "submodule": "Android"
+        },
+        {
+            "file": "src/device/Android.js",
+            "line": 258,
+            "itemtype": "method",
+            "name": "number",
+            "deprecated": true,
+            "deprecationMessage": "instead of Android.numbers",
+            "static": 1,
+            "return": {
+                "description": "[major: int, minor: int, build: int] 形式で返します",
+                "type": "*[]"
+            },
+            "class": "Android",
+            "module": "Browser",
+            "submodule": "Android"
+        },
+        {
+            "file": "src/device/Mac.js",
+            "line": 1,
+            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 23:00\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
+            "class": "Mac",
+            "module": "Browser"
+        },
+        {
+            "file": "src/device/Mac.js",
+            "line": 45,
+            "itemtype": "method",
+            "name": "init",
+            "static": 1,
+            "class": "Mac",
+            "module": "Browser",
+            "submodule": "Mac"
+        },
+        {
+            "file": "src/device/Mac.js",
+            "line": 58,
+            "itemtype": "method",
+            "name": "is",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "Mac",
+            "module": "Browser",
+            "submodule": "Mac"
+        },
+        {
+            "file": "src/device/Mobile.js",
+            "line": 1,
+            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 23:29\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
+            "class": "Mobile",
+            "module": "Browser"
+        },
+        {
+            "file": "src/device/Mobile.js",
+            "line": 45,
+            "itemtype": "method",
+            "name": "is",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "Mobile",
+            "module": "Browser",
+            "submodule": "Mobile"
+        },
+        {
+            "file": "src/device/Mobile.js",
+            "line": 55,
+            "itemtype": "method",
+            "name": "phone",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "Mobile",
+            "module": "Browser",
+            "submodule": "Mobile"
+        },
+        {
+            "file": "src/device/Mobile.js",
+            "line": 65,
+            "itemtype": "method",
+            "name": "tablet",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "Mobile",
+            "module": "Browser",
+            "submodule": "Mobile"
+        },
+        {
+            "file": "src/device/Mobile.js",
+            "line": 75,
+            "description": "window.onload 後に実行して下さい",
+            "itemtype": "method",
+            "name": "hideBar",
+            "static": 1,
+            "class": "Mobile",
+            "module": "Browser",
+            "submodule": "Mobile"
+        },
+        {
+            "file": "src/device/Mobile.js",
+            "line": 85,
+            "itemtype": "method",
+            "name": "hideURLBar",
+            "deprecated": true,
+            "deprecationMessage": "instead of Mobile.hideBar",
+            "static": 1,
+            "class": "Mobile",
+            "module": "Browser",
+            "submodule": "Mobile"
+        },
+        {
+            "file": "src/device/Touch.js",
+            "line": 1,
+            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 23:16\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
+            "class": "Touch",
+            "module": "Browser"
+        },
+        {
+            "file": "src/device/Touch.js",
+            "line": 42,
+            "itemtype": "method",
+            "name": "is",
+            "deprecated": true,
+            "deprecationMessage": "instead of Element.touch",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "Touch",
+            "module": "Browser",
+            "submodule": "Touch"
+        },
+        {
+            "file": "src/device/Windows.js",
+            "line": 1,
+            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 23:05\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
+            "class": "Windows",
+            "module": "Browser"
+        },
+        {
+            "file": "src/device/Windows.js",
+            "line": 44,
+            "itemtype": "method",
+            "name": "init",
+            "static": 1,
+            "class": "Windows",
+            "module": "Browser",
+            "submodule": "Windows"
+        },
+        {
+            "file": "src/device/Windows.js",
+            "line": 57,
+            "itemtype": "method",
+            "name": "is",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "Windows",
+            "module": "Browser",
+            "submodule": "Windows"
+        },
+        {
+            "file": "src/device/iOS.js",
+            "line": 1,
+            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 19:34\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
+            "class": "iOS",
+            "module": "Browser"
+        },
+        {
+            "file": "src/device/iOS.js",
+            "line": 51,
+            "itemtype": "method",
+            "name": "init",
+            "static": 1,
+            "class": "iOS",
+            "module": "Browser",
+            "submodule": "iOS"
+        },
+        {
+            "file": "src/device/iOS.js",
+            "line": 77,
+            "itemtype": "method",
+            "name": "calculate",
+            "static": 1,
+            "class": "iOS",
+            "module": "Browser",
+            "submodule": "iOS"
+        },
+        {
+            "file": "src/device/iOS.js",
+            "line": 131,
+            "itemtype": "method",
+            "name": "is",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "iOS",
+            "module": "Browser",
+            "submodule": "iOS"
+        },
+        {
+            "file": "src/device/iOS.js",
+            "line": 142,
+            "itemtype": "method",
+            "name": "iPhone",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "iOS",
+            "module": "Browser",
+            "submodule": "iOS"
+        },
+        {
+            "file": "src/device/iOS.js",
+            "line": 153,
+            "itemtype": "method",
+            "name": "iPad",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "iOS",
+            "module": "Browser",
+            "submodule": "iOS"
+        },
+        {
+            "file": "src/device/iOS.js",
+            "line": 164,
+            "itemtype": "method",
+            "name": "iPod",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "iOS",
+            "module": "Browser",
+            "submodule": "iOS"
+        },
+        {
+            "file": "src/device/iOS.js",
+            "line": 175,
+            "itemtype": "method",
+            "name": "standalone",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Function|boolean"
+            },
+            "class": "iOS",
+            "module": "Browser",
+            "submodule": "iOS"
+        },
+        {
+            "file": "src/device/iOS.js",
+            "line": 187,
+            "itemtype": "method",
+            "name": "fullScreen",
+            "deprecated": true,
+            "deprecationMessage": "instead of iOS.standalone",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Function|boolean"
+            },
+            "class": "iOS",
+            "module": "Browser",
+            "submodule": "iOS"
+        },
+        {
+            "file": "src/device/iOS.js",
+            "line": 199,
+            "itemtype": "method",
+            "name": "version",
+            "static": 1,
+            "return": {
+                "description": "N.NN で返します",
+                "type": "Float"
+            },
+            "class": "iOS",
+            "module": "Browser",
+            "submodule": "iOS"
+        },
+        {
+            "file": "src/device/iOS.js",
+            "line": 212,
+            "itemtype": "method",
+            "name": "build",
+            "static": 1,
+            "return": {
+                "description": "NN.NN.NN 型（文字）で返します",
+                "type": "String"
+            },
+            "class": "iOS",
+            "module": "Browser",
+            "submodule": "iOS"
+        },
+        {
+            "file": "src/device/iOS.js",
+            "line": 225,
+            "itemtype": "method",
+            "name": "major",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Int"
+            },
+            "class": "iOS",
+            "module": "Browser",
+            "submodule": "iOS"
+        },
+        {
+            "file": "src/device/iOS.js",
+            "line": 236,
+            "itemtype": "method",
+            "name": "numbers",
+            "static": 1,
+            "return": {
+                "description": "[major: int, minor: int, build: int] 形式で返します",
+                "type": "*[]"
+            },
+            "class": "iOS",
+            "module": "Browser",
+            "submodule": "iOS"
+        },
+        {
+            "file": "src/device/iOS.js",
+            "line": 248,
+            "itemtype": "method",
+            "name": "number",
+            "deprecated": true,
+            "deprecationMessage": "instead of Safari.numbers",
+            "static": 1,
+            "return": {
+                "description": "[major: int, minor: int, build: int] 形式で返します",
+                "type": "*[]"
+            },
+            "class": "iOS",
+            "module": "Browser",
+            "submodule": "iOS"
+        },
+        {
+            "file": "src/device/iOS.js",
+            "line": 260,
+            "description": "アプリ内ブラウザかどうかを返します",
+            "itemtype": "method",
+            "name": "webView",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "iOS",
+            "module": "Browser",
+            "submodule": "iOS"
+        },
+        {
+            "file": "src/document/Dataset.js",
+            "line": 1,
+            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 15/08/20 - 19:42\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.\n\nfor wakegi.js",
+            "class": "Dataset",
+            "module": "Browser"
+        },
+        {
+            "file": "src/document/Dataset.js",
+            "line": 43,
+            "description": "引数 element(HTMLElement) の data属性を object にして返す",
+            "itemtype": "method",
+            "name": "parse",
+            "static": 1,
+            "params": [
+                {
+                    "name": "element",
+                    "description": "",
+                    "type": "Element"
+                }
+            ],
+            "return": {
+                "description": "}"
+            },
+            "class": "Dataset",
+            "module": "wakegi",
+            "submodule": "Dataset"
+        },
+        {
+            "file": "src/document/Dataset.js",
+            "line": 64,
+            "itemtype": "method",
+            "name": "modern",
+            "static": 1,
+            "params": [
+                {
+                    "name": "element",
+                    "description": "",
+                    "type": "Element"
+                }
+            ],
+            "return": {
+                "description": "}"
+            },
+            "class": "Dataset",
+            "module": "wakegi",
+            "submodule": "Dataset"
+        },
+        {
+            "file": "src/document/Dataset.js",
+            "line": 114,
+            "itemtype": "method",
+            "name": "legacy",
+            "static": 1,
+            "params": [
+                {
+                    "name": "element",
+                    "description": "",
+                    "type": "Element"
+                }
+            ],
+            "return": {
+                "description": "}"
+            },
+            "class": "Dataset",
+            "module": "wakegi",
+            "submodule": "Dataset"
+        },
+        {
+            "file": "src/document/Dom.js",
+            "line": 1,
+            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/04/02 - 20:40\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
+            "class": "Dom",
+            "module": "wakegi"
+        },
+        {
+            "file": "src/document/Dom.js",
+            "line": 38,
+            "itemtype": "property",
+            "name": "_element",
+            "type": "{HTMLElement}",
+            "access": "private",
+            "tagname": "",
+            "class": "Dom",
+            "module": "wakegi",
+            "submodule": "Dom"
+        },
+        {
+            "file": "src/document/Dom.js",
+            "line": 50,
+            "itemtype": "method",
+            "name": "hasClass",
+            "params": [
+                {
+                    "name": "className",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "Dom",
+            "module": "wakegi",
+            "submodule": "Dom"
+        },
+        {
+            "file": "src/document/Dom.js",
+            "line": 60,
+            "itemtype": "method",
+            "name": "addClass",
+            "params": [
+                {
+                    "name": "className",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Dom"
+            },
+            "class": "Dom",
+            "module": "wakegi",
+            "submodule": "Dom"
+        },
+        {
+            "file": "src/document/Dom.js",
+            "line": 71,
+            "itemtype": "method",
+            "name": "removeClass",
+            "params": [
+                {
+                    "name": "className",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Dom"
+            },
+            "class": "Dom",
+            "module": "wakegi",
+            "submodule": "Dom"
+        },
+        {
+            "file": "src/document/Dom.js",
+            "line": 82,
+            "itemtype": "method",
+            "name": "style",
+            "params": [
+                {
+                    "name": "styleProp",
+                    "description": "",
+                    "type": "String",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "*"
+            },
+            "class": "Dom",
+            "module": "wakegi",
+            "submodule": "Dom"
+        },
+        {
+            "file": "src/document/Dom.js",
+            "line": 92,
+            "itemtype": "method",
+            "name": "hasClass",
+            "static": 1,
+            "params": [
+                {
+                    "name": "element",
+                    "description": "",
+                    "type": "HTMLElement"
+                },
+                {
+                    "name": "className",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "Dom",
+            "module": "wakegi",
+            "submodule": "Dom"
+        },
+        {
+            "file": "src/document/Dom.js",
+            "line": 104,
+            "itemtype": "method",
+            "name": "addClass",
+            "static": 1,
+            "params": [
+                {
+                    "name": "element",
+                    "description": "",
+                    "type": "HTMLElement"
+                },
+                {
+                    "name": "className",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Dom"
+            },
+            "class": "Dom",
+            "module": "wakegi",
+            "submodule": "Dom"
+        },
+        {
+            "file": "src/document/Dom.js",
+            "line": 136,
+            "itemtype": "method",
+            "name": "removeClass",
+            "static": 1,
+            "params": [
+                {
+                    "name": "element",
+                    "description": "",
+                    "type": "HTMLElement"
+                },
+                {
+                    "name": "className",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Dom"
+            },
+            "class": "Dom",
+            "module": "wakegi",
+            "submodule": "Dom"
+        },
+        {
+            "file": "src/document/Dom.js",
+            "line": 177,
+            "description": "getComputedStyle を使い HTMLElement style value を取得します",
+            "itemtype": "method",
+            "name": "styleCompute",
+            "static": 1,
+            "params": [
+                {
+                    "name": "defaultView",
+                    "description": "",
+                    "type": "Object"
+                },
+                {
+                    "name": "el",
+                    "description": "",
+                    "type": "HTMLElement"
+                },
+                {
+                    "name": "styleProp",
+                    "description": "",
+                    "type": "String",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "styleProp が null or undefined or \"\" の時は CSSStyleDeclaration Object<br>\n   指定されている時は CSS 設定値(string)を返します",
+                "type": "CSSStyleDeclaration|*|String"
+            },
+            "class": "Dom",
+            "module": "wakegi",
+            "submodule": "Dom"
+        },
+        {
+            "file": "src/document/Dom.js",
+            "line": 203,
+            "description": "currentStyle を使い HTMLElement style value を取得します",
+            "itemtype": "method",
+            "name": "styleCurrent",
+            "static": 1,
+            "params": [
+                {
+                    "name": "el",
+                    "description": "",
+                    "type": "HTMLElement"
+                },
+                {
+                    "name": "styleProp",
+                    "description": "",
+                    "type": "String",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "*"
+            },
+            "class": "Dom",
+            "module": "wakegi",
+            "submodule": "Dom"
+        },
+        {
+            "file": "src/document/Dom.js",
+            "line": 256,
+            "description": "HTMLElement の css style を返します",
+            "itemtype": "method",
+            "name": "getStyle",
+            "static": 1,
+            "params": [
+                {
+                    "name": "el",
+                    "description": "",
+                    "type": "HTMLElement"
+                },
+                {
+                    "name": "styleProp",
+                    "description": "",
+                    "type": "String",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "*"
+            },
+            "class": "Dom",
+            "module": "wakegi",
+            "submodule": "Dom"
+        },
+        {
+            "file": "src/document/Element.js",
+            "line": 1,
+            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/18 - 13:09\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
+            "class": "Element",
+            "module": "wakegi"
+        },
+        {
+            "file": "src/document/Element.js",
+            "line": 48,
+            "itemtype": "method",
+            "name": "touch",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "Element",
+            "module": "Browser",
+            "submodule": "Element"
+        },
+        {
+            "file": "src/document/Element.js",
+            "line": 66,
+            "itemtype": "method",
+            "name": "querySelector",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "Element",
+            "module": "Browser",
+            "submodule": "Element"
+        },
+        {
+            "file": "src/document/Element.js",
+            "line": 84,
+            "itemtype": "method",
+            "name": "canvas",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "Element",
+            "module": "Browser",
+            "submodule": "Element"
+        },
+        {
+            "file": "src/document/Element.js",
+            "line": 102,
+            "itemtype": "method",
+            "name": "webgl",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "Element",
+            "module": "Browser",
+            "submodule": "Element"
+        },
+        {
+            "file": "src/document/Element.js",
+            "line": 134,
+            "description": "querySelector が使えるブラウザだけ使用可能",
+            "itemtype": "method",
+            "name": "find",
+            "params": [
+                {
+                    "name": "searchKey",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "HTMLElement を返します",
+                "type": "*"
+            },
+            "class": "Element",
+            "module": "Browser",
+            "submodule": "Element"
+        },
+        {
+            "file": "src/document/Util.js",
+            "line": 1,
+            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 15/08/20 - 20:26\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.\n\nfor wakegi.js",
+            "class": "Util",
+            "module": "Browser"
+        },
+        {
+            "file": "src/document/Util.js",
+            "line": 42,
+            "description": "abc-def を abcDef にします",
+            "itemtype": "method",
+            "name": "camelize",
+            "static": 1,
+            "params": [
+                {
+                    "name": "str",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "dash(-)連結 word を camel case へ変換し返します。",
+                "type": "String"
+            },
+            "class": "Util",
+            "module": "wakegi",
+            "submodule": "Util"
+        },
+        {
+            "file": "src/document/Util.js",
+            "line": 60,
+            "description": "abcDef を abc-def にします",
+            "itemtype": "method",
+            "name": "dash",
+            "static": 1,
+            "params": [
+                {
+                    "name": "str",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "Util",
+            "module": "wakegi",
+            "submodule": "Util"
+        },
+        {
+            "file": "src/Browser.js",
+            "line": 1,
+            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 12:39\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
+            "class": "Browser",
+            "module": "wakegi"
+        },
+        {
+            "file": "src/Browser.js",
+            "line": 47,
+            "itemtype": "method",
+            "name": "init",
+            "static": 1,
+            "class": "Browser",
+            "module": "wakegi",
+            "submodule": "Browser"
+        },
+        {
+            "file": "src/Browser.js",
+            "line": 60,
+            "itemtype": "method",
+            "name": "navigator",
+            "static": 1,
+            "return": {
+                "description": "window.navigator オブジェクトを返します",
+                "type": "Navigator"
+            },
+            "class": "Browser",
+            "module": "wakegi",
+            "submodule": "Browser"
+        },
+        {
+            "file": "src/Browser.js",
+            "line": 68,
+            "itemtype": "method",
+            "name": "ua",
+            "static": 1,
+            "return": {
+                "description": "navigator.userAgent を返します",
+                "type": "*|string"
+            },
+            "class": "Browser",
+            "module": "wakegi",
+            "submodule": "Browser"
+        },
+        {
+            "file": "src/Browser.js",
+            "line": 79,
+            "itemtype": "method",
+            "name": "app",
+            "static": 1,
+            "return": {
+                "description": "navigator.appVersion を返します",
+                "type": "*|string"
+            },
+            "class": "Browser",
+            "module": "wakegi",
+            "submodule": "Browser"
+        },
+        {
+            "file": "src/Browser.js",
+            "line": 90,
+            "description": "userAgent regular expression of Safari",
+            "itemtype": "method",
+            "name": "matchSafari",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "Browser",
+            "module": "wakegi",
+            "submodule": "Browser"
+        },
+        {
+            "file": "src/wakegi.js",
+            "line": 1,
+            "license": "inazumatv.com",
+            "author": "(at)taikiken / http://inazumatv.com",
+            "date": "2015/03/17 - 12:37\n\nCopyright (c) 2011-@@year inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
+            "build": "@@buildTime",
+            "version": "@@version",
+            "class": "",
+            "module": "wakegi"
+        }
+    ],
+    "warnings": [
+        {
+            "message": "unknown tag: license",
+            "line": " src/wakegi.js:1"
+        },
+        {
+            "message": "unknown tag: date",
+            "line": " src/wakegi.js:1"
+        },
+        {
+            "message": "unknown tag: build",
+            "line": " src/wakegi.js:1"
+        },
+        {
+            "message": "unknown tag: version",
+            "line": " src/wakegi.js:1"
+        },
+        {
+            "message": "Missing item type\nlicense inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 17:32\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
+            "line": " src/browser/Chrome.js:1"
+        },
+        {
+            "message": "Missing item type\nlicense inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 14:43\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.\n\niOS Chrome",
+            "line": " src/browser/CriOS.js:1"
+        },
+        {
+            "message": "Missing item type\nlicense inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 15/07/30 - 17:59\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
+            "line": " src/browser/Edge.js:1"
+        },
+        {
+            "message": "Missing item type\nlicense inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 18:29\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
+            "line": " src/browser/Firefox.js:1"
+        },
+        {
+            "message": "Missing item type\nlicense inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 14:16\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
+            "line": " src/browser/IE.js:1"
+        },
+        {
+            "message": "Missing item type\nlicense inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 18:06\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
+            "line": " src/browser/Safari.js:1"
+        },
+        {
+            "message": "Missing item type\nlicense inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 22:24\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
+            "line": " src/css/Css3.js:1"
+        },
+        {
+            "message": "Missing item type\nlicense inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 22:57\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
+            "line": " src/css/Transform.js:1"
+        },
+        {
+            "message": "Missing item type\nlicense inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 22:54\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
+            "line": " src/css/Transition.js:1"
+        },
+        {
+            "message": "Missing item type\nlicense inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 21:16\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
+            "line": " src/device/Android.js:1"
+        },
+        {
+            "message": "Missing item type\nlicense inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 23:00\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
+            "line": " src/device/Mac.js:1"
+        },
+        {
+            "message": "Missing item type\nlicense inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 23:29\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
+            "line": " src/device/Mobile.js:1"
+        },
+        {
+            "message": "Missing item type\nlicense inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 23:16\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
+            "line": " src/device/Touch.js:1"
+        },
+        {
+            "message": "Missing item type\nlicense inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 23:05\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
+            "line": " src/device/Windows.js:1"
+        },
+        {
+            "message": "Missing item type\nlicense inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 19:34\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
+            "line": " src/device/iOS.js:1"
+        },
+        {
+            "message": "Missing item type\nlicense inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 15/08/20 - 19:42\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.\n\nfor wakegi.js",
+            "line": " src/document/Dataset.js:1"
+        },
+        {
+            "message": "Missing item type\nlicense inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/04/02 - 20:40\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
+            "line": " src/document/Dom.js:1"
+        },
+        {
+            "message": "Missing item type\nlicense inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/18 - 13:09\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
+            "line": " src/document/Element.js:1"
+        },
+        {
+            "message": "Missing item type\nlicense inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 15/08/20 - 20:26\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.\n\nfor wakegi.js",
+            "line": " src/document/Util.js:1"
+        },
+        {
+            "message": "Missing item type\nlicense inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 12:39\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
+            "line": " src/Browser.js:1"
+        },
+        {
+            "message": "Missing item type",
+            "line": " src/wakegi.js:1"
+        }
+    ]
+}

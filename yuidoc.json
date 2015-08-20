@@ -1,0 +1,11 @@
+{
+    "name": "wakegi.js API",
+    "description": "The wakegi.js API is a Browser detection.",
+    "url": "https://github.com/taikiken/wakegi.js",
+    "options": {
+        "linkNatives": "true",
+        "attributesEmit": "true",
+        "outdir": "./docs",
+        "paths": "./src"
+    }
+}

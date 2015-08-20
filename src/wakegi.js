@@ -13,8 +13,16 @@
  * @build @@buildTime
  * @version @@version
  *
- * @module wakegi
  */
+
+/**
+ * # Browser 機能を調べる
+ * # HTMLElement の CSS class 操作
+ *
+ * @module wakegi
+ * @type {{}|wakegi}
+ */
+
 var wakegi = wakegi || {};
 
 wakegi.int = parseInt;

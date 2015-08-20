@@ -10,6 +10,12 @@
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
+ *
+ */
+
+/**
+ * Windows OS チェックを行います
+ *
  * @module Browser
  * @submodule Windows
  */

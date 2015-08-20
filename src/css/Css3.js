@@ -10,6 +10,12 @@
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
+ *
+ */
+
+/**
+ * CSS3 機能（一部のみ）が使用可能かを調べます
+ *
  * @module Browser
  * @submodule Css3
  */

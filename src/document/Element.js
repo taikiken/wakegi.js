@@ -10,9 +10,14 @@
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
+ */
+
+/**
+ * Browser 毎の Element 機能を調べます
+ *
  * @module Browser
  * @submodule Element
- */
+ * */
 ( function ( window ){
   "use strict";
   var

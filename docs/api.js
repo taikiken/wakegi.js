@@ -6,6 +6,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "Chrome",
         "CriOS",
         "Css3",
+        "Dataset",
         "Dom",
         "Edge",
         "Element",
@@ -17,108 +18,137 @@ YUI.add("yuidoc-meta", function(Y) {
         "Touch",
         "Transform",
         "Transition",
+        "Util",
         "Windows",
         "iOS"
     ],
     "modules": [
+        "Android",
         "Browser",
+        "Chrome",
+        "CriOS",
+        "Css3",
+        "Dataset",
         "Dom",
+        "Edge",
+        "Element",
+        "Firefox",
+        "IE",
+        "Mac",
+        "Mobile",
+        "Safari",
+        "Touch",
+        "Transform",
+        "Transition",
+        "Util",
+        "Windows",
+        "iOS",
         "wakegi"
     ],
     "allModules": [
         {
             "displayName": "Android",
             "name": "Android",
-            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 21:16\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software."
+            "description": "Android のバージョンチェック他を行います"
         },
         {
             "displayName": "Browser",
             "name": "Browser",
-            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 12:39\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software."
+            "description": "Browser 機能を調べます\n\n互換のために Browser を基点にした Class が存在します"
         },
         {
             "displayName": "Chrome",
             "name": "Chrome",
-            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 17:32\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software."
+            "description": "Chrome チェックを行います"
         },
         {
             "displayName": "CriOS",
             "name": "CriOS",
-            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 14:43\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.\n\niOS Chrome"
+            "description": "iOS Chrome チェックを行います"
         },
         {
             "displayName": "Css3",
             "name": "Css3",
-            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 22:24\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software."
+            "description": "CSS3 機能（一部のみ）が使用可能かを調べます"
+        },
+        {
+            "displayName": "Dataset",
+            "name": "Dataset",
+            "description": "data-xxx を key, value に分解します"
         },
         {
             "displayName": "Dom",
             "name": "Dom",
-            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/04/02 - 20:40\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software."
+            "description": "HTMLElement へ class を追加・削除・存在確認を行います"
         },
         {
             "displayName": "Edge",
             "name": "Edge",
-            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 15/07/30 - 17:59\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software."
+            "description": "Windows 10 Edge Browser チェックを行います"
         },
         {
             "displayName": "Element",
             "name": "Element",
-            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/18 - 13:09\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software."
+            "description": "Browser 毎の Element 機能を調べます"
         },
         {
             "displayName": "Firefox",
             "name": "Firefox",
-            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 18:29\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software."
+            "description": "Firefox チェックを行います"
         },
         {
             "displayName": "IE",
             "name": "IE",
-            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 14:16\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software."
+            "description": "IE チェックを行います"
         },
         {
             "displayName": "iOS",
             "name": "iOS",
-            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 19:34\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software."
+            "description": "iOS バージョンチェック他を行います"
         },
         {
             "displayName": "Mac",
             "name": "Mac",
-            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 23:00\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software."
+            "description": "Mac OS チェックを行います"
         },
         {
             "displayName": "Mobile",
             "name": "Mobile",
-            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 23:29\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software."
+            "description": "mobile (phone, tablet) チェックを行います"
         },
         {
             "displayName": "Safari",
             "name": "Safari",
-            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 18:06\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software."
+            "description": "Safari チェックを行います"
         },
         {
             "displayName": "Touch",
             "name": "Touch",
-            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 23:16\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software."
+            "description": "touch event 利用可能かを調べます"
         },
         {
             "displayName": "Transform",
             "name": "Transform",
-            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 22:57\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software."
+            "description": "deprecated instead of Css3"
         },
         {
             "displayName": "Transition",
             "name": "Transition",
-            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 22:54\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software."
+            "description": "deprecated instead of Css3"
+        },
+        {
+            "displayName": "Util",
+            "name": "Util"
         },
         {
             "displayName": "wakegi",
-            "name": "wakegi"
+            "name": "wakegi",
+            "description": "# Browser 機能を調べる\n# HTMLElement の CSS class 操作"
         },
         {
             "displayName": "Windows",
             "name": "Windows",
-            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 23:05\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software."
+            "description": "Windows OS チェックを行います"
         }
     ]
 } };

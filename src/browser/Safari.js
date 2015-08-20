@@ -10,6 +10,12 @@
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
+ *
+ */
+
+/**
+ * Safari チェックを行います
+ *
  * @module Browser
  * @submodule Safari
  */

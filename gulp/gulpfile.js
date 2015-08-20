@@ -89,6 +89,8 @@ scripts.push( dir.src + '/css/Transform.js' );
 // document
 scripts.push( dir.src + '/document/Element.js' );
 scripts.push( dir.src + '/document/Dom.js' );
+scripts.push( dir.src + '/document/Util.js' );
+scripts.push( dir.src + '/document/Dataset.js' );
 
 // device
 scripts.push( dir.src + '/device/iOS.js' );
@@ -158,7 +160,7 @@ gulp.task( 'script-docs', function () {
 
   return gulp.src( scripts )
     .pipe( yuidoc.parser() )
-    .pipe(yuidoc.generator())
+    .pipe( yuidoc.generator() )
     .pipe( gulp.dest( dir.docs ) );
 } );
 
@@ -172,7 +174,7 @@ gulp.task('js-hint', function () {
 
 // ----------------------------------------------------------------
 // build
-gulp.task( 'script-build', function () {
+gulp.task( 'build', function () {
 
   runSequence(
     'js-hint',
@@ -184,7 +186,7 @@ gulp.task( 'script-build', function () {
 } );
 
 // build with docs
-gulp.task( 'script-build-api', function () {
+gulp.task( 'build-api', function () {
 
   runSequence(
     'js-hint',
