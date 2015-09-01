@@ -38,6 +38,7 @@
 
     /**
      * Android detection
+     * @static
      * @class Android
      * @constructor
      */

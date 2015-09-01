@@ -30,8 +30,9 @@
       mac;
 
     /**
-     * Mac detection
+     * Mac OS detection
      * @class Mac
+     * @static
      * @constructor
      */
     function Mac () {

@@ -38,7 +38,11 @@
 
     /**
      * Chrome 判定
+     *
+     * iOS Chrome も含まれます
+     *
      * @class Chrome
+     * @static
      * @constructor
      */
     function Chrome () {

@@ -39,6 +39,7 @@
     /**
      * Safari detection
      * @class Safari
+     * @static
      * @constructor
      */
     function Safari () {

@@ -32,6 +32,7 @@
     /**
      * @deprecated instead of Css3
      * @class Transition
+     * @static
      * @constructor
      */
     function Transition () {

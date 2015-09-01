@@ -38,6 +38,7 @@
     /**
      * iOS detection
      * @class iOS
+     * @static
      * @constructor
      */
     function iOS () {

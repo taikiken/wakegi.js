@@ -20,7 +20,9 @@
  * @submodule Transform
  */
 ( function ( window ){
-  "use strict";
+
+  'use strict';
+
   var
     wakegi = window.wakegi,
     Browser = wakegi.Browser;
@@ -32,6 +34,7 @@
     /**
      * @deprecated instead of Css3
      * @class Transform
+     * @static
      * @constructor
      */
     function Transform () {

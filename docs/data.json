@@ -256,6 +256,7 @@
                 "iOS": 1,
                 "Element": 1
             },
+            "elements": {},
             "classes": {
                 "Chrome": 1,
                 "CriOS": 1,
@@ -285,6 +286,7 @@
         "Chrome": {
             "name": "Chrome",
             "submodules": {},
+            "elements": {},
             "classes": {
                 "Chrome": 1
             },
@@ -300,6 +302,7 @@
         "CriOS": {
             "name": "CriOS",
             "submodules": {},
+            "elements": {},
             "classes": {
                 "CriOS": 1
             },
@@ -315,6 +318,7 @@
         "Edge": {
             "name": "Edge",
             "submodules": {},
+            "elements": {},
             "classes": {
                 "Edge": 1
             },
@@ -330,6 +334,7 @@
         "Firefox": {
             "name": "Firefox",
             "submodules": {},
+            "elements": {},
             "classes": {
                 "Firefox": 1
             },
@@ -345,6 +350,7 @@
         "IE": {
             "name": "IE",
             "submodules": {},
+            "elements": {},
             "classes": {
                 "IE": 1
             },
@@ -360,6 +366,7 @@
         "Safari": {
             "name": "Safari",
             "submodules": {},
+            "elements": {},
             "classes": {
                 "Safari": 1
             },
@@ -375,6 +382,7 @@
         "Css3": {
             "name": "Css3",
             "submodules": {},
+            "elements": {},
             "classes": {
                 "Css3": 1
             },
@@ -384,12 +392,13 @@
             "module": "Browser",
             "namespace": "",
             "file": "src/css/Css3.js",
-            "line": 38,
+            "line": 40,
             "description": "CSS3 機能（一部のみ）が使用可能かを調べます"
         },
         "Transform": {
             "name": "Transform",
             "submodules": {},
+            "elements": {},
             "classes": {
                 "Transform": 1
             },
@@ -399,12 +408,13 @@
             "module": "Browser",
             "namespace": "",
             "file": "src/css/Transform.js",
-            "line": 32,
+            "line": 34,
             "description": "deprecated instead of Css3"
         },
         "Transition": {
             "name": "Transition",
             "submodules": {},
+            "elements": {},
             "classes": {
                 "Transition": 1
             },
@@ -420,6 +430,7 @@
         "Android": {
             "name": "Android",
             "submodules": {},
+            "elements": {},
             "classes": {
                 "Android": 1
             },
@@ -435,6 +446,7 @@
         "Mac": {
             "name": "Mac",
             "submodules": {},
+            "elements": {},
             "classes": {
                 "Mac": 1
             },
@@ -450,6 +462,7 @@
         "Mobile": {
             "name": "Mobile",
             "submodules": {},
+            "elements": {},
             "classes": {
                 "Mobile": 1
             },
@@ -465,6 +478,7 @@
         "Touch": {
             "name": "Touch",
             "submodules": {},
+            "elements": {},
             "classes": {
                 "Touch": 1
             },
@@ -475,11 +489,12 @@
             "namespace": "",
             "file": "src/device/Touch.js",
             "line": 30,
-            "description": "touch event 利用可能かを調べます"
+            "description": "touch event が利用可能かを調べます"
         },
         "Windows": {
             "name": "Windows",
             "submodules": {},
+            "elements": {},
             "classes": {
                 "Windows": 1
             },
@@ -495,6 +510,7 @@
         "iOS": {
             "name": "iOS",
             "submodules": {},
+            "elements": {},
             "classes": {
                 "iOS": 1
             },
@@ -514,6 +530,7 @@
                 "Dom": 1,
                 "Util": 1
             },
+            "elements": {},
             "classes": {
                 "Dataset": 1,
                 "Dom": 1,
@@ -531,6 +548,7 @@
         "Dataset": {
             "name": "Dataset",
             "submodules": {},
+            "elements": {},
             "classes": {
                 "Dataset": 1
             },
@@ -546,6 +564,7 @@
         "Dom": {
             "name": "Dom",
             "submodules": {},
+            "elements": {},
             "classes": {
                 "Dom": 1
             },
@@ -561,6 +580,7 @@
         "Element": {
             "name": "Element",
             "submodules": {},
+            "elements": {},
             "classes": {
                 "Element": 1
             },
@@ -576,6 +596,7 @@
         "Util": {
             "name": "Util",
             "submodules": {},
+            "elements": {},
             "classes": {
                 "Util": 1
             },
@@ -602,7 +623,8 @@
             "namespace": "",
             "file": "src/browser/Chrome.js",
             "line": 39,
-            "description": "Chrome 判定",
+            "description": "Chrome 判定\n\niOS Chrome も含まれます",
+            "static": 1,
             "is_constructor": 1
         },
         "CriOS": {
@@ -619,6 +641,7 @@
             "file": "src/browser/CriOS.js",
             "line": 38,
             "description": "iOS Chrome 判定",
+            "static": 1,
             "is_constructor": 1
         },
         "Edge": {
@@ -634,6 +657,7 @@
             "namespace": "",
             "file": "src/browser/Edge.js",
             "line": 38,
+            "description": "Windows 10 Edge Browser チェックを行います",
             "static": 1,
             "is_constructor": 1
         },
@@ -651,6 +675,7 @@
             "file": "src/browser/Firefox.js",
             "line": 34,
             "description": "Firefox detection",
+            "static": 1,
             "is_constructor": 1
         },
         "IE": {
@@ -667,6 +692,7 @@
             "file": "src/browser/IE.js",
             "line": 32,
             "description": "IE detection",
+            "static": 1,
             "is_constructor": 1
         },
         "Safari": {
@@ -683,6 +709,7 @@
             "file": "src/browser/Safari.js",
             "line": 39,
             "description": "Safari detection",
+            "static": 1,
             "is_constructor": 1
         },
         "Css3": {
@@ -697,8 +724,9 @@
             "submodule": "Css3",
             "namespace": "",
             "file": "src/css/Css3.js",
-            "line": 38,
+            "line": 40,
             "description": "CSS3 detection",
+            "static": 1,
             "is_constructor": 1
         },
         "Transform": {
@@ -713,9 +741,10 @@
             "submodule": "Transform",
             "namespace": "",
             "file": "src/css/Transform.js",
-            "line": 32,
+            "line": 34,
             "deprecated": true,
             "deprecationMessage": "instead of Css3",
+            "static": 1,
             "is_constructor": 1
         },
         "Transition": {
@@ -733,6 +762,7 @@
             "line": 32,
             "deprecated": true,
             "deprecationMessage": "instead of Css3",
+            "static": 1,
             "is_constructor": 1
         },
         "Android": {
@@ -749,6 +779,7 @@
             "file": "src/device/Android.js",
             "line": 39,
             "description": "Android detection",
+            "static": 1,
             "is_constructor": 1
         },
         "Mac": {
@@ -764,7 +795,8 @@
             "namespace": "",
             "file": "src/device/Mac.js",
             "line": 32,
-            "description": "Mac detection",
+            "description": "Mac OS detection",
+            "static": 1,
             "is_constructor": 1
         },
         "Mobile": {
@@ -781,6 +813,7 @@
             "file": "src/device/Mobile.js",
             "line": 33,
             "description": "Mobile detection, iOS or Android",
+            "static": 1,
             "is_constructor": 1
         },
         "Touch": {
@@ -796,6 +829,7 @@
             "namespace": "",
             "file": "src/device/Touch.js",
             "line": 30,
+            "static": 1,
             "deprecated": true,
             "deprecationMessage": "instead of Element",
             "is_constructor": 1
@@ -813,7 +847,8 @@
             "namespace": "",
             "file": "src/device/Windows.js",
             "line": 32,
-            "description": "windows detection",
+            "description": "windows OS detection",
+            "static": 1,
             "is_constructor": 1
         },
         "iOS": {
@@ -830,6 +865,7 @@
             "file": "src/device/iOS.js",
             "line": 38,
             "description": "iOS detection",
+            "static": 1,
             "is_constructor": 1
         },
         "Dataset": {
@@ -862,6 +898,7 @@
             "namespace": "",
             "file": "src/document/Dom.js",
             "line": 31,
+            "static": 1,
             "is_constructor": 1,
             "params": [
                 {
@@ -885,6 +922,7 @@
             "file": "src/document/Element.js",
             "line": 35,
             "description": "HTMLElement detection",
+            "static": 1,
             "is_constructor": 1
         },
         "Util": {
@@ -916,10 +954,12 @@
             "namespace": "",
             "file": "src/Browser.js",
             "line": 35,
-            "description": "Browser 基本機能",
+            "description": "Browser 基本機能\n\n主要Classの親になります",
+            "static": 1,
             "is_constructor": 1
         }
     },
+    "elements": {},
     "classitems": [
         {
             "file": "src/browser/Chrome.js",
@@ -929,7 +969,7 @@
         },
         {
             "file": "src/browser/Chrome.js",
-            "line": 52,
+            "line": 56,
             "itemtype": "method",
             "name": "init",
             "static": 1,
@@ -939,7 +979,7 @@
         },
         {
             "file": "src/browser/Chrome.js",
-            "line": 84,
+            "line": 88,
             "itemtype": "method",
             "name": "calculate",
             "static": 1,
@@ -949,7 +989,7 @@
         },
         {
             "file": "src/browser/Chrome.js",
-            "line": 142,
+            "line": 146,
             "itemtype": "method",
             "name": "is",
             "static": 1,
@@ -963,7 +1003,7 @@
         },
         {
             "file": "src/browser/Chrome.js",
-            "line": 154,
+            "line": 158,
             "itemtype": "method",
             "name": "version",
             "static": 1,
@@ -977,7 +1017,7 @@
         },
         {
             "file": "src/browser/Chrome.js",
-            "line": 167,
+            "line": 171,
             "itemtype": "method",
             "name": "build",
             "static": 1,
@@ -991,7 +1031,7 @@
         },
         {
             "file": "src/browser/Chrome.js",
-            "line": 180,
+            "line": 184,
             "itemtype": "method",
             "name": "major",
             "static": 1,
@@ -1005,7 +1045,7 @@
         },
         {
             "file": "src/browser/Chrome.js",
-            "line": 192,
+            "line": 196,
             "itemtype": "method",
             "name": "numbers",
             "static": 1,
@@ -1026,7 +1066,7 @@
         },
         {
             "file": "src/browser/CriOS.js",
-            "line": 51,
+            "line": 53,
             "itemtype": "method",
             "name": "init",
             "static": 1,
@@ -1036,7 +1076,7 @@
         },
         {
             "file": "src/browser/CriOS.js",
-            "line": 65,
+            "line": 67,
             "itemtype": "method",
             "name": "calculate",
             "static": 1,
@@ -1046,7 +1086,7 @@
         },
         {
             "file": "src/browser/CriOS.js",
-            "line": 110,
+            "line": 112,
             "itemtype": "method",
             "name": "is",
             "static": 1,
@@ -1060,7 +1100,7 @@
         },
         {
             "file": "src/browser/CriOS.js",
-            "line": 122,
+            "line": 124,
             "itemtype": "method",
             "name": "version",
             "static": 1,
@@ -1074,7 +1114,7 @@
         },
         {
             "file": "src/browser/CriOS.js",
-            "line": 136,
+            "line": 138,
             "itemtype": "method",
             "name": "build",
             "static": 1,
@@ -1088,7 +1128,7 @@
         },
         {
             "file": "src/browser/CriOS.js",
-            "line": 149,
+            "line": 151,
             "itemtype": "method",
             "name": "major",
             "static": 1,
@@ -1102,7 +1142,7 @@
         },
         {
             "file": "src/browser/CriOS.js",
-            "line": 161,
+            "line": 163,
             "itemtype": "method",
             "name": "numbers",
             "static": 1,
@@ -1123,7 +1163,7 @@
         },
         {
             "file": "src/browser/Edge.js",
-            "line": 50,
+            "line": 52,
             "itemtype": "method",
             "name": "init",
             "static": 1,
@@ -1133,7 +1173,7 @@
         },
         {
             "file": "src/browser/Edge.js",
-            "line": 64,
+            "line": 66,
             "itemtype": "method",
             "name": "calculate",
             "static": 1,
@@ -1143,7 +1183,7 @@
         },
         {
             "file": "src/browser/Edge.js",
-            "line": 110,
+            "line": 112,
             "itemtype": "method",
             "name": "is",
             "static": 1,
@@ -1157,7 +1197,7 @@
         },
         {
             "file": "src/browser/Edge.js",
-            "line": 122,
+            "line": 124,
             "itemtype": "method",
             "name": "version",
             "static": 1,
@@ -1171,7 +1211,7 @@
         },
         {
             "file": "src/browser/Edge.js",
-            "line": 135,
+            "line": 137,
             "itemtype": "method",
             "name": "major",
             "static": 1,
@@ -1185,7 +1225,7 @@
         },
         {
             "file": "src/browser/Edge.js",
-            "line": 147,
+            "line": 149,
             "itemtype": "method",
             "name": "build",
             "static": 1,
@@ -1199,7 +1239,7 @@
         },
         {
             "file": "src/browser/Edge.js",
-            "line": 160,
+            "line": 162,
             "itemtype": "method",
             "name": "numbers",
             "static": 1,
@@ -1220,7 +1260,7 @@
         },
         {
             "file": "src/browser/Firefox.js",
-            "line": 47,
+            "line": 48,
             "itemtype": "method",
             "name": "init",
             "static": 1,
@@ -1230,7 +1270,7 @@
         },
         {
             "file": "src/browser/Firefox.js",
-            "line": 63,
+            "line": 64,
             "itemtype": "method",
             "name": "calculate",
             "static": 1,
@@ -1240,7 +1280,7 @@
         },
         {
             "file": "src/browser/Firefox.js",
-            "line": 110,
+            "line": 111,
             "itemtype": "method",
             "name": "is",
             "static": 1,
@@ -1254,7 +1294,7 @@
         },
         {
             "file": "src/browser/Firefox.js",
-            "line": 122,
+            "line": 123,
             "itemtype": "method",
             "name": "version",
             "static": 1,
@@ -1268,7 +1308,7 @@
         },
         {
             "file": "src/browser/Firefox.js",
-            "line": 135,
+            "line": 136,
             "itemtype": "method",
             "name": "major",
             "static": 1,
@@ -1282,7 +1322,7 @@
         },
         {
             "file": "src/browser/Firefox.js",
-            "line": 147,
+            "line": 148,
             "itemtype": "method",
             "name": "build",
             "static": 1,
@@ -1296,7 +1336,7 @@
         },
         {
             "file": "src/browser/Firefox.js",
-            "line": 160,
+            "line": 161,
             "itemtype": "method",
             "name": "numbers",
             "static": 1,
@@ -1317,7 +1357,7 @@
         },
         {
             "file": "src/browser/IE.js",
-            "line": 45,
+            "line": 46,
             "itemtype": "method",
             "name": "init",
             "static": 1,
@@ -1327,7 +1367,7 @@
         },
         {
             "file": "src/browser/IE.js",
-            "line": 114,
+            "line": 115,
             "itemtype": "method",
             "name": "calculate",
             "static": 1,
@@ -1337,7 +1377,7 @@
         },
         {
             "file": "src/browser/IE.js",
-            "line": 161,
+            "line": 162,
             "itemtype": "method",
             "name": "is",
             "static": 1,
@@ -1351,7 +1391,7 @@
         },
         {
             "file": "src/browser/IE.js",
-            "line": 173,
+            "line": 174,
             "itemtype": "method",
             "name": "is6",
             "static": 1,
@@ -1365,7 +1405,7 @@
         },
         {
             "file": "src/browser/IE.js",
-            "line": 185,
+            "line": 186,
             "itemtype": "method",
             "name": "is7",
             "static": 1,
@@ -1379,7 +1419,7 @@
         },
         {
             "file": "src/browser/IE.js",
-            "line": 197,
+            "line": 198,
             "itemtype": "method",
             "name": "is8",
             "static": 1,
@@ -1393,7 +1433,7 @@
         },
         {
             "file": "src/browser/IE.js",
-            "line": 209,
+            "line": 210,
             "itemtype": "method",
             "name": "is9",
             "static": 1,
@@ -1407,7 +1447,7 @@
         },
         {
             "file": "src/browser/IE.js",
-            "line": 221,
+            "line": 222,
             "itemtype": "method",
             "name": "is10",
             "static": 1,
@@ -1421,7 +1461,7 @@
         },
         {
             "file": "src/browser/IE.js",
-            "line": 233,
+            "line": 234,
             "itemtype": "method",
             "name": "is11",
             "static": 1,
@@ -1435,7 +1475,7 @@
         },
         {
             "file": "src/browser/IE.js",
-            "line": 245,
+            "line": 246,
             "description": "version float型",
             "itemtype": "method",
             "name": "version",
@@ -1450,7 +1490,7 @@
         },
         {
             "file": "src/browser/IE.js",
-            "line": 258,
+            "line": 259,
             "description": "version 正数",
             "itemtype": "method",
             "name": "major",
@@ -1465,7 +1505,7 @@
         },
         {
             "file": "src/browser/IE.js",
-            "line": 270,
+            "line": 271,
             "description": "IE 8 or 7 or 6 判定",
             "itemtype": "method",
             "name": "legacy",
@@ -1487,7 +1527,7 @@
         },
         {
             "file": "src/browser/Safari.js",
-            "line": 52,
+            "line": 53,
             "itemtype": "method",
             "name": "init",
             "static": 1,
@@ -1497,7 +1537,7 @@
         },
         {
             "file": "src/browser/Safari.js",
-            "line": 79,
+            "line": 80,
             "itemtype": "method",
             "name": "calculate",
             "static": 1,
@@ -1507,7 +1547,7 @@
         },
         {
             "file": "src/browser/Safari.js",
-            "line": 137,
+            "line": 138,
             "itemtype": "method",
             "name": "is",
             "static": 1,
@@ -1521,7 +1561,7 @@
         },
         {
             "file": "src/browser/Safari.js",
-            "line": 149,
+            "line": 150,
             "itemtype": "method",
             "name": "set",
             "static": 1,
@@ -1538,7 +1578,7 @@
         },
         {
             "file": "src/browser/Safari.js",
-            "line": 160,
+            "line": 161,
             "itemtype": "method",
             "name": "version",
             "static": 1,
@@ -1552,7 +1592,7 @@
         },
         {
             "file": "src/browser/Safari.js",
-            "line": 173,
+            "line": 174,
             "itemtype": "method",
             "name": "major",
             "static": 1,
@@ -1566,7 +1606,7 @@
         },
         {
             "file": "src/browser/Safari.js",
-            "line": 185,
+            "line": 186,
             "itemtype": "method",
             "name": "build",
             "static": 1,
@@ -1580,7 +1620,7 @@
         },
         {
             "file": "src/browser/Safari.js",
-            "line": 198,
+            "line": 199,
             "itemtype": "method",
             "name": "numbers",
             "static": 1,
@@ -1594,7 +1634,7 @@
         },
         {
             "file": "src/browser/Safari.js",
-            "line": 210,
+            "line": 211,
             "itemtype": "method",
             "name": "number",
             "deprecated": true,
@@ -1617,7 +1657,7 @@
         },
         {
             "file": "src/css/Css3.js",
-            "line": 53,
+            "line": 55,
             "description": "CSS3 transition detection",
             "itemtype": "method",
             "name": "transition",
@@ -1632,7 +1672,7 @@
         },
         {
             "file": "src/css/Css3.js",
-            "line": 79,
+            "line": 82,
             "description": "CSS3 transform detection",
             "itemtype": "method",
             "name": "transform",
@@ -1647,7 +1687,8 @@
         },
         {
             "file": "src/css/Css3.js",
-            "line": 105,
+            "line": 109,
+            "description": "matchMedia が使用可能かを調べます",
             "itemtype": "method",
             "name": "matchMedia",
             "static": 1,
@@ -1661,7 +1702,8 @@
         },
         {
             "file": "src/css/Css3.js",
-            "line": 121,
+            "line": 127,
+            "description": "onorientationchange が使用可能かを調べます",
             "itemtype": "method",
             "name": "orientationChange",
             "static": 1,
@@ -1675,7 +1717,8 @@
         },
         {
             "file": "src/css/Css3.js",
-            "line": 138,
+            "line": 146,
+            "description": "orientation が使用可能かを調べます",
             "itemtype": "method",
             "name": "orientation",
             "static": 1,
@@ -1689,7 +1732,8 @@
         },
         {
             "file": "src/css/Css3.js",
-            "line": 154,
+            "line": 164,
+            "description": "backgroundSize が使用可能かを調べます",
             "itemtype": "method",
             "name": "backgroundSize",
             "static": 1,
@@ -1710,7 +1754,7 @@
         },
         {
             "file": "src/css/Transform.js",
-            "line": 44,
+            "line": 47,
             "itemtype": "method",
             "name": "is",
             "deprecated": true,
@@ -1733,7 +1777,7 @@
         },
         {
             "file": "src/css/Transition.js",
-            "line": 44,
+            "line": 45,
             "itemtype": "method",
             "name": "is",
             "deprecated": true,
@@ -1756,7 +1800,7 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 52,
+            "line": 53,
             "itemtype": "method",
             "name": "init",
             "static": 1,
@@ -1766,7 +1810,7 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 91,
+            "line": 92,
             "itemtype": "method",
             "name": "calculate",
             "static": 1,
@@ -1776,7 +1820,7 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 145,
+            "line": 146,
             "itemtype": "method",
             "name": "is",
             "static": 1,
@@ -1790,7 +1834,7 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 157,
+            "line": 158,
             "description": "Android 標準ブラウザ",
             "itemtype": "method",
             "name": "standard",
@@ -1805,7 +1849,7 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 170,
+            "line": 171,
             "description": "Android Phone",
             "itemtype": "method",
             "name": "phone",
@@ -1820,7 +1864,7 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 183,
+            "line": 184,
             "description": "Android Tablet",
             "itemtype": "method",
             "name": "tablet",
@@ -1835,7 +1879,7 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 196,
+            "line": 197,
             "description": "Android HD 端末",
             "itemtype": "method",
             "name": "hd",
@@ -1850,7 +1894,7 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 209,
+            "line": 210,
             "itemtype": "method",
             "name": "version",
             "static": 1,
@@ -1864,7 +1908,7 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 222,
+            "line": 223,
             "itemtype": "method",
             "name": "build",
             "static": 1,
@@ -1878,7 +1922,7 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 235,
+            "line": 236,
             "itemtype": "method",
             "name": "major",
             "static": 1,
@@ -1892,7 +1936,7 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 246,
+            "line": 247,
             "itemtype": "method",
             "name": "numbers",
             "static": 1,
@@ -1906,7 +1950,7 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 258,
+            "line": 259,
             "itemtype": "method",
             "name": "number",
             "deprecated": true,
@@ -1929,7 +1973,7 @@
         },
         {
             "file": "src/device/Mac.js",
-            "line": 45,
+            "line": 46,
             "itemtype": "method",
             "name": "init",
             "static": 1,
@@ -1939,7 +1983,7 @@
         },
         {
             "file": "src/device/Mac.js",
-            "line": 58,
+            "line": 59,
             "itemtype": "method",
             "name": "is",
             "static": 1,
@@ -1960,7 +2004,7 @@
         },
         {
             "file": "src/device/Mobile.js",
-            "line": 45,
+            "line": 46,
             "itemtype": "method",
             "name": "is",
             "static": 1,
@@ -1974,7 +2018,7 @@
         },
         {
             "file": "src/device/Mobile.js",
-            "line": 55,
+            "line": 56,
             "itemtype": "method",
             "name": "phone",
             "static": 1,
@@ -1988,7 +2032,7 @@
         },
         {
             "file": "src/device/Mobile.js",
-            "line": 65,
+            "line": 66,
             "itemtype": "method",
             "name": "tablet",
             "static": 1,
@@ -2002,7 +2046,7 @@
         },
         {
             "file": "src/device/Mobile.js",
-            "line": 75,
+            "line": 76,
             "description": "window.onload 後に実行して下さい",
             "itemtype": "method",
             "name": "hideBar",
@@ -2013,7 +2057,7 @@
         },
         {
             "file": "src/device/Mobile.js",
-            "line": 85,
+            "line": 86,
             "itemtype": "method",
             "name": "hideURLBar",
             "deprecated": true,
@@ -2032,7 +2076,7 @@
         },
         {
             "file": "src/device/Touch.js",
-            "line": 42,
+            "line": 43,
             "itemtype": "method",
             "name": "is",
             "deprecated": true,
@@ -2055,7 +2099,7 @@
         },
         {
             "file": "src/device/Windows.js",
-            "line": 44,
+            "line": 46,
             "itemtype": "method",
             "name": "init",
             "static": 1,
@@ -2065,7 +2109,7 @@
         },
         {
             "file": "src/device/Windows.js",
-            "line": 57,
+            "line": 59,
             "itemtype": "method",
             "name": "is",
             "static": 1,
@@ -2086,7 +2130,7 @@
         },
         {
             "file": "src/device/iOS.js",
-            "line": 51,
+            "line": 52,
             "itemtype": "method",
             "name": "init",
             "static": 1,
@@ -2096,7 +2140,7 @@
         },
         {
             "file": "src/device/iOS.js",
-            "line": 77,
+            "line": 78,
             "itemtype": "method",
             "name": "calculate",
             "static": 1,
@@ -2106,7 +2150,7 @@
         },
         {
             "file": "src/device/iOS.js",
-            "line": 131,
+            "line": 132,
             "itemtype": "method",
             "name": "is",
             "static": 1,
@@ -2120,7 +2164,7 @@
         },
         {
             "file": "src/device/iOS.js",
-            "line": 142,
+            "line": 143,
             "itemtype": "method",
             "name": "iPhone",
             "static": 1,
@@ -2134,7 +2178,7 @@
         },
         {
             "file": "src/device/iOS.js",
-            "line": 153,
+            "line": 154,
             "itemtype": "method",
             "name": "iPad",
             "static": 1,
@@ -2148,7 +2192,7 @@
         },
         {
             "file": "src/device/iOS.js",
-            "line": 164,
+            "line": 165,
             "itemtype": "method",
             "name": "iPod",
             "static": 1,
@@ -2162,7 +2206,7 @@
         },
         {
             "file": "src/device/iOS.js",
-            "line": 175,
+            "line": 176,
             "itemtype": "method",
             "name": "standalone",
             "static": 1,
@@ -2176,7 +2220,7 @@
         },
         {
             "file": "src/device/iOS.js",
-            "line": 187,
+            "line": 188,
             "itemtype": "method",
             "name": "fullScreen",
             "deprecated": true,
@@ -2192,7 +2236,7 @@
         },
         {
             "file": "src/device/iOS.js",
-            "line": 199,
+            "line": 200,
             "itemtype": "method",
             "name": "version",
             "static": 1,
@@ -2206,7 +2250,7 @@
         },
         {
             "file": "src/device/iOS.js",
-            "line": 212,
+            "line": 213,
             "itemtype": "method",
             "name": "build",
             "static": 1,
@@ -2220,7 +2264,7 @@
         },
         {
             "file": "src/device/iOS.js",
-            "line": 225,
+            "line": 226,
             "itemtype": "method",
             "name": "major",
             "static": 1,
@@ -2234,7 +2278,7 @@
         },
         {
             "file": "src/device/iOS.js",
-            "line": 236,
+            "line": 237,
             "itemtype": "method",
             "name": "numbers",
             "static": 1,
@@ -2248,7 +2292,7 @@
         },
         {
             "file": "src/device/iOS.js",
-            "line": 248,
+            "line": 249,
             "itemtype": "method",
             "name": "number",
             "deprecated": true,
@@ -2264,7 +2308,7 @@
         },
         {
             "file": "src/device/iOS.js",
-            "line": 260,
+            "line": 261,
             "description": "アプリ内ブラウザかどうかを返します",
             "itemtype": "method",
             "name": "webView",
@@ -2354,7 +2398,7 @@
         },
         {
             "file": "src/document/Dom.js",
-            "line": 38,
+            "line": 39,
             "itemtype": "property",
             "name": "_element",
             "type": "{HTMLElement}",
@@ -2366,7 +2410,7 @@
         },
         {
             "file": "src/document/Dom.js",
-            "line": 50,
+            "line": 51,
             "itemtype": "method",
             "name": "hasClass",
             "params": [
@@ -2386,7 +2430,7 @@
         },
         {
             "file": "src/document/Dom.js",
-            "line": 60,
+            "line": 61,
             "itemtype": "method",
             "name": "addClass",
             "params": [
@@ -2406,7 +2450,7 @@
         },
         {
             "file": "src/document/Dom.js",
-            "line": 71,
+            "line": 72,
             "itemtype": "method",
             "name": "removeClass",
             "params": [
@@ -2426,7 +2470,7 @@
         },
         {
             "file": "src/document/Dom.js",
-            "line": 82,
+            "line": 83,
             "itemtype": "method",
             "name": "style",
             "params": [
@@ -2447,7 +2491,7 @@
         },
         {
             "file": "src/document/Dom.js",
-            "line": 92,
+            "line": 93,
             "itemtype": "method",
             "name": "hasClass",
             "static": 1,
@@ -2473,7 +2517,7 @@
         },
         {
             "file": "src/document/Dom.js",
-            "line": 104,
+            "line": 105,
             "itemtype": "method",
             "name": "addClass",
             "static": 1,
@@ -2499,7 +2543,7 @@
         },
         {
             "file": "src/document/Dom.js",
-            "line": 136,
+            "line": 137,
             "itemtype": "method",
             "name": "removeClass",
             "static": 1,
@@ -2525,7 +2569,7 @@
         },
         {
             "file": "src/document/Dom.js",
-            "line": 177,
+            "line": 178,
             "description": "getComputedStyle を使い HTMLElement style value を取得します",
             "itemtype": "method",
             "name": "styleCompute",
@@ -2558,7 +2602,7 @@
         },
         {
             "file": "src/document/Dom.js",
-            "line": 203,
+            "line": 204,
             "description": "currentStyle を使い HTMLElement style value を取得します",
             "itemtype": "method",
             "name": "styleCurrent",
@@ -2586,7 +2630,7 @@
         },
         {
             "file": "src/document/Dom.js",
-            "line": 256,
+            "line": 257,
             "description": "HTMLElement の css style を返します",
             "itemtype": "method",
             "name": "getStyle",
@@ -2621,7 +2665,8 @@
         },
         {
             "file": "src/document/Element.js",
-            "line": 48,
+            "line": 49,
+            "description": "touch event が使用可能かを調べます",
             "itemtype": "method",
             "name": "touch",
             "static": 1,
@@ -2635,7 +2680,8 @@
         },
         {
             "file": "src/document/Element.js",
-            "line": 66,
+            "line": 70,
+            "description": "document.querySelector が使用可能かを調べます",
             "itemtype": "method",
             "name": "querySelector",
             "static": 1,
@@ -2649,7 +2695,8 @@
         },
         {
             "file": "src/document/Element.js",
-            "line": 84,
+            "line": 90,
+            "description": "canvas 2D が使用可能かを調べます",
             "itemtype": "method",
             "name": "canvas",
             "static": 1,
@@ -2663,7 +2710,8 @@
         },
         {
             "file": "src/document/Element.js",
-            "line": 102,
+            "line": 110,
+            "description": "canvas WebGL が使用可能かを調べます",
             "itemtype": "method",
             "name": "webgl",
             "static": 1,
@@ -2677,7 +2725,7 @@
         },
         {
             "file": "src/document/Element.js",
-            "line": 134,
+            "line": 144,
             "description": "querySelector が使えるブラウザだけ使用可能",
             "itemtype": "method",
             "name": "find",
@@ -2756,7 +2804,7 @@
         },
         {
             "file": "src/Browser.js",
-            "line": 47,
+            "line": 51,
             "itemtype": "method",
             "name": "init",
             "static": 1,
@@ -2766,7 +2814,7 @@
         },
         {
             "file": "src/Browser.js",
-            "line": 60,
+            "line": 64,
             "itemtype": "method",
             "name": "navigator",
             "static": 1,
@@ -2780,7 +2828,7 @@
         },
         {
             "file": "src/Browser.js",
-            "line": 68,
+            "line": 72,
             "itemtype": "method",
             "name": "ua",
             "static": 1,
@@ -2794,7 +2842,7 @@
         },
         {
             "file": "src/Browser.js",
-            "line": 79,
+            "line": 83,
             "itemtype": "method",
             "name": "app",
             "static": 1,
@@ -2808,7 +2856,7 @@
         },
         {
             "file": "src/Browser.js",
-            "line": 90,
+            "line": 94,
             "description": "userAgent regular expression of Safari",
             "itemtype": "method",
             "name": "matchSafari",

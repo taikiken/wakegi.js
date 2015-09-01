@@ -34,7 +34,11 @@
 
     /**
      * Browser 基本機能
+     *
+     * 主要Classの親になります
+     *
      * @class Browser
+     * @static
      * @constructor
      */
     function Browser () {

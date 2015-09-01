@@ -33,6 +33,7 @@
     /**
      * Mobile detection, iOS or Android
      * @class Mobile
+     * @static
      * @constructor
      */
     function Mobile () {

@@ -22,8 +22,8 @@
 
   'use strict';
 
-  var
-    document = window.document;
+  //var
+  //  document = window.document;
 
   window.wakegi.Util = ( function () {
 

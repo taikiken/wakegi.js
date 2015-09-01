@@ -30,8 +30,10 @@
       windows;
 
     /**
-     * windows detection
+     * windows OS detection
+     *
      * @class Windows
+     * @static
      * @constructor
      */
     function Windows () {

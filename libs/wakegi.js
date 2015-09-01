@@ -10,7 +10,7 @@
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
- * @build 2015-08-20 21:28:23
+ * @build 2015-09-01 13:19:11
  * @version 0.9.4
  *
  */
@@ -29,7 +29,7 @@ wakegi.int = parseInt;
 wakegi.float = parseFloat;
 
 ( function (){
-  "use strict";
+  'use strict';
 
   // Array.isArray
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray
@@ -38,6 +38,7 @@ wakegi.float = parseFloat;
     Array.isArray = function( arg ) {
 
       return Object.prototype.toString.call( arg ) === '[object Array]';
+
     };
   }
 
@@ -79,7 +80,11 @@ wakegi.float = parseFloat;
 
     /**
      * Browser 基本機能
+     *
+     * 主要Classの親になります
+     *
      * @class Browser
+     * @static
      * @constructor
      */
     function Browser () {
@@ -171,7 +176,9 @@ wakegi.float = parseFloat;
  * @submodule Css3
  */
 ( function ( window ){
-  "use strict";
+
+  'use strict';
+
   var
     document = window.document,
     wakegi = window.wakegi,
@@ -189,6 +196,7 @@ wakegi.float = parseFloat;
     /**
      * CSS3 detection
      * @class Css3
+     * @static
      * @constructor
      */
     function Css3 () {
@@ -196,13 +204,13 @@ wakegi.float = parseFloat;
     }
 
     var p = Css3.prototype;
-
     p.constructor = Css3;
 
     //Css3.init = function () {
     //};
     /**
      * CSS3 transition detection
+     *
      * @method transition
      * @static
      * @return {boolean}
@@ -229,6 +237,7 @@ wakegi.float = parseFloat;
     };
     /**
      * CSS3 transform detection
+     *
      * @method transform
      * @static
      * @return {boolean}
@@ -254,6 +263,8 @@ wakegi.float = parseFloat;
     };
 
     /**
+     * matchMedia が使用可能かを調べます
+     *
      * @method matchMedia
      * @static
      * @return {boolean}
@@ -270,6 +281,8 @@ wakegi.float = parseFloat;
       return matchMedia;
     };
     /**
+     * onorientationchange が使用可能かを調べます
+     *
      * @method orientationChange
      * @static
      * @return {boolean}
@@ -287,6 +300,8 @@ wakegi.float = parseFloat;
 
     };
     /**
+     * orientation が使用可能かを調べます
+     *
      * @method orientation
      * @static
      * @return {boolean}
@@ -303,6 +318,8 @@ wakegi.float = parseFloat;
       return orientation;
     };
     /**
+     * backgroundSize が使用可能かを調べます
+     *
      * @method backgroundSize
      * @static
      * @return {boolean}
@@ -358,6 +375,7 @@ wakegi.float = parseFloat;
     /**
      * @deprecated instead of Css3
      * @class Transition
+     * @static
      * @constructor
      */
     function Transition () {
@@ -405,7 +423,9 @@ wakegi.float = parseFloat;
  * @submodule Transform
  */
 ( function ( window ){
-  "use strict";
+
+  'use strict';
+
   var
     wakegi = window.wakegi,
     Browser = wakegi.Browser;
@@ -417,6 +437,7 @@ wakegi.float = parseFloat;
     /**
      * @deprecated instead of Css3
      * @class Transform
+     * @static
      * @constructor
      */
     function Transform () {
@@ -479,6 +500,7 @@ wakegi.float = parseFloat;
     /**
      * HTMLElement detection
      * @class Element
+     * @static
      * @constructor
      */
     function Element () {
@@ -490,6 +512,8 @@ wakegi.float = parseFloat;
     p.constructor = Element;
 
     /**
+     * touch event が使用可能かを調べます
+     *
      * @method touch
      * @static
      * @return {boolean}
@@ -501,6 +525,7 @@ wakegi.float = parseFloat;
         // http://perfectionkills.com/detecting-event-support-without-browser-sniffing/
         // http://stackoverflow.com/questions/2915833/how-to-check-browser-for-touchstart-support-using-js-jquery#answer-2915912
         touch = 'ontouchstart' in document.documentElement;
+
       }
 
       return touch;
@@ -508,6 +533,8 @@ wakegi.float = parseFloat;
     };
 
     /**
+     * document.querySelector が使用可能かを調べます
+     *
      * @method querySelector
      * @static
      * @return {boolean}
@@ -526,6 +553,8 @@ wakegi.float = parseFloat;
     };
 
     /**
+     * canvas 2D が使用可能かを調べます
+     *
      * @method canvas
      * @static
      * @return {boolean}
@@ -544,6 +573,8 @@ wakegi.float = parseFloat;
     };
 
     /**
+     * canvas WebGL が使用可能かを調べます
+     *
      * @method webgl
      * @static
      * @return {boolean}
@@ -577,6 +608,7 @@ wakegi.float = parseFloat;
 
     /**
      * querySelector が使えるブラウザだけ使用可能
+     *
      * @method find
      * @param {string} searchKey
      * @return {*} HTMLElement を返します
@@ -631,6 +663,7 @@ wakegi.float = parseFloat;
 
     /**
      * @class Dom
+     * @static
      * @constructor
      * @param {HTMLElement} element
      */
@@ -954,8 +987,8 @@ wakegi.float = parseFloat;
 
   'use strict';
 
-  var
-    document = window.document;
+  //var
+  //  document = window.document;
 
   window.wakegi.Util = ( function () {
 
@@ -1200,6 +1233,7 @@ wakegi.float = parseFloat;
     /**
      * iOS detection
      * @class iOS
+     * @static
      * @constructor
      */
     function iOS () {
@@ -1475,6 +1509,7 @@ wakegi.float = parseFloat;
 
     /**
      * Android detection
+     * @static
      * @class Android
      * @constructor
      */
@@ -1723,7 +1758,7 @@ wakegi.float = parseFloat;
  */
 
 /**
- * touch event 利用可能かを調べます
+ * touch event が利用可能かを調べます
  *
  * @module Browser
  * @submodule Touch
@@ -1738,6 +1773,7 @@ wakegi.float = parseFloat;
 
     /**
      * @class Touch
+     * @static
      * @deprecated instead of Element
      * @constructor
      */
@@ -1800,6 +1836,7 @@ wakegi.float = parseFloat;
     /**
      * Mobile detection, iOS or Android
      * @class Mobile
+     * @static
      * @constructor
      */
     function Mobile () {
@@ -1895,8 +1932,9 @@ wakegi.float = parseFloat;
       mac;
 
     /**
-     * Mac detection
+     * Mac OS detection
      * @class Mac
+     * @static
      * @constructor
      */
     function Mac () {
@@ -1968,8 +2006,10 @@ wakegi.float = parseFloat;
       windows;
 
     /**
-     * windows detection
+     * windows OS detection
+     *
      * @class Windows
+     * @static
      * @constructor
      */
     function Windows () {
@@ -2046,6 +2086,8 @@ wakegi.float = parseFloat;
       version, major, build;
 
     /**
+     * Windows 10 Edge Browser チェックを行います
+     *
      * @class Edge
      * @static
      * @constructor
@@ -2219,6 +2261,7 @@ wakegi.float = parseFloat;
     /**
      * IE detection
      * @class IE
+     * @static
      * @constructor
      */
     function IE () {
@@ -2509,7 +2552,9 @@ wakegi.float = parseFloat;
 
     /**
      * iOS Chrome 判定
+     *
      * @class CriOS
+     * @static
      * @constructor
      */
     function CriOS () {
@@ -2685,7 +2730,11 @@ wakegi.float = parseFloat;
 
     /**
      * Chrome 判定
+     *
+     * iOS Chrome も含まれます
+     *
      * @class Chrome
+     * @static
      * @constructor
      */
     function Chrome () {
@@ -2887,6 +2936,7 @@ wakegi.float = parseFloat;
     /**
      * Firefox detection
      * @class Firefox
+     * @static
      * @constructor
      */
     function Firefox () {
@@ -3067,6 +3117,7 @@ wakegi.float = parseFloat;
     /**
      * Safari detection
      * @class Safari
+     * @static
      * @constructor
      */
     function Safari () {

@@ -20,7 +20,9 @@
  * @submodule Css3
  */
 ( function ( window ){
-  "use strict";
+
+  'use strict';
+
   var
     document = window.document,
     wakegi = window.wakegi,
@@ -38,6 +40,7 @@
     /**
      * CSS3 detection
      * @class Css3
+     * @static
      * @constructor
      */
     function Css3 () {
@@ -45,13 +48,13 @@
     }
 
     var p = Css3.prototype;
-
     p.constructor = Css3;
 
     //Css3.init = function () {
     //};
     /**
      * CSS3 transition detection
+     *
      * @method transition
      * @static
      * @return {boolean}
@@ -78,6 +81,7 @@
     };
     /**
      * CSS3 transform detection
+     *
      * @method transform
      * @static
      * @return {boolean}
@@ -103,6 +107,8 @@
     };
 
     /**
+     * matchMedia が使用可能かを調べます
+     *
      * @method matchMedia
      * @static
      * @return {boolean}
@@ -119,6 +125,8 @@
       return matchMedia;
     };
     /**
+     * onorientationchange が使用可能かを調べます
+     *
      * @method orientationChange
      * @static
      * @return {boolean}
@@ -136,6 +144,8 @@
 
     };
     /**
+     * orientation が使用可能かを調べます
+     *
      * @method orientation
      * @static
      * @return {boolean}
@@ -152,6 +162,8 @@
       return orientation;
     };
     /**
+     * backgroundSize が使用可能かを調べます
+     *
      * @method backgroundSize
      * @static
      * @return {boolean}

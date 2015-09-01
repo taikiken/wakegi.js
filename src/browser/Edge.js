@@ -36,6 +36,8 @@
       version, major, build;
 
     /**
+     * Windows 10 Edge Browser チェックを行います
+     *
      * @class Edge
      * @static
      * @constructor

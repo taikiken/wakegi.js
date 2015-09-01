@@ -32,6 +32,7 @@
     /**
      * IE detection
      * @class IE
+     * @static
      * @constructor
      */
     function IE () {

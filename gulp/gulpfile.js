@@ -166,7 +166,7 @@ gulp.task( 'script-docs', function () {
 
 // Lint JavaScript
 gulp.task('js-hint', function () {
-  return gulp.src( dir.src + '/**/*.js' )
+  return gulp.src( dir.libs + '/wakegi.js' )
     .pipe( jshint() )
     .pipe( jshint.reporter('jshint-stylish'));
 });
@@ -177,8 +177,8 @@ gulp.task('js-hint', function () {
 gulp.task( 'build', function () {
 
   runSequence(
-    'js-hint',
     'script-concat',
+    'js-hint',
     'script-min',
     'script-version'
   );

@@ -60,6 +60,7 @@
                                 <li><a href="../classes/Windows.html">Windows</a></li>
                             </ul>
                 
+                
                             <ul id="api-modules" class="apis modules">
                                 <li><a href="../modules/Android.html">Android</a></li>
                                 <li><a href="../modules/Browser.html">Browser</a></li>
@@ -141,7 +142,9 @@
  * @submodule Css3
  */
 ( function ( window ){
-  &quot;use strict&quot;;
+
+  &#x27;use strict&#x27;;
+
   var
     document = window.document,
     wakegi = window.wakegi,
@@ -159,6 +162,7 @@
     /**
      * CSS3 detection
      * @class Css3
+     * @static
      * @constructor
      */
     function Css3 () {
@@ -166,13 +170,13 @@
     }
 
     var p = Css3.prototype;
-
     p.constructor = Css3;
 
     //Css3.init = function () {
     //};
     /**
      * CSS3 transition detection
+     *
      * @method transition
      * @static
      * @return {boolean}
@@ -199,6 +203,7 @@
     };
     /**
      * CSS3 transform detection
+     *
      * @method transform
      * @static
      * @return {boolean}
@@ -224,6 +229,8 @@
     };
 
     /**
+     * matchMedia が使用可能かを調べます
+     *
      * @method matchMedia
      * @static
      * @return {boolean}
@@ -240,6 +247,8 @@
       return matchMedia;
     };
     /**
+     * onorientationchange が使用可能かを調べます
+     *
      * @method orientationChange
      * @static
      * @return {boolean}
@@ -257,6 +266,8 @@
 
     };
     /**
+     * orientation が使用可能かを調べます
+     *
      * @method orientation
      * @static
      * @return {boolean}
@@ -273,6 +284,8 @@
       return orientation;
     };
     /**
+     * backgroundSize が使用可能かを調べます
+     *
      * @method backgroundSize
      * @static
      * @return {boolean}

@@ -34,6 +34,7 @@
     /**
      * Firefox detection
      * @class Firefox
+     * @static
      * @constructor
      */
     function Firefox () {

@@ -124,7 +124,7 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "Touch",
             "name": "Touch",
-            "description": "touch event 利用可能かを調べます"
+            "description": "touch event が利用可能かを調べます"
         },
         {
             "displayName": "Transform",
@@ -150,6 +150,7 @@ YUI.add("yuidoc-meta", function(Y) {
             "name": "Windows",
             "description": "Windows OS チェックを行います"
         }
-    ]
+    ],
+    "elements": []
 } };
 });

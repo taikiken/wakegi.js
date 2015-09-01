@@ -14,7 +14,7 @@
  */
 
 /**
- * touch event 利用可能かを調べます
+ * touch event が利用可能かを調べます
  *
  * @module Browser
  * @submodule Touch
@@ -29,6 +29,7 @@
 
     /**
      * @class Touch
+     * @static
      * @deprecated instead of Element
      * @constructor
      */

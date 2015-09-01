@@ -30,6 +30,7 @@
 
     /**
      * @class Dom
+     * @static
      * @constructor
      * @param {HTMLElement} element
      */

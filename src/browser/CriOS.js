@@ -37,7 +37,9 @@
 
     /**
      * iOS Chrome 判定
+     *
      * @class CriOS
+     * @static
      * @constructor
      */
     function CriOS () {

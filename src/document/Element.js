@@ -35,6 +35,7 @@
     /**
      * HTMLElement detection
      * @class Element
+     * @static
      * @constructor
      */
     function Element () {
@@ -46,6 +47,8 @@
     p.constructor = Element;
 
     /**
+     * touch event が使用可能かを調べます
+     *
      * @method touch
      * @static
      * @return {boolean}
@@ -57,6 +60,7 @@
         // http://perfectionkills.com/detecting-event-support-without-browser-sniffing/
         // http://stackoverflow.com/questions/2915833/how-to-check-browser-for-touchstart-support-using-js-jquery#answer-2915912
         touch = 'ontouchstart' in document.documentElement;
+
       }
 
       return touch;
@@ -64,6 +68,8 @@
     };
 
     /**
+     * document.querySelector が使用可能かを調べます
+     *
      * @method querySelector
      * @static
      * @return {boolean}
@@ -82,6 +88,8 @@
     };
 
     /**
+     * canvas 2D が使用可能かを調べます
+     *
      * @method canvas
      * @static
      * @return {boolean}
@@ -100,6 +108,8 @@
     };
 
     /**
+     * canvas WebGL が使用可能かを調べます
+     *
      * @method webgl
      * @static
      * @return {boolean}
@@ -133,6 +143,7 @@
 
     /**
      * querySelector が使えるブラウザだけ使用可能
+     *
      * @method find
      * @param {string} searchKey
      * @return {*} HTMLElement を返します
