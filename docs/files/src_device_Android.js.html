@@ -148,7 +148,9 @@
     Browser = wakegi.Browser;
 
   Browser.Android = ( function (){
+
     var
+      Windows = Browser.Windows,
       _max = Math.max,
       numbers = [ -1, -1, -1 ],
       standard,
@@ -194,7 +196,11 @@
           max = _max( window.innerWidth,  window.innerHeight );
           hd = max &gt;= 1024;
           // http://googlewebmastercentral.blogspot.jp/2011/03/mo-better-to-also-detect-mobile-user.html
-          phone = !!ua.match(/mobile/i);
+
+          // 2015-10 windows phone detect added
+          // https://msdn.microsoft.com/ja-jp/library/hh869301(v=vs.85).aspx
+          // Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; DEVICE INFO) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Mobile Safari/537.36 Edge/12.&lt;OS build number&gt;
+          phone = !!ua.match(/mobile/i) || Windows.phone();
 
           if ( !phone ) {
 

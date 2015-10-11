@@ -27,6 +27,7 @@
 
   Browser.Windows = ( function (){
     var
+      phone,
       windows;
 
     /**
@@ -49,9 +50,29 @@
      */
     Windows.init = function () {
 
+      var ua;
+
       if ( typeof windows === 'undefined' ) {
+
         // windows undefined
-        windows = !!Browser.ua().match(/windows/i);
+        ua = Browser.ua();
+        windows = !!ua.match(/windows/i);
+
+        if ( windows ) {
+
+          phone = !!ua.match(/windows phone/i);
+          if ( phone ) {
+
+            windows = false;
+
+          }
+
+        } else {
+
+          phone = false;
+
+        }
+
       }
 
     };
@@ -67,8 +88,20 @@
       return windows;
 
     };
+    /**
+     * @method phone
+     * @static
+     * @return {boolean}
+     */
+    Windows.phone = function () {
+
+      Windows.init();
+      return phone;
+
+    };
 
     return Windows;
+
   }() );
 
 }( window ) );

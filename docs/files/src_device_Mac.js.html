@@ -147,6 +147,7 @@
     Browser = wakegi.Browser;
 
   Browser.Mac = ( function (){
+
     var
       iOS = Browser.iOS,
       mac;
@@ -172,8 +173,10 @@
     Mac.init = function () {
 
       if ( typeof mac === &#x27;undefined&#x27; ) {
+
         // mac undefined
         mac = !iOS.is() &amp;&amp; !!Browser.ua().match(/mac os x/i);
+
       }
 
     };

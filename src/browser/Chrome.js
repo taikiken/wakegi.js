@@ -27,6 +27,7 @@
     Browser = wakegi.Browser;
 
   Browser.Chrome = ( function (){
+
     var
       CriOS = Browser.CriOS,
       Android = Browser.Android,

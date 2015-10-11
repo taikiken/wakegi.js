@@ -28,7 +28,8 @@
   Browser.Mobile = ( function (){
     var
       iOS = Browser.iOS,
-      Android = Browser.Android;
+      Android = Browser.Android,
+      Windows = Browser.Windows;
 
     /**
      * Mobile detection, iOS or Android
@@ -50,7 +51,7 @@
      */
     Mobile.is = function () {
 
-      return iOS.is() || Android.is();
+      return iOS.is() || Android.is() || Windows.phone();
 
     };
     /**

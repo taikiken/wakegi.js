@@ -296,7 +296,7 @@
             "module": "Browser",
             "namespace": "",
             "file": "src/browser/Chrome.js",
-            "line": 39,
+            "line": 40,
             "description": "Chrome チェックを行います"
         },
         "CriOS": {
@@ -440,7 +440,7 @@
             "module": "Browser",
             "namespace": "",
             "file": "src/device/Android.js",
-            "line": 39,
+            "line": 41,
             "description": "Android のバージョンチェック他を行います"
         },
         "Mac": {
@@ -456,7 +456,7 @@
             "module": "Browser",
             "namespace": "",
             "file": "src/device/Mac.js",
-            "line": 32,
+            "line": 33,
             "description": "Mac OS チェックを行います"
         },
         "Mobile": {
@@ -472,7 +472,7 @@
             "module": "Browser",
             "namespace": "",
             "file": "src/device/Mobile.js",
-            "line": 33,
+            "line": 34,
             "description": "mobile (phone, tablet) チェックを行います"
         },
         "Touch": {
@@ -504,7 +504,7 @@
             "module": "Browser",
             "namespace": "",
             "file": "src/device/Windows.js",
-            "line": 32,
+            "line": 33,
             "description": "Windows OS チェックを行います"
         },
         "iOS": {
@@ -622,7 +622,7 @@
             "submodule": "Chrome",
             "namespace": "",
             "file": "src/browser/Chrome.js",
-            "line": 39,
+            "line": 40,
             "description": "Chrome 判定\n\niOS Chrome も含まれます",
             "static": 1,
             "is_constructor": 1
@@ -777,7 +777,7 @@
             "submodule": "Android",
             "namespace": "",
             "file": "src/device/Android.js",
-            "line": 39,
+            "line": 41,
             "description": "Android detection",
             "static": 1,
             "is_constructor": 1
@@ -794,7 +794,7 @@
             "submodule": "Mac",
             "namespace": "",
             "file": "src/device/Mac.js",
-            "line": 32,
+            "line": 33,
             "description": "Mac OS detection",
             "static": 1,
             "is_constructor": 1
@@ -811,7 +811,7 @@
             "submodule": "Mobile",
             "namespace": "",
             "file": "src/device/Mobile.js",
-            "line": 33,
+            "line": 34,
             "description": "Mobile detection, iOS or Android",
             "static": 1,
             "is_constructor": 1
@@ -846,7 +846,7 @@
             "submodule": "Windows",
             "namespace": "",
             "file": "src/device/Windows.js",
-            "line": 32,
+            "line": 33,
             "description": "windows OS detection",
             "static": 1,
             "is_constructor": 1
@@ -969,7 +969,7 @@
         },
         {
             "file": "src/browser/Chrome.js",
-            "line": 56,
+            "line": 57,
             "itemtype": "method",
             "name": "init",
             "static": 1,
@@ -979,7 +979,7 @@
         },
         {
             "file": "src/browser/Chrome.js",
-            "line": 88,
+            "line": 89,
             "itemtype": "method",
             "name": "calculate",
             "static": 1,
@@ -989,7 +989,7 @@
         },
         {
             "file": "src/browser/Chrome.js",
-            "line": 146,
+            "line": 147,
             "itemtype": "method",
             "name": "is",
             "static": 1,
@@ -1003,7 +1003,7 @@
         },
         {
             "file": "src/browser/Chrome.js",
-            "line": 158,
+            "line": 159,
             "itemtype": "method",
             "name": "version",
             "static": 1,
@@ -1017,7 +1017,7 @@
         },
         {
             "file": "src/browser/Chrome.js",
-            "line": 171,
+            "line": 172,
             "itemtype": "method",
             "name": "build",
             "static": 1,
@@ -1031,7 +1031,7 @@
         },
         {
             "file": "src/browser/Chrome.js",
-            "line": 184,
+            "line": 185,
             "itemtype": "method",
             "name": "major",
             "static": 1,
@@ -1045,7 +1045,7 @@
         },
         {
             "file": "src/browser/Chrome.js",
-            "line": 196,
+            "line": 197,
             "itemtype": "method",
             "name": "numbers",
             "static": 1,
@@ -1800,7 +1800,7 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 53,
+            "line": 55,
             "itemtype": "method",
             "name": "init",
             "static": 1,
@@ -1810,7 +1810,7 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 92,
+            "line": 98,
             "itemtype": "method",
             "name": "calculate",
             "static": 1,
@@ -1820,7 +1820,7 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 146,
+            "line": 152,
             "itemtype": "method",
             "name": "is",
             "static": 1,
@@ -1834,7 +1834,7 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 158,
+            "line": 164,
             "description": "Android 標準ブラウザ",
             "itemtype": "method",
             "name": "standard",
@@ -1849,7 +1849,7 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 171,
+            "line": 177,
             "description": "Android Phone",
             "itemtype": "method",
             "name": "phone",
@@ -1864,7 +1864,7 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 184,
+            "line": 190,
             "description": "Android Tablet",
             "itemtype": "method",
             "name": "tablet",
@@ -1879,7 +1879,7 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 197,
+            "line": 203,
             "description": "Android HD 端末",
             "itemtype": "method",
             "name": "hd",
@@ -1894,7 +1894,7 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 210,
+            "line": 216,
             "itemtype": "method",
             "name": "version",
             "static": 1,
@@ -1908,7 +1908,7 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 223,
+            "line": 229,
             "itemtype": "method",
             "name": "build",
             "static": 1,
@@ -1922,7 +1922,7 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 236,
+            "line": 242,
             "itemtype": "method",
             "name": "major",
             "static": 1,
@@ -1936,7 +1936,7 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 247,
+            "line": 253,
             "itemtype": "method",
             "name": "numbers",
             "static": 1,
@@ -1950,7 +1950,7 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 259,
+            "line": 265,
             "itemtype": "method",
             "name": "number",
             "deprecated": true,
@@ -1973,7 +1973,7 @@
         },
         {
             "file": "src/device/Mac.js",
-            "line": 46,
+            "line": 47,
             "itemtype": "method",
             "name": "init",
             "static": 1,
@@ -1983,7 +1983,7 @@
         },
         {
             "file": "src/device/Mac.js",
-            "line": 59,
+            "line": 62,
             "itemtype": "method",
             "name": "is",
             "static": 1,
@@ -2004,7 +2004,7 @@
         },
         {
             "file": "src/device/Mobile.js",
-            "line": 46,
+            "line": 47,
             "itemtype": "method",
             "name": "is",
             "static": 1,
@@ -2018,7 +2018,7 @@
         },
         {
             "file": "src/device/Mobile.js",
-            "line": 56,
+            "line": 57,
             "itemtype": "method",
             "name": "phone",
             "static": 1,
@@ -2032,7 +2032,7 @@
         },
         {
             "file": "src/device/Mobile.js",
-            "line": 66,
+            "line": 67,
             "itemtype": "method",
             "name": "tablet",
             "static": 1,
@@ -2046,7 +2046,7 @@
         },
         {
             "file": "src/device/Mobile.js",
-            "line": 76,
+            "line": 77,
             "description": "window.onload 後に実行して下さい",
             "itemtype": "method",
             "name": "hideBar",
@@ -2057,7 +2057,7 @@
         },
         {
             "file": "src/device/Mobile.js",
-            "line": 86,
+            "line": 87,
             "itemtype": "method",
             "name": "hideURLBar",
             "deprecated": true,
@@ -2099,7 +2099,7 @@
         },
         {
             "file": "src/device/Windows.js",
-            "line": 46,
+            "line": 47,
             "itemtype": "method",
             "name": "init",
             "static": 1,
@@ -2109,9 +2109,23 @@
         },
         {
             "file": "src/device/Windows.js",
-            "line": 59,
+            "line": 80,
             "itemtype": "method",
             "name": "is",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "Windows",
+            "module": "Browser",
+            "submodule": "Windows"
+        },
+        {
+            "file": "src/device/Windows.js",
+            "line": 91,
+            "itemtype": "method",
+            "name": "phone",
             "static": 1,
             "return": {
                 "description": "",
