@@ -14,6 +14,7 @@
  */
 
 /**
+ * 文字列操作に使用します
  *
  * @module wakegi
  * @submodule Util

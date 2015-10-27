@@ -49,6 +49,17 @@
     p.constructor = Dom;
 
     /**
+     * 使用 Element を返します
+     * @method element
+     * @return {HTMLElement}
+     */
+    p.element = function () {
+
+      return this._element;
+
+    };
+
+    /**
      * @method hasClass
      * @param {string} className
      * @return {boolean}

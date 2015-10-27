@@ -10,8 +10,8 @@
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
- * @build 2015-10-10 21:58:58
- * @version 0.9.5
+ * @build 2015-10-27 20:58:23
+ * @version 0.9.6
  *
  */
 
@@ -682,6 +682,17 @@ wakegi.float = parseFloat;
     p.constructor = Dom;
 
     /**
+     * 使用 Element を返します
+     * @method element
+     * @return {HTMLElement}
+     */
+    p.element = function () {
+
+      return this._element;
+
+    };
+
+    /**
      * @method hasClass
      * @param {string} className
      * @return {boolean}
@@ -979,6 +990,7 @@ wakegi.float = parseFloat;
  */
 
 /**
+ * 文字列操作に使用します
  *
  * @module wakegi
  * @submodule Util
