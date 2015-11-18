@@ -22,7 +22,7 @@
  * @submodule Browser
  */
 ( function ( window ){
-  "use strict";
+  'use strict';
   var
     wakegi = window.wakegi;
 

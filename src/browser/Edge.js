@@ -22,7 +22,7 @@
 /*jslint -W016*/
 ( function ( window ) {
 
-  "use strict";
+  'use strict';
 
   var
     wakegi = window.wakegi,

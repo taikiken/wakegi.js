@@ -20,7 +20,7 @@
  */
 /*jslint -W016*/
 ( function ( window ){
-  "use strict";
+  'use strict';
   var
     wakegi = window.wakegi,
     Browser = wakegi.Browser;
@@ -87,7 +87,7 @@
           }//phone
 
           // Android 標準ブラウザ
-          standard = Browser.matchSafari() && !!ua.match(/version/i);
+          standard = Browser.matchSafari() && ( !!ua.match(/version/i) || !!ua.match(/samsungbrowser/i) );
 
         }//android
 
@@ -136,10 +136,10 @@
 
             }
 
-            build = versions.join( "." );
+            build = versions.join( '.' );
             major = versions[ 0 ];
             numbers = versions;
-            version = float( versions[ 0 ] + "." + versions[ 1 ] + versions[ 2 ] );
+            version = float( versions[ 0 ] + '.' + versions[ 1 ] + versions[ 2 ] );
 
           }// Array
 

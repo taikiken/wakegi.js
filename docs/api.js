@@ -11,6 +11,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "Edge",
         "Element",
         "Firefox",
+        "FxiOS",
         "IE",
         "Mac",
         "Mobile",
@@ -33,6 +34,7 @@ YUI.add("yuidoc-meta", function(Y) {
         "Edge",
         "Element",
         "Firefox",
+        "FxiOS",
         "IE",
         "Mac",
         "Mobile",
@@ -97,6 +99,11 @@ YUI.add("yuidoc-meta", function(Y) {
             "description": "Firefox チェックを行います"
         },
         {
+            "displayName": "FxiOS",
+            "name": "FxiOS",
+            "description": "iOS Firefox チェックを行います"
+        },
+        {
             "displayName": "IE",
             "name": "IE",
             "description": "IE チェックを行います"
@@ -138,7 +145,8 @@ YUI.add("yuidoc-meta", function(Y) {
         },
         {
             "displayName": "Util",
-            "name": "Util"
+            "name": "Util",
+            "description": "文字列操作に使用します"
         },
         {
             "displayName": "wakegi",

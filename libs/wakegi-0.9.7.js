@@ -1,17 +1,15 @@
-/**
- * @license inazumatv.com
+/*!
+ * Copyright (c) 2011-2015 inazumatv.com, inc.
  * @author (at)taikiken / http://inazumatv.com
  * @date 2015/03/17 - 12:37
- *
- * Copyright (c) 2011-2015 inazumatv.com, inc.
  *
  * Distributed under the terms of the MIT license.
  * http://www.opensource.org/licenses/mit-license.html
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
- * @build 2015-10-27 20:58:23
- * @version 0.9.6
+ * @build 2015-11-18 15:24:44
+ * @version 0.9.7
  *
  */
 
@@ -68,7 +66,7 @@ wakegi.float = parseFloat;
  * @submodule Browser
  */
 ( function ( window ){
-  "use strict";
+  'use strict';
   var
     wakegi = window.wakegi;
 
@@ -222,13 +220,13 @@ wakegi.float = parseFloat;
       if ( typeof transition === 'undefined' ) {
 
         // transition undefined
-        p = document.createElement( "p" ).style;
+        p = document.createElement( 'p' ).style;
 
-        transition = "transition" in p ||
-          "WebkitTransition" in p ||
-          "MozTransition" in p ||
-          "msTransition" in p ||
-          "OTransition" in p;
+        transition = 'transition' in p ||
+          'WebkitTransition' in p ||
+          'MozTransition' in p ||
+          'msTransition' in p ||
+          'OTransition' in p;
 
       }
 
@@ -249,13 +247,13 @@ wakegi.float = parseFloat;
       if ( typeof transform === 'undefined' ) {
 
         // transform undefined
-        p = document.createElement( "p" ).style;
+        p = document.createElement( 'p' ).style;
 
-        transform = "transform" in p ||
-          "WebkitTransform" in p ||
-          "MozTransform" in p ||
-          "OTransform" in p ||
-          "msTransform" in p;
+        transform = 'transform' in p ||
+          'WebkitTransform' in p ||
+          'MozTransform' in p ||
+          'OTransform' in p ||
+          'msTransform' in p;
       }
 
       return transform;
@@ -363,7 +361,7 @@ wakegi.float = parseFloat;
  * @submodule Transition
  */
 ( function ( window ){
-  "use strict";
+  'use strict';
   var
     wakegi = window.wakegi,
     Browser = wakegi.Browser;
@@ -484,7 +482,7 @@ wakegi.float = parseFloat;
  * @submodule Element
  * */
 ( function ( window ){
-  "use strict";
+  'use strict';
   var
     document = window.document,
     wakegi = window.wakegi,
@@ -653,7 +651,7 @@ wakegi.float = parseFloat;
  *
  * */
 ( function ( window ){
-  "use strict";
+  'use strict';
 
   var
     //document = window.document,
@@ -761,16 +759,16 @@ wakegi.float = parseFloat;
 
       if ( !Dom.hasClass( element, className ) ) {
         // 追加 className が not found
-        space = "";
+        space = '';
         names = element.className;
 
-        if ( names !== "" ) {
+        if ( names !== '' ) {
           // 既に class 設定されているので 1 space を付与する
-          space = " ";
+          space = ' ';
         }
 
         names += space + className;
-        names = names.split( "  " ).join( " " );
+        names = names.split( '  ' ).join( ' ' );
         element.className = names;
 
       }
@@ -881,7 +879,7 @@ wakegi.float = parseFloat;
 
             el.runtimeStyle.left = el.currentStyle.left;
             el.style.left = value || 0;
-            value = el.style.pixelLeft + "px";
+            value = el.style.pixelLeft + 'px';
             el.style.left = oldLeft;
             el.runtimeStyle.left = oldRsLeft;
 
@@ -1073,6 +1071,7 @@ wakegi.float = parseFloat;
  * @module wakegi
  * @submodule Dataset
  */
+/* jslint -W089 */
 ( function ( window ) {
 
   'use strict';
@@ -1104,7 +1103,7 @@ wakegi.float = parseFloat;
      */
     Dataset.parse = function ( element ) {
 
-      if ( typeof element.dataset !== "undefined" ) {
+      if ( typeof element.dataset !== 'undefined' ) {
 
         return Dataset.modern( element );
 
@@ -1133,11 +1132,12 @@ wakegi.float = parseFloat;
 
       for( key in data ) {
 
-        keyName = "";
-        value = "";
+        keyName = '';
+        value = '';
 
         // Android 2.3 under, dataset object の hasOwnProperty が String型, バカでしょー
-        if ( typeof data.hasOwnProperty === "function" ) {
+        // hasOwnProperty が使えない, function check
+        if ( typeof data.hasOwnProperty === 'function' ) {
 
           if ( data.hasOwnProperty( key ) ) {
 
@@ -1185,9 +1185,9 @@ wakegi.float = parseFloat;
         attribute = data[ i ];
         nodeName = attribute.nodeName.toLowerCase();
 
-        if ( nodeName.indexOf( "data-" ) !== -1 ) {
+        if ( nodeName.indexOf( 'data-' ) !== -1 ) {
 
-          dataKey = nodeName.replace( "data-", "" );
+          dataKey = nodeName.replace( 'data-', '' );
           dataKey = Util.camelize( dataKey );
           found = true;
           results[ dataKey ] = attribute.nodeValue.toLowerCase();
@@ -1227,7 +1227,7 @@ wakegi.float = parseFloat;
  * @submodule Windows
  */
 ( function ( window ){
-  "use strict";
+  'use strict';
   var
     wakegi = window.wakegi,
     Browser = wakegi.Browser;
@@ -1334,7 +1334,7 @@ wakegi.float = parseFloat;
  */
 /*jslint -W016*/
 ( function ( window ){
-  "use strict";
+  'use strict';
   var
     wakegi = window.wakegi,
     Browser = wakegi.Browser;
@@ -1401,7 +1401,7 @@ wakegi.float = parseFloat;
 
       if ( typeof version === 'undefined' ) {
         // version undefined
-        build = "";
+        build = '';
         version = -1;
         major = -1;
 
@@ -1609,7 +1609,7 @@ wakegi.float = parseFloat;
  * @submodule Mac
  */
 ( function ( window ){
-  "use strict";
+  'use strict';
   var
     wakegi = window.wakegi,
     Browser = wakegi.Browser;
@@ -1687,7 +1687,7 @@ wakegi.float = parseFloat;
  */
 /*jslint -W016*/
 ( function ( window ){
-  "use strict";
+  'use strict';
   var
     wakegi = window.wakegi,
     Browser = wakegi.Browser;
@@ -1754,7 +1754,7 @@ wakegi.float = parseFloat;
           }//phone
 
           // Android 標準ブラウザ
-          standard = Browser.matchSafari() && !!ua.match(/version/i);
+          standard = Browser.matchSafari() && ( !!ua.match(/version/i) || !!ua.match(/samsungbrowser/i) );
 
         }//android
 
@@ -1803,10 +1803,10 @@ wakegi.float = parseFloat;
 
             }
 
-            build = versions.join( "." );
+            build = versions.join( '.' );
             major = versions[ 0 ];
             numbers = versions;
-            version = float( versions[ 0 ] + "." + versions[ 1 ] + versions[ 2 ] );
+            version = float( versions[ 0 ] + '.' + versions[ 1 ] + versions[ 2 ] );
 
           }// Array
 
@@ -1966,7 +1966,7 @@ wakegi.float = parseFloat;
  * @submodule Touch
  */
 ( function ( window ){
-  "use strict";
+  'use strict';
   var
     wakegi = window.wakegi,
     Browser = wakegi.Browser;
@@ -2025,7 +2025,7 @@ wakegi.float = parseFloat;
  * @submodule Mobile
  */
 ( function ( window ){
-  "use strict";
+  'use strict';
   var
     wakegi = window.wakegi,
     Browser = wakegi.Browser;
@@ -2104,6 +2104,181 @@ wakegi.float = parseFloat;
   }() );
 }( window ) );
 /**
+ * Copyright (c) 2011-2015 inazumatv.com, inc.
+ * author (at)taikiken / http://inazumatv.com
+ * date 2015/11/18 - 14:38
+ *
+ * Distributed under the terms of the MIT license.
+ * http://www.opensource.org/licenses/mit-license.html
+ *
+ * This notice shall be included in all copies or substantial portions of the Software.
+ *
+ */
+/* jslint -W016 */
+/**
+ * iOS Firefox チェックを行います
+ *
+ * @module Browser
+ * @submodule FxiOS
+ */
+( function ( window ) {
+
+  'use strict';
+
+  var
+    wakegi = window.wakegi,
+    Browser = wakegi.Browser;
+
+  Browser.FxiOS = ( function () {
+
+    var
+      numbers = [ -1, -1 ],
+      fxi, version, major, build;
+
+    /**
+     * @class FxiOS
+     * @static
+     * @constructor
+     */
+    function FxiOS () {
+      throw new Error( 'FxiOS can\'t create instance.' );
+    }
+    
+    var p = FxiOS.prototype;
+    p.constructor = FxiOS;
+
+    /**
+     * @method init
+     * @static
+     */
+    FxiOS.init = function () {
+
+      if ( typeof fxi === 'undefined' ) {
+        // need initialize
+
+        // check userAgent
+        fxi = !!Browser.ua().match(/fxios/i);
+
+      }
+
+    };
+
+    /**
+     * @method calculate
+     * @static
+     */
+    FxiOS.calculate = function () {
+
+      var
+        versions = [],
+        nums, int, float, i, limit;
+
+      if ( typeof version === 'undefined' ) {
+
+        // version undefined
+        build = '';
+        version = -1;
+        major = -1;
+
+        if ( FxiOS.is() ) {
+
+          // firefox os
+          nums = Browser.ua().match( /FxiOS\/(\d+)\.?(\d+)?/ );
+
+          if ( Array.isArray( nums ) ) {
+
+            // 結果が配列
+            int = wakegi.int;
+            float = wakegi.float;
+
+            for ( i = 1, limit = nums.length; i < limit; i = (i+1)|0 ) {
+
+              versions.push( int( nums[ i ], 10 ) );
+
+            }
+
+            build = versions.join( '.' );
+            major = versions[ 0 ];
+            version = float( versions[ 0 ] + '.' + versions[ 1 ] );
+            numbers = versions;
+
+          }
+
+        }
+
+      }
+
+    };
+
+    /**
+     * @method is
+     * @static
+     * @return {boolean}
+     */
+    FxiOS.is = function () {
+
+      FxiOS.init();
+      return fxi;
+
+    };
+
+
+    /**
+     *
+     * @method version
+     * @static
+     * @return {float} N.NN で返します
+     */
+    FxiOS.version = function () {
+
+      FxiOS.calculate();
+      return version;
+
+    };
+
+    /**
+     * @method major
+     * @static
+     * @return {int}
+     */
+    FxiOS.major = function () {
+
+      FxiOS.calculate();
+      return major;
+
+    };
+
+    /**
+     *
+     * @method build
+     * @static
+     * @return {string} NN.NN.NN.NN 型（文字）で返します
+     */
+    FxiOS.build = function () {
+
+      FxiOS.calculate();
+      return build;
+
+    };
+
+    /**
+     * @method numbers
+     * @static
+     * @return {*[]} [major: int, minor: int, build: int] 形式で返します
+     */
+    FxiOS.numbers = function () {
+
+      FxiOS.calculate();
+      return numbers;
+
+    };
+    
+    return FxiOS;
+  
+  }() );
+
+}( window ) );
+/**
  * license inazumatv.com
  * author (at)taikiken / http://inazumatv.com
  * date 15/07/30 - 17:59
@@ -2127,7 +2302,7 @@ wakegi.float = parseFloat;
 /*jslint -W016*/
 ( function ( window ) {
 
-  "use strict";
+  'use strict';
 
   var
     wakegi = window.wakegi,
@@ -2304,7 +2479,7 @@ wakegi.float = parseFloat;
  * @submodule IE
  */
 ( function ( window ){
-  "use strict";
+  'use strict';
   var
     wakegi = window.wakegi,
     Browser = wakegi.Browser;
@@ -2593,7 +2768,7 @@ wakegi.float = parseFloat;
  */
 /*jslint -W016*/
 ( function ( window ){
-  "use strict";
+  'use strict';
 
   var
     wakegi = window.wakegi,
@@ -2647,7 +2822,7 @@ wakegi.float = parseFloat;
 
       if ( typeof version === 'undefined' ) {
         // version undefined
-        build = "";
+        build = '';
         version = -1;
         major = -1;
 
@@ -2768,7 +2943,7 @@ wakegi.float = parseFloat;
  */
 /*jslint -W016*/
 ( function ( window ){
-  "use strict";
+  'use strict';
   var
     wakegi = window.wakegi,
     Browser = wakegi.Browser;
@@ -2847,7 +3022,7 @@ wakegi.float = parseFloat;
 
       if ( typeof version === 'undefined' ) {
         // version undefined
-        build = "";
+        build = '';
         version = -1;
         major = -1;
 
@@ -2979,7 +3154,7 @@ wakegi.float = parseFloat;
  */
 /*jslint -W016*/
 ( function ( window ){
-  "use strict";
+  'use strict';
   var
     wakegi = window.wakegi,
     Browser = wakegi.Browser;
@@ -3155,7 +3330,7 @@ wakegi.float = parseFloat;
  */
 /*jslint -W016*/
 ( function ( window ){
-  "use strict";
+  'use strict';
   var
     wakegi = window.wakegi,
     Browser = wakegi.Browser;
@@ -3165,9 +3340,10 @@ wakegi.float = parseFloat;
       CriOS = Browser.CriOS,
       Chrome = Browser.Chrome,
       Android = Browser.Android,
+      FxiOS = Browser.FxiOS,
       Edge = Browser.Edge,
       numbers = [ -1, -1, -1 ],
-      crios, chrome, edge,
+      crios, chrome, edge, fxios,
       safari, version, major, build;
 
     /**
@@ -3196,8 +3372,9 @@ wakegi.float = parseFloat;
         crios = CriOS.is();
         chrome = Chrome.is();
         edge = Edge.is();
+        fxios = FxiOS.is();
 
-        if ( crios || chrome || edge || Android.standard() ) {
+        if ( crios || chrome || edge || Android.standard() || fxios ) {
           // Chrome(iOS, Android), Android standard
           safari = false;
 
@@ -3224,7 +3401,7 @@ wakegi.float = parseFloat;
       if ( typeof version === 'undefined' ) {
 
         // version undefined
-        build = "";
+        build = '';
         version = -1;
         major = -1;
 

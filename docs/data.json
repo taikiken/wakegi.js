@@ -49,6 +49,17 @@
             "fors": {},
             "namespaces": {}
         },
+        "src/browser/FxiOS.js": {
+            "name": "src/browser/FxiOS.js",
+            "modules": {
+                "FxiOS": 1
+            },
+            "classes": {
+                "FxiOS": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
         "src/browser/IE.js": {
             "name": "src/browser/IE.js",
             "modules": {
@@ -243,6 +254,7 @@
                 "CriOS": 1,
                 "Edge": 1,
                 "Firefox": 1,
+                "FxiOS": 1,
                 "IE": 1,
                 "Safari": 1,
                 "Css3": 1,
@@ -262,6 +274,7 @@
                 "CriOS": 1,
                 "Edge": 1,
                 "Firefox": 1,
+                "FxiOS": 1,
                 "IE": 1,
                 "Safari": 1,
                 "Css3": 1,
@@ -347,6 +360,22 @@
             "line": 34,
             "description": "Firefox チェックを行います"
         },
+        "FxiOS": {
+            "name": "FxiOS",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "FxiOS": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "Browser",
+            "namespace": "",
+            "file": "src/browser/FxiOS.js",
+            "line": 33,
+            "description": "iOS Firefox チェックを行います"
+        },
         "IE": {
             "name": "IE",
             "submodules": {},
@@ -376,7 +405,7 @@
             "module": "Browser",
             "namespace": "",
             "file": "src/browser/Safari.js",
-            "line": 39,
+            "line": 40,
             "description": "Safari チェックを行います"
         },
         "Css3": {
@@ -558,7 +587,7 @@
             "module": "wakegi",
             "namespace": "",
             "file": "src/document/Dataset.js",
-            "line": 32,
+            "line": 33,
             "description": "data-xxx を key, value に分解します"
         },
         "Dom": {
@@ -606,7 +635,8 @@
             "module": "wakegi",
             "namespace": "",
             "file": "src/document/Util.js",
-            "line": 30
+            "line": 31,
+            "description": "文字列操作に使用します"
         }
     },
     "classes": {
@@ -678,6 +708,22 @@
             "static": 1,
             "is_constructor": 1
         },
+        "FxiOS": {
+            "name": "FxiOS",
+            "shortname": "FxiOS",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Browser",
+            "submodule": "FxiOS",
+            "namespace": "",
+            "file": "src/browser/FxiOS.js",
+            "line": 33,
+            "static": 1,
+            "is_constructor": 1
+        },
         "IE": {
             "name": "IE",
             "shortname": "IE",
@@ -707,7 +753,7 @@
             "submodule": "Safari",
             "namespace": "",
             "file": "src/browser/Safari.js",
-            "line": 39,
+            "line": 40,
             "description": "Safari detection",
             "static": 1,
             "is_constructor": 1
@@ -880,7 +926,7 @@
             "submodule": "Dataset",
             "namespace": "",
             "file": "src/document/Dataset.js",
-            "line": 32,
+            "line": 33,
             "description": "tag の data属性を key: value 形式に分解します",
             "static": 1,
             "is_constructor": 1
@@ -937,7 +983,7 @@
             "submodule": "Util",
             "namespace": "",
             "file": "src/document/Util.js",
-            "line": 30,
+            "line": 31,
             "static": 1,
             "is_constructor": 1
         },
@@ -1349,6 +1395,103 @@
             "submodule": "Firefox"
         },
         {
+            "file": "src/browser/FxiOS.js",
+            "line": 1,
+            "description": "Copyright (c) 2011-2015 inazumatv.com, inc.\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/11/18 - 14:38\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
+            "class": "FxiOS",
+            "module": "Browser"
+        },
+        {
+            "file": "src/browser/FxiOS.js",
+            "line": 45,
+            "itemtype": "method",
+            "name": "init",
+            "static": 1,
+            "class": "FxiOS",
+            "module": "Browser",
+            "submodule": "FxiOS"
+        },
+        {
+            "file": "src/browser/FxiOS.js",
+            "line": 61,
+            "itemtype": "method",
+            "name": "calculate",
+            "static": 1,
+            "class": "FxiOS",
+            "module": "Browser",
+            "submodule": "FxiOS"
+        },
+        {
+            "file": "src/browser/FxiOS.js",
+            "line": 108,
+            "itemtype": "method",
+            "name": "is",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Boolean"
+            },
+            "class": "FxiOS",
+            "module": "Browser",
+            "submodule": "FxiOS"
+        },
+        {
+            "file": "src/browser/FxiOS.js",
+            "line": 121,
+            "itemtype": "method",
+            "name": "version",
+            "static": 1,
+            "return": {
+                "description": "N.NN で返します",
+                "type": "Float"
+            },
+            "class": "FxiOS",
+            "module": "Browser",
+            "submodule": "FxiOS"
+        },
+        {
+            "file": "src/browser/FxiOS.js",
+            "line": 134,
+            "itemtype": "method",
+            "name": "major",
+            "static": 1,
+            "return": {
+                "description": "",
+                "type": "Int"
+            },
+            "class": "FxiOS",
+            "module": "Browser",
+            "submodule": "FxiOS"
+        },
+        {
+            "file": "src/browser/FxiOS.js",
+            "line": 146,
+            "itemtype": "method",
+            "name": "build",
+            "static": 1,
+            "return": {
+                "description": "NN.NN.NN.NN 型（文字）で返します",
+                "type": "String"
+            },
+            "class": "FxiOS",
+            "module": "Browser",
+            "submodule": "FxiOS"
+        },
+        {
+            "file": "src/browser/FxiOS.js",
+            "line": 159,
+            "itemtype": "method",
+            "name": "numbers",
+            "static": 1,
+            "return": {
+                "description": "[major: int, minor: int, build: int] 形式で返します",
+                "type": "*[]"
+            },
+            "class": "FxiOS",
+            "module": "Browser",
+            "submodule": "FxiOS"
+        },
+        {
             "file": "src/browser/IE.js",
             "line": 1,
             "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 14:16\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
@@ -1527,7 +1670,7 @@
         },
         {
             "file": "src/browser/Safari.js",
-            "line": 53,
+            "line": 54,
             "itemtype": "method",
             "name": "init",
             "static": 1,
@@ -1537,7 +1680,7 @@
         },
         {
             "file": "src/browser/Safari.js",
-            "line": 80,
+            "line": 82,
             "itemtype": "method",
             "name": "calculate",
             "static": 1,
@@ -1547,7 +1690,7 @@
         },
         {
             "file": "src/browser/Safari.js",
-            "line": 138,
+            "line": 140,
             "itemtype": "method",
             "name": "is",
             "static": 1,
@@ -1561,7 +1704,7 @@
         },
         {
             "file": "src/browser/Safari.js",
-            "line": 150,
+            "line": 152,
             "itemtype": "method",
             "name": "set",
             "static": 1,
@@ -1578,7 +1721,7 @@
         },
         {
             "file": "src/browser/Safari.js",
-            "line": 161,
+            "line": 163,
             "itemtype": "method",
             "name": "version",
             "static": 1,
@@ -1592,7 +1735,7 @@
         },
         {
             "file": "src/browser/Safari.js",
-            "line": 174,
+            "line": 176,
             "itemtype": "method",
             "name": "major",
             "static": 1,
@@ -1606,7 +1749,7 @@
         },
         {
             "file": "src/browser/Safari.js",
-            "line": 186,
+            "line": 188,
             "itemtype": "method",
             "name": "build",
             "static": 1,
@@ -1620,7 +1763,7 @@
         },
         {
             "file": "src/browser/Safari.js",
-            "line": 199,
+            "line": 201,
             "itemtype": "method",
             "name": "numbers",
             "static": 1,
@@ -1634,7 +1777,7 @@
         },
         {
             "file": "src/browser/Safari.js",
-            "line": 211,
+            "line": 213,
             "itemtype": "method",
             "name": "number",
             "deprecated": true,
@@ -2344,7 +2487,7 @@
         },
         {
             "file": "src/document/Dataset.js",
-            "line": 43,
+            "line": 44,
             "description": "引数 element(HTMLElement) の data属性を object にして返す",
             "itemtype": "method",
             "name": "parse",
@@ -2365,7 +2508,7 @@
         },
         {
             "file": "src/document/Dataset.js",
-            "line": 64,
+            "line": 65,
             "itemtype": "method",
             "name": "modern",
             "static": 1,
@@ -2385,7 +2528,7 @@
         },
         {
             "file": "src/document/Dataset.js",
-            "line": 114,
+            "line": 116,
             "itemtype": "method",
             "name": "legacy",
             "static": 1,
@@ -2425,6 +2568,20 @@
         {
             "file": "src/document/Dom.js",
             "line": 51,
+            "description": "使用 Element を返します",
+            "itemtype": "method",
+            "name": "element",
+            "return": {
+                "description": "",
+                "type": "HTMLElement"
+            },
+            "class": "Dom",
+            "module": "wakegi",
+            "submodule": "Dom"
+        },
+        {
+            "file": "src/document/Dom.js",
+            "line": 62,
             "itemtype": "method",
             "name": "hasClass",
             "params": [
@@ -2444,7 +2601,7 @@
         },
         {
             "file": "src/document/Dom.js",
-            "line": 61,
+            "line": 72,
             "itemtype": "method",
             "name": "addClass",
             "params": [
@@ -2464,7 +2621,7 @@
         },
         {
             "file": "src/document/Dom.js",
-            "line": 72,
+            "line": 83,
             "itemtype": "method",
             "name": "removeClass",
             "params": [
@@ -2484,7 +2641,7 @@
         },
         {
             "file": "src/document/Dom.js",
-            "line": 83,
+            "line": 94,
             "itemtype": "method",
             "name": "style",
             "params": [
@@ -2505,7 +2662,7 @@
         },
         {
             "file": "src/document/Dom.js",
-            "line": 93,
+            "line": 104,
             "itemtype": "method",
             "name": "hasClass",
             "static": 1,
@@ -2531,7 +2688,7 @@
         },
         {
             "file": "src/document/Dom.js",
-            "line": 105,
+            "line": 116,
             "itemtype": "method",
             "name": "addClass",
             "static": 1,
@@ -2557,7 +2714,7 @@
         },
         {
             "file": "src/document/Dom.js",
-            "line": 137,
+            "line": 148,
             "itemtype": "method",
             "name": "removeClass",
             "static": 1,
@@ -2583,7 +2740,7 @@
         },
         {
             "file": "src/document/Dom.js",
-            "line": 178,
+            "line": 189,
             "description": "getComputedStyle を使い HTMLElement style value を取得します",
             "itemtype": "method",
             "name": "styleCompute",
@@ -2616,7 +2773,7 @@
         },
         {
             "file": "src/document/Dom.js",
-            "line": 204,
+            "line": 215,
             "description": "currentStyle を使い HTMLElement style value を取得します",
             "itemtype": "method",
             "name": "styleCurrent",
@@ -2644,7 +2801,7 @@
         },
         {
             "file": "src/document/Dom.js",
-            "line": 257,
+            "line": 268,
             "description": "HTMLElement の css style を返します",
             "itemtype": "method",
             "name": "getStyle",
@@ -2767,7 +2924,7 @@
         },
         {
             "file": "src/document/Util.js",
-            "line": 42,
+            "line": 43,
             "description": "abc-def を abcDef にします",
             "itemtype": "method",
             "name": "camelize",
@@ -2789,7 +2946,7 @@
         },
         {
             "file": "src/document/Util.js",
-            "line": 60,
+            "line": 61,
             "description": "abcDef を abc-def にします",
             "itemtype": "method",
             "name": "dash",
@@ -2882,36 +3039,9 @@
             "class": "Browser",
             "module": "wakegi",
             "submodule": "Browser"
-        },
-        {
-            "file": "src/wakegi.js",
-            "line": 1,
-            "license": "inazumatv.com",
-            "author": "(at)taikiken / http://inazumatv.com",
-            "date": "2015/03/17 - 12:37\n\nCopyright (c) 2011-@@year inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
-            "build": "@@buildTime",
-            "version": "@@version",
-            "class": "",
-            "module": "wakegi"
         }
     ],
     "warnings": [
-        {
-            "message": "unknown tag: license",
-            "line": " src/wakegi.js:1"
-        },
-        {
-            "message": "unknown tag: date",
-            "line": " src/wakegi.js:1"
-        },
-        {
-            "message": "unknown tag: build",
-            "line": " src/wakegi.js:1"
-        },
-        {
-            "message": "unknown tag: version",
-            "line": " src/wakegi.js:1"
-        },
         {
             "message": "Missing item type\nlicense inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 17:32\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
             "line": " src/browser/Chrome.js:1"
@@ -2927,6 +3057,10 @@
         {
             "message": "Missing item type\nlicense inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 18:29\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
             "line": " src/browser/Firefox.js:1"
+        },
+        {
+            "message": "Missing item type\nCopyright (c) 2011-2015 inazumatv.com, inc.\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/11/18 - 14:38\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
+            "line": " src/browser/FxiOS.js:1"
         },
         {
             "message": "Missing item type\nlicense inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 14:16\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
@@ -2991,10 +3125,6 @@
         {
             "message": "Missing item type\nlicense inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 12:39\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
             "line": " src/Browser.js:1"
-        },
-        {
-            "message": "Missing item type",
-            "line": " src/wakegi.js:1"
         }
     ]
 }

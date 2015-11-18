@@ -19,7 +19,7 @@
  * @submodule Element
  * */
 ( function ( window ){
-  "use strict";
+  'use strict';
   var
     document = window.document,
     wakegi = window.wakegi,

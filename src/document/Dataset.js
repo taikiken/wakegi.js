@@ -18,6 +18,7 @@
  * @module wakegi
  * @submodule Dataset
  */
+/* jslint -W089 */
 ( function ( window ) {
 
   'use strict';
@@ -49,7 +50,7 @@
      */
     Dataset.parse = function ( element ) {
 
-      if ( typeof element.dataset !== "undefined" ) {
+      if ( typeof element.dataset !== 'undefined' ) {
 
         return Dataset.modern( element );
 
@@ -78,11 +79,12 @@
 
       for( key in data ) {
 
-        keyName = "";
-        value = "";
+        keyName = '';
+        value = '';
 
         // Android 2.3 under, dataset object の hasOwnProperty が String型, バカでしょー
-        if ( typeof data.hasOwnProperty === "function" ) {
+        // hasOwnProperty が使えない, function check
+        if ( typeof data.hasOwnProperty === 'function' ) {
 
           if ( data.hasOwnProperty( key ) ) {
 
@@ -130,9 +132,9 @@
         attribute = data[ i ];
         nodeName = attribute.nodeName.toLowerCase();
 
-        if ( nodeName.indexOf( "data-" ) !== -1 ) {
+        if ( nodeName.indexOf( 'data-' ) !== -1 ) {
 
-          dataKey = nodeName.replace( "data-", "" );
+          dataKey = nodeName.replace( 'data-', '' );
           dataKey = Util.camelize( dataKey );
           found = true;
           results[ dataKey ] = attribute.nodeValue.toLowerCase();

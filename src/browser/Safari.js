@@ -21,7 +21,7 @@
  */
 /*jslint -W016*/
 ( function ( window ){
-  "use strict";
+  'use strict';
   var
     wakegi = window.wakegi,
     Browser = wakegi.Browser;
@@ -31,9 +31,10 @@
       CriOS = Browser.CriOS,
       Chrome = Browser.Chrome,
       Android = Browser.Android,
+      FxiOS = Browser.FxiOS,
       Edge = Browser.Edge,
       numbers = [ -1, -1, -1 ],
-      crios, chrome, edge,
+      crios, chrome, edge, fxios,
       safari, version, major, build;
 
     /**
@@ -62,8 +63,9 @@
         crios = CriOS.is();
         chrome = Chrome.is();
         edge = Edge.is();
+        fxios = FxiOS.is();
 
-        if ( crios || chrome || edge || Android.standard() ) {
+        if ( crios || chrome || edge || Android.standard() || fxios ) {
           // Chrome(iOS, Android), Android standard
           safari = false;
 
@@ -90,7 +92,7 @@
       if ( typeof version === 'undefined' ) {
 
         // version undefined
-        build = "";
+        build = '';
         version = -1;
         major = -1;
 

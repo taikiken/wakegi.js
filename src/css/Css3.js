@@ -66,13 +66,13 @@
       if ( typeof transition === 'undefined' ) {
 
         // transition undefined
-        p = document.createElement( "p" ).style;
+        p = document.createElement( 'p' ).style;
 
-        transition = "transition" in p ||
-          "WebkitTransition" in p ||
-          "MozTransition" in p ||
-          "msTransition" in p ||
-          "OTransition" in p;
+        transition = 'transition' in p ||
+          'WebkitTransition' in p ||
+          'MozTransition' in p ||
+          'msTransition' in p ||
+          'OTransition' in p;
 
       }
 
@@ -93,13 +93,13 @@
       if ( typeof transform === 'undefined' ) {
 
         // transform undefined
-        p = document.createElement( "p" ).style;
+        p = document.createElement( 'p' ).style;
 
-        transform = "transform" in p ||
-          "WebkitTransform" in p ||
-          "MozTransform" in p ||
-          "OTransform" in p ||
-          "msTransform" in p;
+        transform = 'transform' in p ||
+          'WebkitTransform' in p ||
+          'MozTransform' in p ||
+          'OTransform' in p ||
+          'msTransform' in p;
       }
 
       return transform;

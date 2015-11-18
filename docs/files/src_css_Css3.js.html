@@ -48,6 +48,7 @@
                                 <li><a href="../classes/Edge.html">Edge</a></li>
                                 <li><a href="../classes/Element.html">Element</a></li>
                                 <li><a href="../classes/Firefox.html">Firefox</a></li>
+                                <li><a href="../classes/FxiOS.html">FxiOS</a></li>
                                 <li><a href="../classes/IE.html">IE</a></li>
                                 <li><a href="../classes/iOS.html">iOS</a></li>
                                 <li><a href="../classes/Mac.html">Mac</a></li>
@@ -72,6 +73,7 @@
                                 <li><a href="../modules/Edge.html">Edge</a></li>
                                 <li><a href="../modules/Element.html">Element</a></li>
                                 <li><a href="../modules/Firefox.html">Firefox</a></li>
+                                <li><a href="../modules/FxiOS.html">FxiOS</a></li>
                                 <li><a href="../modules/IE.html">IE</a></li>
                                 <li><a href="../modules/iOS.html">iOS</a></li>
                                 <li><a href="../modules/Mac.html">Mac</a></li>
@@ -188,13 +190,13 @@
       if ( typeof transition === &#x27;undefined&#x27; ) {
 
         // transition undefined
-        p = document.createElement( &quot;p&quot; ).style;
+        p = document.createElement( &#x27;p&#x27; ).style;
 
-        transition = &quot;transition&quot; in p ||
-          &quot;WebkitTransition&quot; in p ||
-          &quot;MozTransition&quot; in p ||
-          &quot;msTransition&quot; in p ||
-          &quot;OTransition&quot; in p;
+        transition = &#x27;transition&#x27; in p ||
+          &#x27;WebkitTransition&#x27; in p ||
+          &#x27;MozTransition&#x27; in p ||
+          &#x27;msTransition&#x27; in p ||
+          &#x27;OTransition&#x27; in p;
 
       }
 
@@ -215,13 +217,13 @@
       if ( typeof transform === &#x27;undefined&#x27; ) {
 
         // transform undefined
-        p = document.createElement( &quot;p&quot; ).style;
+        p = document.createElement( &#x27;p&#x27; ).style;
 
-        transform = &quot;transform&quot; in p ||
-          &quot;WebkitTransform&quot; in p ||
-          &quot;MozTransform&quot; in p ||
-          &quot;OTransform&quot; in p ||
-          &quot;msTransform&quot; in p;
+        transform = &#x27;transform&#x27; in p ||
+          &#x27;WebkitTransform&#x27; in p ||
+          &#x27;MozTransform&#x27; in p ||
+          &#x27;OTransform&#x27; in p ||
+          &#x27;msTransform&#x27; in p;
       }
 
       return transform;

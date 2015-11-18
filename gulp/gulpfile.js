@@ -104,6 +104,7 @@ scripts.push( dir.src + '/device/Touch.js' );
 scripts.push( dir.src + '/device/Mobile.js' );
 
 // ua
+scripts.push( dir.src + '/browser/FxiOS.js' );
 scripts.push( dir.src + '/browser/Edge.js' );
 scripts.push( dir.src + '/browser/IE.js' );
 scripts.push( dir.src + '/browser/CriOS.js' );
@@ -168,7 +169,7 @@ gulp.task( 'script-docs', function () {
 
 // Lint JavaScript
 gulp.task('js-hint', function () {
-  return gulp.src( dir.libs + '/wakegi.js' )
+  return gulp.src( dir.src + '/**/*.js' )
     .pipe( jshint() )
     .pipe( jshint.reporter('jshint-stylish'));
 });
@@ -179,8 +180,8 @@ gulp.task('js-hint', function () {
 gulp.task( 'build', function () {
 
   runSequence(
-    'script-concat',
     'js-hint',
+    'script-concat',
     'script-min',
     'script-version'
   );

@@ -21,7 +21,7 @@
  */
 /*jslint -W016*/
 ( function ( window ){
-  "use strict";
+  'use strict';
   var
     wakegi = window.wakegi,
     Browser = wakegi.Browser;
@@ -100,7 +100,7 @@
 
       if ( typeof version === 'undefined' ) {
         // version undefined
-        build = "";
+        build = '';
         version = -1;
         major = -1;
 

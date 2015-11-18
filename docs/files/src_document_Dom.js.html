@@ -48,6 +48,7 @@
                                 <li><a href="../classes/Edge.html">Edge</a></li>
                                 <li><a href="../classes/Element.html">Element</a></li>
                                 <li><a href="../classes/Firefox.html">Firefox</a></li>
+                                <li><a href="../classes/FxiOS.html">FxiOS</a></li>
                                 <li><a href="../classes/IE.html">IE</a></li>
                                 <li><a href="../classes/iOS.html">iOS</a></li>
                                 <li><a href="../classes/Mac.html">Mac</a></li>
@@ -72,6 +73,7 @@
                                 <li><a href="../modules/Edge.html">Edge</a></li>
                                 <li><a href="../modules/Element.html">Element</a></li>
                                 <li><a href="../modules/Firefox.html">Firefox</a></li>
+                                <li><a href="../modules/FxiOS.html">FxiOS</a></li>
                                 <li><a href="../modules/IE.html">IE</a></li>
                                 <li><a href="../modules/iOS.html">iOS</a></li>
                                 <li><a href="../modules/Mac.html">Mac</a></li>
@@ -142,7 +144,7 @@
  *
  * */
 ( function ( window ){
-  &quot;use strict&quot;;
+  &#x27;use strict&#x27;;
 
   var
     //document = window.document,
@@ -169,6 +171,17 @@
 
     var p = Dom.prototype;
     p.constructor = Dom;
+
+    /**
+     * 使用 Element を返します
+     * @method element
+     * @return {HTMLElement}
+     */
+    p.element = function () {
+
+      return this._element;
+
+    };
 
     /**
      * @method hasClass
@@ -239,16 +252,16 @@
 
       if ( !Dom.hasClass( element, className ) ) {
         // 追加 className が not found
-        space = &quot;&quot;;
+        space = &#x27;&#x27;;
         names = element.className;
 
-        if ( names !== &quot;&quot; ) {
+        if ( names !== &#x27;&#x27; ) {
           // 既に class 設定されているので 1 space を付与する
-          space = &quot; &quot;;
+          space = &#x27; &#x27;;
         }
 
         names += space + className;
-        names = names.split( &quot;  &quot; ).join( &quot; &quot; );
+        names = names.split( &#x27;  &#x27; ).join( &#x27; &#x27; );
         element.className = names;
 
       }
@@ -359,7 +372,7 @@
 
             el.runtimeStyle.left = el.currentStyle.left;
             el.style.left = value || 0;
-            value = el.style.pixelLeft + &quot;px&quot;;
+            value = el.style.pixelLeft + &#x27;px&#x27;;
             el.style.left = oldLeft;
             el.runtimeStyle.left = oldRsLeft;
 

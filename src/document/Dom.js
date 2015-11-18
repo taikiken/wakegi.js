@@ -20,7 +20,7 @@
  *
  * */
 ( function ( window ){
-  "use strict";
+  'use strict';
 
   var
     //document = window.document,
@@ -128,16 +128,16 @@
 
       if ( !Dom.hasClass( element, className ) ) {
         // 追加 className が not found
-        space = "";
+        space = '';
         names = element.className;
 
-        if ( names !== "" ) {
+        if ( names !== '' ) {
           // 既に class 設定されているので 1 space を付与する
-          space = " ";
+          space = ' ';
         }
 
         names += space + className;
-        names = names.split( "  " ).join( " " );
+        names = names.split( '  ' ).join( ' ' );
         element.className = names;
 
       }
@@ -248,7 +248,7 @@
 
             el.runtimeStyle.left = el.currentStyle.left;
             el.style.left = value || 0;
-            value = el.style.pixelLeft + "px";
+            value = el.style.pixelLeft + 'px';
             el.style.left = oldLeft;
             el.runtimeStyle.left = oldRsLeft;
 

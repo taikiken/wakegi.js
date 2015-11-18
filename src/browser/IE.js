@@ -20,7 +20,7 @@
  * @submodule IE
  */
 ( function ( window ){
-  "use strict";
+  'use strict';
   var
     wakegi = window.wakegi,
     Browser = wakegi.Browser;

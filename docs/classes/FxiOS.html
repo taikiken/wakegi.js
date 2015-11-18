@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Transition - wakegi.js API</title>
+    <title>FxiOS - wakegi.js API</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
@@ -118,24 +118,19 @@
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-<h1>Transition Class</h1>
+<h1>FxiOS Class</h1>
 <div class="box meta">
 
 
         <div class="foundat">
-            Defined in: <a href="../files/src_css_Transition.js.html#l32"><code>src&#x2F;css&#x2F;Transition.js:32</code></a>
+            Defined in: <a href="../files/src_browser_FxiOS.js.html#l33"><code>src&#x2F;browser&#x2F;FxiOS.js:33</code></a>
         </div>
 
-            Module: <a href="../modules/Transition.html">Transition</a><br>
+            Module: <a href="../modules/FxiOS.html">FxiOS</a><br>
             Parent Module: <a href="../modules/Browser.html">Browser</a>
 
 </div>
 
-    <div class="box deprecated">
-        <p>
-            <strong>Deprecated:</strong> instead of Css3
-        </p>
-    </div>
 
 <div class="box intro">
     
@@ -143,13 +138,12 @@
 
     <div class="constructor">
         <h2>Constructor</h2>
-<div id="method_Transition" class="method item deprecated">
-    <h3 class="name"><code>Transition</code></h3>
+<div id="method_FxiOS" class="method item">
+    <h3 class="name"><code>FxiOS</code></h3>
 
         <span class="paren">()</span>
 
 
-        <span class="flag deprecated" title="instead of Css3">deprecated</span>
 
 
 
@@ -160,11 +154,10 @@
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_css_Transition.js.html#l32"><code>src&#x2F;css&#x2F;Transition.js:32</code></a>
+        <a href="../files/src_browser_FxiOS.js.html#l33"><code>src&#x2F;browser&#x2F;FxiOS.js:33</code></a>
         </p>
 
 
-            <p>Deprecated: instead of Css3</p>
 
     </div>
 
@@ -193,11 +186,40 @@
                     <h3>Methods</h3>
 
                     <ul class="index-list methods">
-                            <li class="index-item method deprecated">
+                            <li class="index-item method">
+                                <a href="#method_build">build</a>
+
+                                    <span class="flag static">static</span>
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_calculate">calculate</a>
+
+                                    <span class="flag static">static</span>
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_init">init</a>
+
+                                    <span class="flag static">static</span>
+                            </li>
+                            <li class="index-item method">
                                 <a href="#method_is">is</a>
 
                                     <span class="flag static">static</span>
-                                    <span class="flag deprecated">deprecated</span>
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_major">major</a>
+
+                                    <span class="flag static">static</span>
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_numbers">numbers</a>
+
+                                    <span class="flag static">static</span>
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_version">version</a>
+
+                                    <span class="flag static">static</span>
                             </li>
                     </ul>
                 </div>
@@ -209,16 +231,15 @@
             <div id="methods" class="api-class-tabpanel">
                 <h2 class="off-left">Methods</h2>
 
-<div id="method_is" class="method item deprecated">
-    <h3 class="name"><code>is</code></h3>
+<div id="method_build" class="method item">
+    <h3 class="name"><code>build</code></h3>
 
         <span class="paren">()</span>
 
         <span class="returns-inline">
-            <span class="type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
+            <span class="type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
         </span>
 
-        <span class="flag deprecated" title="instead of Css3.transition">deprecated</span>
 
 
 
@@ -229,11 +250,115 @@
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_css_Transition.js.html#l45"><code>src&#x2F;css&#x2F;Transition.js:45</code></a>
+        <a href="../files/src_browser_FxiOS.js.html#l146"><code>src&#x2F;browser&#x2F;FxiOS.js:146</code></a>
         </p>
 
 
-            <p>Deprecated: instead of Css3.transition</p>
+
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>:
+                    <p>NN.NN.NN.NN 型（文字）で返します</p>
+
+            </div>
+        </div>
+
+
+</div>
+<div id="method_calculate" class="method item">
+    <h3 class="name"><code>calculate</code></h3>
+
+        <span class="paren">()</span>
+
+
+
+
+
+        <span class="flag static">static</span>
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_browser_FxiOS.js.html#l61"><code>src&#x2F;browser&#x2F;FxiOS.js:61</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+
+
+
+</div>
+<div id="method_init" class="method item">
+    <h3 class="name"><code>init</code></h3>
+
+        <span class="paren">()</span>
+
+
+
+
+
+        <span class="flag static">static</span>
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_browser_FxiOS.js.html#l45"><code>src&#x2F;browser&#x2F;FxiOS.js:45</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+
+
+
+</div>
+<div id="method_is" class="method item">
+    <h3 class="name"><code>is</code></h3>
+
+        <span class="paren">()</span>
+
+        <span class="returns-inline">
+            <span class="type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
+        </span>
+
+
+
+
+        <span class="flag static">static</span>
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_browser_FxiOS.js.html#l108"><code>src&#x2F;browser&#x2F;FxiOS.js:108</code></a>
+        </p>
+
+
 
     </div>
 
@@ -247,6 +372,133 @@
 
             <div class="returns-description">
                         <span class="type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>:
+            </div>
+        </div>
+
+
+</div>
+<div id="method_major" class="method item">
+    <h3 class="name"><code>major</code></h3>
+
+        <span class="paren">()</span>
+
+        <span class="returns-inline">
+            <span class="type">Int</span>
+        </span>
+
+
+
+
+        <span class="flag static">static</span>
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_browser_FxiOS.js.html#l134"><code>src&#x2F;browser&#x2F;FxiOS.js:134</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Int</span>:
+            </div>
+        </div>
+
+
+</div>
+<div id="method_numbers" class="method item">
+    <h3 class="name"><code>numbers</code></h3>
+
+        <span class="paren">()</span>
+
+        <span class="returns-inline">
+            <span class="type"></span>
+        </span>
+
+
+
+
+        <span class="flag static">static</span>
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_browser_FxiOS.js.html#l159"><code>src&#x2F;browser&#x2F;FxiOS.js:159</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type"></span>:
+                    <p>[major: int, minor: int, build: int] 形式で返します</p>
+
+            </div>
+        </div>
+
+
+</div>
+<div id="method_version" class="method item">
+    <h3 class="name"><code>version</code></h3>
+
+        <span class="paren">()</span>
+
+        <span class="returns-inline">
+            <span class="type">Float</span>
+        </span>
+
+
+
+
+        <span class="flag static">static</span>
+
+
+
+    <div class="meta">
+                <p>
+                Defined in
+        <a href="../files/src_browser_FxiOS.js.html#l121"><code>src&#x2F;browser&#x2F;FxiOS.js:121</code></a>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        
+    </div>
+
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Float</span>:
+                    <p>N.NN で返します</p>
+
             </div>
         </div>
 

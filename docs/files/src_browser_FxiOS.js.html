@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Transition - wakegi.js API</title>
+    <title>src/browser/FxiOS.js - wakegi.js API</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
@@ -118,145 +118,186 @@
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-<h1>Transition Class</h1>
-<div class="box meta">
+<h1 class="file-heading">File: src/browser/FxiOS.js</h1>
 
+<div class="file">
+    <pre class="code prettyprint linenums">
+/**
+ * Copyright (c) 2011-2015 inazumatv.com, inc.
+ * author (at)taikiken / http://inazumatv.com
+ * date 2015/11/18 - 14:38
+ *
+ * Distributed under the terms of the MIT license.
+ * http://www.opensource.org/licenses/mit-license.html
+ *
+ * This notice shall be included in all copies or substantial portions of the Software.
+ *
+ */
+/* jslint -W016 */
+/**
+ * iOS Firefox チェックを行います
+ *
+ * @module Browser
+ * @submodule FxiOS
+ */
+( function ( window ) {
 
-        <div class="foundat">
-            Defined in: <a href="../files/src_css_Transition.js.html#l32"><code>src&#x2F;css&#x2F;Transition.js:32</code></a>
-        </div>
+  &#x27;use strict&#x27;;
 
-            Module: <a href="../modules/Transition.html">Transition</a><br>
-            Parent Module: <a href="../modules/Browser.html">Browser</a>
+  var
+    wakegi = window.wakegi,
+    Browser = wakegi.Browser;
 
-</div>
+  Browser.FxiOS = ( function () {
 
-    <div class="box deprecated">
-        <p>
-            <strong>Deprecated:</strong> instead of Css3
-        </p>
-    </div>
+    var
+      numbers = [ -1, -1 ],
+      fxi, version, major, build;
 
-<div class="box intro">
+    /**
+     * @class FxiOS
+     * @static
+     * @constructor
+     */
+    function FxiOS () {
+      throw new Error( &#x27;FxiOS can\&#x27;t create instance.&#x27; );
+    }
     
-</div>
+    var p = FxiOS.prototype;
+    p.constructor = FxiOS;
 
-    <div class="constructor">
-        <h2>Constructor</h2>
-<div id="method_Transition" class="method item deprecated">
-    <h3 class="name"><code>Transition</code></h3>
+    /**
+     * @method init
+     * @static
+     */
+    FxiOS.init = function () {
 
-        <span class="paren">()</span>
+      if ( typeof fxi === &#x27;undefined&#x27; ) {
+        // need initialize
 
+        // check userAgent
+        fxi = !!Browser.ua().match(/fxios/i);
 
-        <span class="flag deprecated" title="instead of Css3">deprecated</span>
+      }
 
+    };
 
+    /**
+     * @method calculate
+     * @static
+     */
+    FxiOS.calculate = function () {
 
-        <span class="flag static">static</span>
+      var
+        versions = [],
+        nums, int, float, i, limit;
 
+      if ( typeof version === &#x27;undefined&#x27; ) {
 
+        // version undefined
+        build = &#x27;&#x27;;
+        version = -1;
+        major = -1;
 
-    <div class="meta">
-                <p>
-                Defined in
-        <a href="../files/src_css_Transition.js.html#l32"><code>src&#x2F;css&#x2F;Transition.js:32</code></a>
-        </p>
+        if ( FxiOS.is() ) {
 
+          // firefox os
+          nums = Browser.ua().match( /FxiOS\/(\d+)\.?(\d+)?/ );
 
-            <p>Deprecated: instead of Css3</p>
+          if ( Array.isArray( nums ) ) {
 
-    </div>
+            // 結果が配列
+            int = wakegi.int;
+            float = wakegi.float;
 
-    <div class="description">
-        
-    </div>
+            for ( i = 1, limit = nums.length; i &lt; limit; i = (i+1)|0 ) {
 
+              versions.push( int( nums[ i ], 10 ) );
 
+            }
 
+            build = versions.join( &#x27;.&#x27; );
+            major = versions[ 0 ];
+            version = float( versions[ 0 ] + &#x27;.&#x27; + versions[ 1 ] );
+            numbers = versions;
 
-</div>
-    </div>
+          }
 
-<div id="classdocs" class="tabview">
-    <ul class="api-class-tabs">
-        <li class="api-class-tab index"><a href="#index">Index</a></li>
+        }
 
-            <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
-    </ul>
+      }
 
-    <div>
-        <div id="index" class="api-class-tabpanel index">
-            <h2 class="off-left">Item Index</h2>
+    };
 
-                <div class="index-section methods">
-                    <h3>Methods</h3>
+    /**
+     * @method is
+     * @static
+     * @return {boolean}
+     */
+    FxiOS.is = function () {
 
-                    <ul class="index-list methods">
-                            <li class="index-item method deprecated">
-                                <a href="#method_is">is</a>
+      FxiOS.init();
+      return fxi;
 
-                                    <span class="flag static">static</span>
-                                    <span class="flag deprecated">deprecated</span>
-                            </li>
-                    </ul>
-                </div>
-
-
-
-        </div>
-
-            <div id="methods" class="api-class-tabpanel">
-                <h2 class="off-left">Methods</h2>
-
-<div id="method_is" class="method item deprecated">
-    <h3 class="name"><code>is</code></h3>
-
-        <span class="paren">()</span>
-
-        <span class="returns-inline">
-            <span class="type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
-        </span>
-
-        <span class="flag deprecated" title="instead of Css3.transition">deprecated</span>
+    };
 
 
+    /**
+     *
+     * @method version
+     * @static
+     * @return {float} N.NN で返します
+     */
+    FxiOS.version = function () {
 
-        <span class="flag static">static</span>
+      FxiOS.calculate();
+      return version;
 
+    };
 
+    /**
+     * @method major
+     * @static
+     * @return {int}
+     */
+    FxiOS.major = function () {
 
-    <div class="meta">
-                <p>
-                Defined in
-        <a href="../files/src_css_Transition.js.html#l45"><code>src&#x2F;css&#x2F;Transition.js:45</code></a>
-        </p>
+      FxiOS.calculate();
+      return major;
 
+    };
 
-            <p>Deprecated: instead of Css3.transition</p>
+    /**
+     *
+     * @method build
+     * @static
+     * @return {string} NN.NN.NN.NN 型（文字）で返します
+     */
+    FxiOS.build = function () {
 
-    </div>
+      FxiOS.calculate();
+      return build;
 
-    <div class="description">
-        
-    </div>
+    };
 
+    /**
+     * @method numbers
+     * @static
+     * @return {*[]} [major: int, minor: int, build: int] 形式で返します
+     */
+    FxiOS.numbers = function () {
 
-        <div class="returns">
-            <h4>Returns:</h4>
+      FxiOS.calculate();
+      return numbers;
 
-            <div class="returns-description">
-                        <span class="type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>:
-            </div>
-        </div>
+    };
+    
+    return FxiOS;
+  
+  }() );
 
-
-</div>
-            </div>
-
-
-
-    </div>
+}( window ) );
+    </pre>
 </div>
                     </div>
                 </div>

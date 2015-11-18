@@ -48,6 +48,7 @@
                                 <li><a href="../classes/Edge.html">Edge</a></li>
                                 <li><a href="../classes/Element.html">Element</a></li>
                                 <li><a href="../classes/Firefox.html">Firefox</a></li>
+                                <li><a href="../classes/FxiOS.html">FxiOS</a></li>
                                 <li><a href="../classes/IE.html">IE</a></li>
                                 <li><a href="../classes/iOS.html">iOS</a></li>
                                 <li><a href="../classes/Mac.html">Mac</a></li>
@@ -72,6 +73,7 @@
                                 <li><a href="../modules/Edge.html">Edge</a></li>
                                 <li><a href="../modules/Element.html">Element</a></li>
                                 <li><a href="../modules/Firefox.html">Firefox</a></li>
+                                <li><a href="../modules/FxiOS.html">FxiOS</a></li>
                                 <li><a href="../modules/IE.html">IE</a></li>
                                 <li><a href="../modules/iOS.html">iOS</a></li>
                                 <li><a href="../modules/Mac.html">Mac</a></li>
@@ -140,6 +142,7 @@
  * @module wakegi
  * @submodule Dataset
  */
+/* jslint -W089 */
 ( function ( window ) {
 
   &#x27;use strict&#x27;;
@@ -171,7 +174,7 @@
      */
     Dataset.parse = function ( element ) {
 
-      if ( typeof element.dataset !== &quot;undefined&quot; ) {
+      if ( typeof element.dataset !== &#x27;undefined&#x27; ) {
 
         return Dataset.modern( element );
 
@@ -200,11 +203,12 @@
 
       for( key in data ) {
 
-        keyName = &quot;&quot;;
-        value = &quot;&quot;;
+        keyName = &#x27;&#x27;;
+        value = &#x27;&#x27;;
 
         // Android 2.3 under, dataset object の hasOwnProperty が String型, バカでしょー
-        if ( typeof data.hasOwnProperty === &quot;function&quot; ) {
+        // hasOwnProperty が使えない, function check
+        if ( typeof data.hasOwnProperty === &#x27;function&#x27; ) {
 
           if ( data.hasOwnProperty( key ) ) {
 
@@ -252,9 +256,9 @@
         attribute = data[ i ];
         nodeName = attribute.nodeName.toLowerCase();
 
-        if ( nodeName.indexOf( &quot;data-&quot; ) !== -1 ) {
+        if ( nodeName.indexOf( &#x27;data-&#x27; ) !== -1 ) {
 
-          dataKey = nodeName.replace( &quot;data-&quot;, &quot;&quot; );
+          dataKey = nodeName.replace( &#x27;data-&#x27;, &#x27;&#x27; );
           dataKey = Util.camelize( dataKey );
           found = true;
           results[ dataKey ] = attribute.nodeValue.toLowerCase();
