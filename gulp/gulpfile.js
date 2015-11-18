@@ -52,14 +52,14 @@ var dir = require( './setting.json' );
 
 // ----------------------------------------------------------------
 // package
-var pac = require( './package.json' );
+var pkg = require( './package.json' );
 
 // ----------------------------------------------------------------
 // patterns, replace task
 var patterns = [
   {
     match: 'version',
-    replacement: pac.version
+    replacement: pkg.version
   },
   {
     match: 'buildTime',
@@ -68,6 +68,10 @@ var patterns = [
   {
     match: 'year',
     replacement: new Date().getFullYear()
+  },
+  {
+    match: 'url',
+    replacement: pkg.repository.url
   }
 ];
 // ----------------------------------------------------------------
@@ -124,7 +128,7 @@ gulp.task( 'script-concat', function () {
     .pipe( gulp.dest( dir.libs ) )
     .pipe( rename( function ( path ) {
 
-      path.basename = path.basename + '-' + pac.version;
+      path.basename = path.basename + '-' + pkg.version;
 
     } ) )
     .pipe( gulp.dest( dir.libs ) )

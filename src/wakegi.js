@@ -8,9 +8,9 @@
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
- * @build @@buildTime
- * @version @@version
- *
+ * build @@buildTime
+ * version @@version
+ * github: @@url
  */
 
 /**
