@@ -60,6 +60,7 @@
         app = navigator.appVersion;
 
       }
+
     };
     /**
      * @method navigator

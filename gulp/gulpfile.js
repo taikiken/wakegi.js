@@ -85,6 +85,9 @@ scripts.push( dir.src + '/wakegi.js' );
 // Browser
 scripts.push( dir.src + '/Browser.js' );
 
+// Utility
+scripts.push( dir.src + '/util/Iro.js' );
+
 // CSS3
 scripts.push( dir.src + '/css/Css3.js' );
 scripts.push( dir.src + '/css/Transition.js' );

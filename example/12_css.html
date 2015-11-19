@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Dom.getStyle</title>
+<script type="text/javascript" src="../libs/wakegi.js"></script>
+<style type="text/css">
+.block {
+  border: 1px solid #ccc;
+  padding: 2px 4px 6px 10px;
+}
+</style>
+</head>
+<body>
+<strong>CSS</strong>
+<p id="result" class="block"></p>
+<script>
+  ( function ( window ) {
+
+    'use strict';
+
+    var
+      document = window.document,
+      result = document.getElementById( 'result' ),
+
+      wakegi = window.wakegi,
+      Dom = wakegi.Dom,
+      Iro = wakegi.Iro;
+
+    var style = Dom.getStyle( result, 'borderTopColor' );
+    var key, val;
+
+    var color, colors;
+
+    result.innerHTML += style + '<br>';
+
+    // IE color hex
+    if ( style.indexOf( 'rgb(' ) !== -1 ) {
+
+      colors = style.match(/rgb\((\d+), (\d+), (\d+)/);
+      colors.shift();
+      result.innerHTML += colors[ 0 ] + ', ' + colors[ 1 ] + ', ' + colors[ 2 ];
+
+    }
+
+//
+//    console.log( 'getComputedStyle ', window.getComputedStyle( result, null ) );
+
+//    if ( typeof style === 'string' ) {
+//
+//      colors = style.match(/rgb\((\d+), (\d+), (\d+)/);
+////      console.log( 'colors ', colors );
+//      colors.shift();
+//      result.innerHTML += style + '<br>';
+//      result.innerHTML += colors[ 0 ] + ', ' + colors[ 1 ] + ', ' + colors[ 2 ];
+//
+//    } else {
+//
+//      for( key in style ) {
+//
+//        if ( style.hasOwnProperty( key ) ) {
+//
+//          val  = style[ key ];
+//          result.innerHTML += key + ': ' + val + '<br>';
+//
+//        }
+//
+//      }
+//
+//    }
+
+  }( window ) );
+</script>
+</body>
+</html>

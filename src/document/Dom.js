@@ -23,7 +23,7 @@
   'use strict';
 
   var
-    //document = window.document,
+    document = window.document,
     wakegi = window.wakegi;
 
   wakegi.Dom = ( function (){
@@ -255,6 +255,7 @@
             return value;
 
           } )( value );
+
         }
 
         return value;
