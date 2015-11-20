@@ -13,8 +13,10 @@ YUI.add("yuidoc-meta", function(Y) {
         "Firefox",
         "FxiOS",
         "IE",
+        "Iro",
         "Mac",
         "Mobile",
+        "Patterns",
         "Safari",
         "Touch",
         "Transform",
@@ -36,8 +38,10 @@ YUI.add("yuidoc-meta", function(Y) {
         "Firefox",
         "FxiOS",
         "IE",
+        "Iro",
         "Mac",
         "Mobile",
+        "Patterns",
         "Safari",
         "Touch",
         "Transform",
@@ -114,6 +118,11 @@ YUI.add("yuidoc-meta", function(Y) {
             "description": "iOS バージョンチェック他を行います"
         },
         {
+            "displayName": "Iro",
+            "name": "Iro",
+            "description": "rgb, hsl, hsv\n\nColor 関連 utilties"
+        },
+        {
             "displayName": "Mac",
             "name": "Mac",
             "description": "Mac OS チェックを行います"
@@ -122,6 +131,11 @@ YUI.add("yuidoc-meta", function(Y) {
             "displayName": "Mobile",
             "name": "Mobile",
             "description": "mobile (phone, tablet) チェックを行います"
+        },
+        {
+            "displayName": "Patterns",
+            "name": "Patterns",
+            "description": "CSS shorthand property pattern"
         },
         {
             "displayName": "Safari",

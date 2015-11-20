@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>CriOS - wakegi.js API</title>
+    <title>Patterns - wakegi.js API</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
@@ -122,29 +122,28 @@
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-<h1>CriOS Class</h1>
+<h1>Patterns Class</h1>
 <div class="box meta">
 
 
         <div class="foundat">
-            Defined in: <a href="../files/src_browser_CriOS.js.html#l38"><code>src&#x2F;browser&#x2F;CriOS.js:38</code></a>
+            Defined in: <a href="../files/src_css_Patterns.js.html#l41"><code>src&#x2F;css&#x2F;Patterns.js:41</code></a>
         </div>
 
-            Module: <a href="../modules/CriOS.html">CriOS</a><br>
-            Parent Module: <a href="../modules/Browser.html">Browser</a>
+            Module: <a href="../modules/Patterns.html">Patterns</a><br>
+            Parent Module: <a href="../modules/wakegi.html">wakegi</a>
 
 </div>
 
 
 <div class="box intro">
-    <p>iOS Chrome 判定</p>
-
+    
 </div>
 
     <div class="constructor">
         <h2>Constructor</h2>
-<div id="method_CriOS" class="method item">
-    <h3 class="name"><code>CriOS</code></h3>
+<div id="method_Patterns" class="method item">
+    <h3 class="name"><code>Patterns</code></h3>
 
         <span class="paren">()</span>
 
@@ -159,7 +158,7 @@
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_browser_CriOS.js.html#l38"><code>src&#x2F;browser&#x2F;CriOS.js:38</code></a>
+        <a href="../files/src_css_Patterns.js.html#l41"><code>src&#x2F;css&#x2F;Patterns.js:41</code></a>
         </p>
 
 
@@ -181,6 +180,7 @@
         <li class="api-class-tab index"><a href="#index">Index</a></li>
 
             <li class="api-class-tab methods"><a href="#methods">Methods</a></li>
+            <li class="api-class-tab properties"><a href="#properties">Properties</a></li>
     </ul>
 
     <div>
@@ -192,37 +192,29 @@
 
                     <ul class="index-list methods">
                             <li class="index-item method">
-                                <a href="#method_build">build</a>
+                                <a href="#method_get">get</a>
 
                                     <span class="flag static">static</span>
                             </li>
                             <li class="index-item method">
-                                <a href="#method_calculate">calculate</a>
+                                <a href="#method_has">has</a>
 
                                     <span class="flag static">static</span>
                             </li>
                             <li class="index-item method">
-                                <a href="#method_init">init</a>
+                                <a href="#method_hyphen">hyphen</a>
 
                                     <span class="flag static">static</span>
                             </li>
-                            <li class="index-item method">
-                                <a href="#method_is">is</a>
+                    </ul>
+                </div>
 
-                                    <span class="flag static">static</span>
-                            </li>
-                            <li class="index-item method">
-                                <a href="#method_major">major</a>
+                <div class="index-section properties">
+                    <h3>Properties</h3>
 
-                                    <span class="flag static">static</span>
-                            </li>
-                            <li class="index-item method">
-                                <a href="#method_numbers">numbers</a>
-
-                                    <span class="flag static">static</span>
-                            </li>
-                            <li class="index-item method">
-                                <a href="#method_version">version</a>
+                    <ul class="index-list properties">
+                            <li class="index-item property private">
+                                <a href="#property__patterns">_patterns</a>
 
                                     <span class="flag static">static</span>
                             </li>
@@ -230,19 +222,24 @@
                 </div>
 
 
-
         </div>
 
             <div id="methods" class="api-class-tabpanel">
                 <h2 class="off-left">Methods</h2>
 
-<div id="method_build" class="method item">
-    <h3 class="name"><code>build</code></h3>
+<div id="method_get" class="method item">
+    <h3 class="name"><code>get</code></h3>
 
-        <span class="paren">()</span>
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>key</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
 
         <span class="returns-inline">
-            <span class="type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+            <span class="type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" class="crosslink external" target="_blank">Array</a></span>
         </span>
 
 
@@ -255,7 +252,7 @@
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_browser_CriOS.js.html#l138"><code>src&#x2F;browser&#x2F;CriOS.js:138</code></a>
+        <a href="../files/src_css_Patterns.js.html#l78"><code>src&#x2F;css&#x2F;Patterns.js:78</code></a>
         </p>
 
 
@@ -266,85 +263,43 @@
         
     </div>
 
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">key</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+            </ul>
+        </div>
 
         <div class="returns">
             <h4>Returns:</h4>
 
             <div class="returns-description">
-                        <span class="type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>:
-                    <p>NN.NN.NN.NN 型（文字）で返します</p>
-
+                        <span class="type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" class="crosslink external" target="_blank">Array</a></span>:
             </div>
         </div>
 
 
 </div>
-<div id="method_calculate" class="method item">
-    <h3 class="name"><code>calculate</code></h3>
+<div id="method_has" class="method item">
+    <h3 class="name"><code>has</code></h3>
 
-        <span class="paren">()</span>
-
-
-
-
-
-        <span class="flag static">static</span>
-
-
-
-    <div class="meta">
-                <p>
-                Defined in
-        <a href="../files/src_browser_CriOS.js.html#l67"><code>src&#x2F;browser&#x2F;CriOS.js:67</code></a>
-        </p>
-
-
-
-    </div>
-
-    <div class="description">
-        
-    </div>
-
-
-
-
-</div>
-<div id="method_init" class="method item">
-    <h3 class="name"><code>init</code></h3>
-
-        <span class="paren">()</span>
-
-
-
-
-
-        <span class="flag static">static</span>
-
-
-
-    <div class="meta">
-                <p>
-                Defined in
-        <a href="../files/src_browser_CriOS.js.html#l53"><code>src&#x2F;browser&#x2F;CriOS.js:53</code></a>
-        </p>
-
-
-
-    </div>
-
-    <div class="description">
-        
-    </div>
-
-
-
-
-</div>
-<div id="method_is" class="method item">
-    <h3 class="name"><code>is</code></h3>
-
-        <span class="paren">()</span>
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>key</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
 
         <span class="returns-inline">
             <span class="type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean" class="crosslink external" target="_blank">Boolean</a></span>
@@ -360,7 +315,7 @@
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_browser_CriOS.js.html#l112"><code>src&#x2F;browser&#x2F;CriOS.js:112</code></a>
+        <a href="../files/src_css_Patterns.js.html#l66"><code>src&#x2F;css&#x2F;Patterns.js:66</code></a>
         </p>
 
 
@@ -371,6 +326,22 @@
         
     </div>
 
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">key</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+            </ul>
+        </div>
 
         <div class="returns">
             <h4>Returns:</h4>
@@ -382,13 +353,19 @@
 
 
 </div>
-<div id="method_major" class="method item">
-    <h3 class="name"><code>major</code></h3>
+<div id="method_hyphen" class="method item">
+    <h3 class="name"><code>hyphen</code></h3>
 
-        <span class="paren">()</span>
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>key</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
 
         <span class="returns-inline">
-            <span class="type">Int</span>
+            <span class="type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
         </span>
 
 
@@ -401,7 +378,7 @@
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_browser_CriOS.js.html#l151"><code>src&#x2F;browser&#x2F;CriOS.js:151</code></a>
+        <a href="../files/src_css_Patterns.js.html#l53"><code>src&#x2F;css&#x2F;Patterns.js:53</code></a>
         </p>
 
 
@@ -409,42 +386,57 @@
     </div>
 
     <div class="description">
-        
+        <p>camel を hyphen に変換</p>
+
     </div>
 
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">key</code>
+                        <span class="type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>
+
+
+                    <div class="param-description">
+                         
+                    </div>
+
+                </li>
+            </ul>
+        </div>
 
         <div class="returns">
             <h4>Returns:</h4>
 
             <div class="returns-description">
-                        <span class="type">Int</span>:
+                        <span class="type"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" class="crosslink external" target="_blank">String</a></span>:
             </div>
         </div>
 
 
 </div>
-<div id="method_numbers" class="method item">
-    <h3 class="name"><code>numbers</code></h3>
+            </div>
 
-        <span class="paren">()</span>
+            <div id="properties" class="api-class-tabpanel">
+                <h2 class="off-left">Properties</h2>
 
-        <span class="returns-inline">
-            <span class="type"></span>
-        </span>
+<div id="property__patterns" class="property item private">
+    <h3 class="name"><code>_patterns</code></h3>
+    <span class="type">Padding: string, margin: string[], border-color: string[]</span>
 
 
+        <span class="flag private">private</span>
 
 
         <span class="flag static">static</span>
 
-
-
     <div class="meta">
                 <p>
                 Defined in
-        <a href="../files/src_browser_CriOS.js.html#l163"><code>src&#x2F;browser&#x2F;CriOS.js:163</code></a>
+        <a href="../files/src_css_Patterns.js.html#l29"><code>src&#x2F;css&#x2F;Patterns.js:29</code></a>
         </p>
-
 
 
     </div>
@@ -454,63 +446,9 @@
     </div>
 
 
-        <div class="returns">
-            <h4>Returns:</h4>
-
-            <div class="returns-description">
-                        <span class="type"></span>:
-                    <p>[major: int, minor: int, build: int] 形式で返します</p>
-
-            </div>
-        </div>
-
-
-</div>
-<div id="method_version" class="method item">
-    <h3 class="name"><code>version</code></h3>
-
-        <span class="paren">()</span>
-
-        <span class="returns-inline">
-            <span class="type">Float</span>
-        </span>
-
-
-
-
-        <span class="flag static">static</span>
-
-
-
-    <div class="meta">
-                <p>
-                Defined in
-        <a href="../files/src_browser_CriOS.js.html#l124"><code>src&#x2F;browser&#x2F;CriOS.js:124</code></a>
-        </p>
-
-
-
-    </div>
-
-    <div class="description">
-        
-    </div>
-
-
-        <div class="returns">
-            <h4>Returns:</h4>
-
-            <div class="returns-description">
-                        <span class="type">Float</span>:
-                    <p>N.NNN で返します</p>
-
-            </div>
-        </div>
-
 
 </div>
             </div>
-
 
 
     </div>

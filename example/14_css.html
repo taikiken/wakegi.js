@@ -5,6 +5,9 @@
 <title>Dom.getStyle</title>
 <script type="text/javascript" src="../libs/wakegi.js"></script>
 <style type="text/css">
+body {
+  background-color: #fff;
+}
 .block {
   border: 1px solid #cccccc;
   padding: 2px 4px 6px 10px;
@@ -39,9 +42,26 @@
 
       colors = style.match(/rgb\((\d+), (\d+), (\d+)/);
       colors.shift();
-      result.innerHTML += colors[ 0 ] + ', ' + colors[ 1 ] + ', ' + colors[ 2 ];
+      result.innerHTML += colors[ 0 ] + ', ' + colors[ 1 ] + ', ' + colors[ 2 ] + '<br>';
 
     }
+
+    var borderColor = Dom.getStyle( result, 'border-color' );
+    var borderColor2 = Dom.getStyle( result, 'borderColor' );
+
+    result.innerHTML += '<br>';
+    result.innerHTML += 'border-color: ' + borderColor + '<br>';
+
+    result.innerHTML += '<br>';
+    result.innerHTML += 'borderColor: ' + borderColor2 + '<br>';
+
+    var txtColor = Dom.getStyle( result, 'color' );
+    result.innerHTML += '<br>';
+    result.innerHTML += 'color: ' + txtColor + '<br>';
+
+    var bgColor = Dom.getStyle( result, 'background-color' );
+    result.innerHTML += '<br>';
+    result.innerHTML += 'background-color: ' + bgColor + '<br>';
 
 //
 //    console.log( 'getComputedStyle ', window.getComputedStyle( result, null ) );

@@ -89,6 +89,7 @@ scripts.push( dir.src + '/Browser.js' );
 scripts.push( dir.src + '/util/Iro.js' );
 
 // CSS3
+scripts.push( dir.src + '/css/Patterns.js' );
 scripts.push( dir.src + '/css/Css3.js' );
 scripts.push( dir.src + '/css/Transition.js' );
 scripts.push( dir.src + '/css/Transform.js' );

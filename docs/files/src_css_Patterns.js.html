@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Transform - wakegi.js API</title>
+    <title>src/css/Patterns.js - wakegi.js API</title>
     <link rel="stylesheet" href="http://yui.yahooapis.com/3.9.1/build/cssgrids/cssgrids-min.css">
     <link rel="stylesheet" href="../assets/vendor/prettify/prettify-min.css">
     <link rel="stylesheet" href="../assets/css/main.css" id="site_styles">
@@ -122,39 +122,107 @@
             <div class="apidocs">
                 <div id="docs-main">
                     <div class="content">
-<h1>Transform Module</h1>
-<div class="box clearfix meta">
+<h1 class="file-heading">File: src/css/Patterns.js</h1>
 
+<div class="file">
+    <pre class="code prettyprint linenums">
+/**
+ * Copyright (c) 2011-2015 inazumatv.com, inc.
+ * @author (at)taikiken / http://inazumatv.com
+ * @date 2015/11/20 - 19:07
+ *
+ * Distributed under the terms of the MIT license.
+ * http://www.opensource.org/licenses/mit-license.html
+ *
+ * This notice shall be included in all copies or substantial portions of the Software.
+ *
+ */
+/**
+ * CSS shorthand property pattern
+ *
+ * @module wakegi
+ * @submodule Patterns
+ *
+ * */
+( function ( window ) {
 
-        <div class="foundat">
-            Defined in: <a href="../files/src_css_Transform.js.html#l34"><code>src&#x2F;css&#x2F;Transform.js:34</code></a>
-        </div>
+  &#x27;use strict&#x27;;
 
-</div>
+  //var
+  //  document = window.document;
 
+  window.wakegi.Patterns = ( function () {
 
-<div class="box intro">
-    <p>deprecated instead of Css3</p>
+    var
+      /**
+       * @property _patterns
+       * @static
+       * @type {{padding: string[], margin: string[], border-color: string[]}}
+       * @private
+       */
+      _patterns = {
+        padding: [ &#x27;paddingTop&#x27;, &#x27;paddingRight&#x27;, &#x27;paddingBottom&#x27;, &#x27;paddingLeft&#x27; ],
+        margin: [ &#x27;marginTop&#x27;, &#x27;marginRight&#x27;, &#x27;marginBottom&#x27;, &#x27;marginLeft&#x27; ],
+        &#x27;border-color&#x27;: [ &#x27;borderTopColor&#x27;, &#x27;borderRightColor&#x27;, &#x27;borderBottomColor&#x27;, &#x27;borderLeftColor&#x27; ]
+      };
 
-</div>
+    /**
+     * @class Patterns
+     * @static
+     * @constructor
+     */
+    function Patterns () {
+      throw new Error( &#x27;Patterns can\&#x27;t create instance&#x27; );
+    }
 
+    var p = Patterns.prototype;
+    p.constructor = Patterns;
 
-<div class="yui3-g">
-    <div class="yui3-u-1-2">
-            <p>This module provides the following classes:</p>
+    /**
+     * camel を hyphen に変換
+     * @method hyphen
+     * @static
+     * @param {string} key
+     * @return {string}
+     */
+    Patterns.hyphen = function ( key ) {
 
-            <ul class="module-classes">
-                <li class="module-class">
-                    <a href="../classes/Transform.html">
-                        Transform
-                    </a>
-                </li>
-            </ul>
-    </div>
+      return key.replace( /([A-Z])/g, &#x27;-$1&#x27; ).toLowerCase();
 
+    };
 
-    <div class="yui3-u-1-2">
-    </div>
+    /**
+     * @method has
+     * @static
+     * @param {string} key
+     * @return {boolean}
+     */
+    Patterns.has = function ( key ) {
+
+      key = Patterns.hyphen( key );
+      return _patterns.hasOwnProperty( key );
+
+    };
+    /**
+     * @method get
+     * @static
+     * @param {string} key
+     * @return {Array}
+     */
+    Patterns.get = function ( key ) {
+
+      key = Patterns.hyphen( key );
+      return _patterns[ key ];
+
+    };
+
+    return Patterns;
+
+  }() );
+
+}( window ) );
+
+    </pre>
 </div>
                     </div>
                 </div>

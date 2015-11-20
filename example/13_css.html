@@ -6,14 +6,47 @@
 <script type="text/javascript" src="../libs/wakegi.js"></script>
 <style type="text/css">
 .block {
-  border: 1px solid #ccc;
+  border: 1px solid #CcC;
   padding: 2px 4px 6px 10px;
+}
+.block2 {
+  border: 1px solid #ccceff;
+  padding: 4px 6px 10px;
+}
+.block3 {
+  border: 1px solid #c1ceff;
+  padding: 4px 10px;
+}
+.block4 {
+  border: 1px solid #b9ff69;
+  padding: 10px;
 }
 </style>
 </head>
 <body>
 <strong>CSS</strong>
+<pre>
+.block {
+  border: 1px solid #ccc;
+  padding: 2px 4px 6px 10px;
+}
+.block2 {
+  border: 1px solid #ccceff;
+  padding: 4px 6px 10px;
+}
+.block3 {
+  border: 1px solid #c1ceff;
+  padding: 4px 10px;
+}
+.block4 {
+  border: 1px solid #b9ff69;
+  padding: 10px;
+}
+</pre>
 <p id="result" class="block"></p>
+<p id="result2" class="block2"></p>
+<p id="result3" class="block3"></p>
+<p id="result4" class="block4"></p>
 <script>
   ( function ( window ) {
 
@@ -29,12 +62,24 @@
 
     var style = Dom.getStyle( result );
     var key, val;
+    var padding = Dom.getStyle( result, 'padding' );
+    var padding2 = Dom.getStyle( document.getElementById( 'result2' ), 'padding' );
+    var padding3 = Dom.getStyle( document.getElementById( 'result3' ), 'padding' );
+    var padding4 = Dom.getStyle( document.getElementById( 'result4' ), 'padding' );
 
     result.innerHTML += 'padding: ' + style.padding + '<br>';
     result.innerHTML += 'padding-top: ' + style.paddingTop + '<br>';
     result.innerHTML += 'padding-right: ' + style.paddingRight + '<br>';
     result.innerHTML += 'padding-bottom: ' + style.paddingBottom + '<br>';
     result.innerHTML += 'padding-left: ' + style.paddingLeft + '<br>';
+    result.innerHTML += '************************' + '<br>';
+    result.innerHTML += 'padding: ' + padding + '<br>';
+    result.innerHTML += '************************' + '<br>';
+    result.innerHTML += 'padding2: ' + padding2 + '<br>';
+    result.innerHTML += '************************' + '<br>';
+    result.innerHTML += 'padding3: ' + padding3 + '<br>';
+    result.innerHTML += '************************' + '<br>';
+    result.innerHTML += 'padding4: ' + padding4 + '<br>';
 
 //    var color, colors;
 //

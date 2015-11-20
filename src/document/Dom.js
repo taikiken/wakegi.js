@@ -23,10 +23,13 @@
   'use strict';
 
   var
-    document = window.document,
+    //document = window.document,
     wakegi = window.wakegi;
 
   wakegi.Dom = ( function (){
+
+    var
+      Patterns = wakegi.Patterns;
 
     /**
      * @class Dom
@@ -267,6 +270,61 @@
     };
 
     /**
+     * @method shortHand
+     * @static
+     * @param {Object} defaultView
+     * @param {HTMLElement} el
+     * @param {Array} patterns [string, ...]
+     * @return {string}
+     */
+    Dom.shortHand = function ( defaultView, el, patterns ) {
+
+      var
+        top = Dom.styleCompute( defaultView, el, patterns[ 0 ] ),
+        right = Dom.styleCompute( defaultView, el, patterns[ 1 ] ),
+        bottom = Dom.styleCompute( defaultView, el, patterns[ 2 ] ),
+        left = Dom.styleCompute( defaultView, el, patterns[ 3 ] ),
+        result = '';
+
+      if ( top === bottom ) {
+
+        if ( right === left ) {
+
+         if ( top === right ) {
+
+           result = top;
+
+         } else {
+
+           result = top + ' ' + right;
+
+         }
+
+        } else {
+
+          result = top + ' ' + right + ' ' + bottom + ' ' + left;
+
+        }
+
+      } else {
+
+        if ( right === left ) {
+
+          result = top + ' ' + right + ' ' + bottom;
+
+        } else {
+
+          result = top + ' ' + right + ' ' + bottom + ' ' + left;
+
+        }
+
+      }
+
+      return result;
+
+    };
+
+    /**
      * HTMLElement の css style を返します
      * @method getStyle
      * @static
@@ -328,11 +386,30 @@
 
         result = Dom.styleCompute( defaultView, el, styleProp );
 
+        // Firefox, shorthand css property が常に空になる
+        // 再計算を行う
+        if ( result === '' && !!styleProp && Patterns.has( styleProp ) ) {
+
+          result = Dom.shortHand( defaultView, el, Patterns.get( styleProp ) );
+
+        }
+
       } else if ( !!el.currentStyle ) {
 
         result = Dom.styleCurrent( el, styleProp );
 
       }
+
+      //if ( typeof document.defaultView === 'undefined' || typeof document.defaultView.getComputedStyle === 'undefined' ) {
+      //
+      //  // document.defaultView undefined
+      //  result = Dom.styleCurrent( el, styleProp );
+      //
+      //} else {
+      //
+      //  result = Dom.styleCompute( document.defaultView, el, styleProp );
+      //
+      //}
 
       return result;
 

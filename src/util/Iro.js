@@ -9,6 +9,16 @@
  * This notice shall be included in all copies or substantial portions of the Software.
  *
  */
+
+/**
+ * rgb, hsl, hsv
+ *
+ * Color 関連 utilties
+ *
+ * @module wakegi
+ * @submodule Iro
+ *
+ * */
 ( function ( window ) {
 
   'use strict';
@@ -29,7 +39,6 @@
      * 色設定 utility
      *
      * - http://stackoverflow.com/questions/2353211/hsl-to-rgb-color-conversion
-     * - http://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb
      * - http://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb
      * - https://github.com/mbostock/d3/tree/master/src/color
      *
@@ -183,9 +192,11 @@
           case r:
             h = ( g - b ) / d + ( g < b ? 6 : 0 );
             break;
+
           case g:
             h = ( b - r ) / d + 2;
             break;
+
           case b:
             h = ( r - g ) / d + 4;
             break;
@@ -218,12 +229,41 @@
         t = v * ( 1 - ( 1 - f ) * s );
 
       switch ( i % 6 ) {
-        case 0: r = v; g = t; b = p; break;
-        case 1: r = q; g = v; b = p; break;
-        case 2: r = p; g = v; b = t; break;
-        case 3: r = p; g = q; b = v; break;
-        case 4: r = t; g = p; b = v; break;
-        case 5: r = v; g = p; b = q; break;
+        case 0:
+          r = v;
+          g = t;
+          b = p;
+          break;
+
+        case 1:
+          r = q;
+          g = v;
+          b = p;
+          break;
+
+        case 2:
+          r = p;
+          g = v;
+          b = t;
+          break;
+
+        case 3:
+          r = p;
+          g = q;
+          b = v;
+          break;
+
+        case 4:
+          r = t;
+          g = p;
+          b = v;
+          break;
+
+        case 5:
+          r = v;
+          g = p;
+          b = q;
+          break;
       }
 
       return {
@@ -299,12 +339,15 @@
 
       num = _floor( num );
 
-      var hex = num.toString( 16 );
+      var
+        hex = num.toString( 16 ),
+        sub,
+        i;
 
       if ( hex.length < 6 ) {
 
-        var i = hex.length,
-          sub = 6 - i;
+        i = hex.length;
+        sub = 6 - i;
 
         while( sub ) {
 

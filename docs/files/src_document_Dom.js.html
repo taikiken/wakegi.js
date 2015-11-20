@@ -51,8 +51,10 @@
                                 <li><a href="../classes/FxiOS.html">FxiOS</a></li>
                                 <li><a href="../classes/IE.html">IE</a></li>
                                 <li><a href="../classes/iOS.html">iOS</a></li>
+                                <li><a href="../classes/Iro.html">Iro</a></li>
                                 <li><a href="../classes/Mac.html">Mac</a></li>
                                 <li><a href="../classes/Mobile.html">Mobile</a></li>
+                                <li><a href="../classes/Patterns.html">Patterns</a></li>
                                 <li><a href="../classes/Safari.html">Safari</a></li>
                                 <li><a href="../classes/Touch.html">Touch</a></li>
                                 <li><a href="../classes/Transform.html">Transform</a></li>
@@ -76,8 +78,10 @@
                                 <li><a href="../modules/FxiOS.html">FxiOS</a></li>
                                 <li><a href="../modules/IE.html">IE</a></li>
                                 <li><a href="../modules/iOS.html">iOS</a></li>
+                                <li><a href="../modules/Iro.html">Iro</a></li>
                                 <li><a href="../modules/Mac.html">Mac</a></li>
                                 <li><a href="../modules/Mobile.html">Mobile</a></li>
+                                <li><a href="../modules/Patterns.html">Patterns</a></li>
                                 <li><a href="../modules/Safari.html">Safari</a></li>
                                 <li><a href="../modules/Touch.html">Touch</a></li>
                                 <li><a href="../modules/Transform.html">Transform</a></li>
@@ -151,6 +155,9 @@
     wakegi = window.wakegi;
 
   wakegi.Dom = ( function (){
+
+    var
+      Patterns = wakegi.Patterns;
 
     /**
      * @class Dom
@@ -379,6 +386,7 @@
             return value;
 
           } )( value );
+
         }
 
         return value;
@@ -386,6 +394,61 @@
       }
 
       return style;
+
+    };
+
+    /**
+     * @method shortHand
+     * @static
+     * @param {Object} defaultView
+     * @param {HTMLElement} el
+     * @param {Array} patterns [string, ...]
+     * @return {string}
+     */
+    Dom.shortHand = function ( defaultView, el, patterns ) {
+
+      var
+        top = Dom.styleCompute( defaultView, el, patterns[ 0 ] ),
+        right = Dom.styleCompute( defaultView, el, patterns[ 1 ] ),
+        bottom = Dom.styleCompute( defaultView, el, patterns[ 2 ] ),
+        left = Dom.styleCompute( defaultView, el, patterns[ 3 ] ),
+        result = &#x27;&#x27;;
+
+      if ( top === bottom ) {
+
+        if ( right === left ) {
+
+         if ( top === right ) {
+
+           result = top;
+
+         } else {
+
+           result = top + &#x27; &#x27; + right;
+
+         }
+
+        } else {
+
+          result = top + &#x27; &#x27; + right + &#x27; &#x27; + bottom + &#x27; &#x27; + left;
+
+        }
+
+      } else {
+
+        if ( right === left ) {
+
+          result = top + &#x27; &#x27; + right + &#x27; &#x27; + bottom;
+
+        } else {
+
+          result = top + &#x27; &#x27; + right + &#x27; &#x27; + bottom + &#x27; &#x27; + left;
+
+        }
+
+      }
+
+      return result;
 
     };
 
@@ -451,11 +514,30 @@
 
         result = Dom.styleCompute( defaultView, el, styleProp );
 
+        // Firefox, shorthand css property が常に空になる
+        // 再計算を行う
+        if ( result === &#x27;&#x27; &amp;&amp; !!styleProp &amp;&amp; Patterns.has( styleProp ) ) {
+
+          result = Dom.shortHand( defaultView, el, Patterns.get( styleProp ) );
+
+        }
+
       } else if ( !!el.currentStyle ) {
 
         result = Dom.styleCurrent( el, styleProp );
 
       }
+
+      //if ( typeof document.defaultView === &#x27;undefined&#x27; || typeof document.defaultView.getComputedStyle === &#x27;undefined&#x27; ) {
+      //
+      //  // document.defaultView undefined
+      //  result = Dom.styleCurrent( el, styleProp );
+      //
+      //} else {
+      //
+      //  result = Dom.styleCompute( document.defaultView, el, styleProp );
+      //
+      //}
 
       return result;
 
@@ -465,6 +547,7 @@
   }() );
 
 }( window ) );
+
     </pre>
 </div>
                     </div>
