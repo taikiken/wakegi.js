@@ -485,7 +485,7 @@
             "module": "wakegi",
             "namespace": "",
             "file": "src/css/Patterns.js",
-            "line": 41,
+            "line": 43,
             "description": "CSS shorthand property pattern"
         },
         "Transform": {
@@ -845,7 +845,7 @@
             "submodule": "Patterns",
             "namespace": "",
             "file": "src/css/Patterns.js",
-            "line": 41,
+            "line": 43,
             "static": 1,
             "is_constructor": 1
         },
@@ -2003,7 +2003,7 @@
         },
         {
             "file": "src/css/Patterns.js",
-            "line": 53,
+            "line": 55,
             "description": "camel を hyphen に変換",
             "itemtype": "method",
             "name": "hyphen",
@@ -2025,7 +2025,7 @@
         },
         {
             "file": "src/css/Patterns.js",
-            "line": 66,
+            "line": 68,
             "itemtype": "method",
             "name": "has",
             "static": 1,
@@ -2046,7 +2046,7 @@
         },
         {
             "file": "src/css/Patterns.js",
-            "line": 78,
+            "line": 80,
             "itemtype": "method",
             "name": "get",
             "static": 1,

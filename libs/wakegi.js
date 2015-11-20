@@ -8,7 +8,7 @@
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
- * build 2015-11-20 22:02:31
+ * build 2015-11-20 22:14:24
  * version 0.9.80
  * github: https://github.com/taikiken/wakegi.js
  */
@@ -560,7 +560,9 @@ wakegi.float = parseFloat;
       _patterns = {
         padding: [ 'paddingTop', 'paddingRight', 'paddingBottom', 'paddingLeft' ],
         margin: [ 'marginTop', 'marginRight', 'marginBottom', 'marginLeft' ],
-        'border-color': [ 'borderTopColor', 'borderRightColor', 'borderBottomColor', 'borderLeftColor' ]
+        'border-color': [ 'borderTopColor', 'borderRightColor', 'borderBottomColor', 'borderLeftColor' ],
+        'border-style': [ 'borderTopStyle', 'borderRightStyle', 'borderBottomStyle', 'borderLeftStyle' ],
+        'border-width': [ 'borderTopWidth', 'borderRightWidth', 'borderBottomWidth', 'borderLeftWidth' ]
       };
 
     /**
