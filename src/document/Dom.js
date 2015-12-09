@@ -207,7 +207,7 @@
 
       if ( !!styleProp ) {
 
-        styleProp = styleProp.replace( /([A-Z])/g, "-$1" ).toLowerCase();
+        styleProp = styleProp.replace( /([A-Z])/g, '-$1' ).toLowerCase();
         return style.getPropertyValue( styleProp );
 
       }

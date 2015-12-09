@@ -8,8 +8,8 @@
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
- * build 2015-11-20 22:14:24
- * version 0.9.80
+ * build 2015-12-09 17:06:55
+ * version 0.9.81
  * github: https://github.com/taikiken/wakegi.js
  */
 
@@ -38,6 +38,7 @@ wakegi.float = parseFloat;
       return Object.prototype.toString.call( arg ) === '[object Array]';
 
     };
+
   }
 
 }() );
@@ -431,12 +432,38 @@ wakegi.float = parseFloat;
 
     // http://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb
     /**
+     * hex CSS shorthand to normal (#0ef -> #00eeff)
+     * @method hexShort
+     * @static
+     * @param hex
+     * @return {*}
+     */
+    Iro.hexShort  = function ( hex ) {
+
+      if ( typeof hex !== 'string' ) {
+
+        // order string
+        return null;
+
+      }
+
+      var
+        shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
+
+      return hex.replace( shorthandRegex, function( m, r, g, b ) {
+        return r + r + g + g + b + b;
+      } );
+
+    };
+    /**
      * @method hex2rgb
      * @static
      * @param {string} hex CSS 色設定文字 #ff0000
      * @return {object} {r: number, g: number, b: number}
      */
     Iro.hex2rgb = function ( hex ) {
+
+      hex = Iro.hexShort( hex );
 
       if ( typeof hex !== 'string' ) {
 
@@ -447,12 +474,12 @@ wakegi.float = parseFloat;
 
       // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
       var
-        shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i,
+        //shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i,
         result;
 
-      hex = hex.replace( shorthandRegex, function( m, r, g, b ) {
-        return r + r + g + g + b + b;
-      } );
+      //hex = hex.replace( shorthandRegex, function( m, r, g, b ) {
+      //  return r + r + g + g + b + b;
+      //} );
 
       result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec( hex );
       return result ? {
@@ -485,6 +512,7 @@ wakegi.float = parseFloat;
     };
 
     /**
+     * convert int to hex, 16777215 -> #ffffff
      * @method int2hex
      * @static
      * @param {number} num
@@ -517,12 +545,113 @@ wakegi.float = parseFloat;
 
     };
 
+    /**
+     * convert hex to int, #fff -> 16777215
+     * @method hex2int
+     * @static
+     * @param hex
+     * @return {int|null}
+     */
+    Iro.hex2int = function ( hex ) {
+
+      hex = Iro.hexShort( hex );
+
+      if ( typeof hex !== 'string' ) {
+
+        // order string
+        return null;
+
+      }
+
+      return _int( hex, 16 );
+
+    };
+
     return Iro;
 
   }() );
 
 }( window ) );
 
+/**
+ * license inazumatv.com
+ * author (at)taikiken / http://inazumatv.com
+ * date 15/08/20 - 20:26
+ *
+ * Copyright (c) 2011-2015 inazumatv.com, inc.
+ *
+ * Distributed under the terms of the MIT license.
+ * http://www.opensource.org/licenses/mit-license.html
+ *
+ * This notice shall be included in all copies or substantial portions of the Software.
+ *
+ * for wakegi.js
+ */
+
+/**
+ * 文字列操作に使用します
+ *
+ * @module wakegi
+ * @submodule Util
+ */
+( function ( window ) {
+
+  'use strict';
+
+  //var
+  //  document = window.document;
+
+  window.wakegi.Util = ( function () {
+
+    /**
+     * @class Util
+     * @static
+     * @constructor
+     */
+    function Util () {
+
+    }
+
+    var p = Util.prototype;
+    p.constructor = Util;
+
+    /**
+     * abc-def を abcDef にします
+     *
+     * @method camelize
+     * @static
+     * @param {string} str
+     * @return {string} dash(-)連結 word を camel case へ変換し返します。
+     */
+    Util.camelize = function ( str ) {
+
+      return str.toLowerCase().replace(/-(.)/g, function( match, group1 ) {
+
+        return group1.toUpperCase();
+
+      });
+
+    };
+
+    /**
+     * abcDef を abc-def にします
+     *
+     * @method dash
+     * @static
+     * @param {string} str
+     * @return {string}
+     */
+    Util.dash = function ( str ) {
+
+      return str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
+
+    };
+
+    return Util;
+
+  }() );
+
+}( window ) );
 /**
  * Copyright (c) 2011-2015 inazumatv.com, inc.
  * @author (at)taikiken / http://inazumatv.com
@@ -1307,7 +1436,7 @@ wakegi.float = parseFloat;
 
       if ( !!styleProp ) {
 
-        styleProp = styleProp.replace( /([A-Z])/g, "-$1" ).toLowerCase();
+        styleProp = styleProp.replace( /([A-Z])/g, '-$1' ).toLowerCase();
         return style.getPropertyValue( styleProp );
 
       }
@@ -1520,85 +1649,6 @@ wakegi.float = parseFloat;
 
 }( window ) );
 
-/**
- * license inazumatv.com
- * author (at)taikiken / http://inazumatv.com
- * date 15/08/20 - 20:26
- *
- * Copyright (c) 2011-2015 inazumatv.com, inc.
- *
- * Distributed under the terms of the MIT license.
- * http://www.opensource.org/licenses/mit-license.html
- *
- * This notice shall be included in all copies or substantial portions of the Software.
- *
- * for wakegi.js
- */
-
-/**
- * 文字列操作に使用します
- *
- * @module wakegi
- * @submodule Util
- */
-( function ( window ) {
-
-  'use strict';
-
-  //var
-  //  document = window.document;
-
-  window.wakegi.Util = ( function () {
-
-    /**
-     * @class Util
-     * @static
-     * @constructor
-     */
-    function Util () {
-
-    }
-
-    var p = Util.prototype;
-    p.constructor = Util;
-
-    /**
-     * abc-def を abcDef にします
-     *
-     * @method camelize
-     * @static
-     * @param {string} str
-     * @return {string} dash(-)連結 word を camel case へ変換し返します。
-     */
-    Util.camelize = function ( str ) {
-
-      return str.toLowerCase().replace(/-(.)/g, function( match, group1 ) {
-
-        return group1.toUpperCase();
-
-      });
-
-    };
-
-    /**
-     * abcDef を abc-def にします
-     *
-     * @method dash
-     * @static
-     * @param {string} str
-     * @return {string}
-     */
-    Util.dash = function ( str ) {
-
-      return str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
-
-    };
-
-    return Util;
-
-  }() );
-
-}( window ) );
 /**
  * license inazumatv.com
  * author (at)taikiken / http://inazumatv.com
@@ -1815,6 +1865,9 @@ wakegi.float = parseFloat;
 
         if ( windows ) {
 
+          // 2015-10 windows phone detect added
+          // https://msdn.microsoft.com/ja-jp/library/hh869301(v=vs.85).aspx
+          // Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; DEVICE INFO) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Mobile Safari/537.36 Edge/12.<OS build number>
           phone = !!ua.match(/windows phone/i);
           if ( phone ) {
 
@@ -2284,27 +2337,41 @@ wakegi.float = parseFloat;
         standard = false;
         hd = false;
 
-        if ( android ) {
+        if ( Windows.phone() ) {
 
-          max = _max( window.innerWidth,  window.innerHeight );
-          hd = max >= 1024;
-          // http://googlewebmastercentral.blogspot.jp/2011/03/mo-better-to-also-detect-mobile-user.html
+          android = false;
 
-          // 2015-10 windows phone detect added
-          // https://msdn.microsoft.com/ja-jp/library/hh869301(v=vs.85).aspx
-          // Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; DEVICE INFO) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Mobile Safari/537.36 Edge/12.<OS build number>
-          phone = !!ua.match(/mobile/i) || Windows.phone();
+        } else {
 
-          if ( !phone ) {
+          if ( android ) {
 
-            tablet = true;
+            max = _max( window.innerWidth,  window.innerHeight );
+            hd = max >= 1024;
+            // http://googlewebmastercentral.blogspot.jp/2011/03/mo-better-to-also-detect-mobile-user.html
+            // Mozilla/5.0 (Linux; U; Android 3.0; en-us; Xoom Build/HRI39) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13
+            // Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; Nexus One Build/FRG83) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
 
-          }//phone
+            // 2015-10 windows phone detect added
+            // https://msdn.microsoft.com/ja-jp/library/hh869301(v=vs.85).aspx
+            // Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; DEVICE INFO) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Mobile Safari/537.36 Edge/12.<OS build number>
 
-          // Android 標準ブラウザ
-          standard = Browser.matchSafari() && ( !!ua.match(/version/i) || !!ua.match(/samsungbrowser/i) );
+            //phone = !!ua.match(/mobile/i) || Windows.phone();
+            // ua に mobile があり windows phone がない時 Android phone
+            phone = !!ua.match(/mobile/i);
 
-        }//android
+            //if ( !phone ) {
+            if ( !phone) {
+
+              tablet = true;
+
+            }//phone
+
+            // Android 標準ブラウザ
+            standard = Browser.matchSafari() && ( !!ua.match(/version/i) || !!ua.match(/samsungbrowser/i) );
+
+          }//android
+
+        }
 
       }//undefined
 

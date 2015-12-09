@@ -87,6 +87,7 @@ scripts.push( dir.src + '/Browser.js' );
 
 // Utility
 scripts.push( dir.src + '/util/Iro.js' );
+scripts.push( dir.src + '/util/Util.js' );
 
 // CSS3
 scripts.push( dir.src + '/css/Patterns.js' );
@@ -97,7 +98,6 @@ scripts.push( dir.src + '/css/Transform.js' );
 // document
 scripts.push( dir.src + '/document/Element.js' );
 scripts.push( dir.src + '/document/Dom.js' );
-scripts.push( dir.src + '/document/Util.js' );
 scripts.push( dir.src + '/document/Dataset.js' );
 
 // device

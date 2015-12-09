@@ -188,6 +188,9 @@
 
         if ( windows ) {
 
+          // 2015-10 windows phone detect added
+          // https://msdn.microsoft.com/ja-jp/library/hh869301(v=vs.85).aspx
+          // Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; DEVICE INFO) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Mobile Safari/537.36 Edge/12.&lt;OS build number&gt;
           phone = !!ua.match(/windows phone/i);
           if ( phone ) {
 

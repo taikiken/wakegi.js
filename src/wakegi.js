@@ -38,6 +38,7 @@ wakegi.float = parseFloat;
       return Object.prototype.toString.call( arg ) === '[object Array]';
 
     };
+
   }
 
 }() );

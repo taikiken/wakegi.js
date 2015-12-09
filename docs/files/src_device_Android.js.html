@@ -197,27 +197,41 @@
         standard = false;
         hd = false;
 
-        if ( android ) {
+        if ( Windows.phone() ) {
 
-          max = _max( window.innerWidth,  window.innerHeight );
-          hd = max &gt;= 1024;
-          // http://googlewebmastercentral.blogspot.jp/2011/03/mo-better-to-also-detect-mobile-user.html
+          android = false;
 
-          // 2015-10 windows phone detect added
-          // https://msdn.microsoft.com/ja-jp/library/hh869301(v=vs.85).aspx
-          // Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; DEVICE INFO) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Mobile Safari/537.36 Edge/12.&lt;OS build number&gt;
-          phone = !!ua.match(/mobile/i) || Windows.phone();
+        } else {
 
-          if ( !phone ) {
+          if ( android ) {
 
-            tablet = true;
+            max = _max( window.innerWidth,  window.innerHeight );
+            hd = max &gt;= 1024;
+            // http://googlewebmastercentral.blogspot.jp/2011/03/mo-better-to-also-detect-mobile-user.html
+            // Mozilla/5.0 (Linux; U; Android 3.0; en-us; Xoom Build/HRI39) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13
+            // Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; Nexus One Build/FRG83) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
 
-          }//phone
+            // 2015-10 windows phone detect added
+            // https://msdn.microsoft.com/ja-jp/library/hh869301(v=vs.85).aspx
+            // Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; DEVICE INFO) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Mobile Safari/537.36 Edge/12.&lt;OS build number&gt;
 
-          // Android 標準ブラウザ
-          standard = Browser.matchSafari() &amp;&amp; ( !!ua.match(/version/i) || !!ua.match(/samsungbrowser/i) );
+            //phone = !!ua.match(/mobile/i) || Windows.phone();
+            // ua に mobile があり windows phone がない時 Android phone
+            phone = !!ua.match(/mobile/i);
 
-        }//android
+            //if ( !phone ) {
+            if ( !phone) {
+
+              tablet = true;
+
+            }//phone
+
+            // Android 標準ブラウザ
+            standard = Browser.matchSafari() &amp;&amp; ( !!ua.match(/version/i) || !!ua.match(/samsungbrowser/i) );
+
+          }//android
+
+        }
 
       }//undefined
 

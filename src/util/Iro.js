@@ -276,12 +276,38 @@
 
     // http://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb
     /**
+     * hex CSS shorthand to normal (#0ef -> #00eeff)
+     * @method hexShort
+     * @static
+     * @param hex
+     * @return {*}
+     */
+    Iro.hexShort  = function ( hex ) {
+
+      if ( typeof hex !== 'string' ) {
+
+        // order string
+        return null;
+
+      }
+
+      var
+        shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
+
+      return hex.replace( shorthandRegex, function( m, r, g, b ) {
+        return r + r + g + g + b + b;
+      } );
+
+    };
+    /**
      * @method hex2rgb
      * @static
      * @param {string} hex CSS 色設定文字 #ff0000
      * @return {object} {r: number, g: number, b: number}
      */
     Iro.hex2rgb = function ( hex ) {
+
+      hex = Iro.hexShort( hex );
 
       if ( typeof hex !== 'string' ) {
 
@@ -292,12 +318,12 @@
 
       // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
       var
-        shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i,
+        //shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i,
         result;
 
-      hex = hex.replace( shorthandRegex, function( m, r, g, b ) {
-        return r + r + g + g + b + b;
-      } );
+      //hex = hex.replace( shorthandRegex, function( m, r, g, b ) {
+      //  return r + r + g + g + b + b;
+      //} );
 
       result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec( hex );
       return result ? {
@@ -330,6 +356,7 @@
     };
 
     /**
+     * convert int to hex, 16777215 -> #ffffff
      * @method int2hex
      * @static
      * @param {number} num
@@ -359,6 +386,28 @@
       }
 
       return '#' + hex;
+
+    };
+
+    /**
+     * convert hex to int, #fff -> 16777215
+     * @method hex2int
+     * @static
+     * @param hex
+     * @return {int|null}
+     */
+    Iro.hex2int = function ( hex ) {
+
+      hex = Iro.hexShort( hex );
+
+      if ( typeof hex !== 'string' ) {
+
+        // order string
+        return null;
+
+      }
+
+      return _int( hex, 16 );
 
     };
 

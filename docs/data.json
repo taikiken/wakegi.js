@@ -225,17 +225,6 @@
             "fors": {},
             "namespaces": {}
         },
-        "src/document/Util.js": {
-            "name": "src/document/Util.js",
-            "modules": {
-                "Util": 1
-            },
-            "classes": {
-                "Util": 1
-            },
-            "fors": {},
-            "namespaces": {}
-        },
         "src/util/Iro.js": {
             "name": "src/util/Iro.js",
             "modules": {
@@ -243,6 +232,17 @@
             },
             "classes": {
                 "Iro": 1
+            },
+            "fors": {},
+            "namespaces": {}
+        },
+        "src/util/Util.js": {
+            "name": "src/util/Util.js",
+            "modules": {
+                "Util": 1
+            },
+            "classes": {
+                "Util": 1
             },
             "fors": {},
             "namespaces": {}
@@ -452,16 +452,16 @@
                 "Patterns": 1,
                 "Dataset": 1,
                 "Dom": 1,
-                "Util": 1,
-                "Iro": 1
+                "Iro": 1,
+                "Util": 1
             },
             "elements": {},
             "classes": {
                 "Patterns": 1,
                 "Dataset": 1,
                 "Dom": 1,
-                "Util": 1,
                 "Iro": 1,
+                "Util": 1,
                 "Browser": 1
             },
             "fors": {},
@@ -664,22 +664,6 @@
             "line": 35,
             "description": "Browser 毎の Element 機能を調べます"
         },
-        "Util": {
-            "name": "Util",
-            "submodules": {},
-            "elements": {},
-            "classes": {
-                "Util": 1
-            },
-            "fors": {},
-            "is_submodule": 1,
-            "namespaces": {},
-            "module": "wakegi",
-            "namespace": "",
-            "file": "src/document/Util.js",
-            "line": 31,
-            "description": "文字列操作に使用します"
-        },
         "Iro": {
             "name": "Iro",
             "submodules": {},
@@ -695,6 +679,22 @@
             "file": "src/util/Iro.js",
             "line": 38,
             "description": "rgb, hsl, hsv\n\nColor 関連 utilties"
+        },
+        "Util": {
+            "name": "Util",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "Util": 1
+            },
+            "fors": {},
+            "is_submodule": 1,
+            "namespaces": {},
+            "module": "wakegi",
+            "namespace": "",
+            "file": "src/util/Util.js",
+            "line": 31,
+            "description": "文字列操作に使用します"
         }
     },
     "classes": {
@@ -1045,22 +1045,6 @@
             "static": 1,
             "is_constructor": 1
         },
-        "Util": {
-            "name": "Util",
-            "shortname": "Util",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "wakegi",
-            "submodule": "Util",
-            "namespace": "",
-            "file": "src/document/Util.js",
-            "line": 31,
-            "static": 1,
-            "is_constructor": 1
-        },
         "Iro": {
             "name": "Iro",
             "shortname": "Iro",
@@ -1075,6 +1059,22 @@
             "file": "src/util/Iro.js",
             "line": 38,
             "description": "色設定 utility\n\n- http://stackoverflow.com/questions/2353211/hsl-to-rgb-color-conversion\n- http://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb\n- https://github.com/mbostock/d3/tree/master/src/color\n\n`not found`\n- https://github.com/less/less.js/blob/master/lib/less/functions.js",
+            "static": 1,
+            "is_constructor": 1
+        },
+        "Util": {
+            "name": "Util",
+            "shortname": "Util",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "wakegi",
+            "submodule": "Util",
+            "namespace": "",
+            "file": "src/util/Util.js",
+            "line": 31,
             "static": 1,
             "is_constructor": 1
         },
@@ -2130,7 +2130,7 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 98,
+            "line": 112,
             "itemtype": "method",
             "name": "calculate",
             "static": 1,
@@ -2140,7 +2140,7 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 152,
+            "line": 166,
             "itemtype": "method",
             "name": "is",
             "static": 1,
@@ -2154,7 +2154,7 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 164,
+            "line": 178,
             "description": "Android 標準ブラウザ",
             "itemtype": "method",
             "name": "standard",
@@ -2169,7 +2169,7 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 177,
+            "line": 191,
             "description": "Android Phone",
             "itemtype": "method",
             "name": "phone",
@@ -2184,7 +2184,7 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 190,
+            "line": 204,
             "description": "Android Tablet",
             "itemtype": "method",
             "name": "tablet",
@@ -2199,7 +2199,7 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 203,
+            "line": 217,
             "description": "Android HD 端末",
             "itemtype": "method",
             "name": "hd",
@@ -2214,7 +2214,7 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 216,
+            "line": 230,
             "itemtype": "method",
             "name": "version",
             "static": 1,
@@ -2228,7 +2228,7 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 229,
+            "line": 243,
             "itemtype": "method",
             "name": "build",
             "static": 1,
@@ -2242,7 +2242,7 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 242,
+            "line": 256,
             "itemtype": "method",
             "name": "major",
             "static": 1,
@@ -2256,7 +2256,7 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 253,
+            "line": 267,
             "itemtype": "method",
             "name": "numbers",
             "static": 1,
@@ -2270,7 +2270,7 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 265,
+            "line": 279,
             "itemtype": "method",
             "name": "number",
             "deprecated": true,
@@ -2429,7 +2429,7 @@
         },
         {
             "file": "src/device/Windows.js",
-            "line": 80,
+            "line": 83,
             "itemtype": "method",
             "name": "is",
             "static": 1,
@@ -2443,7 +2443,7 @@
         },
         {
             "file": "src/device/Windows.js",
-            "line": 91,
+            "line": 94,
             "itemtype": "method",
             "name": "phone",
             "static": 1,
@@ -3124,64 +3124,13 @@
             "submodule": "Element"
         },
         {
-            "file": "src/document/Util.js",
-            "line": 1,
-            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 15/08/20 - 20:26\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.\n\nfor wakegi.js",
-            "class": "Util",
-            "module": "Browser"
-        },
-        {
-            "file": "src/document/Util.js",
-            "line": 43,
-            "description": "abc-def を abcDef にします",
-            "itemtype": "method",
-            "name": "camelize",
-            "static": 1,
-            "params": [
-                {
-                    "name": "str",
-                    "description": "",
-                    "type": "String"
-                }
-            ],
-            "return": {
-                "description": "dash(-)連結 word を camel case へ変換し返します。",
-                "type": "String"
-            },
-            "class": "Util",
-            "module": "wakegi",
-            "submodule": "Util"
-        },
-        {
-            "file": "src/document/Util.js",
-            "line": 61,
-            "description": "abcDef を abc-def にします",
-            "itemtype": "method",
-            "name": "dash",
-            "static": 1,
-            "params": [
-                {
-                    "name": "str",
-                    "description": "",
-                    "type": "String"
-                }
-            ],
-            "return": {
-                "description": "",
-                "type": "String"
-            },
-            "class": "Util",
-            "module": "wakegi",
-            "submodule": "Util"
-        },
-        {
             "file": "src/util/Iro.js",
             "line": 1,
             "description": "Copyright (c) 2011-2015 inazumatv.com, inc.",
             "author": "(at)taikiken / http://inazumatv.com",
             "date": "2015/11/19 - 16:44\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
             "class": "Iro",
-            "module": "wakegi"
+            "module": "Browser"
         },
         {
             "file": "src/util/Iro.js",
@@ -3311,6 +3260,27 @@
         {
             "file": "src/util/Iro.js",
             "line": 278,
+            "description": "hex CSS shorthand to normal (#0ef -> #00eeff)",
+            "itemtype": "method",
+            "name": "hexShort",
+            "static": 1,
+            "params": [
+                {
+                    "name": "hex",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "*"
+            },
+            "class": "Iro",
+            "module": "wakegi",
+            "submodule": "Iro"
+        },
+        {
+            "file": "src/util/Iro.js",
+            "line": 302,
             "itemtype": "method",
             "name": "hex2rgb",
             "static": 1,
@@ -3331,7 +3301,7 @@
         },
         {
             "file": "src/util/Iro.js",
-            "line": 311,
+            "line": 337,
             "itemtype": "method",
             "name": "rgb2hex",
             "static": 1,
@@ -3362,7 +3332,8 @@
         },
         {
             "file": "src/util/Iro.js",
-            "line": 332,
+            "line": 358,
+            "description": "convert int to hex, 16777215 -> #ffffff",
             "itemtype": "method",
             "name": "int2hex",
             "static": 1,
@@ -3380,6 +3351,78 @@
             "class": "Iro",
             "module": "wakegi",
             "submodule": "Iro"
+        },
+        {
+            "file": "src/util/Iro.js",
+            "line": 392,
+            "description": "convert hex to int, #fff -> 16777215",
+            "itemtype": "method",
+            "name": "hex2int",
+            "static": 1,
+            "params": [
+                {
+                    "name": "hex",
+                    "description": ""
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Int|null"
+            },
+            "class": "Iro",
+            "module": "wakegi",
+            "submodule": "Iro"
+        },
+        {
+            "file": "src/util/Util.js",
+            "line": 1,
+            "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 15/08/20 - 20:26\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.\n\nfor wakegi.js",
+            "class": "Util",
+            "module": "wakegi"
+        },
+        {
+            "file": "src/util/Util.js",
+            "line": 43,
+            "description": "abc-def を abcDef にします",
+            "itemtype": "method",
+            "name": "camelize",
+            "static": 1,
+            "params": [
+                {
+                    "name": "str",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "dash(-)連結 word を camel case へ変換し返します。",
+                "type": "String"
+            },
+            "class": "Util",
+            "module": "wakegi",
+            "submodule": "Util"
+        },
+        {
+            "file": "src/util/Util.js",
+            "line": 61,
+            "description": "abcDef を abc-def にします",
+            "itemtype": "method",
+            "name": "dash",
+            "static": 1,
+            "params": [
+                {
+                    "name": "str",
+                    "description": "",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "String"
+            },
+            "class": "Util",
+            "module": "wakegi",
+            "submodule": "Util"
         },
         {
             "file": "src/Browser.js",
@@ -3546,12 +3589,12 @@
             "line": " src/document/Element.js:1"
         },
         {
-            "message": "Missing item type\nlicense inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 15/08/20 - 20:26\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.\n\nfor wakegi.js",
-            "line": " src/document/Util.js:1"
-        },
-        {
             "message": "Missing item type\nCopyright (c) 2011-2015 inazumatv.com, inc.",
             "line": " src/util/Iro.js:1"
+        },
+        {
+            "message": "Missing item type\nlicense inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 15/08/20 - 20:26\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.\n\nfor wakegi.js",
+            "line": " src/util/Util.js:1"
         },
         {
             "message": "Missing item type\nlicense inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 12:39\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
