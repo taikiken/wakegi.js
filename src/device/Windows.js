@@ -64,11 +64,11 @@
           // https://msdn.microsoft.com/ja-jp/library/hh869301(v=vs.85).aspx
           // Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; DEVICE INFO) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Mobile Safari/537.36 Edge/12.<OS build number>
           phone = !!ua.match(/windows phone/i);
-          if ( phone ) {
-
-            windows = false;
-
-          }
+          //if ( phone ) {
+          //
+          //  windows = false;
+          //
+          //}
 
         } else {
 
