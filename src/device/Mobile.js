@@ -61,7 +61,7 @@
      */
     Mobile.phone = function () {
 
-      return iOS.iPhone() || iOS.iPod() || Android.phone();
+      return iOS.iPhone() || iOS.iPod() || Android.phone() || Windows.phone();
 
     };
     /**

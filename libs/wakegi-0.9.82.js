@@ -1,5 +1,5 @@
 /*!
- * Copyright (c) 2011-2015 inazumatv.com, inc.
+ * Copyright (c) 2011-2016 inazumatv.com, inc.
  * @author (at)taikiken / http://inazumatv.com
  * @date 2015/03/17 - 12:37
  *
@@ -8,8 +8,8 @@
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
- * build 2015-12-09 17:39:56
- * version 0.9.81
+ * build 1/7/2016, 3:30:12 PM
+ * version 0.9.82
  * github: https://github.com/taikiken/wakegi.js
  */
 
@@ -2681,7 +2681,7 @@ wakegi.float = parseFloat;
      */
     Mobile.phone = function () {
 
-      return iOS.iPhone() || iOS.iPod() || Android.phone();
+      return iOS.iPhone() || iOS.iPod() || Android.phone() || Windows.phone();
 
     };
     /**
