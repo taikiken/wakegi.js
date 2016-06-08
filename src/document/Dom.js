@@ -112,9 +112,15 @@
      * @return {boolean}
      */
     Dom.hasClass = function ( element, className ) {
+      // categoryX があって category で検索すると match するのまずい
+      // return !!element.className.match( new RegExp( className, 'i' ) );
+      // return !!element.className.match( new RegExp( '^' + className + '$', 'g' ) );
+      // return !!element.className.match( new RegExp( '\\' + className + '\\w', 'g' ) );
+      var
+        elementClass = element.className,
+        classes = elementClass.split( ' ' );
 
-      return !!element.className.match( new RegExp( className, 'i' ) );
-
+      return classes.indexOf( className ) !== -1;
     };
     /**
      * @method addClass

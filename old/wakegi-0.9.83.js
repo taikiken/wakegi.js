@@ -8,8 +8,8 @@
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
- * build 2016-06-08 14:11:18
- * version 0.9.84
+ * build 2016-06-08 14:08:25
+ * version 0.9.83
  * github: https://github.com/taikiken/wakegi.js
  */
 

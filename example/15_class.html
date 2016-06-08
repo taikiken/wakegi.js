@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>Dom.getStyle</title>
+<script type="text/javascript" src="../libs/wakegi.js"></script>
+<style type="text/css">
+body {
+  background-color: #fff;
+}
+.block {
+  border: 1px solid #cccccc;
+  padding: 2px 4px 6px 10px;
+}
+</style>
+</head>
+<body>
+<strong>CSS</strong>
+<p id="result" class="block"></p>
+<script>
+  ( function ( window ) {
+
+    'use strict';
+
+    var
+      document = window.document,
+      result = document.getElementById( 'result' ),
+
+      wakegi = window.wakegi,
+      Dom = wakegi.Dom;
+
+    result.innerHTML += '.bloc: ' + String( Dom.hasClass( result, 'bloc' ) );
+    result.innerHTML += '<br>';
+    result.innerHTML += '.block: ' + String( Dom.hasClass( result, 'block' ) );
+    result.innerHTML += '<br>';
+    result.innerHTML += '.blockX: ' + String( Dom.hasClass( result, 'blockX' ) );
+    result.innerHTML += '<br>';
+    result.innerHTML += '.Block: ' + String( Dom.hasClass( result, 'Block' ) );
+
+  }( window ) );
+</script>
+</body>
+</html>
