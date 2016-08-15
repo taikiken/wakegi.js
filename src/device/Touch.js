@@ -23,7 +23,8 @@
   'use strict';
   var
     wakegi = window.wakegi,
-    Browser = wakegi.Browser;
+    Browser = wakegi.Browser,
+    Element = Browser.Element;
 
   Browser.Touch = ( function (){
 
