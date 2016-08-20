@@ -19,6 +19,7 @@
  * @submodule Dom
  *
  * */
+/* JSLint -W016 */
 ( function ( window ){
   'use strict';
 
@@ -164,36 +165,57 @@
     Dom.removeClass = function ( element, className ) {
 
       var
-        names = '';
+        names,
+        elementClass,
+        classes,
+        i, limit,
+        currentClass;
 
       //console.log( "Element.removeClass ", className, Element.hasClass( element, className ) );
 
-      if ( Dom.hasClass( element, className ) ) {
-
-        // found class name
-        names = element.className;
-        // class を削除して 2 spaces を 1 space へ
-        names = names.replace( className, '' ).split( '  ' ).join( ' ' );
-
-        // 先頭の半角space削除
-        if ( names.substr( 0, 1 ) === ' ' ) {
-
-          names = names.substr( 1 );
-
-        }
-
-        if ( names === ' ' ) {
-          // space のみになったら空へ
-          names = '';
-
-        }
-
-        element.className = names;
-
+      if ( !Dom.hasClass( element, className ) ) {
+        return Dom;
       }
 
-      return Dom;
+      // @type {string}
+      elementClass = element.className;
+      // @type {array<string>}
+      classes = elementClass.split( ' ' );
+      for ( i = 0, limit = classes.length; i < limit; i = (i+1) | 0 ) {
+        currentClass = classes[i];
 
+        if (!currentClass) {
+          continue;
+        }
+
+        if (currentClass === className) {
+          classes[i] = 'XXX_XXX_XXX';
+        }
+      }
+
+      // XXX_XXX_XXX を削除して 2 spaces を 1 space へ
+      names = classes.join(' ').replace('XXX_XXX_XXX', '').split('  ').join(' ');
+      // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+      // remove, start / last white space
+      names = names.trim();
+      // // found class name
+      // names = element.className;
+      // // class を削除して 2 spaces を 1 space へ
+      // names = names.replace( className, '' ).split( '  ' ).join( ' ' );
+
+      // // 先頭の半角space削除
+      // if ( names.substr( 0, 1 ) === ' ' ) {
+      //   names = names.substr( 1 );
+      // }
+
+      // if ( names === ' ' ) {
+      //   // space のみになったら空へ
+      //   names = '';
+      // }
+
+      element.className = names;
+
+      return Dom;
     };
     /**
      * getComputedStyle を使い HTMLElement style value を取得します

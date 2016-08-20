@@ -22,7 +22,7 @@ var size = require('gulp-size');
 
 var concat = require( 'gulp-concat' );
 var rename = require( 'gulp-rename' );
-var uglifyjs = require( 'gulp-uglifyjs' );
+// var uglifyjs = require( 'gulp-uglifyjs' );
 var uglify = require( 'gulp-uglify' );
 
 var shell = require( 'gulp-shell' );
