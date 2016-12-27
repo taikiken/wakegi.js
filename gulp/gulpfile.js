@@ -44,7 +44,8 @@ var yuidoc = require( 'gulp-yuidoc' );
 
 var replace = require('gulp-replace-task');
 
-var jshint = require('gulp-jshint');
+// var jshint = require('gulp-jshint');
+var eslint = require('gulp-eslint');
 
 // ----------------------------------------------------------------
 // Directory
@@ -175,11 +176,22 @@ gulp.task( 'script-docs', function () {
     .pipe( gulp.dest( dir.docs ) );
 } );
 
-// Lint JavaScript
-gulp.task('js-hint', function () {
-  return gulp.src( dir.src + '/**/*.js' )
-    .pipe( jshint() )
-    .pipe( jshint.reporter('jshint-stylish'));
+// // Lint JavaScript
+// gulp.task('js-hint', function () {
+//   return gulp.src( dir.src + '/**/*.js' )
+//     .pipe( jshint() )
+//     .pipe( jshint.reporter('jshint-stylish'));
+// });
+
+// ESLint
+gulp.task('js:eslint', function() {
+  return gulp.src(dir.src + '/**/*.js')
+    .pipe(eslint({
+      useEslintrc: false,
+      configFile: '../eslint.es5.yml'
+    }))
+    .pipe(eslint.format())
+    .pipe( size( { title: '*** js:eslint ***' } ) );
 });
 
 
@@ -188,7 +200,7 @@ gulp.task('js-hint', function () {
 gulp.task( 'build', function () {
 
   runSequence(
-    'js-hint',
+    // 'js-hint',
     'script-concat',
     'script-min',
     'script-version'
@@ -200,7 +212,7 @@ gulp.task( 'build', function () {
 gulp.task( 'build-api', function () {
 
   runSequence(
-    'js-hint',
+    // 'js-hint',
     'script-concat',
     'script-min',
     'script-version',
