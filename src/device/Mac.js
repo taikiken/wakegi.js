@@ -18,60 +18,44 @@
  * @module Browser
  * @submodule Mac
  */
-( function( window ){
+(function(window) {
   'use strict';
   var
     wakegi = window.wakegi,
-    Browser = wakegi.Browser;
+    Browser = wakegi.Browser,
 
-  Browser.Mac = ( function(){
+    iOS = Browser.iOS,
+    mac;
 
-    var
-      iOS = Browser.iOS,
-      mac;
-
-    /**
-     * Mac OS detection
-     * @class Mac
-     * @static
-     * @constructor
-     */
-    function Mac () {
-      throw new Error( 'Mac can\'t create instance.' );
+  /**
+   * Mac OS detection
+   * @class Mac
+   * @static
+   * @constructor
+   */
+  function Mac() {
+    throw new Error('Mac can\'t create instance.');
+  }
+  var p = Mac.prototype;
+  p.constructor = Mac;
+  /**
+   * @method init
+   * @static
+   */
+  Mac.init = function() {
+    if (typeof mac === 'undefined') {
+      // mac undefined
+      mac = !iOS.is() && !!Browser.ua().match(/mac os x/i);
     }
-
-    var p = Mac.prototype;
-
-    p.constructor = Mac;
-
-    /**
-     * @method init
-     * @static
-     */
-    Mac.init = function() {
-
-      if ( typeof mac === 'undefined' ) {
-
-        // mac undefined
-        mac = !iOS.is() && !!Browser.ua().match(/mac os x/i);
-
-      }
-
-    };
-
-    /**
-     * @method is
-     * @static
-     * @returns {boolean}
-     */
-    Mac.is = function() {
-
-      Mac.init();
-      return mac;
-
-    };
-
-    return Mac;
-  }() );
-
-}( window ) );
+  };
+  /**
+   * Mac OS 判定します
+   * @method is
+   * @static
+   * @returns {boolean} true Mac OS
+   */
+  Mac.is = function() {
+    Mac.init();
+    return mac;
+  };
+}(window));
