@@ -14,49 +14,40 @@
  */
 
 /**
- * deprecated instead of Css3
+ * CSS3 transform 使用可能かを判定します
  *
  * @module Browser
  * @submodule Transform
  */
-( function( window ){
-
+(function(window) {
   'use strict';
-
   var
     wakegi = window.wakegi,
-    Browser = wakegi.Browser;
+    Browser = wakegi.Browser,
+    Css3 = Browser.Css3;
+  /**
+   * CSS3 transform 使用可能かを判定します
+   * @deprecated instead of Css3
+   * @class Transform
+   * @static
+   * @constructor
+   */
+  function Transform() {
+    throw new Error('Transform can\'t create instance.');
+  }
 
-  Browser.Transform = ( function(){
-    var
-      Css3 = Browser.Css3;
+  var p = Transform.prototype;
 
-    /**
-     * @deprecated instead of Css3
-     * @class Transform
-     * @static
-     * @constructor
-     */
-    function Transform () {
-      throw new Error( 'Transform can\'t create instance.' );
-    }
-
-    var p = Transform.prototype;
-
-    p.constructor = Transform;
-    /**
-     * @method is
-     * @deprecated instead of Css3.transform
-     * @static
-     * @returns {boolean}
-     */
-    Transform.is = function() {
-
-      return Css3.transform();
-
-    };
-
-    return Transform;
-  }() );
-
-}( window ) );
+  p.constructor = Transform;
+  /**
+   * CSS3 transform 使用可能かを判定します
+   * @method is
+   * @deprecated instead of Css3.transform
+   * @static
+   * @returns {boolean} true: CSS3 transform 使用可能
+   */
+  Transform.is = function() {
+    return Css3.transform();
+  };
+  Browser.Transform = Transform;
+}(window));

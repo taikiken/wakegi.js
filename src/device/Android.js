@@ -18,8 +18,8 @@
  * @module Browser
  * @submodule Android
  */
-/*jslint -W016*/
-( function( window ){
+
+(function(window) {
   'use strict';
   var
     wakegi = window.wakegi,
