@@ -123,7 +123,7 @@
     return build;
   };
   /**
-   * version major を取得します
+   * version: major を取得します
    * @method major
    * @static
    * @returns {int} version major を返します
