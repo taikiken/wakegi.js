@@ -50,4 +50,4 @@
     return Element.touch();
   };
   Browser.Touch = Touch;
-}( window ) );
+}(window));
