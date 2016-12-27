@@ -20,14 +20,14 @@
  *
  * */
 /* JSLint -W016 */
-( function ( window ){
+( function( window ){
   'use strict';
 
   var
     //document = window.document,
     wakegi = window.wakegi;
 
-  wakegi.Dom = ( function (){
+  wakegi.Dom = ( function(){
 
     var
       Patterns = wakegi.Patterns;
@@ -57,7 +57,7 @@
      * @method element
      * @returns {HTMLElement}
      */
-    p.element = function () {
+    p.element = function() {
 
       return this._element;
 
@@ -68,7 +68,7 @@
      * @param {string} className
      * @returns {boolean}
      */
-    p.hasClass = function ( className ) {
+    p.hasClass = function( className ) {
 
       return Dom.hasClass( this._element, className );
 
@@ -78,7 +78,7 @@
      * @param {string} className
      * @returns {Dom}
      */
-    p.addClass = function ( className ) {
+    p.addClass = function( className ) {
 
       Dom.addClass( this._element, className );
       return this;
@@ -89,7 +89,7 @@
      * @param {string} className
      * @returns {Dom}
      */
-    p.removeClass = function ( className ) {
+    p.removeClass = function( className ) {
 
       Dom.removeClass( this._element, className );
       return this;
@@ -100,7 +100,7 @@
      * @param {string} [styleProp]
      * @returns {*}
      */
-    p.style = function ( styleProp ) {
+    p.style = function( styleProp ) {
 
       return Dom.getStyle( this._element, styleProp );
 
@@ -112,7 +112,7 @@
      * @param {string} className
      * @returns {boolean}
      */
-    Dom.hasClass = function ( element, className ) {
+    Dom.hasClass = function( element, className ) {
       // categoryX があって category で検索すると match するのまずい
       // return !!element.className.match( new RegExp( className, 'i' ) );
       // return !!element.className.match( new RegExp( '^' + className + '$', 'g' ) );
@@ -130,7 +130,7 @@
      * @param {string} className
      * @returns {Dom}
      */
-    Dom.addClass = function ( element, className ) {
+    Dom.addClass = function( element, className ) {
 
       var
         names = '',
@@ -162,7 +162,7 @@
      * @param {string} className
      * @returns {Dom}
      */
-    Dom.removeClass = function ( element, className ) {
+    Dom.removeClass = function( element, className ) {
 
       var
         names,
@@ -228,7 +228,7 @@
      *    styleProp が null or undefined or "" の時は CSSStyleDeclaration Object<br>
      *    指定されている時は CSS 設定値(string)を返します
      */
-    Dom.styleCompute = function ( defaultView, el, styleProp ) {
+    Dom.styleCompute = function( defaultView, el, styleProp ) {
 
       var
         style = defaultView.getComputedStyle( el, null );
@@ -251,7 +251,7 @@
      * @param {string} [styleProp]
      * @returns {*}
      */
-    Dom.styleCurrent = function ( el, styleProp ) {
+    Dom.styleCurrent = function( el, styleProp ) {
 
       var
         style = el.currentStyle,
@@ -305,7 +305,7 @@
      * @param {Array} patterns [string, ...]
      * @returns {string}
      */
-    Dom.shortHand = function ( defaultView, el, patterns ) {
+    Dom.shortHand = function( defaultView, el, patterns ) {
 
       var
         top = Dom.styleCompute( defaultView, el, patterns[ 0 ] ),
@@ -360,7 +360,7 @@
      * @param {string} [styleProp]
      * @returns {*}
      */
-    Dom.getStyle = function ( el, styleProp ) {
+    Dom.getStyle = function( el, styleProp ) {
       // https://gist.github.com/cms/369133
 
       //var value, defaultView = el.ownerDocument.defaultView;

@@ -19,7 +19,7 @@
  * @module Browser
  * @submodule Transform
  */
-( function ( window ){
+( function( window ){
 
   'use strict';
 
@@ -27,7 +27,7 @@
     wakegi = window.wakegi,
     Browser = wakegi.Browser;
 
-  Browser.Transform = ( function (){
+  Browser.Transform = ( function(){
     var
       Css3 = Browser.Css3;
 
@@ -50,7 +50,7 @@
      * @static
      * @returns {boolean}
      */
-    Transform.is = function () {
+    Transform.is = function() {
 
       return Css3.transform();
 

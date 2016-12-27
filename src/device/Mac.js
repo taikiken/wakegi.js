@@ -18,13 +18,13 @@
  * @module Browser
  * @submodule Mac
  */
-( function ( window ){
+( function( window ){
   'use strict';
   var
     wakegi = window.wakegi,
     Browser = wakegi.Browser;
 
-  Browser.Mac = ( function (){
+  Browser.Mac = ( function(){
 
     var
       iOS = Browser.iOS,
@@ -48,7 +48,7 @@
      * @method init
      * @static
      */
-    Mac.init = function () {
+    Mac.init = function() {
 
       if ( typeof mac === 'undefined' ) {
 
@@ -64,7 +64,7 @@
      * @static
      * @returns {boolean}
      */
-    Mac.is = function () {
+    Mac.is = function() {
 
       Mac.init();
       return mac;

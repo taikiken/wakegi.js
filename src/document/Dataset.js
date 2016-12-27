@@ -19,14 +19,14 @@
  * @submodule Dataset
  */
 /* jslint -W089 */
-( function ( window ) {
+( function( window ) {
 
   'use strict';
 
   var
     wakegi = window.wakegi;
 
-  wakegi.Dataset = ( function () {
+  wakegi.Dataset = ( function() {
 
     var Util = wakegi.Util;
 
@@ -48,7 +48,7 @@
      * @param {Element} element
      * @returns {{}}
      */
-    Dataset.parse = function ( element ) {
+    Dataset.parse = function( element ) {
 
       if ( typeof element.dataset !== 'undefined' ) {
 
@@ -68,7 +68,7 @@
      * @param {Element} element
      * @returns {{}}
      */
-    Dataset.modern = function ( element ) {
+    Dataset.modern = function( element ) {
 
       var
         data = element.dataset,
@@ -119,7 +119,7 @@
      * @param {Element} element
      * @returns {{}}
      */
-    Dataset.legacy = function ( element ) {
+    Dataset.legacy = function( element ) {
 
       var
         data = element.attributes,

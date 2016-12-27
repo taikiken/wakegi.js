@@ -19,14 +19,14 @@
  * @submodule Iro
  *
  * */
-( function ( window ) {
+( function( window ) {
 
   'use strict';
 
   var
     Math = window.Math;
 
-  window.wakegi.Iro = ( function () {
+  window.wakegi.Iro = ( function() {
 
     var
       //_round = Math.round,
@@ -67,7 +67,7 @@
      * @param {int} b
      * @returns {object} {h: number, s: number, l: number}
      */
-    Iro.rgb2hsl = function ( r, g, b ){
+    Iro.rgb2hsl = function( r, g, b ){
 
       r /= 255;
       g /= 255;
@@ -119,7 +119,7 @@
      * @param {number} l
      * @returns {object} {r: number, g: number, b: number}
      */
-    Iro.hsl2rgb = function ( h, s, l ) {
+    Iro.hsl2rgb = function( h, s, l ) {
 
       var r, g, b, q, p;
 
@@ -167,7 +167,7 @@
      * @param {int} b
      * @returns {object} {h: number, s: number, v: number}
      */
-    Iro.rgb2hsv = function ( r, g, b ) {
+    Iro.rgb2hsv = function( r, g, b ) {
 
       r /= 255;
       g /= 255;
@@ -218,7 +218,7 @@
      * @param {number} v
      * @returns {object} {r: number, g: number, b: number}
      */
-    Iro.hsv2rgb = function ( h, s, v ) {
+    Iro.hsv2rgb = function( h, s, v ) {
 
       var
         r, g, b,
@@ -282,7 +282,7 @@
      * @param hex
      * @returns {*}
      */
-    Iro.hexShort  = function ( hex ) {
+    Iro.hexShort  = function( hex ) {
 
       if ( typeof hex !== 'string' ) {
 
@@ -305,7 +305,7 @@
      * @param {string} hex CSS 色設定文字 #ff0000
      * @returns {object} {r: number, g: number, b: number}
      */
-    Iro.hex2rgb = function ( hex ) {
+    Iro.hex2rgb = function( hex ) {
 
       hex = Iro.hexShort( hex );
 
@@ -342,7 +342,7 @@
      * @param {int} b
      * @returns {string}
      */
-    Iro.rgb2hex = function ( r, g, b ) {
+    Iro.rgb2hex = function( r, g, b ) {
 
       function componentToHex( c ) {
 
@@ -362,7 +362,7 @@
      * @param {number} num
      * @returns {string}
      */
-    Iro.int2hex = function ( num ) {
+    Iro.int2hex = function( num ) {
 
       num = _floor( num );
 
@@ -396,7 +396,7 @@
      * @param hex
      * @returns {int|null}
      */
-    Iro.hex2int = function ( hex ) {
+    Iro.hex2int = function( hex ) {
 
       hex = Iro.hexShort( hex );
 

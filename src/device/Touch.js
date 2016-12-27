@@ -19,14 +19,14 @@
  * @module Browser
  * @submodule Touch
  */
-( function ( window ){
+( function( window ){
   'use strict';
   var
     wakegi = window.wakegi,
     Browser = wakegi.Browser,
     Element = Browser.Element;
 
-  Browser.Touch = ( function (){
+  Browser.Touch = ( function(){
 
     /**
      * @class Touch
@@ -47,7 +47,7 @@
      * @static
      * @returns {boolean}
      */
-    Touch.is = function () {
+    Touch.is = function() {
 
       return Element.touch();
 

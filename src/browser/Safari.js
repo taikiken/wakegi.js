@@ -31,7 +31,7 @@
     Android = Browser.Android,
     FxiOS = Browser.FxiOS,
     Edge = Browser.Edge,
-    numbers = [ -1, -1, -1 ],
+    numbers = [-1, -1, -1],
     crios, chrome, edge, fxios,
     safari, version, major, build;
 
@@ -108,9 +108,9 @@
               versions.push(0);
             }
           }
-          build = versions.join( '.' );
-          version = float( versions[ 0 ] + '.' + versions[ 1 ] + versions[ 2 ] );
-          major = versions[ 0 ];
+          build = versions.join('.');
+          version = float( versions[0] + '.' + versions[1] + versions[2] );
+          major = versions[0];
           numbers = versions;
         }// Array
       }// safari

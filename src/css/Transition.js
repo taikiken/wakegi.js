@@ -19,13 +19,13 @@
  * @module Browser
  * @submodule Transition
  */
-( function ( window ){
+( function( window ){
   'use strict';
   var
     wakegi = window.wakegi,
     Browser = wakegi.Browser;
 
-  Browser.Transition = ( function (){
+  Browser.Transition = ( function(){
     var
       Css3 = Browser.Css3;
 
@@ -48,7 +48,7 @@
      * @static
      * @returns {boolean}
      */
-    Transition.is = function () {
+    Transition.is = function() {
 
       return Css3.transition();
 

@@ -19,13 +19,13 @@
  * @module Browser
  * @submodule Windows
  */
-( function ( window ){
+( function( window ){
   'use strict';
   var
     wakegi = window.wakegi,
     Browser = wakegi.Browser;
 
-  Browser.Windows = ( function (){
+  Browser.Windows = ( function(){
     var
       phone,
       windows;
@@ -48,7 +48,7 @@
      * @method init
      * @static
      */
-    Windows.init = function () {
+    Windows.init = function() {
 
       var ua;
 
@@ -85,7 +85,7 @@
      * @static
      * @returns {boolean}
      */
-    Windows.is = function () {
+    Windows.is = function() {
 
       Windows.init();
       return windows;
@@ -96,7 +96,7 @@
      * @static
      * @returns {boolean}
      */
-    Windows.phone = function () {
+    Windows.phone = function() {
 
       Windows.init();
       return phone;

@@ -19,13 +19,13 @@
  * @submodule iOS
  */
 /*jslint -W016*/
-( function ( window ){
+( function( window ){
   'use strict';
   var
     wakegi = window.wakegi,
     Browser = wakegi.Browser;
 
-  Browser.iOS = ( function (){
+  Browser.iOS = ( function(){
     var
       numbers = [ -1, -1, -1 ],
       ios,
@@ -53,7 +53,7 @@
      * @method init
      * @static
      */
-    iOS.init = function () {
+    iOS.init = function() {
 
       var ua;
 
@@ -79,7 +79,7 @@
      * @method calculate
      * @static
      */
-    iOS.calculate = function () {
+    iOS.calculate = function() {
 
       var
         versions = [],
@@ -134,7 +134,7 @@
      * @static
      * @returns {boolean}
      */
-    iOS.is = function () {
+    iOS.is = function() {
 
       iOS.init();
       return ios;
@@ -145,7 +145,7 @@
      * @static
      * @returns {boolean}
      */
-    iOS.iPhone = function () {
+    iOS.iPhone = function() {
 
       iOS.init();
       return iphone;
@@ -156,7 +156,7 @@
      * @static
      * @returns {boolean}
      */
-    iOS.iPad = function () {
+    iOS.iPad = function() {
 
       iOS.init();
       return ipad;
@@ -167,7 +167,7 @@
      * @static
      * @returns {boolean}
      */
-    iOS.iPod = function () {
+    iOS.iPod = function() {
 
       iOS.init();
       return ipod;
@@ -178,7 +178,7 @@
      * @static
      * @returns {Function|boolean}
      */
-    iOS.standalone = function () {
+    iOS.standalone = function() {
 
       var navigator = Browser.navigator();
       return !!navigator.standalone ? navigator.standalone : false;
@@ -191,7 +191,7 @@
      * @static
      * @returns {Function|boolean}
      */
-    iOS.fullScreen = function () {
+    iOS.fullScreen = function() {
 
       return iOS.standalone();
 
@@ -203,7 +203,7 @@
      * @static
      * @returns {float} N.NN で返します
      */
-    iOS.version = function () {
+    iOS.version = function() {
 
       iOS.calculate();
       return version;
@@ -216,7 +216,7 @@
      * @static
      * @returns {string} NN.NN.NN 型（文字）で返します
      */
-    iOS.build = function () {
+    iOS.build = function() {
 
       iOS.calculate();
       return build;
@@ -228,7 +228,7 @@
      * @static
      * @returns {int}
      */
-    iOS.major = function () {
+    iOS.major = function() {
 
       iOS.calculate();
       return major;
@@ -239,7 +239,7 @@
      * @static
      * @returns {*[]} [major: int, minor: int, build: int] 形式で返します
      */
-    iOS.numbers = function () {
+    iOS.numbers = function() {
 
       iOS.calculate();
       return numbers;
@@ -252,7 +252,7 @@
      * @static
      * @returns {*[]} [major: int, minor: int, build: int] 形式で返します
      */
-    iOS.number = function () {
+    iOS.number = function() {
 
       // 互換のために残します
       return iOS.numbers();
@@ -264,7 +264,7 @@
      * @static
      * @returns {boolean}
      */
-    iOS.webView = function () {
+    iOS.webView = function() {
 
       iOS.init();
       return webＶiew;

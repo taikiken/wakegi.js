@@ -19,14 +19,14 @@
  * @module wakegi
  * @submodule Util
  */
-( function ( window ) {
+( function( window ) {
 
   'use strict';
 
   //var
   //  document = window.document;
 
-  window.wakegi.Util = ( function () {
+  window.wakegi.Util = ( function() {
 
     /**
      * @class Util
@@ -48,7 +48,7 @@
      * @param {string} str
      * @returns {string} dash(-)連結 word を camel case へ変換し返します。
      */
-    Util.camelize = function ( str ) {
+    Util.camelize = function( str ) {
 
       return str.toLowerCase().replace(/-(.)/g, function( match, group1 ) {
 
@@ -66,7 +66,7 @@
      * @param {string} str
      * @returns {string}
      */
-    Util.dash = function ( str ) {
+    Util.dash = function( str ) {
 
       return str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
 

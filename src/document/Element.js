@@ -18,14 +18,14 @@
  * @module Browser
  * @submodule Element
  * */
-( function ( window ){
+( function( window ){
   'use strict';
   var
     document = window.document,
     wakegi = window.wakegi,
     Browser = wakegi.Browser;
 
-  Browser.Element = ( function (){
+  Browser.Element = ( function(){
     var
       touch,
       querySelector,
@@ -53,7 +53,7 @@
      * @static
      * @returns {boolean}
      */
-    Element.touch = function () {
+    Element.touch = function() {
 
       if ( typeof touch === 'undefined' ) {
         // touch undefined
@@ -74,7 +74,7 @@
      * @static
      * @returns {boolean}
      */
-    Element.querySelector = function () {
+    Element.querySelector = function() {
 
       if ( typeof querySelector === 'undefined' ) {
 
@@ -94,7 +94,7 @@
      * @static
      * @returns {boolean}
      */
-    Element.canvas = function () {
+    Element.canvas = function() {
 
       if ( typeof canvas === 'undefined' ) {
 
@@ -114,7 +114,7 @@
      * @static
      * @returns {boolean}
      */
-    Element.webgl = function () {
+    Element.webgl = function() {
 
       if ( typeof webgl === 'undefined' ) {
 
@@ -148,7 +148,7 @@
      * @param {string} searchKey
      * @returns {*} HTMLElement を返します
      */
-    Element.find = function ( searchKey ) {
+    Element.find = function( searchKey ) {
 
       var result;
 

@@ -19,13 +19,13 @@
  * @module Browser
  * @submodule Mobile
  */
-( function ( window ){
+( function( window ){
   'use strict';
   var
     wakegi = window.wakegi,
     Browser = wakegi.Browser;
 
-  Browser.Mobile = ( function (){
+  Browser.Mobile = ( function(){
     var
       iOS = Browser.iOS,
       Android = Browser.Android,
@@ -49,7 +49,7 @@
      * @static
      * @returns {boolean}
      */
-    Mobile.is = function () {
+    Mobile.is = function() {
 
       return iOS.is() || Android.is() || Windows.phone();
 
@@ -59,7 +59,7 @@
      * @static
      * @returns {boolean}
      */
-    Mobile.phone = function () {
+    Mobile.phone = function() {
 
       return iOS.iPhone() || iOS.iPod() || Android.phone() || Windows.phone();
 
@@ -69,7 +69,7 @@
      * @static
      * @returns {boolean}
      */
-    Mobile.tablet = function () {
+    Mobile.tablet = function() {
 
       return iOS.iPad() || Android.tablet();
 
@@ -79,9 +79,9 @@
      * @method hideBar
      * @static
      */
-    Mobile.hideBar = function () {
+    Mobile.hideBar = function() {
 
-      setTimeout( function (){ scrollBy( 0, 1 ); }, 0 );
+      setTimeout( function(){ scrollBy( 0, 1 ); }, 0 );
 
     };
     /**
@@ -89,7 +89,7 @@
      * @deprecated instead of Mobile.hideBar
      * @static
      */
-    Mobile.hideURLBar = function () {
+    Mobile.hideURLBar = function() {
 
       Mobile.hideBar();
 
