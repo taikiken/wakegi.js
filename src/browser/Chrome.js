@@ -19,193 +19,159 @@
  * @module Browser
  * @submodule Chrome
  */
-/*jslint -W016*/
-( function ( window ){
+
+(function(window) {
   'use strict';
   var
     wakegi = window.wakegi,
-    Browser = wakegi.Browser;
+    Browser = wakegi.Browser,
+    
+    CriOS = Browser.CriOS,
+    Android = Browser.Android,
+    Edge = Browser.Edge,
+    numbers = [ -1, -1, -1, -1 ],
+    crios,
+    edge,
+    chrome, version, major, build;
 
-  Browser.Chrome = ( function (){
+  /**
+   * Chrome 判定
+   *
+   * iOS Chrome も含まれます
+   *
+   * @class Chrome
+   * @static
+   * @constructor
+   */
+  function Chrome() {
+    throw new Error('Chrome can\'t create instance.');
+  }
 
-    var
-      CriOS = Browser.CriOS,
-      Android = Browser.Android,
-      Edge = Browser.Edge,
-      numbers = [ -1, -1, -1, -1 ],
-      crios,
-      edge,
-      chrome, version, major, build;
+  var p = Chrome.prototype;
 
-    /**
-     * Chrome 判定
-     *
-     * iOS Chrome も含まれます
-     *
-     * @class Chrome
-     * @static
-     * @constructor
-     */
-    function Chrome () {
-      throw new Error( 'Chrome can\'t create instance.' );
-    }
+  p.constructor = Chrome;
 
-    var p = Chrome.prototype;
+  /**
+   * @method init
+   * @static
+   */
+  Chrome.init = function() {
+    if (typeof chrome === 'undefined') {
+      // need initialize
+      crios = CriOS.is();
+      edge = Edge.is();
+      chrome = false;
 
-    p.constructor = Chrome;
-
-    /**
-     * @method init
-     * @static
-     */
-    Chrome.init = function () {
-
-      if ( typeof chrome === 'undefined' ) {
-
-        // need initialize
-        crios = CriOS.is();
-        edge = Edge.is();
-        chrome = false;
-
-        if ( !edge ) {
-
-          if ( crios ) {
-            // iOS Chrome
-            chrome = true;
-
-          } else if ( !Android.standard() ) {
-
-            // check userAgent
-            chrome = !!Browser.ua().match(/chrome/i);
-
-          }
-
+      if (!edge) {
+        if (crios) {
+          // iOS Chrome
+          chrome = true;
+        } else if (!Android.standard()) {
+          // check userAgent
+          chrome = !!Browser.ua().match(/chrome/i);
         }
-
       }
+    }
+  };
 
-    };
+  /**
+   * @method calculate
+   * @static
+   */
+  Chrome.calculate = function() {
+    var
+      versions = [],
+      nums, int, float, i, limit;
 
-    /**
-     * @method calculate
-     * @static
-     */
-    Chrome.calculate = function () {
+    if (typeof version === 'undefined') {
+      // version undefined
+      build = '';
+      version = -1;
+      major = -1;
 
-      var
-        versions = [],
-        nums, int, float, i, limit;
+      if (Chrome.is()) {
+        // Chrome
 
-      //Chrome.init();
+        if (!crios) {
+          // not CriOS
+          nums = Browser.app().match(/Chrome\/(\d+)\.(\d+)\.(\d+)\.?(\d+)?/);
 
-      if ( typeof version === 'undefined' ) {
-        // version undefined
-        build = '';
-        version = -1;
-        major = -1;
+          if (Array.isArray(nums)) {
+            // 結果が配列
+            int = wakegi.int;
+            float = wakegi.float;
 
-        if ( Chrome.is() ) {
-          // Chrome
+            for (i = 1, limit = nums.length; i < limit; i = ( i + 1 ) | 0 ) {
+              versions.push( int(nums[i], 10));
+            }
 
-          if ( !crios ) {
-            // not CriOS
-            nums = Browser.app().match(/Chrome\/(\d+)\.(\d+)\.(\d+)\.?(\d+)?/);
+            build = versions.join('.');
+            major = versions[0];
+            numbers = versions;
+            version = float(versions[0] + '.' + versions[1] + versions[2] + versions[3]);
+          }// Array
+        } else {
+          // CriOS からコピー
+          build = CriOS.build();
+          major = CriOS.major();
+          numbers = CriOS.numbers();
+          version = CriOS.version();
+        }
+      }// chrome
+    }// undefined
+  };
 
-            if ( Array.isArray( nums ) ) {
-              // 結果が配列
-              int = wakegi.int;
-              float = wakegi.float;
+  /**
+   * Chrome 判定を行います
+   * @method is
+   * @static
+   * @returns {boolean} true: Chrome
+   */
+  Chrome.is = function() {
+    Chrome.init();
+    return chrome;
+  };
 
-              for ( i = 1, limit = nums.length; i < limit; i = (i+1)|0 ) {
+  /**
+   * version N.NNN を取得します
+   * @method version
+   * @static
+   * @returns {float} N.NNN で返します
+   */
+  Chrome.version = function() {
+    Chrome.calculate();
+    return version;
+  };
 
-                versions.push( int( nums[ i ], 10 ) );
+  /**
+   * version: build type を含み取得します
+   * @method build
+   * @static
+   * @returns {string} NN.NN.NN.NN 型（文字）で返します
+   */
+  Chrome.build = function() {
+    Chrome.calculate();
+    return build;
+  };
+  /**
+   * version NN を取得します
+   * @method major
+   * @static
+   * @returns {int} version NN を返します
+   */
+  Chrome.major = function() {
+    Chrome.calculate();
+    return major;
+  };
+  /**
+   * @method numbers
+   * @static
+   * @returns {*[]} [major: int, minor: int, build: int] 形式で返します
+   */
+  Chrome.numbers = function() {
+    Chrome.calculate();
+    return numbers;
+  };
 
-              }
-
-              build = versions.join( '.' );
-              major = versions[ 0 ];
-              numbers = versions;
-              version = float( versions[ 0 ] + '.' + versions[ 1 ] + versions[ 2 ] + versions[ 3 ] );
-
-            }// Array
-
-          } else {
-            // CriOS からコピー
-            build = CriOS.build();
-            major = CriOS.major();
-            numbers = CriOS.numbers();
-            version = CriOS.version();
-
-          }
-
-        }// chrome
-
-      }// undefined
-
-    };
-
-    /**
-     * @method is
-     * @static
-     * @returns {boolean}
-     */
-    Chrome.is = function () {
-
-      Chrome.init();
-      return chrome;
-
-    };
-
-    /**
-     *
-     * @method version
-     * @static
-     * @returns {float} N.NNN で返します
-     */
-    Chrome.version = function () {
-
-      Chrome.calculate();
-      return version;
-
-    };
-
-    /**
-     *
-     * @method build
-     * @static
-     * @returns {string} NN.NN.NN.NN 型（文字）で返します
-     */
-    Chrome.build = function () {
-
-      Chrome.calculate();
-      return build;
-
-    };
-
-    /**
-     * @method major
-     * @static
-     * @returns {int}
-     */
-    Chrome.major = function () {
-
-      Chrome.calculate();
-      return major;
-
-    };
-
-    /**
-     * @method numbers
-     * @static
-     * @returns {*[]} [major: int, minor: int, build: int] 形式で返します
-     */
-    Chrome.numbers = function () {
-
-      Chrome.calculate();
-      return numbers;
-
-    };
-
-    return Chrome;
-  }() );
-}( window ) );
+  Browser.Chrome = Chrome;
+}(window));
