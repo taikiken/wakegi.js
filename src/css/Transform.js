@@ -48,7 +48,7 @@
      * @method is
      * @deprecated instead of Css3.transform
      * @static
-     * @return {boolean}
+     * @returns {boolean}
      */
     Transform.is = function () {
 

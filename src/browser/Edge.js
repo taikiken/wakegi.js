@@ -112,7 +112,7 @@
     /**
      * @method is
      * @static
-     * @return {boolean}
+     * @returns {boolean}
      */
     Edge.is = function () {
 
@@ -125,7 +125,7 @@
      *
      * @method version
      * @static
-     * @return {float} N.NN で返します
+     * @returns {float} N.NN で返します
      */
     Edge.version = function () {
 
@@ -137,7 +137,7 @@
     /**
      * @method major
      * @static
-     * @return {int}
+     * @returns {int}
      */
     Edge.major = function () {
 
@@ -150,7 +150,7 @@
      *
      * @method build
      * @static
-     * @return {string} NN.NN 型（文字）で返します
+     * @returns {string} NN.NN 型（文字）で返します
      */
     Edge.build = function () {
 
@@ -162,7 +162,7 @@
     /**
      * @method numbers
      * @static
-     * @return {[]} [major: int, minor: int] 形式で返します
+     * @returns {[]} [major: int, minor: int] 形式で返します
      */
     Edge.numbers = function () {
 

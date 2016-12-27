@@ -162,7 +162,7 @@
     /**
      * @method is
      * @static
-     * @return {boolean}
+     * @returns {boolean}
      */
     IE.is = function () {
 
@@ -174,7 +174,7 @@
     /**
      * @method is6
      * @static
-     * @return {boolean}
+     * @returns {boolean}
      */
     IE.is6 = function () {
 
@@ -186,7 +186,7 @@
     /**
      * @method is7
      * @static
-     * @return {boolean}
+     * @returns {boolean}
      */
     IE.is7 = function () {
 
@@ -198,7 +198,7 @@
     /**
      * @method is8
      * @static
-     * @return {boolean}
+     * @returns {boolean}
      */
     IE.is8 = function () {
 
@@ -210,7 +210,7 @@
     /**
      * @method is9
      * @static
-     * @return {boolean}
+     * @returns {boolean}
      */
     IE.is9 = function () {
 
@@ -222,7 +222,7 @@
     /**
      * @method is10
      * @static
-     * @return {boolean}
+     * @returns {boolean}
      */
     IE.is10 = function () {
 
@@ -234,7 +234,7 @@
     /**
      * @method is11
      * @static
-     * @return {boolean}
+     * @returns {boolean}
      */
     IE.is11 = function () {
 
@@ -247,7 +247,7 @@
      * version float型
      * @method version
      * @static
-     * @return {int}
+     * @returns {int}
      */
     IE.version = function () {
 
@@ -260,7 +260,7 @@
      * version 正数
      * @method major
      * @static
-     * @return {int}
+     * @returns {int}
      */
     IE.major = function () {
 
@@ -272,7 +272,7 @@
      * IE 8 or 7 or 6 判定
      * @method legacy
      * @static
-     * @return {boolean}
+     * @returns {boolean}
      */
     IE.legacy = function () {
 

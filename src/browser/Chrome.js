@@ -147,7 +147,7 @@
     /**
      * @method is
      * @static
-     * @return {boolean}
+     * @returns {boolean}
      */
     Chrome.is = function () {
 
@@ -160,7 +160,7 @@
      *
      * @method version
      * @static
-     * @return {float} N.NNN で返します
+     * @returns {float} N.NNN で返します
      */
     Chrome.version = function () {
 
@@ -173,7 +173,7 @@
      *
      * @method build
      * @static
-     * @return {string} NN.NN.NN.NN 型（文字）で返します
+     * @returns {string} NN.NN.NN.NN 型（文字）で返します
      */
     Chrome.build = function () {
 
@@ -185,7 +185,7 @@
     /**
      * @method major
      * @static
-     * @return {int}
+     * @returns {int}
      */
     Chrome.major = function () {
 
@@ -197,7 +197,7 @@
     /**
      * @method numbers
      * @static
-     * @return {*[]} [major: int, minor: int, build: int] 形式で返します
+     * @returns {*[]} [major: int, minor: int, build: int] 形式で返します
      */
     Chrome.numbers = function () {
 

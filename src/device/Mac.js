@@ -62,7 +62,7 @@
     /**
      * @method is
      * @static
-     * @return {boolean}
+     * @returns {boolean}
      */
     Mac.is = function () {
 

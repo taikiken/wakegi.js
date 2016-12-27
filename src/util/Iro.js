@@ -65,7 +65,7 @@
      * @param {int} r
      * @param {int} g
      * @param {int} b
-     * @return {object} {h: number, s: number, l: number}
+     * @returns {object} {h: number, s: number, l: number}
      */
     Iro.rgb2hsl = function ( r, g, b ){
 
@@ -117,7 +117,7 @@
      * @param {number} h
      * @param {number} s
      * @param {number} l
-     * @return {object} {r: number, g: number, b: number}
+     * @returns {object} {r: number, g: number, b: number}
      */
     Iro.hsl2rgb = function ( h, s, l ) {
 
@@ -165,7 +165,7 @@
      * @param {int} r
      * @param {int} g
      * @param {int} b
-     * @return {object} {h: number, s: number, v: number}
+     * @returns {object} {h: number, s: number, v: number}
      */
     Iro.rgb2hsv = function ( r, g, b ) {
 
@@ -216,7 +216,7 @@
      * @param {number} h
      * @param {number} s
      * @param {number} v
-     * @return {object} {r: number, g: number, b: number}
+     * @returns {object} {r: number, g: number, b: number}
      */
     Iro.hsv2rgb = function ( h, s, v ) {
 
@@ -280,7 +280,7 @@
      * @method hexShort
      * @static
      * @param hex
-     * @return {*}
+     * @returns {*}
      */
     Iro.hexShort  = function ( hex ) {
 
@@ -303,7 +303,7 @@
      * @method hex2rgb
      * @static
      * @param {string} hex CSS 色設定文字 #ff0000
-     * @return {object} {r: number, g: number, b: number}
+     * @returns {object} {r: number, g: number, b: number}
      */
     Iro.hex2rgb = function ( hex ) {
 
@@ -340,7 +340,7 @@
      * @param {int} r
      * @param {int} g
      * @param {int} b
-     * @return {string}
+     * @returns {string}
      */
     Iro.rgb2hex = function ( r, g, b ) {
 
@@ -360,7 +360,7 @@
      * @method int2hex
      * @static
      * @param {number} num
-     * @return {string}
+     * @returns {string}
      */
     Iro.int2hex = function ( num ) {
 
@@ -394,7 +394,7 @@
      * @method hex2int
      * @static
      * @param hex
-     * @return {int|null}
+     * @returns {int|null}
      */
     Iro.hex2int = function ( hex ) {
 

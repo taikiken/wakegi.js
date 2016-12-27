@@ -112,7 +112,7 @@
     /**
      * @method is
      * @static
-     * @return {boolean}
+     * @returns {boolean}
      */
     CriOS.is = function () {
 
@@ -125,7 +125,7 @@
      *
      * @method version
      * @static
-     * @return {float} N.NNN で返します
+     * @returns {float} N.NNN で返します
      */
     CriOS.version = function () {
 
@@ -139,7 +139,7 @@
      *
      * @method build
      * @static
-     * @return {string} NN.NN.NN.NN 型（文字）で返します
+     * @returns {string} NN.NN.NN.NN 型（文字）で返します
      */
     CriOS.build = function () {
 
@@ -151,7 +151,7 @@
     /**
      * @method major
      * @static
-     * @return {int}
+     * @returns {int}
      */
     CriOS.major = function () {
 
@@ -163,7 +163,7 @@
     /**
      * @method numbers
      * @static
-     * @return {*[]} [major: int, minor: int, build: int] 形式で返します
+     * @returns {*[]} [major: int, minor: int, build: int] 形式で返します
      */
     CriOS.numbers = function () {
 

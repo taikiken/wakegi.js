@@ -51,7 +51,7 @@
      *
      * @method touch
      * @static
-     * @return {boolean}
+     * @returns {boolean}
      */
     Element.touch = function () {
 
@@ -72,7 +72,7 @@
      *
      * @method querySelector
      * @static
-     * @return {boolean}
+     * @returns {boolean}
      */
     Element.querySelector = function () {
 
@@ -92,7 +92,7 @@
      *
      * @method canvas
      * @static
-     * @return {boolean}
+     * @returns {boolean}
      */
     Element.canvas = function () {
 
@@ -112,7 +112,7 @@
      *
      * @method webgl
      * @static
-     * @return {boolean}
+     * @returns {boolean}
      */
     Element.webgl = function () {
 
@@ -146,7 +146,7 @@
      *
      * @method find
      * @param {string} searchKey
-     * @return {*} HTMLElement を返します
+     * @returns {*} HTMLElement を返します
      */
     Element.find = function ( searchKey ) {
 

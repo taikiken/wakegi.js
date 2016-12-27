@@ -140,7 +140,7 @@
     /**
      * @method is
      * @static
-     * @return {boolean}
+     * @returns {boolean}
      */
     Safari.is = function () {
 
@@ -164,7 +164,7 @@
      *
      * @method version
      * @static
-     * @return {float} N.NN で返します
+     * @returns {float} N.NN で返します
      */
     Safari.version = function () {
 
@@ -176,7 +176,7 @@
     /**
      * @method major
      * @static
-     * @return {int}
+     * @returns {int}
      */
     Safari.major = function () {
 
@@ -189,7 +189,7 @@
      *
      * @method build
      * @static
-     * @return {string} NN.NN.NN.NN 型（文字）で返します
+     * @returns {string} NN.NN.NN.NN 型（文字）で返します
      */
     Safari.build = function () {
 
@@ -201,7 +201,7 @@
     /**
      * @method numbers
      * @static
-     * @return {*[]} [major: int, minor: int, build: int] 形式で返します
+     * @returns {*[]} [major: int, minor: int, build: int] 形式で返します
      */
     Safari.numbers = function () {
 
@@ -214,7 +214,7 @@
      * @method number
      * @deprecated instead of Safari.numbers
      * @static
-     * @return {*[]} [major: int, minor: int, build: int] 形式で返します
+     * @returns {*[]} [major: int, minor: int, build: int] 形式で返します
      */
     Safari.number = function () {
 

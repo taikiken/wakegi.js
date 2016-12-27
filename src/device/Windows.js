@@ -83,7 +83,7 @@
     /**
      * @method is
      * @static
-     * @return {boolean}
+     * @returns {boolean}
      */
     Windows.is = function () {
 
@@ -94,7 +94,7 @@
     /**
      * @method phone
      * @static
-     * @return {boolean}
+     * @returns {boolean}
      */
     Windows.phone = function () {
 

@@ -45,7 +45,7 @@
      * @method is
      * @deprecated instead of Element.touch
      * @static
-     * @return {boolean}
+     * @returns {boolean}
      */
     Touch.is = function () {
 

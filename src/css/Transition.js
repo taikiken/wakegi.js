@@ -46,7 +46,7 @@
      * @method is
      * @deprecated instead of Css3.transition
      * @static
-     * @return {boolean}
+     * @returns {boolean}
      */
     Transition.is = function () {
 

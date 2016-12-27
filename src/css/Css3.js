@@ -57,7 +57,7 @@
      *
      * @method transition
      * @static
-     * @return {boolean}
+     * @returns {boolean}
      */
     Css3.transition = function () {
 
@@ -84,7 +84,7 @@
      *
      * @method transform
      * @static
-     * @return {boolean}
+     * @returns {boolean}
      */
     Css3.transform = function () {
 
@@ -111,7 +111,7 @@
      *
      * @method matchMedia
      * @static
-     * @return {boolean}
+     * @returns {boolean}
      */
     Css3.matchMedia = function () {
 
@@ -129,7 +129,7 @@
      *
      * @method orientationChange
      * @static
-     * @return {boolean}
+     * @returns {boolean}
      */
     Css3.orientationChange = function () {
 
@@ -148,7 +148,7 @@
      *
      * @method orientation
      * @static
-     * @return {boolean}
+     * @returns {boolean}
      */
     Css3.orientation = function () {
 
@@ -166,7 +166,7 @@
      *
      * @method backgroundSize
      * @static
-     * @return {boolean}
+     * @returns {boolean}
      */
     Css3.backgroundSize = function () {
 

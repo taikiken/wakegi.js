@@ -57,7 +57,7 @@
      * @method hyphen
      * @static
      * @param {string} key
-     * @return {string}
+     * @returns {string}
      */
     Patterns.hyphen = function ( key ) {
 
@@ -69,7 +69,7 @@
      * @method has
      * @static
      * @param {string} key
-     * @return {boolean}
+     * @returns {boolean}
      */
     Patterns.has = function ( key ) {
 
@@ -81,7 +81,7 @@
      * @method get
      * @static
      * @param {string} key
-     * @return {Array}
+     * @returns {Array}
      */
     Patterns.get = function ( key ) {
 

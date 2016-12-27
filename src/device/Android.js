@@ -166,7 +166,7 @@
     /**
      * @method is
      * @static
-     * @return {boolean}
+     * @returns {boolean}
      */
     Android.is = function () {
 
@@ -179,7 +179,7 @@
      * Android 標準ブラウザ
      * @method standard
      * @static
-     * @return {boolean}
+     * @returns {boolean}
      */
     Android.standard = function () {
 
@@ -192,7 +192,7 @@
      * Android Phone
      * @method phone
      * @static
-     * @return {boolean}
+     * @returns {boolean}
      */
     Android.phone = function () {
 
@@ -205,7 +205,7 @@
      * Android Tablet
      * @method tablet
      * @static
-     * @return {boolean}
+     * @returns {boolean}
      */
     Android.tablet = function () {
 
@@ -218,7 +218,7 @@
      * Android HD 端末
      * @method hd
      * @static
-     * @return {boolean}
+     * @returns {boolean}
      */
     Android.hd = function () {
 
@@ -231,7 +231,7 @@
      *
      * @method version
      * @static
-     * @return {float} N.NN で返します
+     * @returns {float} N.NN で返します
      */
     Android.version = function () {
 
@@ -244,7 +244,7 @@
      *
      * @method build
      * @static
-     * @return {string} NN.NN.NN 型（文字）で返します
+     * @returns {string} NN.NN.NN 型（文字）で返します
      */
     Android.build = function () {
 
@@ -256,7 +256,7 @@
     /**
      * @method major
      * @static
-     * @return {int}
+     * @returns {int}
      */
     Android.major = function () {
 
@@ -267,7 +267,7 @@
     /**
      * @method numbers
      * @static
-     * @return {*[]} [major: int, minor: int, build: int] 形式で返します
+     * @returns {*[]} [major: int, minor: int, build: int] 形式で返します
      */
     Android.numbers = function () {
 
@@ -280,7 +280,7 @@
      * @method number
      * @deprecated instead of Android.numbers
      * @static
-     * @return {*[]} [major: int, minor: int, build: int] 形式で返します
+     * @returns {*[]} [major: int, minor: int, build: int] 形式で返します
      */
     Android.number = function () {
       // 互換のために残します

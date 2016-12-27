@@ -46,7 +46,7 @@
      * @method parse
      * @static
      * @param {Element} element
-     * @return {{}}
+     * @returns {{}}
      */
     Dataset.parse = function ( element ) {
 
@@ -66,7 +66,7 @@
      * @method modern
      * @static
      * @param {Element} element
-     * @return {{}}
+     * @returns {{}}
      */
     Dataset.modern = function ( element ) {
 
@@ -117,7 +117,7 @@
      * @method legacy
      * @static
      * @param {Element} element
-     * @return {{}}
+     * @returns {{}}
      */
     Dataset.legacy = function ( element ) {
 

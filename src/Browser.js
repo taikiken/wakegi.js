@@ -21,91 +21,77 @@
  * @module wakegi
  * @submodule Browser
  */
-( function ( window ){
+(function(window) {
   'use strict';
+
   var
-    wakegi = window.wakegi;
+    navigator = window.navigator,
+    ua,
+    app;
 
-  wakegi.Browser = ( function (){
-    var
-      navigator = window.navigator,
-      ua,
-      app;
+  /**
+   * Browser 基本機能
+   *
+   * 主要Classの親になります
+   *
+   * @class Browser
+   * @static
+   * @constructor
+   */
+  function Browser() {
+    throw new Error('Browser can\'t create instance.');
+  }
 
-    /**
-     * Browser 基本機能
-     *
-     * 主要Classの親になります
-     *
-     * @class Browser
-     * @static
-     * @constructor
-     */
-    function Browser () {
-      throw new Error( 'Browser can\'t create instance.' );
+  var p = Browser.prototype;
+
+  p.constructor = Browser;
+  /**
+   * @method init
+   * @static
+   */
+  Browser.init = function() {
+    if (typeof ua === 'undefined' || typeof app === 'undefined') {
+      // ua undefined
+      ua = navigator.userAgent;
+      app = navigator.appVersion;
     }
+  };
+  /**
+   * @method navigator
+   * @static
+   * @returns {Navigator} window.navigator オブジェクトを返します
+   */
+  Browser.navigator = function() {
+    return navigator;
+  };
+  /**
+   * @method ua
+   * @static
+   * @returns {*|string} navigator.userAgent を返します
+   */
+  Browser.ua = function() {
+    Browser.init();
+    return ua;
+  };
+  /**
+   * @method app
+   * @static
+   * @returns {*|string} navigator.appVersion を返します
+   */
+  Browser.app = function() {
+    Browser.init();
+    return app;
+  };
+  /**
+   * userAgent regular expression of Safari
+   * @method matchSafari
+   * @static
+   * @returns {boolean} true: Safari
+   */
+  Browser.matchSafari = function() {
+    Browser.init();
+    return !!ua.match(/safari/i);
+  };
 
-    var p = Browser.prototype;
-
-    p.constructor = Browser;
-    /**
-     * @method init
-     * @static
-     */
-    Browser.init = function () {
-
-      if ( typeof ua === 'undefined' || typeof app === 'undefined' ) {
-          // ua undefined
-        ua = navigator.userAgent;
-        app = navigator.appVersion;
-
-      }
-
-    };
-    /**
-     * @method navigator
-     * @static
-     * @return {Navigator} window.navigator オブジェクトを返します
-     */
-    Browser.navigator = function () {
-      return navigator;
-    };
-    /**
-     * @method ua
-     * @static
-     * @return {*|string} navigator.userAgent を返します
-     */
-    Browser.ua = function () {
-
-      Browser.init();
-      return ua;
-
-    };
-    /**
-     * @method app
-     * @static
-     * @return {*|string} navigator.appVersion を返します
-     */
-    Browser.app = function () {
-
-      Browser.init();
-      return app;
-
-    };
-    /**
-     * userAgent regular expression of Safari
-     * @method matchSafari
-     * @static
-     * @return {boolean}
-     */
-    Browser.matchSafari = function () {
-
-      Browser.init();
-      return !!ua.match(/safari/i);
-
-    };
-
-
-    return Browser;
-  }() );
-}( window ) );
+  window.wakegi.Browser = Browser;
+}(window));

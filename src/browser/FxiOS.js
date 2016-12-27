@@ -108,7 +108,7 @@
     /**
      * @method is
      * @static
-     * @return {boolean}
+     * @returns {boolean}
      */
     FxiOS.is = function () {
 
@@ -122,7 +122,7 @@
      *
      * @method version
      * @static
-     * @return {float} N.NN で返します
+     * @returns {float} N.NN で返します
      */
     FxiOS.version = function () {
 
@@ -134,7 +134,7 @@
     /**
      * @method major
      * @static
-     * @return {int}
+     * @returns {int}
      */
     FxiOS.major = function () {
 
@@ -147,7 +147,7 @@
      *
      * @method build
      * @static
-     * @return {string} NN.NN.NN.NN 型（文字）で返します
+     * @returns {string} NN.NN.NN.NN 型（文字）で返します
      */
     FxiOS.build = function () {
 
@@ -159,7 +159,7 @@
     /**
      * @method numbers
      * @static
-     * @return {*[]} [major: int, minor: int, build: int] 形式で返します
+     * @returns {*[]} [major: int, minor: int, build: int] 形式で返します
      */
     FxiOS.numbers = function () {
 

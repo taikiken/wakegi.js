@@ -47,7 +47,7 @@
     /**
      * @method is
      * @static
-     * @return {boolean}
+     * @returns {boolean}
      */
     Mobile.is = function () {
 
@@ -57,7 +57,7 @@
     /**
      * @method phone
      * @static
-     * @return {boolean}
+     * @returns {boolean}
      */
     Mobile.phone = function () {
 
@@ -67,7 +67,7 @@
     /**
      * @method tablet
      * @static
-     * @return {boolean}
+     * @returns {boolean}
      */
     Mobile.tablet = function () {
 

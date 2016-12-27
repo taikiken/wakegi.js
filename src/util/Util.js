@@ -46,7 +46,7 @@
      * @method camelize
      * @static
      * @param {string} str
-     * @return {string} dash(-)連結 word を camel case へ変換し返します。
+     * @returns {string} dash(-)連結 word を camel case へ変換し返します。
      */
     Util.camelize = function ( str ) {
 
@@ -64,7 +64,7 @@
      * @method dash
      * @static
      * @param {string} str
-     * @return {string}
+     * @returns {string}
      */
     Util.dash = function ( str ) {
 

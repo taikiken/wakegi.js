@@ -1,6 +1,10 @@
 extends:
   "eslint:recommended"
 
+env:
+  # http://stackoverflow.com/questions/30398825/eslint-window-is-not-defined-how-to-allow-global-variables-in-package-json
+  browser: true
+
 rules:
   indent: [2, 2, {SwitchCase: 1}]
   # 今回は tab で

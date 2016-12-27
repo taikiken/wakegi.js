@@ -111,7 +111,7 @@
     /**
      * @method is
      * @static
-     * @return {boolean}
+     * @returns {boolean}
      */
     Firefox.is = function () {
 
@@ -124,7 +124,7 @@
      *
      * @method version
      * @static
-     * @return {float} N.NN で返します
+     * @returns {float} N.NN で返します
      */
     Firefox.version = function () {
 
@@ -136,7 +136,7 @@
     /**
      * @method major
      * @static
-     * @return {int}
+     * @returns {int}
      */
     Firefox.major = function () {
 
@@ -149,7 +149,7 @@
      *
      * @method build
      * @static
-     * @return {string} NN.NN.NN.NN 型（文字）で返します
+     * @returns {string} NN.NN.NN.NN 型（文字）で返します
      */
     Firefox.build = function () {
 
@@ -161,7 +161,7 @@
     /**
      * @method numbers
      * @static
-     * @return {*[]} [major: int, minor: int, build: int] 形式で返します
+     * @returns {*[]} [major: int, minor: int, build: int] 形式で返します
      */
     Firefox.numbers = function () {
 

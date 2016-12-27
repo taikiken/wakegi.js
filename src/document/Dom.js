@@ -55,7 +55,7 @@
     /**
      * 使用 Element を返します
      * @method element
-     * @return {HTMLElement}
+     * @returns {HTMLElement}
      */
     p.element = function () {
 
@@ -66,7 +66,7 @@
     /**
      * @method hasClass
      * @param {string} className
-     * @return {boolean}
+     * @returns {boolean}
      */
     p.hasClass = function ( className ) {
 
@@ -76,7 +76,7 @@
     /**
      * @method addClass
      * @param {string} className
-     * @return {Dom}
+     * @returns {Dom}
      */
     p.addClass = function ( className ) {
 
@@ -87,7 +87,7 @@
     /**
      * @method removeClass
      * @param {string} className
-     * @return {Dom}
+     * @returns {Dom}
      */
     p.removeClass = function ( className ) {
 
@@ -98,7 +98,7 @@
     /**
      * @method style
      * @param {string} [styleProp]
-     * @return {*}
+     * @returns {*}
      */
     p.style = function ( styleProp ) {
 
@@ -110,7 +110,7 @@
      * @static
      * @param {HTMLElement} element
      * @param {string} className
-     * @return {boolean}
+     * @returns {boolean}
      */
     Dom.hasClass = function ( element, className ) {
       // categoryX があって category で検索すると match するのまずい
@@ -128,7 +128,7 @@
      * @static
      * @param {HTMLElement} element
      * @param {string} className
-     * @return {Dom}
+     * @returns {Dom}
      */
     Dom.addClass = function ( element, className ) {
 
@@ -160,7 +160,7 @@
      * @static
      * @param {HTMLElement} element
      * @param {string} className
-     * @return {Dom}
+     * @returns {Dom}
      */
     Dom.removeClass = function ( element, className ) {
 
@@ -224,7 +224,7 @@
      * @param {Object} defaultView
      * @param {HTMLElement} el
      * @param {string} [styleProp]
-     * @return {CSSStyleDeclaration|*|String}
+     * @returns {CSSStyleDeclaration|*|String}
      *    styleProp が null or undefined or "" の時は CSSStyleDeclaration Object<br>
      *    指定されている時は CSS 設定値(string)を返します
      */
@@ -249,7 +249,7 @@
      * @static
      * @param {HTMLElement} el
      * @param {string} [styleProp]
-     * @return {*}
+     * @returns {*}
      */
     Dom.styleCurrent = function ( el, styleProp ) {
 
@@ -303,7 +303,7 @@
      * @param {Object} defaultView
      * @param {HTMLElement} el
      * @param {Array} patterns [string, ...]
-     * @return {string}
+     * @returns {string}
      */
     Dom.shortHand = function ( defaultView, el, patterns ) {
 
@@ -358,7 +358,7 @@
      * @static
      * @param {HTMLElement} el
      * @param {string} [styleProp]
-     * @return {*}
+     * @returns {*}
      */
     Dom.getStyle = function ( el, styleProp ) {
       // https://gist.github.com/cms/369133

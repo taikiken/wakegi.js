@@ -132,7 +132,7 @@
     /**
      * @method is
      * @static
-     * @return {boolean}
+     * @returns {boolean}
      */
     iOS.is = function () {
 
@@ -143,7 +143,7 @@
     /**
      * @method iPhone
      * @static
-     * @return {boolean}
+     * @returns {boolean}
      */
     iOS.iPhone = function () {
 
@@ -154,7 +154,7 @@
     /**
      * @method iPad
      * @static
-     * @return {boolean}
+     * @returns {boolean}
      */
     iOS.iPad = function () {
 
@@ -165,7 +165,7 @@
     /**
      * @method iPod
      * @static
-     * @return {boolean}
+     * @returns {boolean}
      */
     iOS.iPod = function () {
 
@@ -176,7 +176,7 @@
     /**
      * @method standalone
      * @static
-     * @return {Function|boolean}
+     * @returns {Function|boolean}
      */
     iOS.standalone = function () {
 
@@ -189,7 +189,7 @@
      * @method fullScreen
      * @deprecated instead of iOS.standalone
      * @static
-     * @return {Function|boolean}
+     * @returns {Function|boolean}
      */
     iOS.fullScreen = function () {
 
@@ -201,7 +201,7 @@
      *
      * @method version
      * @static
-     * @return {float} N.NN で返します
+     * @returns {float} N.NN で返します
      */
     iOS.version = function () {
 
@@ -214,7 +214,7 @@
      *
      * @method build
      * @static
-     * @return {string} NN.NN.NN 型（文字）で返します
+     * @returns {string} NN.NN.NN 型（文字）で返します
      */
     iOS.build = function () {
 
@@ -226,7 +226,7 @@
     /**
      * @method major
      * @static
-     * @return {int}
+     * @returns {int}
      */
     iOS.major = function () {
 
@@ -237,7 +237,7 @@
     /**
      * @method numbers
      * @static
-     * @return {*[]} [major: int, minor: int, build: int] 形式で返します
+     * @returns {*[]} [major: int, minor: int, build: int] 形式で返します
      */
     iOS.numbers = function () {
 
@@ -250,7 +250,7 @@
      * @method number
      * @deprecated instead of Safari.numbers
      * @static
-     * @return {*[]} [major: int, minor: int, build: int] 形式で返します
+     * @returns {*[]} [major: int, minor: int, build: int] 形式で返します
      */
     iOS.number = function () {
 
@@ -262,7 +262,7 @@
      * アプリ内ブラウザかどうかを返します
      * @method webView
      * @static
-     * @return {boolean}
+     * @returns {boolean}
      */
     iOS.webView = function () {
 

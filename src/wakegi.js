@@ -20,14 +20,20 @@
  * @module wakegi
  * @type {{}|wakegi}
  */
-/* JSLint -W016 */
-/* JSLint -W116 */
-var wakegi = wakegi || {};
+
+/**
+ * builtin 関数を拡張するのを許可
+ * `==` 判定許可
+ */
+
+/* eslint no-extend-native: 1 */
+/* eslint eqeqeq: 1 */
+var wakegi = window.wakegi || {};
 
 wakegi.int = parseInt;
 wakegi.float = parseFloat;
 
-( function (){
+(function() {
   'use strict';
 
   // Array.isArray
@@ -109,8 +115,8 @@ wakegi.float = parseFloat;
   // trim
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
   if (!String.prototype.trim) {
-    String.prototype.trim = function () {
+    String.prototype.trim = function() {
       return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
     };
   }
-}() );
+}());
