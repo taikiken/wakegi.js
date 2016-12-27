@@ -14,47 +14,40 @@
  */
 
 /**
- * deprecated instead of Css3
+ * CSS3 transition 使用可能かを判定します
  *
  * @module Browser
  * @submodule Transition
  */
-( function( window ){
+(function(window) {
   'use strict';
   var
     wakegi = window.wakegi,
-    Browser = wakegi.Browser;
+    Browser = wakegi.Browser,
+    Css3 = Browser.Css3;
 
-  Browser.Transition = ( function(){
-    var
-      Css3 = Browser.Css3;
+  /**
+   * @deprecated instead of Css3
+   * @class Transition
+   * @static
+   * @constructor
+   */
+  function Transition() {
+    throw new Error('Transition can\'t create instance.');
+  }
 
-    /**
-     * @deprecated instead of Css3
-     * @class Transition
-     * @static
-     * @constructor
-     */
-    function Transition () {
-      throw new Error( 'Transition can\'t create instance.' );
-    }
+  var p = Transition.prototype;
 
-    var p = Transition.prototype;
-
-    p.constructor = Transition;
-    /**
-     * @method is
-     * @deprecated instead of Css3.transition
-     * @static
-     * @returns {boolean}
-     */
-    Transition.is = function() {
-
-      return Css3.transition();
-
-    };
-
-    return Transition;
-  }() );
-
-}( window ) );
+  p.constructor = Transition;
+  /**
+   * CSS3 transition 使用可能かを判定します
+   * @method is
+   * @deprecated instead of Css3.transition
+   * @static
+   * @returns {boolean} true: CSS3 transition 使用可能
+   */
+  Transition.is = function() {
+    return Css3.transition();
+  };
+  Browser.Transition = Transition;
+}(window));
