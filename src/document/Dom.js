@@ -19,431 +19,321 @@
  * @submodule Dom
  *
  * */
-/* JSLint -W016 */
-( function( window ){
+
+(function(window) {
   'use strict';
 
   var
-    //document = window.document,
     wakegi = window.wakegi;
 
-  wakegi.Dom = ( function(){
+  var
+    Patterns = wakegi.Patterns;
 
-    var
-      Patterns = wakegi.Patterns;
-
+  /**
+   * HTML Element style / class を操作します
+   * @class Dom
+   * @static
+   * @constructor
+   * @param {HTMLElement} element 操作対象 Element
+   */
+  function Dom(element) {
     /**
-     * @class Dom
-     * @static
-     * @constructor
-     * @param {HTMLElement} element
+     * @property _element
+     * @type {HTMLElement}
+     * @private
      */
-    function Dom ( element ) {
+    this.element = element;
+  }
 
-      /**
-       * @property _element
-       * @type {HTMLElement}
-       * @private
-       */
-      this._element = element;
+  var p = Dom.prototype;
+  p.constructor = Dom;
 
+  // /**
+  //  * 使用 Element を返します
+  //  * @method element
+  //  * @returns {HTMLElement}
+  //  */
+  // p.element = function() {
+  //   return this.element;
+  // };
+  /**
+   * CSS class が存在するかを調べます
+   * @method hasClass
+   * @param {string} className 調査する class name
+   * @returns {boolean} true CSS class が存在する
+   */
+  p.hasClass = function( className ) {
+    return Dom.hasClass(this.element, className);
+  };
+  /**
+   * @method addClass
+   * @param {string} className 対象 class 名称
+   * @returns {boolean} true: 追加成功
+   */
+  p.addClass = function( className ) {
+    return Dom.addClass(this.element, className);
+  };
+  /**
+   * @method removeClass
+   * @param {string} className 対象 class 名称
+   * @returns {boolean} true: 削除成功
+   */
+  p.removeClass = function( className ) {
+    return Dom.removeClass(this.element, className);
+  };
+  /**
+   * element の 指定 css property 値を取得します
+   * @method style
+   * @param {string} [styleProp=''] css property name
+   * @returns {*} CSS 値
+   */
+  p.style = function(styleProp) {
+    return Dom.getStyle(this.element, styleProp);
+  };
+  /**
+   * CSS class が存在するかを調べます
+   * @method hasClass
+   * @static
+   * @param {HTMLElement} element 操作対象 Element
+   * @param {string} className 調査する class name
+   * @returns {boolean} true: 存在する
+   */
+  Dom.hasClass = function( element, className ) {
+    // categoryX があって category で検索すると match するのまずい
+    // return !!element.className.match( new RegExp( className, 'i' ) );
+    // return !!element.className.match( new RegExp( '^' + className + '$', 'g' ) );
+    // return !!element.className.match( new RegExp( '\\' + className + '\\w', 'g' ) );
+    var
+      elementClass = element.className,
+      classes = elementClass.split( ' ' );
+
+    return classes.indexOf( className ) !== -1;
+  };
+  /**
+   * css class を追加します
+   * @method addClass
+   * @static
+   * @param {HTMLElement} element 操作対象 Element
+   * @param {string} className 追加する class name
+   * @returns {boolean} true: 追加した
+   */
+  Dom.addClass = function( element, className ) {
+    var
+      names = '',
+      result = false,
+      space;
+
+    if (!Dom.hasClass(element, className)) {
+      // 追加 className が not found
+      space = '';
+      names = element.className;
+
+      if (names !== '') {
+        // 既に class 設定されているので 1 space を付与する
+        space = ' ';
+      }
+
+      names += space + className;
+      names = names.split( '  ' ).join( ' ' );
+      element.className = names;
+      result = true;
     }
 
-    var p = Dom.prototype;
-    p.constructor = Dom;
+    return result;
+  };
+  /**
+   * element から class を削除します
+   * @method removeClass
+   * @static
+   * @param {HTMLElement} element 操作対象 Element
+   * @param {string} className 削除対象 class name
+   * @returns {boolean} true: 削除した
+   */
+  Dom.removeClass = function( element, className ) {
+    var
+      result = false,
+      names,
+      elementClass,
+      classes,
+      i, limit,
+      currentClass;
 
-    /**
-     * 使用 Element を返します
-     * @method element
-     * @returns {HTMLElement}
-     */
-    p.element = function() {
+    if ( !Dom.hasClass( element, className ) ) {
+      return result;
+    }
 
-      return this._element;
-
-    };
-
-    /**
-     * @method hasClass
-     * @param {string} className
-     * @returns {boolean}
-     */
-    p.hasClass = function( className ) {
-
-      return Dom.hasClass( this._element, className );
-
-    };
-    /**
-     * @method addClass
-     * @param {string} className
-     * @returns {Dom}
-     */
-    p.addClass = function( className ) {
-
-      Dom.addClass( this._element, className );
-      return this;
-
-    };
-    /**
-     * @method removeClass
-     * @param {string} className
-     * @returns {Dom}
-     */
-    p.removeClass = function( className ) {
-
-      Dom.removeClass( this._element, className );
-      return this;
-
-    };
-    /**
-     * @method style
-     * @param {string} [styleProp]
-     * @returns {*}
-     */
-    p.style = function( styleProp ) {
-
-      return Dom.getStyle( this._element, styleProp );
-
-    };
-    /**
-     * @method hasClass
-     * @static
-     * @param {HTMLElement} element
-     * @param {string} className
-     * @returns {boolean}
-     */
-    Dom.hasClass = function( element, className ) {
-      // categoryX があって category で検索すると match するのまずい
-      // return !!element.className.match( new RegExp( className, 'i' ) );
-      // return !!element.className.match( new RegExp( '^' + className + '$', 'g' ) );
-      // return !!element.className.match( new RegExp( '\\' + className + '\\w', 'g' ) );
-      var
-        elementClass = element.className,
-        classes = elementClass.split( ' ' );
-
-      return classes.indexOf( className ) !== -1;
-    };
-    /**
-     * @method addClass
-     * @static
-     * @param {HTMLElement} element
-     * @param {string} className
-     * @returns {Dom}
-     */
-    Dom.addClass = function( element, className ) {
-
-      var
-        names = '',
-        space;
-
-      if ( !Dom.hasClass( element, className ) ) {
-        // 追加 className が not found
-        space = '';
-        names = element.className;
-
-        if ( names !== '' ) {
-          // 既に class 設定されているので 1 space を付与する
-          space = ' ';
-        }
-
-        names += space + className;
-        names = names.split( '  ' ).join( ' ' );
-        element.className = names;
-
+    // @type {string}
+    elementClass = element.className;
+    // @type {array<string>}
+    classes = elementClass.split( ' ' );
+    for (i = 0, limit = classes.length; i < limit; i = (i + 1) | 0) {
+      currentClass = classes[i];
+      if (!currentClass) {
+        continue;
       }
-
-      return Dom;
-
-    };
-    /**
-     * @method removeClass
-     * @static
-     * @param {HTMLElement} element
-     * @param {string} className
-     * @returns {Dom}
-     */
-    Dom.removeClass = function( element, className ) {
-
-      var
-        names,
-        elementClass,
-        classes,
-        i, limit,
-        currentClass;
-
-      //console.log( "Element.removeClass ", className, Element.hasClass( element, className ) );
-
-      if ( !Dom.hasClass( element, className ) ) {
-        return Dom;
+      if (currentClass === className) {
+        result = true;
+        classes[i] = 'XXX_XXX_XXX';
       }
+    }
+    // XXX_XXX_XXX を削除して 2 spaces を 1 space へ
+    names = classes.join(' ').replace('XXX_XXX_XXX', '').split('  ').join(' ');
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+    // remove, start / last white space
+    names = names.trim();
+    element.className = names;
+    return result;
+  };
+  /**
+   * getComputedStyle を使い HTMLElement style value を取得します
+   * @method styleCompute
+   * @static
+   * @param {Object} defaultView `defaultView.getComputedStyle` します
+   * @param {HTMLElement} el 調査対象 Element
+   * @param {string} [styleProp] CSS property name
+   * @returns {CSSStyleDeclaration|*|String}
+   *    styleProp が null or undefined or "" の時は CSSStyleDeclaration Object<br>
+   *    指定されている時は CSS 設定値(string)を返します
+   */
+  Dom.styleCompute = function( defaultView, el, styleProp ) {
+    var
+      style = defaultView.getComputedStyle( el, null );
 
-      // @type {string}
-      elementClass = element.className;
-      // @type {array<string>}
-      classes = elementClass.split( ' ' );
-      for ( i = 0, limit = classes.length; i < limit; i = (i+1) | 0 ) {
-        currentClass = classes[i];
+    if ( !!styleProp ) {
+      styleProp = styleProp.replace( /([A-Z])/g, '-$1' ).toLowerCase();
+      return style.getPropertyValue( styleProp );
+    }
+    return style;
+  };
+  /**
+   * currentStyle を使い HTMLElement style value を取得します
+   * @method styleCurrent
+   * @static
+   * @param {HTMLElement} el 調査対象 Element
+   * @param {string} [styleProp] CSS property name
+   * @returns {*} HTMLElement style value を返します
+   */
+  Dom.styleCurrent = function( el, styleProp ) {
+    var
+      style = el.currentStyle,
+      value;
 
-        if (!currentClass) {
-          continue;
-        }
+    if (!!styleProp) {
+      // IE
+      // sanitize property name to camelCase
+      styleProp = styleProp.replace(/\-(\w)/g, function( str, letter ) {
+        return letter.toUpperCase();
+      });
 
-        if (currentClass === className) {
-          classes[i] = 'XXX_XXX_XXX';
-        }
+      value = style[styleProp];
+
+      // convert other units to pixels on IE
+      if (/^\d+(em|pt|%|ex)?$/i.test(value)) {
+        // return (function() {
+        //   var
+        //     oldLeft = el.style.left,
+        //     oldRsLeft = el.runtimeStyle.left;
+        //
+        //   el.runtimeStyle.left = el.currentStyle.left;
+        //   el.style.left = value || 0;
+        //   value = el.style.pixelLeft + 'px';
+        //   el.style.left = oldLeft;
+        //   el.runtimeStyle.left = oldRsLeft;
+        //
+        //   return value;
+        // })();
+        return Dom.styleValue(el, value);
       }
+      return value;
+    }
+    return style;
+  };
+  /**
+   * HTMLElement style value を取得します
+   * @param {HTMLElement} el 調査対象 Element
+   * @param {*} value CSS 値
+   * @returns {string|*} HTMLElement style value を返します
+   */
+  Dom.styleValue = function(el, value) {
+    var
+      oldLeft = el.style.left,
+      oldRsLeft = el.runtimeStyle.left;
 
-      // XXX_XXX_XXX を削除して 2 spaces を 1 space へ
-      names = classes.join(' ').replace('XXX_XXX_XXX', '').split('  ').join(' ');
-      // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
-      // remove, start / last white space
-      names = names.trim();
-      // // found class name
-      // names = element.className;
-      // // class を削除して 2 spaces を 1 space へ
-      // names = names.replace( className, '' ).split( '  ' ).join( ' ' );
+    el.runtimeStyle.left = el.currentStyle.left;
+    el.style.left = value || 0;
+    value = el.style.pixelLeft + 'px';
+    el.style.left = oldLeft;
+    el.runtimeStyle.left = oldRsLeft;
 
-      // // 先頭の半角space削除
-      // if ( names.substr( 0, 1 ) === ' ' ) {
-      //   names = names.substr( 1 );
-      // }
+    return value;
+  };
 
-      // if ( names === ' ' ) {
-      //   // space のみになったら空へ
-      //   names = '';
-      // }
+  /**
+   * CSS 値を取得します
+   * @method shortHand
+   * @static
+   * @param {Object} defaultView `defaultView.getComputedStyle` します
+   * @param {HTMLElement} el 調査対象 HTML tag
+   * @param {Array} patterns [string, ...]
+   * @returns {string} CSS 値を返します
+   */
+  Dom.shortHand = function(defaultView, el, patterns) {
+    var
+      top = Dom.styleCompute(defaultView, el, patterns[0]),
+      right = Dom.styleCompute(defaultView, el, patterns[1]),
+      bottom = Dom.styleCompute(defaultView, el, patterns[2]),
+      left = Dom.styleCompute(defaultView, el, patterns[3]),
+      result = '';
 
-      element.className = names;
-
-      return Dom;
-    };
-    /**
-     * getComputedStyle を使い HTMLElement style value を取得します
-     * @method styleCompute
-     * @static
-     * @param {Object} defaultView
-     * @param {HTMLElement} el
-     * @param {string} [styleProp]
-     * @returns {CSSStyleDeclaration|*|String}
-     *    styleProp が null or undefined or "" の時は CSSStyleDeclaration Object<br>
-     *    指定されている時は CSS 設定値(string)を返します
-     */
-    Dom.styleCompute = function( defaultView, el, styleProp ) {
-
-      var
-        style = defaultView.getComputedStyle( el, null );
-
-      if ( !!styleProp ) {
-
-        styleProp = styleProp.replace( /([A-Z])/g, '-$1' ).toLowerCase();
-        return style.getPropertyValue( styleProp );
-
-      }
-
-      return style;
-
-    };
-    /**
-     * currentStyle を使い HTMLElement style value を取得します
-     * @method styleCurrent
-     * @static
-     * @param {HTMLElement} el
-     * @param {string} [styleProp]
-     * @returns {*}
-     */
-    Dom.styleCurrent = function( el, styleProp ) {
-
-      var
-        style = el.currentStyle,
-        value;
-
-      if ( !!styleProp ) {
-        // IE
-        // sanitize property name to camelCase
-        styleProp = styleProp.replace(/\-(\w)/g, function( str, letter ) {
-
-          return letter.toUpperCase();
-
-        });
-
-        value = style[ styleProp ];
-
-        // convert other units to pixels on IE
-        if ( /^\d+(em|pt|%|ex)?$/i.test( value ) ) {
-
-          return ( function( value ) {
-
-            var
-              oldLeft = el.style.left,
-              oldRsLeft = el.runtimeStyle.left;
-
-            el.runtimeStyle.left = el.currentStyle.left;
-            el.style.left = value || 0;
-            value = el.style.pixelLeft + 'px';
-            el.style.left = oldLeft;
-            el.runtimeStyle.left = oldRsLeft;
-
-            return value;
-
-          } )( value );
-
-        }
-
-        return value;
-
-      }
-
-      return style;
-
-    };
-
-    /**
-     * @method shortHand
-     * @static
-     * @param {Object} defaultView
-     * @param {HTMLElement} el
-     * @param {Array} patterns [string, ...]
-     * @returns {string}
-     */
-    Dom.shortHand = function( defaultView, el, patterns ) {
-
-      var
-        top = Dom.styleCompute( defaultView, el, patterns[ 0 ] ),
-        right = Dom.styleCompute( defaultView, el, patterns[ 1 ] ),
-        bottom = Dom.styleCompute( defaultView, el, patterns[ 2 ] ),
-        left = Dom.styleCompute( defaultView, el, patterns[ 3 ] ),
-        result = '';
-
-      if ( top === bottom ) {
-
-        if ( right === left ) {
-
-         if ( top === right ) {
-
-           result = top;
-
-         } else {
-
-           result = top + ' ' + right;
-
-         }
-
+    if (top === bottom) {
+      if (right === left) {
+        if (top === right) {
+          result = top;
         } else {
-
-          result = top + ' ' + right + ' ' + bottom + ' ' + left;
-
+          result = top + ' ' + right;
         }
-
       } else {
-
-        if ( right === left ) {
-
-          result = top + ' ' + right + ' ' + bottom;
-
-        } else {
-
-          result = top + ' ' + right + ' ' + bottom + ' ' + left;
-
-        }
-
+        result = top + ' ' + right + ' ' + bottom + ' ' + left;
       }
-
-      return result;
-
-    };
-
-    /**
-     * HTMLElement の css style を返します
-     * @method getStyle
-     * @static
-     * @param {HTMLElement} el
-     * @param {string} [styleProp]
-     * @returns {*}
-     */
-    Dom.getStyle = function( el, styleProp ) {
-      // https://gist.github.com/cms/369133
-
-      //var value, defaultView = el.ownerDocument.defaultView;
-      //// W3C standard way:
-      //if (defaultView && defaultView.getComputedStyle) {
-      //  // sanitize property name to css notation (hyphen separated words eg. font-Size)
-      //
-      //  styleProp = styleProp.replace( /([A-Z])/g, "-$1" ).toLowerCase();
-      //  return defaultView.getComputedStyle( el, null ).getPropertyValue( styleProp );
-      //
-      //} else if ( el.currentStyle ) {
-      //  // IE
-      //  // sanitize property name to camelCase
-      //  styleProp = styleProp.replace(/\-(\w)/g, function( str, letter ) {
-      //    return letter.toUpperCase();
-      //  });
-      //
-      //  value = el.currentStyle[ styleProp ];
-      //
-      //  // convert other units to pixels on IE
-      //  if ( /^\d+(em|pt|%|ex)?$/i.test( value ) ) {
-      //
-      //    return ( function( value ) {
-      //      var oldLeft = el.style.left, oldRsLeft = el.runtimeStyle.left;
-      //
-      //      el.runtimeStyle.left = el.currentStyle.left;
-      //      el.style.left = value || 0;
-      //      value = el.style.pixelLeft + "px";
-      //      el.style.left = oldLeft;
-      //      el.runtimeStyle.left = oldRsLeft;
-      //
-      //      return value;
-      //    } )( value );
-      //  }
-      //
-      //  return value;
-      //}
-
-      var
-        ownerDocument = el.ownerDocument,
-        defaultView,
-        result;
-
-      if ( !!ownerDocument ) {
-
-        defaultView = ownerDocument.defaultView;
-
+    } else {
+      if (right === left) {
+        result = top + ' ' + right + ' ' + bottom;
+      } else {
+        result = top + ' ' + right + ' ' + bottom + ' ' + left;
       }
+    }
+    return result;
+  };
+  /**
+   * HTMLElement の css style を取得します
+   * @method getStyle
+   * @static
+   * @param {HTMLElement} el 調査対象 HTML tag
+   * @param {string} [styleProp] CSS property name
+   * @returns {*} HTMLElement の css style を返します
+   */
+  Dom.getStyle = function(el, styleProp) {
+    var
+      ownerDocument = el.ownerDocument,
+      defaultView,
+      result;
 
-      if ( !!defaultView && !!defaultView.getComputedStyle ) {
+    if (!!ownerDocument) {
+      defaultView = ownerDocument.defaultView;
+    }
 
-        result = Dom.styleCompute( defaultView, el, styleProp );
+    if (!!defaultView && !!defaultView.getComputedStyle) {
+      result = Dom.styleCompute(defaultView, el, styleProp);
 
-        // Firefox, shorthand css property が常に空になる
-        // 再計算を行う
-        if ( result === '' && !!styleProp && Patterns.has( styleProp ) ) {
-
-          result = Dom.shortHand( defaultView, el, Patterns.get( styleProp ) );
-
-        }
-
-      } else if ( !!el.currentStyle ) {
-
-        result = Dom.styleCurrent( el, styleProp );
-
+      // Firefox, shorthand css property が常に空になる
+      // 再計算を行う
+      if (result === '' && !!styleProp && Patterns.has(styleProp)) {
+        result = Dom.shortHand(defaultView, el, Patterns.get(styleProp));
       }
+    } else if (!!el.currentStyle) {
+      result = Dom.styleCurrent(el, styleProp);
+    }
+    return result;
+  };
 
-      //if ( typeof document.defaultView === 'undefined' || typeof document.defaultView.getComputedStyle === 'undefined' ) {
-      //
-      //  // document.defaultView undefined
-      //  result = Dom.styleCurrent( el, styleProp );
-      //
-      //} else {
-      //
-      //  result = Dom.styleCompute( document.defaultView, el, styleProp );
-      //
-      //}
-
-      return result;
-
-    };
-
-    return Dom;
-  }() );
-
-}( window ) );
+}(window));

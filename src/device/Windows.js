@@ -19,7 +19,7 @@
  * @module Browser
  * @submodule Windows
  */
-( function( window ){
+( function(window) {
   'use strict';
   var
     wakegi = window.wakegi,
