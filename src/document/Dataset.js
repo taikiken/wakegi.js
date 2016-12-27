@@ -18,137 +18,109 @@
  * @module wakegi
  * @submodule Dataset
  */
-/* jslint -W089 */
+/* eslint guard-for-in: 1 */
 ( function( window ) {
 
   'use strict';
 
   var
-    wakegi = window.wakegi;
+    wakegi = window.wakegi,
 
-  wakegi.Dataset = ( function() {
+    Util = wakegi.Util;
 
-    var Util = wakegi.Util;
+  /**
+   * tag の data属性を key: value 形式に分解します
+   * @class Dataset
+   * @static
+   * @constructor
+   */
+  function Dataset() {}
 
-    /**
-     * tag の data属性を key: value 形式に分解します
-     * @class Dataset
-     * @static
-     * @constructor
-     */
-    function Dataset () {}
+  var p = Dataset.prototype;
+  p.constructor = Dataset;
 
-    var p = Dataset.prototype;
-    p.constructor = Dataset;
+  /**
+   * 引数 element(HTMLElement) の data属性を object にして返す
+   * @method parse
+   * @static
+   * @param {Element} element HTML document
+   * @returns {{}} dataset を取得し key: value Objectを返します
+   */
+  Dataset.parse = function( element ) {
+    if (typeof element.dataset !== 'undefined') {
+      // dataset property が存在するモダンブラウザの処理
+      return Dataset.modern( element );
+    } else {
+      // レガシーブラウザ処理
+      return Dataset.legacy( element );
+    }
+  };
 
-    /**
-     * 引数 element(HTMLElement) の data属性を object にして返す
-     * @method parse
-     * @static
-     * @param {Element} element
-     * @returns {{}}
-     */
-    Dataset.parse = function( element ) {
+  /**
+   * dataset を取得し key: value Object にします: モダンブラウザ
+   * @method modern
+   * @static
+   * @param {Element} element HTML document
+   * @returns {{}} dataset を取得し key: value Objectを返します
+   */
+  Dataset.modern = function( element ) {
 
-      if ( typeof element.dataset !== 'undefined' ) {
+    var
+      data = element.dataset,
+      found = false,
+      results = {},
+      key, value,
+      keyName;
 
-        return Dataset.modern( element );
+    for (key in data) {
+      keyName = '';
+      value = '';
 
-      } else {
-
-        return Dataset.legacy( element );
-
-      }
-
-    };
-
-    /**
-     * @method modern
-     * @static
-     * @param {Element} element
-     * @returns {{}}
-     */
-    Dataset.modern = function( element ) {
-
-      var
-        data = element.dataset,
-        found = false,
-        results = {},
-        key, value,
-        keyName;
-
-      for( key in data ) {
-
-        keyName = '';
-        value = '';
-
-        // Android 2.3 under, dataset object の hasOwnProperty が String型, バカでしょー
-        // hasOwnProperty が使えない, function check
-        if ( typeof data.hasOwnProperty === 'function' ) {
-
-          if ( data.hasOwnProperty( key ) ) {
-
-            value = data[ key ];
-            keyName = key;
-
-          }
-
-        } else {
-
-          value = data[ key ];
+      // Android 2.3 under, dataset object の hasOwnProperty が String型, バカでしょー
+      // hasOwnProperty が使えない, function check
+      if (typeof data.hasOwnProperty === 'function') {
+        if (data.hasOwnProperty(key)) {
+          value = data[key];
           keyName = key;
-
-        }// if
-
-        if ( !!keyName ) {
-
-          found = true;
-          results[ keyName ] = value;
-
         }
-
+      } else {
+        value = data[key];
+        keyName = key;
+      }// if
+      if (!!keyName) {
+        found = true;
+        results[keyName] = value;
       }
+    }
+    return found ? results : null;
+  };
 
-      return found ? results : null;
+  /**
+   * dataset を取得し key: value Object にします: レガシーブラウザ
+   * @method legacy
+   * @static
+   * @param {Element} element HTML document
+   * @returns {{}} dataset を取得し key: value Objectを返します
+   */
+  Dataset.legacy = function(element) {
+    var
+      data = element.attributes,
+      found = false,
+      results = {},
+      i, limit, attribute, nodeName, dataKey;
 
-    };
+    for (i = 0, limit = data.length; i < limit; i = (i + 1) | 0) {
+      attribute = data[ i ];
+      nodeName = attribute.nodeName.toLowerCase();
 
-    /**
-     * @method legacy
-     * @static
-     * @param {Element} element
-     * @returns {{}}
-     */
-    Dataset.legacy = function( element ) {
-
-      var
-        data = element.attributes,
-        found = false,
-        results = {},
-        i, limit, attribute, nodeName, dataKey;
-
-      for ( i = 0, limit = data.length; i < limit; i = i + 1 ) {
-
-        attribute = data[ i ];
-        nodeName = attribute.nodeName.toLowerCase();
-
-        if ( nodeName.indexOf( 'data-' ) !== -1 ) {
-
-          dataKey = nodeName.replace( 'data-', '' );
-          dataKey = Util.camelize( dataKey );
-          found = true;
-          results[ dataKey ] = attribute.nodeValue.toLowerCase();
-
-        }
-
-      }// for
-
-      return found ? results : null;
-
-    };
-
-    return Dataset;
-
-  }() );
-
-}( window ) );
+      if (nodeName.indexOf('data-') !== -1) {
+        dataKey = nodeName.replace('data-', '');
+        dataKey = Util.camelize( dataKey );
+        found = true;
+        results[dataKey] = attribute.nodeValue.toLowerCase();
+      }
+    }// for
+    return found ? results : null;
+  };
+  wakegi.Dataset = Dataset;
+}(window));
