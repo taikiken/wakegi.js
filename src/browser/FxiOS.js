@@ -16,160 +16,133 @@
  * @module Browser
  * @submodule FxiOS
  */
-( function ( window ) {
-
+(function(window) {
   'use strict';
 
   var
     wakegi = window.wakegi,
-    Browser = wakegi.Browser;
+    Browser = wakegi.Browser,
 
-  Browser.FxiOS = ( function () {
+    numbers = [-1, -1],
+    fxi, version, major, build;
 
-    var
-      numbers = [ -1, -1 ],
-      fxi, version, major, build;
+  /**
+   * @class FxiOS
+   * @static
+   * @constructor
+   */
+  function FxiOS() {
+    throw new Error('FxiOS can\'t create instance.');
+  }
 
-    /**
-     * @class FxiOS
-     * @static
-     * @constructor
-     */
-    function FxiOS () {
-      throw new Error( 'FxiOS can\'t create instance.' );
+  var p = FxiOS.prototype;
+  p.constructor = FxiOS;
+
+  /**
+   * iOS Firefox 判定を行います
+   * @method init
+   * @static
+   */
+  FxiOS.init = function() {
+    if ( typeof fxi === 'undefined' ) {
+      // need initialize
+      // check userAgent
+      fxi = !!Browser.ua().match(/fxios/i);
     }
-    
-    var p = FxiOS.prototype;
-    p.constructor = FxiOS;
+  };
 
-    /**
-     * @method init
-     * @static
-     */
-    FxiOS.init = function () {
+  /**
+   * version No. を計算します
+   * @method calculate
+   * @static
+   */
+  FxiOS.calculate = function() {
+    var
+      versions = [],
+      nums, int, float, i, limit;
 
-      if ( typeof fxi === 'undefined' ) {
-        // need initialize
+    if (typeof version === 'undefined') {
+      // version undefined
+      build = '';
+      version = -1;
+      major = -1;
 
-        // check userAgent
-        fxi = !!Browser.ua().match(/fxios/i);
+      if (FxiOS.is()) {
+        // firefox os
+        nums = Browser.ua().match(/FxiOS\/(\d+)\.?(\d+)?/);
 
-      }
+        if (Array.isArray(nums)) {
+          // 結果が配列
+          int = wakegi.int;
+          float = wakegi.float;
 
-    };
-
-    /**
-     * @method calculate
-     * @static
-     */
-    FxiOS.calculate = function () {
-
-      var
-        versions = [],
-        nums, int, float, i, limit;
-
-      if ( typeof version === 'undefined' ) {
-
-        // version undefined
-        build = '';
-        version = -1;
-        major = -1;
-
-        if ( FxiOS.is() ) {
-
-          // firefox os
-          nums = Browser.ua().match( /FxiOS\/(\d+)\.?(\d+)?/ );
-
-          if ( Array.isArray( nums ) ) {
-
-            // 結果が配列
-            int = wakegi.int;
-            float = wakegi.float;
-
-            for ( i = 1, limit = nums.length; i < limit; i = (i+1)|0 ) {
-
-              versions.push( int( nums[ i ], 10 ) );
-
-            }
-
-            build = versions.join( '.' );
-            major = versions[ 0 ];
-            version = float( versions[ 0 ] + '.' + versions[ 1 ] );
-            numbers = versions;
-
+          for (i = 1, limit = nums.length; i < limit; i = (i + 1) | 0) {
+            versions.push(int(nums[i], 10));
           }
 
+          build = versions.join('.');
+          major = versions[0];
+          version = float(versions[0] + '.' + versions[1]);
+          numbers = versions;
         }
-
       }
+    }
+  };
 
-    };
+  /**
+   * iOS Firefox 判定を行います
+   * @method is
+   * @static
+   * @returns {boolean} true: iOS Firefox
+   */
+  FxiOS.is = function() {
+    FxiOS.init();
+    return fxi;
+  };
 
-    /**
-     * @method is
-     * @static
-     * @returns {boolean}
-     */
-    FxiOS.is = function () {
+  /**
+   * version: float型で取得します
+   * @method version
+   * @static
+   * @returns {float} N.NN で返します
+   */
+  FxiOS.version = function() {
+    FxiOS.calculate();
+    return version;
+  };
 
-      FxiOS.init();
-      return fxi;
+  /**
+   * version: major を取得します
+   * @method major
+   * @static
+   * @returns {int} version: major を返します
+   */
+  FxiOS.major = function() {
+    FxiOS.calculate();
+    return major;
+  };
 
-    };
+  /**
+   * version: build ナンバーを含み取得します
+   * @method build
+   * @static
+   * @returns {string} NN.NN.NN.NN 型（文字）で返します
+   */
+  FxiOS.build = function() {
+    FxiOS.calculate();
+    return build;
+  };
 
+  /**
+   * version を配列形式で取得します
+   * @method numbers
+   * @static
+   * @returns {*[]} [major: int, minor: int, build: int] 形式で返します
+   */
+  FxiOS.numbers = function() {
+    FxiOS.calculate();
+    return numbers;
+  };
 
-    /**
-     *
-     * @method version
-     * @static
-     * @returns {float} N.NN で返します
-     */
-    FxiOS.version = function () {
-
-      FxiOS.calculate();
-      return version;
-
-    };
-
-    /**
-     * @method major
-     * @static
-     * @returns {int}
-     */
-    FxiOS.major = function () {
-
-      FxiOS.calculate();
-      return major;
-
-    };
-
-    /**
-     *
-     * @method build
-     * @static
-     * @returns {string} NN.NN.NN.NN 型（文字）で返します
-     */
-    FxiOS.build = function () {
-
-      FxiOS.calculate();
-      return build;
-
-    };
-
-    /**
-     * @method numbers
-     * @static
-     * @returns {*[]} [major: int, minor: int, build: int] 形式で返します
-     */
-    FxiOS.numbers = function () {
-
-      FxiOS.calculate();
-      return numbers;
-
-    };
-    
-    return FxiOS;
-  
-  }() );
-
-}( window ) );
+  Browser.FxiOS = FxiOS;
+}(window));
