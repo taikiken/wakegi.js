@@ -304,6 +304,8 @@
   };
   /**
    * HTMLElement の css style を取得します
+   *
+   * @TODO: background していない時の background-color が rgb(0, 0, 0) になるのを解決する
    * @method getStyle
    * @static
    * @param {HTMLElement} el 調査対象 HTML tag
