@@ -8,7 +8,7 @@
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
- * build 2016-12-29 19:07:43
+ * build 2016-12-29 19:20:43
  * version 0.9.9
  * github: https://github.com/taikiken/wakegi.js
  */
@@ -2082,7 +2082,7 @@ wakegi.float = parseFloat;
   Android.init = function() {
     var ua, max;
 
-    if ( typeof android === 'undefined' ) {
+    if (typeof android === 'undefined') {
       // need initialize
       ua = Browser.ua();
 
@@ -2092,32 +2092,27 @@ wakegi.float = parseFloat;
       standard = false;
       hd = false;
 
-      if ( Windows.phone() ) {
-
+      if (Windows.phone()) {
         android = false;
+      } else if (android) {
+        max = mathMax(window.innerWidth, window.innerHeight);
+        hd = max >= 1024;
+        // http://googlewebmastercentral.blogspot.jp/2011/03/mo-better-to-also-detect-mobile-user.html
+        // Mozilla/5.0 (Linux; U; Android 3.0; en-us; Xoom Build/HRI39) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13
+        // Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; Nexus One Build/FRG83) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
 
-      } else {
+        // 2015-10 windows phone detect added
+        // https://msdn.microsoft.com/ja-jp/library/hh869301(v=vs.85).aspx
+        // Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; DEVICE INFO) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Mobile Safari/537.36 Edge/12.<OS build number>
 
-        if (android) {
-          max = mathMax( window.innerWidth, window.innerHeight );
-          hd = max >= 1024;
-          // http://googlewebmastercentral.blogspot.jp/2011/03/mo-better-to-also-detect-mobile-user.html
-          // Mozilla/5.0 (Linux; U; Android 3.0; en-us; Xoom Build/HRI39) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13
-          // Mozilla/5.0 (Linux; U; Android 2.2.1; en-us; Nexus One Build/FRG83) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1
-
-          // 2015-10 windows phone detect added
-          // https://msdn.microsoft.com/ja-jp/library/hh869301(v=vs.85).aspx
-          // Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; DEVICE INFO) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Mobile Safari/537.36 Edge/12.<OS build number>
-
-          // ua に mobile があり windows phone がない時 Android phone
-          phone = !!ua.match(/mobile/i);
-          if (!phone) {
-            tablet = true;
-          }// phone
-          // Android 標準ブラウザ
-          standard = Browser.matchSafari() && ( !!ua.match(/version/i) || !!ua.match(/samsungbrowser/i) );
-        }// android
-      }
+        // ua に mobile があり windows phone がない時 Android phone
+        phone = !!ua.match(/mobile/i);
+        if (!phone) {
+          tablet = true;
+        }// phone
+        // Android 標準ブラウザ
+        standard = Browser.matchSafari() && ( !!ua.match(/version/i) || !!ua.match(/samsungbrowser/i) );
+      }// android
     }// undefined
   };
 
@@ -2264,6 +2259,18 @@ wakegi.float = parseFloat;
   Android.number = function() {
     // 互換のために残します
     return Android.numbers();
+  };
+  /**
+   * window width / height を取得します
+   * @method rect
+   * @static
+   * @returns {{width: Number, height: Number}} width / height を Object 形式で返します
+   */
+  Android.rect = function() {
+    return {
+      width: window.innerWidth,
+      height: window.innerHeight
+    };
   };
   Browser.Android = Android;
 }(window));
