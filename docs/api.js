@@ -90,7 +90,7 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "Edge",
             "name": "Edge",
-            "description": "Windows 10 Edge Browser チェックを行います"
+            "description": "Windows 10 ~ Edge Browser チェックを行います"
         },
         {
             "displayName": "Element",
@@ -120,7 +120,7 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "Iro",
             "name": "Iro",
-            "description": "rgb, hsl, hsv\n\nColor 関連 utilties"
+            "description": "rgb, hsl, hsv\n\nColor 関連 utilities"
         },
         {
             "displayName": "Mac",
@@ -150,12 +150,12 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "Transform",
             "name": "Transform",
-            "description": "deprecated instead of Css3"
+            "description": "CSS3 transform 使用可能かを判定します"
         },
         {
             "displayName": "Transition",
             "name": "Transition",
-            "description": "deprecated instead of Css3"
+            "description": "CSS3 transition 使用可能かを判定します"
         },
         {
             "displayName": "Util",
@@ -172,7 +172,6 @@ YUI.add("yuidoc-meta", function(Y) {
             "name": "Windows",
             "description": "Windows OS チェックを行います"
         }
-    ],
-    "elements": []
+    ]
 } };
 });

@@ -138,7 +138,7 @@
    * Android 判定を行います
    * @method is
    * @static
-   * @returns {boolean} true: Android
+   * @return {boolean} true: Android
    */
   Android.is = function() {
     Android.init();
@@ -148,7 +148,7 @@
    * Android 標準ブラウザ
    * @method standard
    * @static
-   * @returns {boolean} true: Android 標準ブラウザ
+   * @return {boolean} true: Android 標準ブラウザ
    */
   Android.standard = function() {
     Android.init();
@@ -158,7 +158,7 @@
    * Android Phone
    * @method phone
    * @static
-   * @returns {boolean} true: Android phone
+   * @return {boolean} true: Android phone
    */
   Android.phone = function() {
     Android.init();
@@ -168,7 +168,7 @@
    * Android Tablet
    * @method tablet
    * @static
-   * @returns {boolean} true: Android tablet
+   * @return {boolean} true: Android tablet
    */
   Android.tablet = function() {
     Android.init();
@@ -178,7 +178,7 @@
    * Android HD 端末
    * @method hd
    * @static
-   * @returns {boolean} true: Android HD
+   * @return {boolean} true: Android HD
    */
   Android.hd = function() {
     Android.init();
@@ -188,7 +188,7 @@
    * version: float型で取得します
    * @method version
    * @static
-   * @returns {float} N.NN で返します
+   * @return {float} N.NN で返します
    */
   Android.version = function() {
     Android.calculate();
@@ -198,7 +198,7 @@
    * version: build ナンバーを含み取得します
    * @method build
    * @static
-   * @returns {string} NN.NN.NN 型（文字）で返します
+   * @return {string} NN.NN.NN 型（文字）で返します
    */
   Android.build = function() {
     Android.calculate();
@@ -208,7 +208,7 @@
    * version: major を取得します
    * @method major
    * @static
-   * @returns {int} version: major を返します
+   * @return {int} version: major を返します
    */
   Android.major = function() {
     Android.calculate();
@@ -218,7 +218,7 @@
    * version を配列形式で取得します
    * @method numbers
    * @static
-   * @returns {*[]} [major: int, minor: int, build: int] 形式で返します
+   * @return {*[]} [major: int, minor: int, build: int] 形式で返します
    */
   Android.numbers = function() {
     Android.calculate();
@@ -229,7 +229,7 @@
    * @method number
    * @deprecated instead of Android.numbers
    * @static
-   * @returns {*[]} [major: int, minor: int, build: int] 形式で返します
+   * @return {*[]} [major: int, minor: int, build: int] 形式で返します
    */
   Android.number = function() {
     // 互換のために残します
@@ -239,7 +239,7 @@
    * window width / height を取得します
    * @method rect
    * @static
-   * @returns {{width: Number, height: Number}} width / height を Object 形式で返します
+   * @return {{width: Number, height: Number}} width / height を Object 形式で返します
    */
   Android.rect = function() {
     return {

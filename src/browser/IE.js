@@ -125,7 +125,7 @@
    * IE 判定
    * @method is
    * @static
-   * @returns {boolean} true: IE
+   * @return {boolean} true: IE
    */
   IE.is = function() {
     IE.init();
@@ -135,7 +135,7 @@
    * IE 6判定
    * @method is6
    * @static
-   * @returns {boolean} true: IE 6
+   * @return {boolean} true: IE 6
    */
   IE.is6 = function() {
     IE.init();
@@ -145,7 +145,7 @@
    * IE 7判定
    * @method is7
    * @static
-   * @returns {boolean} true: IE 7
+   * @return {boolean} true: IE 7
    */
   IE.is7 = function() {
     IE.init();
@@ -155,7 +155,7 @@
    * IE 8判定
    * @method is8
    * @static
-   * @returns {boolean} true: IE 8
+   * @return {boolean} true: IE 8
    */
   IE.is8 = function() {
     IE.init();
@@ -165,7 +165,7 @@
    * IE 9判定
    * @method is9
    * @static
-   * @returns {boolean} true: IE 9
+   * @return {boolean} true: IE 9
    */
   IE.is9 = function() {
     IE.init();
@@ -175,7 +175,7 @@
    * IE 10判定
    * @method is10
    * @static
-   * @returns {boolean} true: IE 10
+   * @return {boolean} true: IE 10
    */
   IE.is10 = function() {
     IE.init();
@@ -185,7 +185,7 @@
    * IE 11判定
    * @method is11
    * @static
-   * @returns {boolean} true: IE11
+   * @return {boolean} true: IE11
    */
   IE.is11 = function() {
     IE.init();
@@ -195,7 +195,7 @@
    * version float型
    * @method version
    * @static
-   * @returns {float} N.NN で返します
+   * @return {float} N.NN で返します
    */
   IE.version = function() {
     IE.calculate();
@@ -205,7 +205,7 @@
    * version 正数
    * @method major
    * @static
-   * @returns {int} version: major を返します
+   * @return {int} version: major を返します
    */
   IE.major = function() {
     return parseInt(IE.version(), 10);
@@ -214,7 +214,7 @@
    * IE 8 or 7 or 6 判定
    * @method legacy
    * @static
-   * @returns {boolean} true: IE 6 | 7 | 8
+   * @return {boolean} true: IE 6 | 7 | 8
    */
   IE.legacy = function() {
     IE.init();

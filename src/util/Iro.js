@@ -61,7 +61,7 @@
    * @param {int} r red color number
    * @param {int} g green color number
    * @param {int} b blue color number
-   * @returns {object} {h: number, s: number, l: number}
+   * @return {object} {h: number, s: number, l: number}
    */
   Iro.rgb2hsl = function(r, g, b) {
     r /= 255;
@@ -110,7 +110,7 @@
    * @param {number} point 変換変数
    * @param {number} q 変換変数
    * @param {number} t 変換変数
-   * @returns {number} 色成分数値を返します 0 ~ 255
+   * @return {number} 色成分数値を返します 0 ~ 255
    */
   Iro.hue2rgb = function(point, q, t) {
     if (t < 0) {
@@ -139,7 +139,7 @@
    * @param {number} h Hue
    * @param {number} s Saturation
    * @param {number} l luminance
-   * @returns {object} {r: number, g: number, b: number}
+   * @return {object} {r: number, g: number, b: number}
    */
   Iro.hsl2rgb = function(h, s, l) {
     var r, g, b, q, point;
@@ -170,7 +170,7 @@
    * @param {int} r red color number
    * @param {int} g green color number
    * @param {int} b blue color number
-   * @returns {object} {h: number, s: number, v: number}
+   * @return {object} {h: number, s: number, v: number}
    */
   Iro.rgb2hsv = function(r, g, b) {
     var red = r / 255;
@@ -220,7 +220,7 @@
    * @param {number} h Hue 色相
    * @param {number} s Saturation 彩度
    * @param {number} v Value 明度
-   * @returns {object} {r: number, g: number, b: number}
+   * @return {object} {r: number, g: number, b: number}
    */
   Iro.hsv2rgb = function( h, s, v ) {
     var
@@ -288,7 +288,7 @@
    * @method hexShort
    * @static
    * @param {string} hex CSS color 形式
-   * @returns {string|null} CSS short hand color 形式をフル変換します
+   * @return {string|null} CSS short hand color 形式をフル変換します
    * @see http://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb
    */
   Iro.hexShort = function(hex) {
@@ -309,7 +309,7 @@
    * @method hex2rgb
    * @static
    * @param {string} hex CSS 色設定文字 #ff0000
-   * @returns {object} {r: number, g: number, b: number}
+   * @return {object} {r: number, g: number, b: number}
    */
   Iro.hex2rgb = function(hex) {
     var hexString = Iro.hexShort( hex );
@@ -332,7 +332,7 @@
    * @method componentToHex
    * @static
    * @param {number} color color(red, green, blue) number
-   * @returns {string} 2桁を保障し文字列変換し返します
+   * @return {string} 2桁を保障し文字列変換し返します
    */
   Iro.componentToHex = function(color) {
     var hex = color.toString(16);
@@ -346,7 +346,7 @@
    * @param {int} r red color number
    * @param {int} g green color number
    * @param {int} b blue color number
-   * @returns {string} CSS color 形式文字列を返します
+   * @return {string} CSS color 形式文字列を返します
    */
   Iro.rgb2hex = function(r, g, b) {
     var
@@ -361,7 +361,7 @@
    * @method int2hex
    * @static
    * @param {number} num 変換元 10進数
-   * @returns {string} CSS color 16進数型文字列を返します
+   * @return {string} CSS color 16進数型文字列を返します
    */
   Iro.int2hex = function(num) {
     var
@@ -387,7 +387,7 @@
    * @method hex2int
    * @static
    * @param {string} hex `#fff` な 16進・文字列
-   * @returns {int|null} hex 文字列を10進数変換し返します
+   * @return {int|null} hex 文字列を10進数変換し返します
    */
   Iro.hex2int = function(hex) {
     var hexString = Iro.hexShort(hex);

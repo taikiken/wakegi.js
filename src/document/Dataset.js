@@ -44,7 +44,7 @@
    * @method parse
    * @static
    * @param {Element} element HTML document
-   * @returns {{}} dataset を取得し key: value Objectを返します
+   * @return {{}} dataset を取得し key: value Objectを返します
    */
   Dataset.parse = function( element ) {
     if (typeof element.dataset !== 'undefined') {
@@ -61,7 +61,7 @@
    * @method modern
    * @static
    * @param {Element} element HTML document
-   * @returns {{}} dataset を取得し key: value Objectを返します
+   * @return {{}} dataset を取得し key: value Objectを返します
    */
   Dataset.modern = function( element ) {
 
@@ -100,7 +100,7 @@
    * @method legacy
    * @static
    * @param {Element} element HTML document
-   * @returns {{}} dataset を取得し key: value Objectを返します
+   * @return {{}} dataset を取得し key: value Objectを返します
    */
   Dataset.legacy = function(element) {
     var

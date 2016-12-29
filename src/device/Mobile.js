@@ -46,7 +46,7 @@
    * iOS / Android / Windows phone 判定
    * @method is
    * @static
-   * @returns {boolean} true: iOS / Android / Windows phone
+   * @return {boolean} true: iOS / Android / Windows phone
    */
   Mobile.is = function() {
     return iOS.is() || Android.is() || Windows.phone();
@@ -55,7 +55,7 @@
    * スマホ・iPod touch 判定を行います
    * @method phone
    * @static
-   * @returns {boolean} true: スマホ・iPod touch
+   * @return {boolean} true: スマホ・iPod touch
    */
   Mobile.phone = function() {
     return iOS.iPhone() || iOS.iPod() || Android.phone() || Windows.phone();
@@ -64,7 +64,7 @@
    * tablet 判定を行います
    * @method tablet
    * @static
-   * @returns {boolean} true: tablet
+   * @return {boolean} true: tablet
    */
   Mobile.tablet = function() {
     return iOS.iPad() || Android.tablet();
@@ -77,7 +77,7 @@
    * iOS 9 以降では実行しても無駄です
    * @method hideBar
    * @static
-   * @returns {number} timer id を返します
+   * @return {number} timer id を返します
    */
   Mobile.hideBar = function() {
     return setTimeout(function() {
@@ -89,7 +89,7 @@
    * @deprecated instead of Mobile.hideBar
    * @method hideURLBar
    * @static
-   * @returns {number} timer id を返します
+   * @return {number} timer id を返します
    */
   Mobile.hideURLBar = function() {
     return Mobile.hideBar();

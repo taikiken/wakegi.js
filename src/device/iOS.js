@@ -118,7 +118,7 @@
    * iOS 判定
    * @method is
    * @static
-   * @returns {boolean} true: iOS
+   * @return {boolean} true: iOS
    */
   iOS.is = function() {
     iOS.init();
@@ -128,7 +128,7 @@
    * iPhone 判定
    * @method iPhone
    * @static
-   * @returns {boolean} true: iPhone
+   * @return {boolean} true: iPhone
    */
   iOS.iPhone = function() {
     iOS.init();
@@ -138,7 +138,7 @@
    * iPad 判定
    * @method iPad
    * @static
-   * @returns {boolean} true: iPad
+   * @return {boolean} true: iPad
    */
   iOS.iPad = function() {
     iOS.init();
@@ -148,7 +148,7 @@
    * iPod 判定します
    * @method iPod
    * @static
-   * @returns {boolean} true: iPod
+   * @return {boolean} true: iPod
    */
   iOS.iPod = function() {
     iOS.init();
@@ -158,7 +158,7 @@
    * standalone で表示しているかを判定します
    * @method standalone
    * @static
-   * @returns {boolean} true: standalone で表示
+   * @return {boolean} true: standalone で表示
    */
   iOS.standalone = function() {
     var navigator = Browser.navigator();
@@ -170,7 +170,7 @@
    * @method fullScreen
    * @deprecated instead of iOS.standalone
    * @static
-   * @returns {boolean} true: standalone で表示
+   * @return {boolean} true: standalone で表示
    */
   iOS.fullScreen = function() {
     return iOS.standalone();
@@ -179,7 +179,7 @@
    * version: float型で取得します
    * @method version
    * @static
-   * @returns {float} N.NN で返します
+   * @return {float} N.NN で返します
    */
   iOS.version = function() {
     iOS.calculate();
@@ -189,7 +189,7 @@
    * version: build ナンバーを含み取得します
    * @method build
    * @static
-   * @returns {string} NN.NN.NN 型（文字）で返します
+   * @return {string} NN.NN.NN 型（文字）で返します
    */
   iOS.build = function() {
     iOS.calculate();
@@ -200,7 +200,7 @@
    * version: major を取得します
    * @method major
    * @static
-   * @returns {int} version: major を返します
+   * @return {int} version: major を返します
    */
   iOS.major = function() {
     iOS.calculate();
@@ -210,7 +210,7 @@
    * version を配列形式で取得します
    * @method numbers
    * @static
-   * @returns {*[]} [major: int, minor: int, build: int] 形式で返します
+   * @return {*[]} [major: int, minor: int, build: int] 形式で返します
    */
   iOS.numbers = function() {
     iOS.calculate();
@@ -221,7 +221,7 @@
    * @method number
    * @deprecated instead of Safari.numbers
    * @static
-   * @returns {*[]} [major: int, minor: int, build: int] 形式で返します
+   * @return {*[]} [major: int, minor: int, build: int] 形式で返します
    */
   iOS.number = function() {
     // 互換のために残します
@@ -232,7 +232,7 @@
    * **注意** アプリ内ブラウザ(webView)は UA 偽装可能
    * @method webView
    * @static
-   * @returns {boolean} true: アプリ内ブラウザ
+   * @return {boolean} true: アプリ内ブラウザ
    */
   iOS.webView = function() {
     iOS.init();

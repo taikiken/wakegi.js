@@ -36,7 +36,7 @@
    */
   function Dom(element) {
     /**
-     * @property _element
+     * @property element
      * @type {HTMLElement}
      * @private
      */
@@ -49,7 +49,7 @@
   // /**
   //  * 使用 Element を返します
   //  * @method element
-  //  * @returns {HTMLElement}
+  //  * @return {HTMLElement}
   //  */
   // p.element = function() {
   //   return this.element;
@@ -58,7 +58,7 @@
    * CSS class が存在するかを調べます
    * @method hasClass
    * @param {string} className 調査する class name
-   * @returns {boolean} true CSS class が存在する
+   * @return {boolean} true CSS class が存在する
    */
   p.hasClass = function( className ) {
     return Dom.hasClass(this.element, className);
@@ -66,7 +66,7 @@
   /**
    * @method addClass
    * @param {string} className 対象 class 名称
-   * @returns {boolean} true: 追加成功
+   * @return {boolean} true: 追加成功
    */
   p.addClass = function( className ) {
     return Dom.addClass(this.element, className);
@@ -74,7 +74,7 @@
   /**
    * @method removeClass
    * @param {string} className 対象 class 名称
-   * @returns {boolean} true: 削除成功
+   * @return {boolean} true: 削除成功
    */
   p.removeClass = function( className ) {
     return Dom.removeClass(this.element, className);
@@ -83,7 +83,7 @@
    * element の 指定 css property 値を取得します
    * @method style
    * @param {string} [styleProp=''] css property name
-   * @returns {*} CSS 値
+   * @return {*} CSS 値
    */
   p.style = function(styleProp) {
     return Dom.getStyle(this.element, styleProp);
@@ -94,7 +94,7 @@
    * @static
    * @param {HTMLElement} element 操作対象 Element
    * @param {string} className 調査する class name
-   * @returns {boolean} true: 存在する
+   * @return {boolean} true: 存在する
    */
   Dom.hasClass = function( element, className ) {
     // categoryX があって category で検索すると match するのまずい
@@ -113,7 +113,7 @@
    * @static
    * @param {HTMLElement} element 操作対象 Element
    * @param {string} className 追加する class name
-   * @returns {boolean} true: 追加した
+   * @return {boolean} true: 追加した
    */
   Dom.addClass = function( element, className ) {
     var
@@ -145,7 +145,7 @@
    * @static
    * @param {HTMLElement} element 操作対象 Element
    * @param {string} className 削除対象 class name
-   * @returns {boolean} true: 削除した
+   * @return {boolean} true: 削除した
    */
   Dom.removeClass = function( element, className ) {
     var
@@ -189,7 +189,7 @@
    * @param {Object} defaultView `defaultView.getComputedStyle` します
    * @param {HTMLElement} el 調査対象 Element
    * @param {string} [styleProp] CSS property name
-   * @returns {CSSStyleDeclaration|*|String}
+   * @return {CSSStyleDeclaration|*|String}
    *    styleProp が null or undefined or "" の時は CSSStyleDeclaration Object<br>
    *    指定されている時は CSS 設定値(string)を返します
    */
@@ -209,7 +209,7 @@
    * @static
    * @param {HTMLElement} el 調査対象 Element
    * @param {string} [styleProp] CSS property name
-   * @returns {*} HTMLElement style value を返します
+   * @return {*} HTMLElement style value を返します
    */
   Dom.styleCurrent = function( el, styleProp ) {
     var
@@ -250,7 +250,7 @@
    * HTMLElement style value を取得します
    * @param {HTMLElement} el 調査対象 Element
    * @param {*} value CSS 値
-   * @returns {string|*} HTMLElement style value を返します
+   * @return {string|*} HTMLElement style value を返します
    */
   Dom.styleValue = function(el, value) {
     var
@@ -273,7 +273,7 @@
    * @param {Object} defaultView `defaultView.getComputedStyle` します
    * @param {HTMLElement} el 調査対象 HTML tag
    * @param {Array} patterns [string, ...]
-   * @returns {string} CSS 値を返します
+   * @return {string} CSS 値を返します
    */
   Dom.shortHand = function(defaultView, el, patterns) {
     var
@@ -310,7 +310,7 @@
    * @static
    * @param {HTMLElement} el 調査対象 HTML tag
    * @param {string} [styleProp] CSS property name
-   * @returns {*} HTMLElement の css style を返します
+   * @return {*} HTMLElement の css style を返します
    */
   Dom.getStyle = function(el, styleProp) {
     var

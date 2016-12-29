@@ -98,7 +98,7 @@
    * Firefox 判定を行います
    * @method is
    * @static
-   * @returns {boolean} true: Firefox
+   * @return {boolean} true: Firefox
    */
   Firefox.is = function() {
     Firefox.init();
@@ -109,7 +109,7 @@
    * version: float型で取得します
    * @method version
    * @static
-   * @returns {float} N.NN で返します
+   * @return {float} N.NN で返します
    */
   Firefox.version = function() {
     Firefox.calculate();
@@ -120,7 +120,7 @@
    * version: major を取得します
    * @method major
    * @static
-   * @returns {int} version: major を返します
+   * @return {int} version: major を返します
    */
   Firefox.major = function() {
     Firefox.calculate();
@@ -131,7 +131,7 @@
    *  version: build ナンバーを含み取得します
    * @method build
    * @static
-   * @returns {string} NN.NN.NN.NN 型（文字）で返します
+   * @return {string} NN.NN.NN.NN 型（文字）で返します
    */
   Firefox.build = function() {
     Firefox.calculate();
@@ -142,7 +142,7 @@
    * version を配列形式で取得します
    * @method numbers
    * @static
-   * @returns {*[]} [major: int, minor: int, build: int] 形式で返します
+   * @return {*[]} [major: int, minor: int, build: int] 形式で返します
    */
   Firefox.numbers = function() {
     Firefox.calculate();

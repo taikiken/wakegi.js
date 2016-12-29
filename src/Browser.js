@@ -59,7 +59,7 @@
   /**
    * @method navigator
    * @static
-   * @returns {Navigator} window.navigator オブジェクトを返します
+   * @return {Navigator} window.navigator オブジェクトを返します
    */
   Browser.navigator = function() {
     return navigator;
@@ -67,7 +67,7 @@
   /**
    * @method ua
    * @static
-   * @returns {*|string} navigator.userAgent を返します
+   * @return {*|string} navigator.userAgent を返します
    */
   Browser.ua = function() {
     Browser.init();
@@ -76,7 +76,7 @@
   /**
    * @method app
    * @static
-   * @returns {*|string} navigator.appVersion を返します
+   * @return {*|string} navigator.appVersion を返します
    */
   Browser.app = function() {
     Browser.init();
@@ -86,7 +86,7 @@
    * userAgent regular expression of Safari
    * @method matchSafari
    * @static
-   * @returns {boolean} true: Safari
+   * @return {boolean} true: Safari
    */
   Browser.matchSafari = function() {
     Browser.init();

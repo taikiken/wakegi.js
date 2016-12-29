@@ -52,7 +52,7 @@
    *
    * @method transition
    * @static
-   * @returns {boolean} true: CSS3 transition 使用可能
+   * @return {boolean} true: CSS3 transition 使用可能
    */
   Css3.transition = function() {
     var tagP;
@@ -72,7 +72,7 @@
    *
    * @method transform
    * @static
-   * @returns {boolean} true: CSS3 transform 使用可能
+   * @return {boolean} true: CSS3 transform 使用可能
    */
   Css3.transform = function() {
     var tagP;
@@ -93,7 +93,7 @@
    *
    * @method matchMedia
    * @static
-   * @returns {boolean} true: matchMedia が使用可能
+   * @return {boolean} true: matchMedia が使用可能
    */
   Css3.matchMedia = function() {
     if ( typeof matchMedia === 'undefined' ) {
@@ -107,7 +107,7 @@
    *
    * @method orientationChange
    * @static
-   * @returns {boolean} true: onorientationchange が使用可能
+   * @return {boolean} true: onorientationchange が使用可能
    */
   Css3.orientationChange = function() {
     if ( typeof onorientationchange === 'undefined' ) {
@@ -121,7 +121,7 @@
    *
    * @method orientation
    * @static
-   * @returns {boolean} true: orientation が使用可能
+   * @return {boolean} true: orientation が使用可能
    */
   Css3.orientation = function() {
     if ( typeof orientation === 'undefined' ) {
@@ -135,7 +135,7 @@
    *
    * @method backgroundSize
    * @static
-   * @returns {boolean} true: backgroundSize が使用可能
+   * @return {boolean} true: backgroundSize が使用可能
    */
   Css3.backgroundSize = function() {
     if (typeof backgroundSize === 'undefined') {

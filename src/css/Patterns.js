@@ -50,7 +50,7 @@
    * @method hyphen
    * @static
    * @param {string} key key 名称(CSS property name)
-   * @returns {string} hyphen 変換後文字列を返します
+   * @return {string} hyphen 変換後文字列を返します
    */
   Patterns.hyphen = function(key) {
     return key.replace(/([A-Z])/g, '-$1').toLowerCase();
@@ -60,7 +60,7 @@
    * @method has
    * @static
    * @param {string} key 調べる key 名称(CSS property name)
-   * @returns {boolean} true: 存在する
+   * @return {boolean} true: 存在する
    */
   Patterns.has = function(key) {
     var keyName = Patterns.hyphen(key);
@@ -70,7 +70,7 @@
    * @method get
    * @static
    * @param {string} key key 名称(CSS property name)
-   * @returns {Array|undefined} CSS short hand 配列を返します
+   * @return {Array|undefined} CSS short hand 配列を返します
    */
   Patterns.get = function(key) {
     var keyName = Patterns.hyphen(key);

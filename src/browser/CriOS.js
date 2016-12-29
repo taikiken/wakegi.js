@@ -95,7 +95,7 @@
    * iOS Chrome 判定を行います
    * @method is
    * @static
-   * @returns {boolean} true: iOS Chrome
+   * @return {boolean} true: iOS Chrome
    */
   CriOS.is = function() {
     CriOS.init();
@@ -106,7 +106,7 @@
    * version float 形式で取得します
    * @method version
    * @static
-   * @returns {float} N.NNN で返します
+   * @return {float} N.NNN で返します
    */
   CriOS.version = function() {
     CriOS.calculate();
@@ -116,7 +116,7 @@
    * version: build No. を含み取得します
    * @method build
    * @static
-   * @returns {string} NN.NN.NN.NN 型（文字）で返します
+   * @return {string} NN.NN.NN.NN 型（文字）で返します
    */
   CriOS.build = function() {
     CriOS.calculate();
@@ -126,7 +126,7 @@
    * version: major を取得します
    * @method major
    * @static
-   * @returns {int} version major を返します
+   * @return {int} version major を返します
    */
   CriOS.major = function() {
     CriOS.calculate();
@@ -135,7 +135,7 @@
   /**
    * @method numbers
    * @static
-   * @returns {*[]} [major: int, minor: int, build: int] 形式で返します
+   * @return {*[]} [major: int, minor: int, build: int] 形式で返します
    */
   CriOS.numbers = function() {
     CriOS.calculate();

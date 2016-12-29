@@ -44,7 +44,7 @@
    * @method is
    * @deprecated instead of Css3.transition
    * @static
-   * @returns {boolean} true: CSS3 transition 使用可能
+   * @return {boolean} true: CSS3 transition 使用可能
    */
   Transition.is = function() {
     return Css3.transition();

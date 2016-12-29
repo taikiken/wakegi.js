@@ -48,7 +48,7 @@
    *
    * @method touch
    * @static
-   * @returns {boolean} true: touch event が使用可能
+   * @return {boolean} true: touch event が使用可能
    */
   Element.touch = function() {
     if (typeof touch === 'undefined') {
@@ -65,7 +65,7 @@
    *
    * @method querySelector
    * @static
-   * @returns {boolean} true: querySelector が使用可能
+   * @return {boolean} true: querySelector が使用可能
    */
   Element.querySelector = function() {
     if (typeof querySelector === 'undefined') {
@@ -80,7 +80,7 @@
    *
    * @method canvas
    * @static
-   * @returns {boolean} true: canvas 使用可能
+   * @return {boolean} true: canvas 使用可能
    */
   Element.canvas = function() {
     if ( typeof canvas === 'undefined' ) {
@@ -95,7 +95,7 @@
    *
    * @method webgl
    * @static
-   * @returns {boolean} true: webgl 使用可能
+   * @return {boolean} true: webgl 使用可能
    */
   Element.webgl = function() {
     if (typeof webgl === 'undefined') {
@@ -117,8 +117,9 @@
    * querySelector が使えるブラウザだけ使用可能
    *
    * @method find
+   * @static
    * @param {string} searchKey `querySelector` で使用するセレクター
-   * @returns {*} HTMLElement を返します
+   * @return {*} HTMLElement を返します
    */
   Element.find = function( searchKey ) {
     var result;

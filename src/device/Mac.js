@@ -52,7 +52,7 @@
    * Mac OS 判定します
    * @method is
    * @static
-   * @returns {boolean} true Mac OS
+   * @return {boolean} true Mac OS
    */
   Mac.is = function() {
     Mac.init();

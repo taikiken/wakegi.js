@@ -93,7 +93,7 @@
    * iOS Firefox 判定を行います
    * @method is
    * @static
-   * @returns {boolean} true: iOS Firefox
+   * @return {boolean} true: iOS Firefox
    */
   FxiOS.is = function() {
     FxiOS.init();
@@ -104,7 +104,7 @@
    * version: float型で取得します
    * @method version
    * @static
-   * @returns {float} N.NN で返します
+   * @return {float} N.NN で返します
    */
   FxiOS.version = function() {
     FxiOS.calculate();
@@ -115,7 +115,7 @@
    * version: major を取得します
    * @method major
    * @static
-   * @returns {int} version: major を返します
+   * @return {int} version: major を返します
    */
   FxiOS.major = function() {
     FxiOS.calculate();
@@ -126,7 +126,7 @@
    * version: build ナンバーを含み取得します
    * @method build
    * @static
-   * @returns {string} NN.NN.NN.NN 型（文字）で返します
+   * @return {string} NN.NN.NN.NN 型（文字）で返します
    */
   FxiOS.build = function() {
     FxiOS.calculate();
@@ -137,7 +137,7 @@
    * version を配列形式で取得します
    * @method numbers
    * @static
-   * @returns {*[]} [major: int, minor: int, build: int] 形式で返します
+   * @return {*[]} [major: int, minor: int, build: int] 形式で返します
    */
   FxiOS.numbers = function() {
     FxiOS.calculate();

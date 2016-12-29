@@ -44,7 +44,7 @@
    * @method is
    * @deprecated instead of Css3.transform
    * @static
-   * @returns {boolean} true: CSS3 transform 使用可能
+   * @return {boolean} true: CSS3 transform 使用可能
    */
   Transform.is = function() {
     return Css3.transform();

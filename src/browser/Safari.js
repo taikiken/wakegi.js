@@ -120,7 +120,7 @@
    * Safari 判定を行います
    * @method is
    * @static
-   * @returns {boolean} true: Safari
+   * @return {boolean} true: Safari
    */
   Safari.is = function() {
     Safari.init();
@@ -131,7 +131,7 @@
    * @method set
    * @static
    * @param {boolean} bool 判定フラッグ
-   * @returns {boolean} 設置値を返します
+   * @return {boolean} 設置値を返します
    */
   Safari.set = function(bool) {
     Safari.init();
@@ -142,7 +142,7 @@
    * version: float型で取得します
    * @method version
    * @static
-   * @returns {float} N.NN で返します
+   * @return {float} N.NN で返します
    */
   Safari.version = function() {
     Safari.calculate();
@@ -152,7 +152,7 @@
    * version: major を取得します
    * @method major
    * @static
-   * @returns {int} version: major を返します
+   * @return {int} version: major を返します
    */
   Safari.major = function() {
     Safari.calculate();
@@ -162,7 +162,7 @@
    * version: build ナンバーを含み取得します
    * @method build
    * @static
-   * @returns {string} NN.NN.NN.NN 型（文字）で返します
+   * @return {string} NN.NN.NN.NN 型（文字）で返します
    */
   Safari.build = function() {
     Safari.calculate();
@@ -172,7 +172,7 @@
    * version を配列形式で取得します
    * @method numbers
    * @static
-   * @returns {*[]} [major: int, minor: int, build: int] 形式で返します
+   * @return {*[]} [major: int, minor: int, build: int] 形式で返します
    */
   Safari.numbers = function() {
     Safari.calculate();
@@ -183,7 +183,7 @@
    * @method number
    * @deprecated instead of Safari.numbers
    * @static
-   * @returns {*[]} [major: int, minor: int, build: int] 形式で返します
+   * @return {*[]} [major: int, minor: int, build: int] 形式で返します
    */
   Safari.number = function() {
     // 互換のために残します

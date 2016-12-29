@@ -44,7 +44,7 @@
    * @method is
    * @deprecated instead of Element.touch
    * @static
-   * @returns {boolean} true: touch event が利用可能
+   * @return {boolean} true: touch event が利用可能
    */
   Touch.is = function() {
     return Element.touch();

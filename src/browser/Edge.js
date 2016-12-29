@@ -99,7 +99,7 @@
    * edge 判定を行います
    * @method is
    * @static
-   * @returns {boolean} true: Edge
+   * @return {boolean} true: Edge
    */
   Edge.is = function() {
     Edge.init();
@@ -109,7 +109,7 @@
    * version: float型で取得します
    * @method version
    * @static
-   * @returns {float} N.NN で返します
+   * @return {float} N.NN で返します
    */
   Edge.version = function() {
     Edge.calculate();
@@ -120,7 +120,7 @@
    * version: major を取得します
    * @method major
    * @static
-   * @returns {int} version: major を返します
+   * @return {int} version: major を返します
    */
   Edge.major = function() {
     Edge.calculate();
@@ -130,7 +130,7 @@
    * version: build ナンバーを含み取得します
    * @method build
    * @static
-   * @returns {string} NN.NN 型（文字）で返します
+   * @return {string} NN.NN 型（文字）で返します
    */
   Edge.build = function() {
     Edge.calculate();
@@ -140,7 +140,7 @@
    * version を配列形式で取得します
    * @method numbers
    * @static
-   * @returns {[]} [major: int, minor: int] 形式で返します
+   * @return {[]} [major: int, minor: int] 形式で返します
    */
   Edge.numbers = function() {
     Edge.calculate();

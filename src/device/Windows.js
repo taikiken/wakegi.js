@@ -68,7 +68,7 @@
    * Windows OS 判定を行います
    * @method is
    * @static
-   * @returns {boolean} true: Windows OS
+   * @return {boolean} true: Windows OS
    */
   Windows.is = function() {
     Windows.init();
@@ -78,7 +78,7 @@
    * Windows phone 判定を行います
    * @method phone
    * @static
-   * @returns {boolean} true: Windows phone
+   * @return {boolean} true: Windows phone
    */
   Windows.phone = function() {
     Windows.init();

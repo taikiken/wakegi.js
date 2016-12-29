@@ -40,7 +40,7 @@
    * @method camelize
    * @static
    * @param {string} str 変換元文字列
-   * @returns {string} dash(-)連結 word を camel case へ変換し返します。
+   * @return {string} dash(-)連結 word を camel case へ変換し返します。
    */
   Util.camelize = function( str ) {
     return str.toLowerCase().replace(/-(.)/g, function(match, group1) {
@@ -54,7 +54,7 @@
    * @method dash
    * @static
    * @param {string} str 変換元文字列
-   * @returns {string} dash 変換後文字列を返します
+   * @return {string} dash 変換後文字列を返します
    */
   Util.dash = function(str) {
     return str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();

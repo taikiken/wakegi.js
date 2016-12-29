@@ -125,7 +125,7 @@
    * Chrome 判定を行います
    * @method is
    * @static
-   * @returns {boolean} true: Chrome
+   * @return {boolean} true: Chrome
    */
   Chrome.is = function() {
     Chrome.init();
@@ -136,7 +136,7 @@
    * version N.NNN を取得します
    * @method version
    * @static
-   * @returns {float} N.NNN で返します
+   * @return {float} N.NNN で返します
    */
   Chrome.version = function() {
     Chrome.calculate();
@@ -147,7 +147,7 @@
    * version: build type を含み取得します
    * @method build
    * @static
-   * @returns {string} NN.NN.NN.NN 型（文字）で返します
+   * @return {string} NN.NN.NN.NN 型（文字）で返します
    */
   Chrome.build = function() {
     Chrome.calculate();
@@ -157,7 +157,7 @@
    * version NN を取得します
    * @method major
    * @static
-   * @returns {int} version NN を返します
+   * @return {int} version NN を返します
    */
   Chrome.major = function() {
     Chrome.calculate();
@@ -166,7 +166,7 @@
   /**
    * @method numbers
    * @static
-   * @returns {*[]} [major: int, minor: int, build: int] 形式で返します
+   * @return {*[]} [major: int, minor: int, build: int] 形式で返します
    */
   Chrome.numbers = function() {
     Chrome.calculate();
