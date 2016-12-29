@@ -5,10 +5,22 @@
 <title>wakegi.js</title>
 <script type="text/javascript" src="../libs/wakegi.js"></script>
 <style type="text/css">
-.block {
-  border: 1px solid #ccc;
-  padding: 8px;
-}
+  .block {
+    border: 1px solid #ccc;
+    padding: 8px;
+  }
+  .red {
+    background: #f00;
+    color: #becef7;
+  }
+  .black {
+    background: #000;
+    color: #fff;
+  }
+  .white {
+    background: #fff;
+    color: #000;
+  }
 </style>
 </head>
 <body>
@@ -77,10 +89,11 @@
 
     Dom.addClass( ie, "red" );
     Dom.addClass( ie, "black" );
+    Dom.addClass( ie, "white" );
 
-    Dom.removeClass( ie, "white" );
     Dom.removeClass( ie, "red" );
     Dom.removeClass( ie, "black" );
+    Dom.removeClass( ie, "white" );
     Dom.removeClass( ie, "block" );
 
     Dom.addClass( ie, "black" );

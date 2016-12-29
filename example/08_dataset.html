@@ -18,8 +18,8 @@
 <strong>appVersion</strong>
 <p id="app" class="block"></p>
 
-<strong>Dom</strong>
-<p id="ie" class="block"></p>
+<!--<strong>Dom</strong>-->
+<!--<p id="ie" class="block"></p>-->
 
 <strong>Styles</strong>
 <p id="styles" class="block" data-ask="a" data-ask-hi="ab" data-ask-hi-what="abc" rel="abc:def,gx"></p>
@@ -30,7 +30,7 @@
     var
       document = window.document,
       ua = document.getElementById( "ua" ),
-      ie = document.getElementById( "ie" ),
+//      ie = document.getElementById( "ie" ),
       app = document.getElementById( "app" ),
       styles = document.getElementById( "styles" ),
 
@@ -69,27 +69,11 @@
       key, val;
 
     for ( key in data ) {
-
       if ( data.hasOwnProperty( key ) ) {
-
         val = data[ key ];
         styles.innerHTML += '<strong>' + key + ': </strong>' + val + '<br>';
-
       }
     }
-//
-//    Dom.addClass( ie, "red" );
-//    Dom.addClass( ie, "black" );
-//
-//    Dom.removeClass( ie, "white" );
-//    Dom.removeClass( ie, "red" );
-//    Dom.removeClass( ie, "black" );
-//    Dom.removeClass( ie, "block" );
-//
-//    Dom.addClass( ie, "black" );
-//    Dom.addClass( ie, "block" );
-//
-//    Dom.removeClass( ie, "black" );
 
   }( window ) );
 </script>
