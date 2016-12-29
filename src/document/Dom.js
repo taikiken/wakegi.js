@@ -24,9 +24,7 @@
   'use strict';
 
   var
-    wakegi = window.wakegi;
-
-  var
+    wakegi = window.wakegi,
     Patterns = wakegi.Patterns;
 
   /**
@@ -335,5 +333,5 @@
     }
     return result;
   };
-
+  wakegi.Dom = Dom;
 }(window));

@@ -8,7 +8,7 @@
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
- * build 2016-12-29 19:20:43
+ * build 2016-12-29 19:23:13
  * version 0.9.9
  * github: https://github.com/taikiken/wakegi.js
  */
@@ -1187,9 +1187,7 @@ wakegi.float = parseFloat;
   'use strict';
 
   var
-    wakegi = window.wakegi;
-
-  var
+    wakegi = window.wakegi,
     Patterns = wakegi.Patterns;
 
   /**
@@ -1498,7 +1496,7 @@ wakegi.float = parseFloat;
     }
     return result;
   };
-
+  wakegi.Dom = Dom;
 }(window));
 
 /**
