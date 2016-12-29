@@ -290,7 +290,6 @@
                 "iOS": 1,
                 "Element": 1
             },
-            "elements": {},
             "classes": {
                 "Chrome": 1,
                 "CriOS": 1,
@@ -315,13 +314,12 @@
             "namespaces": {},
             "module": "wakegi",
             "file": "src/Browser.js",
-            "line": 35,
+            "line": 32,
             "description": "Browser 機能を調べます\n\n互換のために Browser を基点にした Class が存在します"
         },
         "Chrome": {
             "name": "Chrome",
             "submodules": {},
-            "elements": {},
             "classes": {
                 "Chrome": 1
             },
@@ -331,13 +329,12 @@
             "module": "Browser",
             "namespace": "",
             "file": "src/browser/Chrome.js",
-            "line": 40,
+            "line": 37,
             "description": "Chrome チェックを行います"
         },
         "CriOS": {
             "name": "CriOS",
             "submodules": {},
-            "elements": {},
             "classes": {
                 "CriOS": 1
             },
@@ -347,13 +344,12 @@
             "module": "Browser",
             "namespace": "",
             "file": "src/browser/CriOS.js",
-            "line": 38,
+            "line": 34,
             "description": "iOS Chrome チェックを行います"
         },
         "Edge": {
             "name": "Edge",
             "submodules": {},
-            "elements": {},
             "classes": {
                 "Edge": 1
             },
@@ -363,13 +359,12 @@
             "module": "Browser",
             "namespace": "",
             "file": "src/browser/Edge.js",
-            "line": 38,
-            "description": "Windows 10 Edge Browser チェックを行います"
+            "line": 34,
+            "description": "Windows 10 ~ Edge Browser チェックを行います"
         },
         "Firefox": {
             "name": "Firefox",
             "submodules": {},
-            "elements": {},
             "classes": {
                 "Firefox": 1
             },
@@ -379,13 +374,12 @@
             "module": "Browser",
             "namespace": "",
             "file": "src/browser/Firefox.js",
-            "line": 34,
+            "line": 32,
             "description": "Firefox チェックを行います"
         },
         "FxiOS": {
             "name": "FxiOS",
             "submodules": {},
-            "elements": {},
             "classes": {
                 "FxiOS": 1
             },
@@ -395,13 +389,12 @@
             "module": "Browser",
             "namespace": "",
             "file": "src/browser/FxiOS.js",
-            "line": 33,
+            "line": 29,
             "description": "iOS Firefox チェックを行います"
         },
         "IE": {
             "name": "IE",
             "submodules": {},
-            "elements": {},
             "classes": {
                 "IE": 1
             },
@@ -411,13 +404,12 @@
             "module": "Browser",
             "namespace": "",
             "file": "src/browser/IE.js",
-            "line": 32,
+            "line": 30,
             "description": "IE チェックを行います"
         },
         "Safari": {
             "name": "Safari",
             "submodules": {},
-            "elements": {},
             "classes": {
                 "Safari": 1
             },
@@ -427,13 +419,12 @@
             "module": "Browser",
             "namespace": "",
             "file": "src/browser/Safari.js",
-            "line": 40,
+            "line": 38,
             "description": "Safari チェックを行います"
         },
         "Css3": {
             "name": "Css3",
             "submodules": {},
-            "elements": {},
             "classes": {
                 "Css3": 1
             },
@@ -443,7 +434,7 @@
             "module": "Browser",
             "namespace": "",
             "file": "src/css/Css3.js",
-            "line": 40,
+            "line": 37,
             "description": "CSS3 機能（一部のみ）が使用可能かを調べます"
         },
         "wakegi": {
@@ -455,7 +446,6 @@
                 "Iro": 1,
                 "Util": 1
             },
-            "elements": {},
             "classes": {
                 "Patterns": 1,
                 "Dataset": 1,
@@ -468,14 +458,13 @@
             "namespaces": {},
             "tag": "module",
             "file": "src/Browser.js",
-            "line": 35,
+            "line": 32,
             "description": "# Browser 機能を調べる\n# HTMLElement の CSS class 操作",
             "type": "{{}|wakegi}"
         },
         "Patterns": {
             "name": "Patterns",
             "submodules": {},
-            "elements": {},
             "classes": {
                 "Patterns": 1
             },
@@ -485,13 +474,12 @@
             "module": "wakegi",
             "namespace": "",
             "file": "src/css/Patterns.js",
-            "line": 43,
+            "line": 36,
             "description": "CSS shorthand property pattern"
         },
         "Transform": {
             "name": "Transform",
             "submodules": {},
-            "elements": {},
             "classes": {
                 "Transform": 1
             },
@@ -501,13 +489,12 @@
             "module": "Browser",
             "namespace": "",
             "file": "src/css/Transform.js",
-            "line": 34,
-            "description": "deprecated instead of Css3"
+            "line": 28,
+            "description": "CSS3 transform 使用可能かを判定します"
         },
         "Transition": {
             "name": "Transition",
             "submodules": {},
-            "elements": {},
             "classes": {
                 "Transition": 1
             },
@@ -517,13 +504,12 @@
             "module": "Browser",
             "namespace": "",
             "file": "src/css/Transition.js",
-            "line": 32,
-            "description": "deprecated instead of Css3"
+            "line": 29,
+            "description": "CSS3 transition 使用可能かを判定します"
         },
         "Android": {
             "name": "Android",
             "submodules": {},
-            "elements": {},
             "classes": {
                 "Android": 1
             },
@@ -533,13 +519,12 @@
             "module": "Browser",
             "namespace": "",
             "file": "src/device/Android.js",
-            "line": 41,
+            "line": 38,
             "description": "Android のバージョンチェック他を行います"
         },
         "Mac": {
             "name": "Mac",
             "submodules": {},
-            "elements": {},
             "classes": {
                 "Mac": 1
             },
@@ -549,13 +534,12 @@
             "module": "Browser",
             "namespace": "",
             "file": "src/device/Mac.js",
-            "line": 33,
+            "line": 30,
             "description": "Mac OS チェックを行います"
         },
         "Mobile": {
             "name": "Mobile",
             "submodules": {},
-            "elements": {},
             "classes": {
                 "Mobile": 1
             },
@@ -565,13 +549,12 @@
             "module": "Browser",
             "namespace": "",
             "file": "src/device/Mobile.js",
-            "line": 34,
+            "line": 32,
             "description": "mobile (phone, tablet) チェックを行います"
         },
         "Touch": {
             "name": "Touch",
             "submodules": {},
-            "elements": {},
             "classes": {
                 "Touch": 1
             },
@@ -581,13 +564,12 @@
             "module": "Browser",
             "namespace": "",
             "file": "src/device/Touch.js",
-            "line": 30,
+            "line": 28,
             "description": "touch event が利用可能かを調べます"
         },
         "Windows": {
             "name": "Windows",
             "submodules": {},
-            "elements": {},
             "classes": {
                 "Windows": 1
             },
@@ -597,13 +579,12 @@
             "module": "Browser",
             "namespace": "",
             "file": "src/device/Windows.js",
-            "line": 33,
+            "line": 31,
             "description": "Windows OS チェックを行います"
         },
         "iOS": {
             "name": "iOS",
             "submodules": {},
-            "elements": {},
             "classes": {
                 "iOS": 1
             },
@@ -613,13 +594,12 @@
             "module": "Browser",
             "namespace": "",
             "file": "src/device/iOS.js",
-            "line": 38,
+            "line": 36,
             "description": "iOS バージョンチェック他を行います"
         },
         "Dataset": {
             "name": "Dataset",
             "submodules": {},
-            "elements": {},
             "classes": {
                 "Dataset": 1
             },
@@ -629,13 +609,12 @@
             "module": "wakegi",
             "namespace": "",
             "file": "src/document/Dataset.js",
-            "line": 33,
+            "line": 31,
             "description": "data-xxx を key, value に分解します"
         },
         "Dom": {
             "name": "Dom",
             "submodules": {},
-            "elements": {},
             "classes": {
                 "Dom": 1
             },
@@ -645,13 +624,12 @@
             "module": "wakegi",
             "namespace": "",
             "file": "src/document/Dom.js",
-            "line": 34,
+            "line": 30,
             "description": "HTMLElement へ class を追加・削除・存在確認を行います"
         },
         "Element": {
             "name": "Element",
             "submodules": {},
-            "elements": {},
             "classes": {
                 "Element": 1
             },
@@ -661,13 +639,12 @@
             "module": "Browser",
             "namespace": "",
             "file": "src/document/Element.js",
-            "line": 35,
+            "line": 33,
             "description": "Browser 毎の Element 機能を調べます"
         },
         "Iro": {
             "name": "Iro",
             "submodules": {},
-            "elements": {},
             "classes": {
                 "Iro": 1
             },
@@ -677,13 +654,12 @@
             "module": "wakegi",
             "namespace": "",
             "file": "src/util/Iro.js",
-            "line": 38,
-            "description": "rgb, hsl, hsv\n\nColor 関連 utilties"
+            "line": 34,
+            "description": "rgb, hsl, hsv\n\nColor 関連 utilities"
         },
         "Util": {
             "name": "Util",
             "submodules": {},
-            "elements": {},
             "classes": {
                 "Util": 1
             },
@@ -693,7 +669,7 @@
             "module": "wakegi",
             "namespace": "",
             "file": "src/util/Util.js",
-            "line": 31,
+            "line": 26,
             "description": "文字列操作に使用します"
         }
     },
@@ -710,7 +686,7 @@
             "submodule": "Chrome",
             "namespace": "",
             "file": "src/browser/Chrome.js",
-            "line": 40,
+            "line": 37,
             "description": "Chrome 判定\n\niOS Chrome も含まれます",
             "static": 1,
             "is_constructor": 1
@@ -727,7 +703,7 @@
             "submodule": "CriOS",
             "namespace": "",
             "file": "src/browser/CriOS.js",
-            "line": 38,
+            "line": 34,
             "description": "iOS Chrome 判定",
             "static": 1,
             "is_constructor": 1
@@ -744,7 +720,7 @@
             "submodule": "Edge",
             "namespace": "",
             "file": "src/browser/Edge.js",
-            "line": 38,
+            "line": 34,
             "description": "Windows 10 Edge Browser チェックを行います",
             "static": 1,
             "is_constructor": 1
@@ -761,7 +737,7 @@
             "submodule": "Firefox",
             "namespace": "",
             "file": "src/browser/Firefox.js",
-            "line": 34,
+            "line": 32,
             "description": "Firefox detection",
             "static": 1,
             "is_constructor": 1
@@ -778,7 +754,7 @@
             "submodule": "FxiOS",
             "namespace": "",
             "file": "src/browser/FxiOS.js",
-            "line": 33,
+            "line": 29,
             "static": 1,
             "is_constructor": 1
         },
@@ -794,7 +770,7 @@
             "submodule": "IE",
             "namespace": "",
             "file": "src/browser/IE.js",
-            "line": 32,
+            "line": 30,
             "description": "IE detection",
             "static": 1,
             "is_constructor": 1
@@ -811,7 +787,7 @@
             "submodule": "Safari",
             "namespace": "",
             "file": "src/browser/Safari.js",
-            "line": 40,
+            "line": 38,
             "description": "Safari detection",
             "static": 1,
             "is_constructor": 1
@@ -828,7 +804,7 @@
             "submodule": "Css3",
             "namespace": "",
             "file": "src/css/Css3.js",
-            "line": 40,
+            "line": 37,
             "description": "CSS3 detection",
             "static": 1,
             "is_constructor": 1
@@ -845,7 +821,7 @@
             "submodule": "Patterns",
             "namespace": "",
             "file": "src/css/Patterns.js",
-            "line": 43,
+            "line": 36,
             "static": 1,
             "is_constructor": 1
         },
@@ -861,7 +837,8 @@
             "submodule": "Transform",
             "namespace": "",
             "file": "src/css/Transform.js",
-            "line": 34,
+            "line": 28,
+            "description": "CSS3 transform 使用可能かを判定します",
             "deprecated": true,
             "deprecationMessage": "instead of Css3",
             "static": 1,
@@ -879,7 +856,7 @@
             "submodule": "Transition",
             "namespace": "",
             "file": "src/css/Transition.js",
-            "line": 32,
+            "line": 29,
             "deprecated": true,
             "deprecationMessage": "instead of Css3",
             "static": 1,
@@ -897,7 +874,7 @@
             "submodule": "Android",
             "namespace": "",
             "file": "src/device/Android.js",
-            "line": 41,
+            "line": 38,
             "description": "Android detection",
             "static": 1,
             "is_constructor": 1
@@ -914,7 +891,7 @@
             "submodule": "Mac",
             "namespace": "",
             "file": "src/device/Mac.js",
-            "line": 33,
+            "line": 30,
             "description": "Mac OS detection",
             "static": 1,
             "is_constructor": 1
@@ -931,7 +908,7 @@
             "submodule": "Mobile",
             "namespace": "",
             "file": "src/device/Mobile.js",
-            "line": 34,
+            "line": 32,
             "description": "Mobile detection, iOS or Android",
             "static": 1,
             "is_constructor": 1
@@ -948,7 +925,8 @@
             "submodule": "Touch",
             "namespace": "",
             "file": "src/device/Touch.js",
-            "line": 30,
+            "line": 28,
+            "description": "touch event が利用可能かを調べます",
             "static": 1,
             "deprecated": true,
             "deprecationMessage": "instead of Element",
@@ -966,7 +944,7 @@
             "submodule": "Windows",
             "namespace": "",
             "file": "src/device/Windows.js",
-            "line": 33,
+            "line": 31,
             "description": "windows OS detection",
             "static": 1,
             "is_constructor": 1
@@ -983,7 +961,7 @@
             "submodule": "iOS",
             "namespace": "",
             "file": "src/device/iOS.js",
-            "line": 38,
+            "line": 36,
             "description": "iOS detection",
             "static": 1,
             "is_constructor": 1
@@ -1000,7 +978,7 @@
             "submodule": "Dataset",
             "namespace": "",
             "file": "src/document/Dataset.js",
-            "line": 33,
+            "line": 31,
             "description": "tag の data属性を key: value 形式に分解します",
             "static": 1,
             "is_constructor": 1
@@ -1017,13 +995,14 @@
             "submodule": "Dom",
             "namespace": "",
             "file": "src/document/Dom.js",
-            "line": 34,
+            "line": 30,
+            "description": "HTML Element style / class を操作します",
             "static": 1,
             "is_constructor": 1,
             "params": [
                 {
                     "name": "element",
-                    "description": "",
+                    "description": "操作対象 Element",
                     "type": "HTMLElement"
                 }
             ]
@@ -1040,7 +1019,7 @@
             "submodule": "Element",
             "namespace": "",
             "file": "src/document/Element.js",
-            "line": 35,
+            "line": 33,
             "description": "HTMLElement detection",
             "static": 1,
             "is_constructor": 1
@@ -1057,7 +1036,7 @@
             "submodule": "Iro",
             "namespace": "",
             "file": "src/util/Iro.js",
-            "line": 38,
+            "line": 34,
             "description": "色設定 utility\n\n- http://stackoverflow.com/questions/2353211/hsl-to-rgb-color-conversion\n- http://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb\n- https://github.com/mbostock/d3/tree/master/src/color\n\n`not found`\n- https://github.com/less/less.js/blob/master/lib/less/functions.js",
             "static": 1,
             "is_constructor": 1
@@ -1074,7 +1053,8 @@
             "submodule": "Util",
             "namespace": "",
             "file": "src/util/Util.js",
-            "line": 31,
+            "line": 26,
+            "description": "ユーティリティ",
             "static": 1,
             "is_constructor": 1
         },
@@ -1090,13 +1070,12 @@
             "submodule": "Browser",
             "namespace": "",
             "file": "src/Browser.js",
-            "line": 35,
+            "line": 32,
             "description": "Browser 基本機能\n\n主要Classの親になります",
             "static": 1,
             "is_constructor": 1
         }
     },
-    "elements": {},
     "classitems": [
         {
             "file": "src/browser/Chrome.js",
@@ -1106,7 +1085,7 @@
         },
         {
             "file": "src/browser/Chrome.js",
-            "line": 57,
+            "line": 54,
             "itemtype": "method",
             "name": "init",
             "static": 1,
@@ -1116,7 +1095,7 @@
         },
         {
             "file": "src/browser/Chrome.js",
-            "line": 89,
+            "line": 77,
             "itemtype": "method",
             "name": "calculate",
             "static": 1,
@@ -1126,12 +1105,13 @@
         },
         {
             "file": "src/browser/Chrome.js",
-            "line": 147,
+            "line": 124,
+            "description": "Chrome 判定を行います",
             "itemtype": "method",
             "name": "is",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "true: Chrome",
                 "type": "Boolean"
             },
             "class": "Chrome",
@@ -1140,7 +1120,8 @@
         },
         {
             "file": "src/browser/Chrome.js",
-            "line": 159,
+            "line": 135,
+            "description": "version N.NNN を取得します",
             "itemtype": "method",
             "name": "version",
             "static": 1,
@@ -1154,7 +1135,8 @@
         },
         {
             "file": "src/browser/Chrome.js",
-            "line": 172,
+            "line": 146,
+            "description": "version: build type を含み取得します",
             "itemtype": "method",
             "name": "build",
             "static": 1,
@@ -1168,12 +1150,13 @@
         },
         {
             "file": "src/browser/Chrome.js",
-            "line": 185,
+            "line": 156,
+            "description": "version NN を取得します",
             "itemtype": "method",
             "name": "major",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "version NN を返します",
                 "type": "Int"
             },
             "class": "Chrome",
@@ -1182,7 +1165,7 @@
         },
         {
             "file": "src/browser/Chrome.js",
-            "line": 197,
+            "line": 166,
             "itemtype": "method",
             "name": "numbers",
             "static": 1,
@@ -1203,7 +1186,7 @@
         },
         {
             "file": "src/browser/CriOS.js",
-            "line": 53,
+            "line": 49,
             "itemtype": "method",
             "name": "init",
             "static": 1,
@@ -1213,7 +1196,7 @@
         },
         {
             "file": "src/browser/CriOS.js",
-            "line": 67,
+            "line": 59,
             "itemtype": "method",
             "name": "calculate",
             "static": 1,
@@ -1223,12 +1206,13 @@
         },
         {
             "file": "src/browser/CriOS.js",
-            "line": 112,
+            "line": 94,
+            "description": "iOS Chrome 判定を行います",
             "itemtype": "method",
             "name": "is",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "true: iOS Chrome",
                 "type": "Boolean"
             },
             "class": "CriOS",
@@ -1237,7 +1221,8 @@
         },
         {
             "file": "src/browser/CriOS.js",
-            "line": 124,
+            "line": 105,
+            "description": "version float 形式で取得します",
             "itemtype": "method",
             "name": "version",
             "static": 1,
@@ -1251,7 +1236,8 @@
         },
         {
             "file": "src/browser/CriOS.js",
-            "line": 138,
+            "line": 115,
+            "description": "version: build No. を含み取得します",
             "itemtype": "method",
             "name": "build",
             "static": 1,
@@ -1265,12 +1251,13 @@
         },
         {
             "file": "src/browser/CriOS.js",
-            "line": 151,
+            "line": 125,
+            "description": "version: major を取得します",
             "itemtype": "method",
             "name": "major",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "version major を返します",
                 "type": "Int"
             },
             "class": "CriOS",
@@ -1279,7 +1266,7 @@
         },
         {
             "file": "src/browser/CriOS.js",
-            "line": 163,
+            "line": 135,
             "itemtype": "method",
             "name": "numbers",
             "static": 1,
@@ -1300,7 +1287,8 @@
         },
         {
             "file": "src/browser/Edge.js",
-            "line": 52,
+            "line": 48,
+            "description": "edge 判定を行います",
             "itemtype": "method",
             "name": "init",
             "static": 1,
@@ -1310,7 +1298,8 @@
         },
         {
             "file": "src/browser/Edge.js",
-            "line": 66,
+            "line": 59,
+            "description": "version No. を計算します",
             "itemtype": "method",
             "name": "calculate",
             "static": 1,
@@ -1320,12 +1309,13 @@
         },
         {
             "file": "src/browser/Edge.js",
-            "line": 112,
+            "line": 98,
+            "description": "edge 判定を行います",
             "itemtype": "method",
             "name": "is",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "true: Edge",
                 "type": "Boolean"
             },
             "class": "Edge",
@@ -1334,7 +1324,8 @@
         },
         {
             "file": "src/browser/Edge.js",
-            "line": 124,
+            "line": 108,
+            "description": "version: float型で取得します",
             "itemtype": "method",
             "name": "version",
             "static": 1,
@@ -1348,12 +1339,13 @@
         },
         {
             "file": "src/browser/Edge.js",
-            "line": 137,
+            "line": 119,
+            "description": "version: major を取得します",
             "itemtype": "method",
             "name": "major",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "version: major を返します",
                 "type": "Int"
             },
             "class": "Edge",
@@ -1362,7 +1354,8 @@
         },
         {
             "file": "src/browser/Edge.js",
-            "line": 149,
+            "line": 129,
+            "description": "version: build ナンバーを含み取得します",
             "itemtype": "method",
             "name": "build",
             "static": 1,
@@ -1376,7 +1369,8 @@
         },
         {
             "file": "src/browser/Edge.js",
-            "line": 162,
+            "line": 139,
+            "description": "version を配列形式で取得します",
             "itemtype": "method",
             "name": "numbers",
             "static": 1,
@@ -1397,7 +1391,8 @@
         },
         {
             "file": "src/browser/Firefox.js",
-            "line": 48,
+            "line": 46,
+            "description": "Firefox 判定を行います",
             "itemtype": "method",
             "name": "init",
             "static": 1,
@@ -1407,7 +1402,8 @@
         },
         {
             "file": "src/browser/Firefox.js",
-            "line": 64,
+            "line": 59,
+            "description": "version No. を計算します",
             "itemtype": "method",
             "name": "calculate",
             "static": 1,
@@ -1417,12 +1413,13 @@
         },
         {
             "file": "src/browser/Firefox.js",
-            "line": 111,
+            "line": 97,
+            "description": "Firefox 判定を行います",
             "itemtype": "method",
             "name": "is",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "true: Firefox",
                 "type": "Boolean"
             },
             "class": "Firefox",
@@ -1431,7 +1428,8 @@
         },
         {
             "file": "src/browser/Firefox.js",
-            "line": 123,
+            "line": 108,
+            "description": "version: float型で取得します",
             "itemtype": "method",
             "name": "version",
             "static": 1,
@@ -1445,12 +1443,13 @@
         },
         {
             "file": "src/browser/Firefox.js",
-            "line": 136,
+            "line": 119,
+            "description": "version: major を取得します",
             "itemtype": "method",
             "name": "major",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "version: major を返します",
                 "type": "Int"
             },
             "class": "Firefox",
@@ -1459,7 +1458,8 @@
         },
         {
             "file": "src/browser/Firefox.js",
-            "line": 148,
+            "line": 130,
+            "description": "version: build ナンバーを含み取得します",
             "itemtype": "method",
             "name": "build",
             "static": 1,
@@ -1473,7 +1473,8 @@
         },
         {
             "file": "src/browser/Firefox.js",
-            "line": 161,
+            "line": 141,
+            "description": "version を配列形式で取得します",
             "itemtype": "method",
             "name": "numbers",
             "static": 1,
@@ -1494,7 +1495,8 @@
         },
         {
             "file": "src/browser/FxiOS.js",
-            "line": 45,
+            "line": 41,
+            "description": "iOS Firefox 判定を行います",
             "itemtype": "method",
             "name": "init",
             "static": 1,
@@ -1504,7 +1506,8 @@
         },
         {
             "file": "src/browser/FxiOS.js",
-            "line": 61,
+            "line": 54,
+            "description": "version No. を計算します",
             "itemtype": "method",
             "name": "calculate",
             "static": 1,
@@ -1514,12 +1517,13 @@
         },
         {
             "file": "src/browser/FxiOS.js",
-            "line": 108,
+            "line": 92,
+            "description": "iOS Firefox 判定を行います",
             "itemtype": "method",
             "name": "is",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "true: iOS Firefox",
                 "type": "Boolean"
             },
             "class": "FxiOS",
@@ -1528,7 +1532,8 @@
         },
         {
             "file": "src/browser/FxiOS.js",
-            "line": 121,
+            "line": 103,
+            "description": "version: float型で取得します",
             "itemtype": "method",
             "name": "version",
             "static": 1,
@@ -1542,12 +1547,13 @@
         },
         {
             "file": "src/browser/FxiOS.js",
-            "line": 134,
+            "line": 114,
+            "description": "version: major を取得します",
             "itemtype": "method",
             "name": "major",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "version: major を返します",
                 "type": "Int"
             },
             "class": "FxiOS",
@@ -1556,7 +1562,8 @@
         },
         {
             "file": "src/browser/FxiOS.js",
-            "line": 146,
+            "line": 125,
+            "description": "version: build ナンバーを含み取得します",
             "itemtype": "method",
             "name": "build",
             "static": 1,
@@ -1570,7 +1577,8 @@
         },
         {
             "file": "src/browser/FxiOS.js",
-            "line": 159,
+            "line": 136,
+            "description": "version を配列形式で取得します",
             "itemtype": "method",
             "name": "numbers",
             "static": 1,
@@ -1591,7 +1599,8 @@
         },
         {
             "file": "src/browser/IE.js",
-            "line": 46,
+            "line": 44,
+            "description": "IE 判定を行います",
             "itemtype": "method",
             "name": "init",
             "static": 1,
@@ -1601,7 +1610,8 @@
         },
         {
             "file": "src/browser/IE.js",
-            "line": 115,
+            "line": 94,
+            "description": "version No. を計算します",
             "itemtype": "method",
             "name": "calculate",
             "static": 1,
@@ -1611,12 +1621,73 @@
         },
         {
             "file": "src/browser/IE.js",
-            "line": 162,
+            "line": 124,
+            "description": "IE 判定",
             "itemtype": "method",
             "name": "is",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "true: IE",
+                "type": "Boolean"
+            },
+            "class": "IE",
+            "module": "Browser",
+            "submodule": "IE"
+        },
+        {
+            "file": "src/browser/IE.js",
+            "line": 134,
+            "description": "IE 6判定",
+            "itemtype": "method",
+            "name": "is6",
+            "static": 1,
+            "return": {
+                "description": "true: IE 6",
+                "type": "Boolean"
+            },
+            "class": "IE",
+            "module": "Browser",
+            "submodule": "IE"
+        },
+        {
+            "file": "src/browser/IE.js",
+            "line": 144,
+            "description": "IE 7判定",
+            "itemtype": "method",
+            "name": "is7",
+            "static": 1,
+            "return": {
+                "description": "true: IE 7",
+                "type": "Boolean"
+            },
+            "class": "IE",
+            "module": "Browser",
+            "submodule": "IE"
+        },
+        {
+            "file": "src/browser/IE.js",
+            "line": 154,
+            "description": "IE 8判定",
+            "itemtype": "method",
+            "name": "is8",
+            "static": 1,
+            "return": {
+                "description": "true: IE 8",
+                "type": "Boolean"
+            },
+            "class": "IE",
+            "module": "Browser",
+            "submodule": "IE"
+        },
+        {
+            "file": "src/browser/IE.js",
+            "line": 164,
+            "description": "IE 9判定",
+            "itemtype": "method",
+            "name": "is9",
+            "static": 1,
+            "return": {
+                "description": "true: IE 9",
                 "type": "Boolean"
             },
             "class": "IE",
@@ -1626,67 +1697,12 @@
         {
             "file": "src/browser/IE.js",
             "line": 174,
-            "itemtype": "method",
-            "name": "is6",
-            "static": 1,
-            "return": {
-                "description": "",
-                "type": "Boolean"
-            },
-            "class": "IE",
-            "module": "Browser",
-            "submodule": "IE"
-        },
-        {
-            "file": "src/browser/IE.js",
-            "line": 186,
-            "itemtype": "method",
-            "name": "is7",
-            "static": 1,
-            "return": {
-                "description": "",
-                "type": "Boolean"
-            },
-            "class": "IE",
-            "module": "Browser",
-            "submodule": "IE"
-        },
-        {
-            "file": "src/browser/IE.js",
-            "line": 198,
-            "itemtype": "method",
-            "name": "is8",
-            "static": 1,
-            "return": {
-                "description": "",
-                "type": "Boolean"
-            },
-            "class": "IE",
-            "module": "Browser",
-            "submodule": "IE"
-        },
-        {
-            "file": "src/browser/IE.js",
-            "line": 210,
-            "itemtype": "method",
-            "name": "is9",
-            "static": 1,
-            "return": {
-                "description": "",
-                "type": "Boolean"
-            },
-            "class": "IE",
-            "module": "Browser",
-            "submodule": "IE"
-        },
-        {
-            "file": "src/browser/IE.js",
-            "line": 222,
+            "description": "IE 10判定",
             "itemtype": "method",
             "name": "is10",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "true: IE 10",
                 "type": "Boolean"
             },
             "class": "IE",
@@ -1695,12 +1711,13 @@
         },
         {
             "file": "src/browser/IE.js",
-            "line": 234,
+            "line": 184,
+            "description": "IE 11判定",
             "itemtype": "method",
             "name": "is11",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "true: IE11",
                 "type": "Boolean"
             },
             "class": "IE",
@@ -1709,14 +1726,14 @@
         },
         {
             "file": "src/browser/IE.js",
-            "line": 246,
+            "line": 194,
             "description": "version float型",
             "itemtype": "method",
             "name": "version",
             "static": 1,
             "return": {
-                "description": "",
-                "type": "Int"
+                "description": "N.NN で返します",
+                "type": "Float"
             },
             "class": "IE",
             "module": "Browser",
@@ -1724,13 +1741,13 @@
         },
         {
             "file": "src/browser/IE.js",
-            "line": 259,
+            "line": 204,
             "description": "version 正数",
             "itemtype": "method",
             "name": "major",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "version: major を返します",
                 "type": "Int"
             },
             "class": "IE",
@@ -1739,13 +1756,13 @@
         },
         {
             "file": "src/browser/IE.js",
-            "line": 271,
+            "line": 213,
             "description": "IE 8 or 7 or 6 判定",
             "itemtype": "method",
             "name": "legacy",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "true: IE 6 | 7 | 8",
                 "type": "Boolean"
             },
             "class": "IE",
@@ -1761,7 +1778,8 @@
         },
         {
             "file": "src/browser/Safari.js",
-            "line": 54,
+            "line": 52,
+            "description": "Safari 判定を行います\n\nChrome, Edge, iOS Chrome, iOS Firefox の UA が近似しているので比較し判定します",
             "itemtype": "method",
             "name": "init",
             "static": 1,
@@ -1771,7 +1789,8 @@
         },
         {
             "file": "src/browser/Safari.js",
-            "line": 82,
+            "line": 77,
+            "description": "version No. を計算します",
             "itemtype": "method",
             "name": "calculate",
             "static": 1,
@@ -1781,12 +1800,13 @@
         },
         {
             "file": "src/browser/Safari.js",
-            "line": 140,
+            "line": 119,
+            "description": "Safari 判定を行います",
             "itemtype": "method",
             "name": "is",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "true: Safari",
                 "type": "Boolean"
             },
             "class": "Safari",
@@ -1795,24 +1815,30 @@
         },
         {
             "file": "src/browser/Safari.js",
-            "line": 152,
+            "line": 129,
+            "description": "Safari 判定値を設定します",
             "itemtype": "method",
             "name": "set",
             "static": 1,
             "params": [
                 {
                     "name": "bool",
-                    "description": "",
+                    "description": "判定フラッグ",
                     "type": "Boolean"
                 }
             ],
+            "return": {
+                "description": "設置値を返します",
+                "type": "Boolean"
+            },
             "class": "Safari",
             "module": "Browser",
             "submodule": "Safari"
         },
         {
             "file": "src/browser/Safari.js",
-            "line": 163,
+            "line": 141,
+            "description": "version: float型で取得します",
             "itemtype": "method",
             "name": "version",
             "static": 1,
@@ -1826,12 +1852,13 @@
         },
         {
             "file": "src/browser/Safari.js",
-            "line": 176,
+            "line": 151,
+            "description": "version: major を取得します",
             "itemtype": "method",
             "name": "major",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "version: major を返します",
                 "type": "Int"
             },
             "class": "Safari",
@@ -1840,7 +1867,8 @@
         },
         {
             "file": "src/browser/Safari.js",
-            "line": 188,
+            "line": 161,
+            "description": "version: build ナンバーを含み取得します",
             "itemtype": "method",
             "name": "build",
             "static": 1,
@@ -1854,7 +1882,8 @@
         },
         {
             "file": "src/browser/Safari.js",
-            "line": 201,
+            "line": 171,
+            "description": "version を配列形式で取得します",
             "itemtype": "method",
             "name": "numbers",
             "static": 1,
@@ -1868,7 +1897,8 @@
         },
         {
             "file": "src/browser/Safari.js",
-            "line": 213,
+            "line": 181,
+            "description": "version を配列形式で取得します",
             "itemtype": "method",
             "name": "number",
             "deprecated": true,
@@ -1891,13 +1921,13 @@
         },
         {
             "file": "src/css/Css3.js",
-            "line": 55,
+            "line": 50,
             "description": "CSS3 transition detection",
             "itemtype": "method",
             "name": "transition",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "true: CSS3 transition 使用可能",
                 "type": "Boolean"
             },
             "class": "Css3",
@@ -1906,13 +1936,13 @@
         },
         {
             "file": "src/css/Css3.js",
-            "line": 82,
+            "line": 70,
             "description": "CSS3 transform detection",
             "itemtype": "method",
             "name": "transform",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "true: CSS3 transform 使用可能",
                 "type": "Boolean"
             },
             "class": "Css3",
@@ -1921,13 +1951,13 @@
         },
         {
             "file": "src/css/Css3.js",
-            "line": 109,
+            "line": 91,
             "description": "matchMedia が使用可能かを調べます",
             "itemtype": "method",
             "name": "matchMedia",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "true: matchMedia が使用可能",
                 "type": "Boolean"
             },
             "class": "Css3",
@@ -1936,13 +1966,13 @@
         },
         {
             "file": "src/css/Css3.js",
-            "line": 127,
+            "line": 105,
             "description": "onorientationchange が使用可能かを調べます",
             "itemtype": "method",
             "name": "orientationChange",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "true: onorientationchange が使用可能",
                 "type": "Boolean"
             },
             "class": "Css3",
@@ -1951,13 +1981,13 @@
         },
         {
             "file": "src/css/Css3.js",
-            "line": 146,
+            "line": 119,
             "description": "orientation が使用可能かを調べます",
             "itemtype": "method",
             "name": "orientation",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "true: orientation が使用可能",
                 "type": "Boolean"
             },
             "class": "Css3",
@@ -1966,13 +1996,13 @@
         },
         {
             "file": "src/css/Css3.js",
-            "line": 164,
+            "line": 133,
             "description": "backgroundSize が使用可能かを調べます",
             "itemtype": "method",
             "name": "backgroundSize",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "true: backgroundSize が使用可能",
                 "type": "Boolean"
             },
             "class": "Css3",
@@ -1990,20 +2020,18 @@
         },
         {
             "file": "src/css/Patterns.js",
-            "line": 29,
+            "line": 23,
             "itemtype": "property",
-            "name": "_patterns",
-            "static": 1,
-            "type": "{{padding: string[], margin: string[], border-color: string[]}}",
-            "access": "private",
-            "tagname": "",
+            "name": "patterns",
+            "static": "@private",
+            "type": "{{padding: [*], margin: [*], border-color: [*], border-style: [*], border-width: [*]}}",
             "class": "Patterns",
             "module": "wakegi",
             "submodule": "Patterns"
         },
         {
             "file": "src/css/Patterns.js",
-            "line": 55,
+            "line": 48,
             "description": "camel を hyphen に変換",
             "itemtype": "method",
             "name": "hyphen",
@@ -2011,12 +2039,12 @@
             "params": [
                 {
                     "name": "key",
-                    "description": "",
+                    "description": "key 名称(CSS property name)",
                     "type": "String"
                 }
             ],
             "return": {
-                "description": "",
+                "description": "hyphen 変換後文字列を返します",
                 "type": "String"
             },
             "class": "Patterns",
@@ -2025,19 +2053,20 @@
         },
         {
             "file": "src/css/Patterns.js",
-            "line": 68,
+            "line": 58,
+            "description": "引数 key 名称が patterns に存在するかを調べます",
             "itemtype": "method",
             "name": "has",
             "static": 1,
             "params": [
                 {
                     "name": "key",
-                    "description": "",
+                    "description": "調べる key 名称(CSS property name)",
                     "type": "String"
                 }
             ],
             "return": {
-                "description": "",
+                "description": "true: 存在する",
                 "type": "Boolean"
             },
             "class": "Patterns",
@@ -2046,20 +2075,20 @@
         },
         {
             "file": "src/css/Patterns.js",
-            "line": 80,
+            "line": 69,
             "itemtype": "method",
             "name": "get",
             "static": 1,
             "params": [
                 {
                     "name": "key",
-                    "description": "",
+                    "description": "key 名称(CSS property name)",
                     "type": "String"
                 }
             ],
             "return": {
-                "description": "",
-                "type": "Array"
+                "description": "CSS short hand 配列を返します",
+                "type": "Array|undefined"
             },
             "class": "Patterns",
             "module": "wakegi",
@@ -2074,14 +2103,15 @@
         },
         {
             "file": "src/css/Transform.js",
-            "line": 47,
+            "line": 42,
+            "description": "CSS3 transform 使用可能かを判定します",
             "itemtype": "method",
             "name": "is",
             "deprecated": true,
             "deprecationMessage": "instead of Css3.transform",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "true: CSS3 transform 使用可能",
                 "type": "Boolean"
             },
             "class": "Transform",
@@ -2097,14 +2127,15 @@
         },
         {
             "file": "src/css/Transition.js",
-            "line": 45,
+            "line": 42,
+            "description": "CSS3 transition 使用可能かを判定します",
             "itemtype": "method",
             "name": "is",
             "deprecated": true,
             "deprecationMessage": "instead of Css3.transition",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "true: CSS3 transition 使用可能",
                 "type": "Boolean"
             },
             "class": "Transition",
@@ -2120,7 +2151,8 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 55,
+            "line": 52,
+            "description": "Android 判定を行います",
             "itemtype": "method",
             "name": "init",
             "static": 1,
@@ -2130,7 +2162,8 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 112,
+            "line": 94,
+            "description": "version No. を計算します",
             "itemtype": "method",
             "name": "calculate",
             "static": 1,
@@ -2140,12 +2173,13 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 166,
+            "line": 137,
+            "description": "Android 判定を行います",
             "itemtype": "method",
             "name": "is",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "true: Android",
                 "type": "Boolean"
             },
             "class": "Android",
@@ -2154,13 +2188,13 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 178,
+            "line": 147,
             "description": "Android 標準ブラウザ",
             "itemtype": "method",
             "name": "standard",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "true: Android 標準ブラウザ",
                 "type": "Boolean"
             },
             "class": "Android",
@@ -2169,13 +2203,13 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 191,
+            "line": 157,
             "description": "Android Phone",
             "itemtype": "method",
             "name": "phone",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "true: Android phone",
                 "type": "Boolean"
             },
             "class": "Android",
@@ -2184,13 +2218,13 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 204,
+            "line": 167,
             "description": "Android Tablet",
             "itemtype": "method",
             "name": "tablet",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "true: Android tablet",
                 "type": "Boolean"
             },
             "class": "Android",
@@ -2199,13 +2233,13 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 217,
+            "line": 177,
             "description": "Android HD 端末",
             "itemtype": "method",
             "name": "hd",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "true: Android HD",
                 "type": "Boolean"
             },
             "class": "Android",
@@ -2214,7 +2248,8 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 230,
+            "line": 187,
+            "description": "version: float型で取得します",
             "itemtype": "method",
             "name": "version",
             "static": 1,
@@ -2228,7 +2263,8 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 243,
+            "line": 197,
+            "description": "version: build ナンバーを含み取得します",
             "itemtype": "method",
             "name": "build",
             "static": 1,
@@ -2242,12 +2278,13 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 256,
+            "line": 207,
+            "description": "version: major を取得します",
             "itemtype": "method",
             "name": "major",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "version: major を返します",
                 "type": "Int"
             },
             "class": "Android",
@@ -2256,7 +2293,8 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 267,
+            "line": 217,
+            "description": "version を配列形式で取得します",
             "itemtype": "method",
             "name": "numbers",
             "static": 1,
@@ -2270,7 +2308,8 @@
         },
         {
             "file": "src/device/Android.js",
-            "line": 279,
+            "line": 227,
+            "description": "version を配列形式で取得します",
             "itemtype": "method",
             "name": "number",
             "deprecated": true,
@@ -2285,6 +2324,21 @@
             "submodule": "Android"
         },
         {
+            "file": "src/device/Android.js",
+            "line": 238,
+            "description": "window width / height を取得します",
+            "itemtype": "method",
+            "name": "rect",
+            "static": 1,
+            "return": {
+                "description": "} width / height を Object 形式で返します",
+                "type": "Width: Number, height: Number"
+            },
+            "class": "Android",
+            "module": "Browser",
+            "submodule": "Android"
+        },
+        {
             "file": "src/device/Mac.js",
             "line": 1,
             "description": "license inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 23:00\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
@@ -2293,7 +2347,7 @@
         },
         {
             "file": "src/device/Mac.js",
-            "line": 47,
+            "line": 41,
             "itemtype": "method",
             "name": "init",
             "static": 1,
@@ -2303,12 +2357,13 @@
         },
         {
             "file": "src/device/Mac.js",
-            "line": 62,
+            "line": 51,
+            "description": "Mac OS 判定します",
             "itemtype": "method",
             "name": "is",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "true Mac OS",
                 "type": "Boolean"
             },
             "class": "Mac",
@@ -2324,12 +2379,13 @@
         },
         {
             "file": "src/device/Mobile.js",
-            "line": 47,
+            "line": 45,
+            "description": "iOS / Android / Windows phone 判定",
             "itemtype": "method",
             "name": "is",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "true: iOS / Android / Windows phone",
                 "type": "Boolean"
             },
             "class": "Mobile",
@@ -2338,12 +2394,13 @@
         },
         {
             "file": "src/device/Mobile.js",
-            "line": 57,
+            "line": 54,
+            "description": "スマホ・iPod touch 判定を行います",
             "itemtype": "method",
             "name": "phone",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "true: スマホ・iPod touch",
                 "type": "Boolean"
             },
             "class": "Mobile",
@@ -2352,12 +2409,13 @@
         },
         {
             "file": "src/device/Mobile.js",
-            "line": 67,
+            "line": 63,
+            "description": "tablet 判定を行います",
             "itemtype": "method",
             "name": "tablet",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "true: tablet",
                 "type": "Boolean"
             },
             "class": "Mobile",
@@ -2366,11 +2424,15 @@
         },
         {
             "file": "src/device/Mobile.js",
-            "line": 77,
-            "description": "window.onload 後に実行して下さい",
+            "line": 72,
+            "description": "強制的にスクロールさせ URL bar を非表示（のように）します\n\n**注意** window.onload 後に実行して下さい\n\niOS 9 以降では実行しても無駄です",
             "itemtype": "method",
             "name": "hideBar",
             "static": 1,
+            "return": {
+                "description": "timer id を返します",
+                "type": "Number"
+            },
             "class": "Mobile",
             "module": "Browser",
             "submodule": "Mobile"
@@ -2378,11 +2440,16 @@
         {
             "file": "src/device/Mobile.js",
             "line": 87,
-            "itemtype": "method",
-            "name": "hideURLBar",
+            "description": "強制的にスクロールさせ URL bar を非表示（のように）します",
             "deprecated": true,
             "deprecationMessage": "instead of Mobile.hideBar",
+            "itemtype": "method",
+            "name": "hideURLBar",
             "static": 1,
+            "return": {
+                "description": "timer id を返します",
+                "type": "Number"
+            },
             "class": "Mobile",
             "module": "Browser",
             "submodule": "Mobile"
@@ -2396,14 +2463,15 @@
         },
         {
             "file": "src/device/Touch.js",
-            "line": 43,
+            "line": 42,
+            "description": "touch event が利用可能かを調べます",
             "itemtype": "method",
             "name": "is",
             "deprecated": true,
             "deprecationMessage": "instead of Element.touch",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "true: touch event が利用可能",
                 "type": "Boolean"
             },
             "class": "Touch",
@@ -2419,7 +2487,7 @@
         },
         {
             "file": "src/device/Windows.js",
-            "line": 47,
+            "line": 45,
             "itemtype": "method",
             "name": "init",
             "static": 1,
@@ -2429,12 +2497,13 @@
         },
         {
             "file": "src/device/Windows.js",
-            "line": 83,
+            "line": 67,
+            "description": "Windows OS 判定を行います",
             "itemtype": "method",
             "name": "is",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "true: Windows OS",
                 "type": "Boolean"
             },
             "class": "Windows",
@@ -2443,12 +2512,13 @@
         },
         {
             "file": "src/device/Windows.js",
-            "line": 94,
+            "line": 77,
+            "description": "Windows phone 判定を行います",
             "itemtype": "method",
             "name": "phone",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "true: Windows phone",
                 "type": "Boolean"
             },
             "class": "Windows",
@@ -2464,7 +2534,8 @@
         },
         {
             "file": "src/device/iOS.js",
-            "line": 52,
+            "line": 50,
+            "description": "iOS 判定を行います",
             "itemtype": "method",
             "name": "init",
             "static": 1,
@@ -2474,7 +2545,8 @@
         },
         {
             "file": "src/device/iOS.js",
-            "line": 78,
+            "line": 74,
+            "description": "version No. を計算します",
             "itemtype": "method",
             "name": "calculate",
             "static": 1,
@@ -2484,12 +2556,13 @@
         },
         {
             "file": "src/device/iOS.js",
-            "line": 132,
+            "line": 117,
+            "description": "iOS 判定",
             "itemtype": "method",
             "name": "is",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "true: iOS",
                 "type": "Boolean"
             },
             "class": "iOS",
@@ -2498,12 +2571,13 @@
         },
         {
             "file": "src/device/iOS.js",
-            "line": 143,
+            "line": 127,
+            "description": "iPhone 判定",
             "itemtype": "method",
             "name": "iPhone",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "true: iPhone",
                 "type": "Boolean"
             },
             "class": "iOS",
@@ -2512,12 +2586,13 @@
         },
         {
             "file": "src/device/iOS.js",
-            "line": 154,
+            "line": 137,
+            "description": "iPad 判定",
             "itemtype": "method",
             "name": "iPad",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "true: iPad",
                 "type": "Boolean"
             },
             "class": "iOS",
@@ -2526,12 +2601,13 @@
         },
         {
             "file": "src/device/iOS.js",
-            "line": 165,
+            "line": 147,
+            "description": "iPod 判定します",
             "itemtype": "method",
             "name": "iPod",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "true: iPod",
                 "type": "Boolean"
             },
             "class": "iOS",
@@ -2540,13 +2616,14 @@
         },
         {
             "file": "src/device/iOS.js",
-            "line": 176,
+            "line": 157,
+            "description": "standalone で表示しているかを判定します",
             "itemtype": "method",
             "name": "standalone",
             "static": 1,
             "return": {
-                "description": "",
-                "type": "Function|boolean"
+                "description": "true: standalone で表示",
+                "type": "Boolean"
             },
             "class": "iOS",
             "module": "Browser",
@@ -2554,15 +2631,16 @@
         },
         {
             "file": "src/device/iOS.js",
-            "line": 188,
+            "line": 168,
+            "description": "standalone で表示しているかを判定します",
             "itemtype": "method",
             "name": "fullScreen",
             "deprecated": true,
             "deprecationMessage": "instead of iOS.standalone",
             "static": 1,
             "return": {
-                "description": "",
-                "type": "Function|boolean"
+                "description": "true: standalone で表示",
+                "type": "Boolean"
             },
             "class": "iOS",
             "module": "Browser",
@@ -2570,7 +2648,8 @@
         },
         {
             "file": "src/device/iOS.js",
-            "line": 200,
+            "line": 178,
+            "description": "version: float型で取得します",
             "itemtype": "method",
             "name": "version",
             "static": 1,
@@ -2584,7 +2663,8 @@
         },
         {
             "file": "src/device/iOS.js",
-            "line": 213,
+            "line": 188,
+            "description": "version: build ナンバーを含み取得します",
             "itemtype": "method",
             "name": "build",
             "static": 1,
@@ -2598,12 +2678,13 @@
         },
         {
             "file": "src/device/iOS.js",
-            "line": 226,
+            "line": 199,
+            "description": "version: major を取得します",
             "itemtype": "method",
             "name": "major",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "version: major を返します",
                 "type": "Int"
             },
             "class": "iOS",
@@ -2612,7 +2693,8 @@
         },
         {
             "file": "src/device/iOS.js",
-            "line": 237,
+            "line": 209,
+            "description": "version を配列形式で取得します",
             "itemtype": "method",
             "name": "numbers",
             "static": 1,
@@ -2626,7 +2708,8 @@
         },
         {
             "file": "src/device/iOS.js",
-            "line": 249,
+            "line": 219,
+            "description": "version を配列形式で取得します",
             "itemtype": "method",
             "name": "number",
             "deprecated": true,
@@ -2642,13 +2725,13 @@
         },
         {
             "file": "src/device/iOS.js",
-            "line": 261,
-            "description": "アプリ内ブラウザかどうかを返します",
+            "line": 230,
+            "description": "アプリ内ブラウザかどうかを返します\n**注意** アプリ内ブラウザ(webView)は UA 偽装可能",
             "itemtype": "method",
             "name": "webView",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "true: アプリ内ブラウザ",
                 "type": "Boolean"
             },
             "class": "iOS",
@@ -2664,7 +2747,7 @@
         },
         {
             "file": "src/document/Dataset.js",
-            "line": 44,
+            "line": 42,
             "description": "引数 element(HTMLElement) の data属性を object にして返す",
             "itemtype": "method",
             "name": "parse",
@@ -2672,12 +2755,12 @@
             "params": [
                 {
                     "name": "element",
-                    "description": "",
+                    "description": "HTML document",
                     "type": "Element"
                 }
             ],
             "return": {
-                "description": "}"
+                "description": "} dataset を取得し key: value Objectを返します"
             },
             "class": "Dataset",
             "module": "wakegi",
@@ -2685,19 +2768,20 @@
         },
         {
             "file": "src/document/Dataset.js",
-            "line": 65,
+            "line": 59,
+            "description": "dataset を取得し key: value Object にします: モダンブラウザ",
             "itemtype": "method",
             "name": "modern",
             "static": 1,
             "params": [
                 {
                     "name": "element",
-                    "description": "",
+                    "description": "HTML document",
                     "type": "Element"
                 }
             ],
             "return": {
-                "description": "}"
+                "description": "} dataset を取得し key: value Objectを返します"
             },
             "class": "Dataset",
             "module": "wakegi",
@@ -2705,19 +2789,20 @@
         },
         {
             "file": "src/document/Dataset.js",
-            "line": 116,
+            "line": 98,
+            "description": "dataset を取得し key: value Object にします: レガシーブラウザ",
             "itemtype": "method",
             "name": "legacy",
             "static": 1,
             "params": [
                 {
                     "name": "element",
-                    "description": "",
+                    "description": "HTML document",
                     "type": "Element"
                 }
             ],
             "return": {
-                "description": "}"
+                "description": "} dataset を取得し key: value Objectを返します"
             },
             "class": "Dataset",
             "module": "wakegi",
@@ -2732,9 +2817,9 @@
         },
         {
             "file": "src/document/Dom.js",
-            "line": 42,
+            "line": 38,
             "itemtype": "property",
-            "name": "_element",
+            "name": "element",
             "type": "{HTMLElement}",
             "access": "private",
             "tagname": "",
@@ -2744,32 +2829,19 @@
         },
         {
             "file": "src/document/Dom.js",
-            "line": 54,
-            "description": "使用 Element を返します",
-            "itemtype": "method",
-            "name": "element",
-            "return": {
-                "description": "",
-                "type": "HTMLElement"
-            },
-            "class": "Dom",
-            "module": "wakegi",
-            "submodule": "Dom"
-        },
-        {
-            "file": "src/document/Dom.js",
-            "line": 65,
+            "line": 57,
+            "description": "CSS class が存在するかを調べます",
             "itemtype": "method",
             "name": "hasClass",
             "params": [
                 {
                     "name": "className",
-                    "description": "",
+                    "description": "調査する class name",
                     "type": "String"
                 }
             ],
             "return": {
-                "description": "",
+                "description": "true CSS class が存在する",
                 "type": "Boolean"
             },
             "class": "Dom",
@@ -2778,19 +2850,19 @@
         },
         {
             "file": "src/document/Dom.js",
-            "line": 75,
+            "line": 66,
             "itemtype": "method",
             "name": "addClass",
             "params": [
                 {
                     "name": "className",
-                    "description": "",
+                    "description": "対象 class 名称",
                     "type": "String"
                 }
             ],
             "return": {
-                "description": "",
-                "type": "Dom"
+                "description": "true: 追加成功",
+                "type": "Boolean"
             },
             "class": "Dom",
             "module": "wakegi",
@@ -2798,19 +2870,19 @@
         },
         {
             "file": "src/document/Dom.js",
-            "line": 86,
+            "line": 74,
             "itemtype": "method",
             "name": "removeClass",
             "params": [
                 {
                     "name": "className",
-                    "description": "",
+                    "description": "対象 class 名称",
                     "type": "String"
                 }
             ],
             "return": {
-                "description": "",
-                "type": "Dom"
+                "description": "true: 削除成功",
+                "type": "Boolean"
             },
             "class": "Dom",
             "module": "wakegi",
@@ -2818,19 +2890,21 @@
         },
         {
             "file": "src/document/Dom.js",
-            "line": 97,
+            "line": 82,
+            "description": "element の 指定 css property 値を取得します",
             "itemtype": "method",
             "name": "style",
             "params": [
                 {
                     "name": "styleProp",
-                    "description": "",
+                    "description": "css property name",
                     "type": "String",
-                    "optional": true
+                    "optional": true,
+                    "optdefault": "''"
                 }
             ],
             "return": {
-                "description": "",
+                "description": "CSS 値",
                 "type": "*"
             },
             "class": "Dom",
@@ -2839,24 +2913,25 @@
         },
         {
             "file": "src/document/Dom.js",
-            "line": 107,
+            "line": 91,
+            "description": "CSS class が存在するかを調べます",
             "itemtype": "method",
             "name": "hasClass",
             "static": 1,
             "params": [
                 {
                     "name": "element",
-                    "description": "",
+                    "description": "操作対象 Element",
                     "type": "HTMLElement"
                 },
                 {
                     "name": "className",
-                    "description": "",
+                    "description": "調査する class name",
                     "type": "String"
                 }
             ],
             "return": {
-                "description": "",
+                "description": "true: 存在する",
                 "type": "Boolean"
             },
             "class": "Dom",
@@ -2865,25 +2940,26 @@
         },
         {
             "file": "src/document/Dom.js",
-            "line": 119,
+            "line": 110,
+            "description": "css class を追加します",
             "itemtype": "method",
             "name": "addClass",
             "static": 1,
             "params": [
                 {
                     "name": "element",
-                    "description": "",
+                    "description": "操作対象 Element",
                     "type": "HTMLElement"
                 },
                 {
                     "name": "className",
-                    "description": "",
+                    "description": "追加する class name",
                     "type": "String"
                 }
             ],
             "return": {
-                "description": "",
-                "type": "Dom"
+                "description": "true: 追加した",
+                "type": "Boolean"
             },
             "class": "Dom",
             "module": "wakegi",
@@ -2891,25 +2967,26 @@
         },
         {
             "file": "src/document/Dom.js",
-            "line": 151,
+            "line": 142,
+            "description": "element から class を削除します",
             "itemtype": "method",
             "name": "removeClass",
             "static": 1,
             "params": [
                 {
                     "name": "element",
-                    "description": "",
+                    "description": "操作対象 Element",
                     "type": "HTMLElement"
                 },
                 {
                     "name": "className",
-                    "description": "",
+                    "description": "削除対象 class name",
                     "type": "String"
                 }
             ],
             "return": {
-                "description": "",
-                "type": "Dom"
+                "description": "true: 削除した",
+                "type": "Boolean"
             },
             "class": "Dom",
             "module": "wakegi",
@@ -2917,7 +2994,7 @@
         },
         {
             "file": "src/document/Dom.js",
-            "line": 192,
+            "line": 185,
             "description": "getComputedStyle を使い HTMLElement style value を取得します",
             "itemtype": "method",
             "name": "styleCompute",
@@ -2925,17 +3002,17 @@
             "params": [
                 {
                     "name": "defaultView",
-                    "description": "",
+                    "description": "`defaultView.getComputedStyle` します",
                     "type": "Object"
                 },
                 {
                     "name": "el",
-                    "description": "",
+                    "description": "調査対象 Element",
                     "type": "HTMLElement"
                 },
                 {
                     "name": "styleProp",
-                    "description": "",
+                    "description": "CSS property name",
                     "type": "String",
                     "optional": true
                 }
@@ -2950,7 +3027,7 @@
         },
         {
             "file": "src/document/Dom.js",
-            "line": 218,
+            "line": 206,
             "description": "currentStyle を使い HTMLElement style value を取得します",
             "itemtype": "method",
             "name": "styleCurrent",
@@ -2958,18 +3035,18 @@
             "params": [
                 {
                     "name": "el",
-                    "description": "",
+                    "description": "調査対象 Element",
                     "type": "HTMLElement"
                 },
                 {
                     "name": "styleProp",
-                    "description": "",
+                    "description": "CSS property name",
                     "type": "String",
                     "optional": true
                 }
             ],
             "return": {
-                "description": "",
+                "description": "HTMLElement style value を返します",
                 "type": "*"
             },
             "class": "Dom",
@@ -2978,19 +3055,44 @@
         },
         {
             "file": "src/document/Dom.js",
-            "line": 272,
+            "line": 249,
+            "description": "HTMLElement style value を取得します",
+            "params": [
+                {
+                    "name": "el",
+                    "description": "調査対象 Element",
+                    "type": "HTMLElement"
+                },
+                {
+                    "name": "value",
+                    "description": "CSS 値",
+                    "type": "*"
+                }
+            ],
+            "return": {
+                "description": "HTMLElement style value を返します",
+                "type": "String|*"
+            },
+            "class": "Dom",
+            "module": "wakegi",
+            "submodule": "Dom"
+        },
+        {
+            "file": "src/document/Dom.js",
+            "line": 269,
+            "description": "CSS 値を取得します",
             "itemtype": "method",
             "name": "shortHand",
             "static": 1,
             "params": [
                 {
                     "name": "defaultView",
-                    "description": "",
+                    "description": "`defaultView.getComputedStyle` します",
                     "type": "Object"
                 },
                 {
                     "name": "el",
-                    "description": "",
+                    "description": "調査対象 HTML tag",
                     "type": "HTMLElement"
                 },
                 {
@@ -3000,7 +3102,7 @@
                 }
             ],
             "return": {
-                "description": "",
+                "description": "CSS 値を返します",
                 "type": "String"
             },
             "class": "Dom",
@@ -3009,26 +3111,31 @@
         },
         {
             "file": "src/document/Dom.js",
-            "line": 327,
-            "description": "HTMLElement の css style を返します",
+            "line": 305,
+            "description": "HTMLElement の css style を取得します",
+            "todo": [
+                ": background していない時の background-color が rgb(0",
+                "0",
+                "0) になるのを解決する"
+            ],
             "itemtype": "method",
             "name": "getStyle",
             "static": 1,
             "params": [
                 {
                     "name": "el",
-                    "description": "",
+                    "description": "調査対象 HTML tag",
                     "type": "HTMLElement"
                 },
                 {
                     "name": "styleProp",
-                    "description": "",
+                    "description": "CSS property name",
                     "type": "String",
                     "optional": true
                 }
             ],
             "return": {
-                "description": "",
+                "description": "HTMLElement の css style を返します",
                 "type": "*"
             },
             "class": "Dom",
@@ -3044,13 +3151,13 @@
         },
         {
             "file": "src/document/Element.js",
-            "line": 49,
+            "line": 46,
             "description": "touch event が使用可能かを調べます",
             "itemtype": "method",
             "name": "touch",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "true: touch event が使用可能",
                 "type": "Boolean"
             },
             "class": "Element",
@@ -3059,13 +3166,13 @@
         },
         {
             "file": "src/document/Element.js",
-            "line": 70,
+            "line": 63,
             "description": "document.querySelector が使用可能かを調べます",
             "itemtype": "method",
             "name": "querySelector",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "true: querySelector が使用可能",
                 "type": "Boolean"
             },
             "class": "Element",
@@ -3074,13 +3181,13 @@
         },
         {
             "file": "src/document/Element.js",
-            "line": 90,
+            "line": 78,
             "description": "canvas 2D が使用可能かを調べます",
             "itemtype": "method",
             "name": "canvas",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "true: canvas 使用可能",
                 "type": "Boolean"
             },
             "class": "Element",
@@ -3089,13 +3196,13 @@
         },
         {
             "file": "src/document/Element.js",
-            "line": 110,
+            "line": 93,
             "description": "canvas WebGL が使用可能かを調べます",
             "itemtype": "method",
             "name": "webgl",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "true: webgl 使用可能",
                 "type": "Boolean"
             },
             "class": "Element",
@@ -3104,14 +3211,15 @@
         },
         {
             "file": "src/document/Element.js",
-            "line": 144,
+            "line": 116,
             "description": "querySelector が使えるブラウザだけ使用可能",
             "itemtype": "method",
             "name": "find",
+            "static": 1,
             "params": [
                 {
                     "name": "searchKey",
-                    "description": "",
+                    "description": "`querySelector` で使用するセレクター",
                     "type": "String"
                 }
             ],
@@ -3134,7 +3242,7 @@
         },
         {
             "file": "src/util/Iro.js",
-            "line": 61,
+            "line": 57,
             "description": "R, G, B to HSL",
             "itemtype": "method",
             "name": "rgb2hsl",
@@ -3142,17 +3250,17 @@
             "params": [
                 {
                     "name": "r",
-                    "description": "",
+                    "description": "red color number",
                     "type": "Int"
                 },
                 {
                     "name": "g",
-                    "description": "",
+                    "description": "green color number",
                     "type": "Int"
                 },
                 {
                     "name": "b",
-                    "description": "",
+                    "description": "blue color number",
                     "type": "Int"
                 }
             ],
@@ -3166,24 +3274,54 @@
         },
         {
             "file": "src/util/Iro.js",
-            "line": 114,
+            "line": 108,
+            "description": "HUE を RGB 変換します",
+            "params": [
+                {
+                    "name": "point",
+                    "description": "変換変数",
+                    "type": "Number"
+                },
+                {
+                    "name": "q",
+                    "description": "変換変数",
+                    "type": "Number"
+                },
+                {
+                    "name": "t",
+                    "description": "変換変数",
+                    "type": "Number"
+                }
+            ],
+            "return": {
+                "description": "色成分数値を返します 0 ~ 255",
+                "type": "Number"
+            },
+            "class": "Iro",
+            "module": "wakegi",
+            "submodule": "Iro"
+        },
+        {
+            "file": "src/util/Iro.js",
+            "line": 135,
+            "description": "HSL を RGB 変換します",
             "itemtype": "method",
             "name": "hsl2rgb",
             "static": 1,
             "params": [
                 {
                     "name": "h",
-                    "description": "",
+                    "description": "Hue",
                     "type": "Number"
                 },
                 {
                     "name": "s",
-                    "description": "",
+                    "description": "Saturation",
                     "type": "Number"
                 },
                 {
                     "name": "l",
-                    "description": "",
+                    "description": "luminance",
                     "type": "Number"
                 }
             ],
@@ -3197,24 +3335,25 @@
         },
         {
             "file": "src/util/Iro.js",
-            "line": 162,
+            "line": 166,
+            "description": "RGB を HSV 変換します",
             "itemtype": "method",
             "name": "rgb2hsv",
             "static": 1,
             "params": [
                 {
                     "name": "r",
-                    "description": "",
+                    "description": "red color number",
                     "type": "Int"
                 },
                 {
                     "name": "g",
-                    "description": "",
+                    "description": "green color number",
                     "type": "Int"
                 },
                 {
                     "name": "b",
-                    "description": "",
+                    "description": "blue color number",
                     "type": "Int"
                 }
             ],
@@ -3228,24 +3367,25 @@
         },
         {
             "file": "src/util/Iro.js",
-            "line": 213,
+            "line": 216,
+            "description": "HSV を RGB 変換します",
             "itemtype": "method",
             "name": "hsv2rgb",
             "static": 1,
             "params": [
                 {
                     "name": "h",
-                    "description": "",
+                    "description": "Hue 色相",
                     "type": "Number"
                 },
                 {
                     "name": "s",
-                    "description": "",
+                    "description": "Saturation 彩度",
                     "type": "Number"
                 },
                 {
                     "name": "v",
-                    "description": "",
+                    "description": "Value 明度",
                     "type": "Number"
                 }
             ],
@@ -3259,7 +3399,7 @@
         },
         {
             "file": "src/util/Iro.js",
-            "line": 278,
+            "line": 286,
             "description": "hex CSS shorthand to normal (#0ef -> #00eeff)",
             "itemtype": "method",
             "name": "hexShort",
@@ -3267,20 +3407,25 @@
             "params": [
                 {
                     "name": "hex",
-                    "description": ""
+                    "description": "CSS color 形式",
+                    "type": "String"
                 }
             ],
             "return": {
-                "description": "",
-                "type": "*"
+                "description": "CSS short hand color 形式をフル変換します",
+                "type": "String|null"
             },
+            "see": [
+                "http://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb"
+            ],
             "class": "Iro",
             "module": "wakegi",
             "submodule": "Iro"
         },
         {
             "file": "src/util/Iro.js",
-            "line": 302,
+            "line": 307,
+            "description": "CSS color 形式文字列を RGB 分解し Object 変換します",
             "itemtype": "method",
             "name": "hex2rgb",
             "static": 1,
@@ -3301,29 +3446,20 @@
         },
         {
             "file": "src/util/Iro.js",
-            "line": 337,
+            "line": 330,
+            "description": "color(red, green, blue) number を 16進数変換し2桁文字列に変換します",
             "itemtype": "method",
-            "name": "rgb2hex",
+            "name": "componentToHex",
             "static": 1,
             "params": [
                 {
-                    "name": "r",
-                    "description": "",
-                    "type": "Int"
-                },
-                {
-                    "name": "g",
-                    "description": "",
-                    "type": "Int"
-                },
-                {
-                    "name": "b",
-                    "description": "",
-                    "type": "Int"
+                    "name": "color",
+                    "description": "color(red, green, blue) number",
+                    "type": "Number"
                 }
             ],
             "return": {
-                "description": "",
+                "description": "2桁を保障し文字列変換し返します",
                 "type": "String"
             },
             "class": "Iro",
@@ -3332,7 +3468,39 @@
         },
         {
             "file": "src/util/Iro.js",
-            "line": 358,
+            "line": 342,
+            "description": "color(red, green, blue) number を CSS color 形式文字列へ変換します",
+            "itemtype": "method",
+            "name": "rgb2hex",
+            "static": 1,
+            "params": [
+                {
+                    "name": "r",
+                    "description": "red color number",
+                    "type": "Int"
+                },
+                {
+                    "name": "g",
+                    "description": "green color number",
+                    "type": "Int"
+                },
+                {
+                    "name": "b",
+                    "description": "blue color number",
+                    "type": "Int"
+                }
+            ],
+            "return": {
+                "description": "CSS color 形式文字列を返します",
+                "type": "String"
+            },
+            "class": "Iro",
+            "module": "wakegi",
+            "submodule": "Iro"
+        },
+        {
+            "file": "src/util/Iro.js",
+            "line": 359,
             "description": "convert int to hex, 16777215 -> #ffffff",
             "itemtype": "method",
             "name": "int2hex",
@@ -3340,12 +3508,12 @@
             "params": [
                 {
                     "name": "num",
-                    "description": "",
+                    "description": "変換元 10進数",
                     "type": "Number"
                 }
             ],
             "return": {
-                "description": "",
+                "description": "CSS color 16進数型文字列を返します",
                 "type": "String"
             },
             "class": "Iro",
@@ -3354,7 +3522,7 @@
         },
         {
             "file": "src/util/Iro.js",
-            "line": 392,
+            "line": 385,
             "description": "convert hex to int, #fff -> 16777215",
             "itemtype": "method",
             "name": "hex2int",
@@ -3362,11 +3530,12 @@
             "params": [
                 {
                     "name": "hex",
-                    "description": ""
+                    "description": "`#fff` な 16進・文字列",
+                    "type": "String"
                 }
             ],
             "return": {
-                "description": "",
+                "description": "hex 文字列を10進数変換し返します",
                 "type": "Int|null"
             },
             "class": "Iro",
@@ -3382,7 +3551,7 @@
         },
         {
             "file": "src/util/Util.js",
-            "line": 43,
+            "line": 37,
             "description": "abc-def を abcDef にします",
             "itemtype": "method",
             "name": "camelize",
@@ -3390,7 +3559,7 @@
             "params": [
                 {
                     "name": "str",
-                    "description": "",
+                    "description": "変換元文字列",
                     "type": "String"
                 }
             ],
@@ -3404,7 +3573,7 @@
         },
         {
             "file": "src/util/Util.js",
-            "line": 61,
+            "line": 51,
             "description": "abcDef を abc-def にします",
             "itemtype": "method",
             "name": "dash",
@@ -3412,12 +3581,12 @@
             "params": [
                 {
                     "name": "str",
-                    "description": "",
+                    "description": "変換元文字列",
                     "type": "String"
                 }
             ],
             "return": {
-                "description": "",
+                "description": "dash 変換後文字列を返します",
                 "type": "String"
             },
             "class": "Util",
@@ -3433,7 +3602,7 @@
         },
         {
             "file": "src/Browser.js",
-            "line": 51,
+            "line": 48,
             "itemtype": "method",
             "name": "init",
             "static": 1,
@@ -3443,7 +3612,7 @@
         },
         {
             "file": "src/Browser.js",
-            "line": 65,
+            "line": 59,
             "itemtype": "method",
             "name": "navigator",
             "static": 1,
@@ -3457,7 +3626,7 @@
         },
         {
             "file": "src/Browser.js",
-            "line": 73,
+            "line": 67,
             "itemtype": "method",
             "name": "ua",
             "static": 1,
@@ -3471,7 +3640,7 @@
         },
         {
             "file": "src/Browser.js",
-            "line": 84,
+            "line": 76,
             "itemtype": "method",
             "name": "app",
             "static": 1,
@@ -3485,18 +3654,25 @@
         },
         {
             "file": "src/Browser.js",
-            "line": 95,
+            "line": 85,
             "description": "userAgent regular expression of Safari",
             "itemtype": "method",
             "name": "matchSafari",
             "static": 1,
             "return": {
-                "description": "",
+                "description": "true: Safari",
                 "type": "Boolean"
             },
             "class": "Browser",
             "module": "wakegi",
             "submodule": "Browser"
+        },
+        {
+            "file": "src/wakegi.js",
+            "line": 24,
+            "description": "builtin 関数を拡張するのを許可\n`==` 判定許可",
+            "class": "",
+            "module": "wakegi"
         }
     ],
     "warnings": [
@@ -3585,6 +3761,10 @@
             "line": " src/document/Dom.js:1"
         },
         {
+            "message": "Missing item type\nHTMLElement style value を取得します",
+            "line": " src/document/Dom.js:249"
+        },
+        {
             "message": "Missing item type\nlicense inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/18 - 13:09\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
             "line": " src/document/Element.js:1"
         },
@@ -3593,12 +3773,20 @@
             "line": " src/util/Iro.js:1"
         },
         {
+            "message": "Missing item type\nHUE を RGB 変換します",
+            "line": " src/util/Iro.js:108"
+        },
+        {
             "message": "Missing item type\nlicense inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 15/08/20 - 20:26\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.\n\nfor wakegi.js",
             "line": " src/util/Util.js:1"
         },
         {
             "message": "Missing item type\nlicense inazumatv.com\nauthor (at)taikiken / http://inazumatv.com\ndate 2015/03/17 - 12:39\n\nCopyright (c) 2011-2015 inazumatv.com, inc.\n\nDistributed under the terms of the MIT license.\nhttp://www.opensource.org/licenses/mit-license.html\n\nThis notice shall be included in all copies or substantial portions of the Software.",
             "line": " src/Browser.js:1"
+        },
+        {
+            "message": "Missing item type\nbuiltin 関数を拡張するのを許可\n`==` 判定許可",
+            "line": " src/wakegi.js:24"
         }
     ]
 }

@@ -19,158 +19,135 @@
  * @module Browser
  * @submodule Firefox
  */
-/*jslint -W016*/
-( function ( window ){
+
+(function(window) {
   'use strict';
   var
     wakegi = window.wakegi,
-    Browser = wakegi.Browser;
+    Browser = wakegi.Browser,
 
-  Browser.Firefox = ( function (){
-    var
-      numbers = [ -1, -1 ],
-      firefox, version, major, build;
+    numbers = [-1, -1],
+    firefox, version, major, build;
 
-    /**
-     * Firefox detection
-     * @class Firefox
-     * @static
-     * @constructor
-     */
-    function Firefox () {
-      throw new Error( 'Firefox can\'t create instance.' );
+  /**
+   * Firefox detection
+   * @class Firefox
+   * @static
+   * @constructor
+   */
+  function Firefox() {
+    throw new Error('Firefox can\'t create instance.');
+  }
+
+  var p = Firefox.prototype;
+
+  p.constructor = Firefox;
+
+  /**
+   * Firefox 判定を行います
+   * @method init
+   * @static
+   */
+  Firefox.init = function() {
+    if (typeof firefox === 'undefined') {
+      // need initialize
+      // check userAgent
+      firefox = !!Browser.ua().match(/firefox/i);
     }
+  };
 
-    var p = Firefox.prototype;
+  /**
+   * version No. を計算します
+   * @method calculate
+   * @static
+   */
+  Firefox.calculate = function() {
+    var
+      versions = [],
+      nums, int, float, i, limit;
 
-    p.constructor = Firefox;
+    if ( typeof version === 'undefined' ) {
+      // version undefined
+      build = '';
+      version = -1;
+      major = -1;
 
-    /**
-     * @method init
-     * @static
-     */
-    Firefox.init = function () {
+      if (Firefox.is()) {
+        // firefox
+        nums = Browser.ua().match(/Firefox\/(\d+)\.?(\d+)?/);
 
-      if ( typeof firefox === 'undefined' ) {
-        // need initialize
+        if (Array.isArray(nums)) {
+          // 結果が配列
+          int = wakegi.int;
+          float = wakegi.float;
 
-        // check userAgent
-        firefox = !!Browser.ua().match(/firefox/i);
-
-      }
-
-    };
-
-    /**
-     * @method calculate
-     * @static
-     */
-    Firefox.calculate = function () {
-
-      var
-        versions = [],
-        nums, int, float, i, limit;
-
-      if ( typeof version === 'undefined' ) {
-
-        // version undefined
-        build = '';
-        version = -1;
-        major = -1;
-
-        if ( Firefox.is() ) {
-          // firefox
-
-          nums = Browser.ua().match( /Firefox\/(\d+)\.?(\d+)?/ );
-
-          if ( Array.isArray( nums ) ) {
-
-            // 結果が配列
-            int = wakegi.int;
-            float = wakegi.float;
-
-            for ( i = 1, limit = nums.length; i < limit; i = (i+1)|0 ) {
-
-              versions.push( int( nums[ i ], 10 ) );
-
-            }
-
-            build = versions.join( '.' );
-            major = versions[ 0 ];
-            version = float( versions[ 0 ] + '.' + versions[ 1 ] );
-            numbers = versions;
-
+          for (i = 1, limit = nums.length; i < limit; i = (i + 1) | 0) {
+            versions.push(int(nums[i], 10));
           }
 
-        }// firefox
+          build = versions.join('.');
+          major = versions[0];
+          version = float(versions[0] + '.' + versions[1]);
+          numbers = versions;
+        }
+      }// firefox
+    }// undefined
+  };
 
-      }// undefined
+  /**
+   * Firefox 判定を行います
+   * @method is
+   * @static
+   * @return {boolean} true: Firefox
+   */
+  Firefox.is = function() {
+    Firefox.init();
+    return firefox;
+  };
 
-    };
+  /**
+   * version: float型で取得します
+   * @method version
+   * @static
+   * @return {float} N.NN で返します
+   */
+  Firefox.version = function() {
+    Firefox.calculate();
+    return version;
+  };
 
-    /**
-     * @method is
-     * @static
-     * @return {boolean}
-     */
-    Firefox.is = function () {
+  /**
+   * version: major を取得します
+   * @method major
+   * @static
+   * @return {int} version: major を返します
+   */
+  Firefox.major = function() {
+    Firefox.calculate();
+    return major;
+  };
 
-      Firefox.init();
-      return firefox;
+  /**
+   *  version: build ナンバーを含み取得します
+   * @method build
+   * @static
+   * @return {string} NN.NN.NN.NN 型（文字）で返します
+   */
+  Firefox.build = function() {
+    Firefox.calculate();
+    return build;
+  };
 
-    };
+  /**
+   * version を配列形式で取得します
+   * @method numbers
+   * @static
+   * @return {*[]} [major: int, minor: int, build: int] 形式で返します
+   */
+  Firefox.numbers = function() {
+    Firefox.calculate();
+    return numbers;
+  };
 
-    /**
-     *
-     * @method version
-     * @static
-     * @return {float} N.NN で返します
-     */
-    Firefox.version = function () {
-
-      Firefox.calculate();
-      return version;
-
-    };
-
-    /**
-     * @method major
-     * @static
-     * @return {int}
-     */
-    Firefox.major = function () {
-
-      Firefox.calculate();
-      return major;
-
-    };
-
-    /**
-     *
-     * @method build
-     * @static
-     * @return {string} NN.NN.NN.NN 型（文字）で返します
-     */
-    Firefox.build = function () {
-
-      Firefox.calculate();
-      return build;
-
-    };
-
-    /**
-     * @method numbers
-     * @static
-     * @return {*[]} [major: int, minor: int, build: int] 形式で返します
-     */
-    Firefox.numbers = function () {
-
-      Firefox.calculate();
-      return numbers;
-
-    };
-
-    return Firefox;
-  }() );
-
-}( window ) );
+  Browser.Firefox = Firefox;
+}(window));

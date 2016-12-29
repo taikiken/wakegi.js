@@ -16,82 +16,66 @@
  * @submodule Patterns
  *
  * */
-( function ( window ) {
-
+(function(window) {
   'use strict';
 
-  //var
-  //  document = window.document;
-
-  window.wakegi.Patterns = ( function () {
-
-    var
-      /**
-       * @property _patterns
-       * @static
-       * @type {{padding: string[], margin: string[], border-color: string[]}}
-       * @private
-       */
-      _patterns = {
-        padding: [ 'paddingTop', 'paddingRight', 'paddingBottom', 'paddingLeft' ],
-        margin: [ 'marginTop', 'marginRight', 'marginBottom', 'marginLeft' ],
-        'border-color': [ 'borderTopColor', 'borderRightColor', 'borderBottomColor', 'borderLeftColor' ],
-        'border-style': [ 'borderTopStyle', 'borderRightStyle', 'borderBottomStyle', 'borderLeftStyle' ],
-        'border-width': [ 'borderTopWidth', 'borderRightWidth', 'borderBottomWidth', 'borderLeftWidth' ]
-      };
-
+  var
     /**
-     * @class Patterns
-     * @static
-     * @constructor
+     * @property patterns
+     * @static @private
+     * @type {{padding: [*], margin: [*], border-color: [*], border-style: [*], border-width: [*]}}
      */
-    function Patterns () {
-      throw new Error( 'Patterns can\'t create instance' );
-    }
-
-    var p = Patterns.prototype;
-    p.constructor = Patterns;
-
-    /**
-     * camel を hyphen に変換
-     * @method hyphen
-     * @static
-     * @param {string} key
-     * @return {string}
-     */
-    Patterns.hyphen = function ( key ) {
-
-      return key.replace( /([A-Z])/g, '-$1' ).toLowerCase();
-
+    patterns = {
+      padding: ['paddingTop', 'paddingRight', 'paddingBottom', 'paddingLeft'],
+      margin: ['marginTop', 'marginRight', 'marginBottom', 'marginLeft'],
+      'border-color': ['borderTopColor', 'borderRightColor', 'borderBottomColor', 'borderLeftColor'],
+      'border-style': ['borderTopStyle', 'borderRightStyle', 'borderBottomStyle', 'borderLeftStyle'],
+      'border-width': ['borderTopWidth', 'borderRightWidth', 'borderBottomWidth', 'borderLeftWidth']
     };
 
-    /**
-     * @method has
-     * @static
-     * @param {string} key
-     * @return {boolean}
-     */
-    Patterns.has = function ( key ) {
+  /**
+   * @class Patterns
+   * @static
+   * @constructor
+   */
+  function Patterns() {
+    throw new Error('Patterns can\'t create instance');
+  }
 
-      key = Patterns.hyphen( key );
-      return _patterns.hasOwnProperty( key );
+  var p = Patterns.prototype;
+  p.constructor = Patterns;
 
-    };
-    /**
-     * @method get
-     * @static
-     * @param {string} key
-     * @return {Array}
-     */
-    Patterns.get = function ( key ) {
-
-      key = Patterns.hyphen( key );
-      return _patterns[ key ];
-
-    };
-
-    return Patterns;
-
-  }() );
-
-}( window ) );
+  /**
+   * camel を hyphen に変換
+   * @method hyphen
+   * @static
+   * @param {string} key key 名称(CSS property name)
+   * @return {string} hyphen 変換後文字列を返します
+   */
+  Patterns.hyphen = function(key) {
+    return key.replace(/([A-Z])/g, '-$1').toLowerCase();
+  };
+  /**
+   * 引数 key 名称が patterns に存在するかを調べます
+   * @method has
+   * @static
+   * @param {string} key 調べる key 名称(CSS property name)
+   * @return {boolean} true: 存在する
+   */
+  Patterns.has = function(key) {
+    var keyName = Patterns.hyphen(key);
+    return patterns.hasOwnProperty(keyName);
+  };
+  /**
+   * @method get
+   * @static
+   * @param {string} key key 名称(CSS property name)
+   * @return {Array|undefined} CSS short hand 配列を返します
+   */
+  Patterns.get = function(key) {
+    var keyName = Patterns.hyphen(key);
+    return patterns[keyName];
+  };
+  
+  window.wakegi.Patterns = Patterns;
+}(window));

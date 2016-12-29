@@ -19,92 +19,70 @@
  * @module Browser
  * @submodule Windows
  */
-( function ( window ){
+( function(window) {
   'use strict';
   var
     wakegi = window.wakegi,
-    Browser = wakegi.Browser;
+    Browser = wakegi.Browser,
 
-  Browser.Windows = ( function (){
-    var
-      phone,
-      windows;
+    phone,
+    windows;
 
-    /**
-     * windows OS detection
-     *
-     * @class Windows
-     * @static
-     * @constructor
-     */
-    function Windows () {
-      throw new Error( 'Windows can\'t create instance.' );
-    }
+  /**
+   * windows OS detection
+   *
+   * @class Windows
+   * @static
+   * @constructor
+   */
+  function Windows() {
+    throw new Error('Windows can\'t create instance.');
+  }
 
-    var p = Windows.prototype;
-    p.constructor = Windows;
+  var p = Windows.prototype;
+  p.constructor = Windows;
 
-    /**
-     * @method init
-     * @static
-     */
-    Windows.init = function () {
+  /**
+   * @method init
+   * @static
+   */
+  Windows.init = function() {
+    var ua;
 
-      var ua;
+    if (typeof windows === 'undefined') {
+      // windows undefined
+      ua = Browser.ua();
+      windows = !!ua.match(/windows/i);
 
-      if ( typeof windows === 'undefined' ) {
-
-        // windows undefined
-        ua = Browser.ua();
-        windows = !!ua.match(/windows/i);
-
-        if ( windows ) {
-
-          // 2015-10 windows phone detect added
-          // https://msdn.microsoft.com/ja-jp/library/hh869301(v=vs.85).aspx
-          // Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; DEVICE INFO) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Mobile Safari/537.36 Edge/12.<OS build number>
-          phone = !!ua.match(/windows phone/i);
-          //if ( phone ) {
-          //
-          //  windows = false;
-          //
-          //}
-
-        } else {
-
-          phone = false;
-
-        }
-
+      if (windows) {
+        // 2015-10 windows phone detect added
+        // https://msdn.microsoft.com/ja-jp/library/hh869301(v=vs.85).aspx
+        // Mozilla/5.0 (Windows Phone 10.0; Android 4.2.1; DEVICE INFO) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Mobile Safari/537.36 Edge/12.<OS build number>
+        phone = !!ua.match(/windows phone/i);
+      } else {
+        phone = false;
       }
-
-    };
-
-    /**
-     * @method is
-     * @static
-     * @return {boolean}
-     */
-    Windows.is = function () {
-
-      Windows.init();
-      return windows;
-
-    };
-    /**
-     * @method phone
-     * @static
-     * @return {boolean}
-     */
-    Windows.phone = function () {
-
-      Windows.init();
-      return phone;
-
-    };
-
-    return Windows;
-
-  }() );
-
-}( window ) );
+    }
+  };
+  /**
+   * Windows OS 判定を行います
+   * @method is
+   * @static
+   * @return {boolean} true: Windows OS
+   */
+  Windows.is = function() {
+    Windows.init();
+    return windows;
+  };
+  /**
+   * Windows phone 判定を行います
+   * @method phone
+   * @static
+   * @return {boolean} true: Windows phone
+   */
+  Windows.phone = function() {
+    Windows.init();
+    return phone;
+  };
+  Browser.Windows = Windows;
+}(window));

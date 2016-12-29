@@ -36,6 +36,8 @@
     ua.innerHTML = Browser.ua();
     app.innerHTML = Browser.app();
 
+    var rect = Browser.Android.rect();
+
     ie.innerHTML += 'Android.is: ' + Browser.Android.is() + '<br>';
     ie.innerHTML += 'Android.build: ' + Browser.Android.build() + '<br>';
     ie.innerHTML += 'Android.version: ' + Browser.Android.version() + '<br>';
@@ -44,6 +46,7 @@
     ie.innerHTML += 'Android.phone: ' + Browser.Android.phone() + '<br>';
     ie.innerHTML += 'Android.tablet: ' + Browser.Android.tablet() + '<br>';
     ie.innerHTML += 'Android.hd: ' + Browser.Android.hd() + '<br>';
+    ie.innerHTML += 'Android.box width: ' + rect.width + ', height: ' + rect.height + '<br>';
     ie.innerHTML += 'Android.standard: ' + Browser.Android.standard() + '<br>';
 
   }( window ) );

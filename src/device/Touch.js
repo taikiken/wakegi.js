@@ -19,42 +19,35 @@
  * @module Browser
  * @submodule Touch
  */
-( function ( window ){
+(function(window) {
   'use strict';
   var
     wakegi = window.wakegi,
     Browser = wakegi.Browser,
     Element = Browser.Element;
+  /**
+   * touch event が利用可能かを調べます
+   * @class Touch
+   * @static
+   * @deprecated instead of Element
+   * @constructor
+   */
+  function Touch() {
+    throw new Error('Touch can\'t create instance.');
+  }
 
-  Browser.Touch = ( function (){
+  var p = Touch.prototype;
+  p.constructor = Touch;
 
-    /**
-     * @class Touch
-     * @static
-     * @deprecated instead of Element
-     * @constructor
-     */
-    function Touch () {
-      throw new Error( 'Touch can\'t create instance.' );
-    }
-
-    var p = Touch.prototype;
-    p.constructor = Touch;
-
-    /**
-     * @method is
-     * @deprecated instead of Element.touch
-     * @static
-     * @return {boolean}
-     */
-    Touch.is = function () {
-
-      return Element.touch();
-
-    };
-
-    return Touch;
-
-  }() );
-
-}( window ) );
+  /**
+   * touch event が利用可能かを調べます
+   * @method is
+   * @deprecated instead of Element.touch
+   * @static
+   * @return {boolean} true: touch event が利用可能
+   */
+  Touch.is = function() {
+    return Element.touch();
+  };
+  Browser.Touch = Touch;
+}(window));

@@ -14,166 +14,138 @@
  */
 
 /**
- * Windows 10 Edge Browser チェックを行います
+ * Windows 10 ~ Edge Browser チェックを行います
  *
  * @module Browser
  * @submodule Edge
  */
-/*jslint -W016*/
-( function ( window ) {
 
+( function(window) {
   'use strict';
 
   var
     wakegi = window.wakegi,
-    Browser = wakegi.Browser;
+    Browser = wakegi.Browser,
 
-  Browser.Edge = ( function () {
+    edge,
+    numbers = [-1, -1],
+    version, major, build;
+
+  /**
+   * Windows 10 Edge Browser チェックを行います
+   *
+   * @class Edge
+   * @static
+   * @constructor
+   */
+  function Edge() {
+    throw new Error('Edge can\'t create instance.');
+  }
+
+  var p = Edge.prototype;
+  p.constructor = Edge;
+
+  /**
+   * edge 判定を行います
+   * @method init
+   * @static
+   */
+  Edge.init = function() {
+    if (typeof edge === 'undefined') {
+      edge = !!Browser.ua().match(/edge/i);
+    }
+  };
+
+  /**
+   * version No. を計算します
+   * @method calculate
+   * @static
+   */
+  Edge.calculate = function() {
 
     var
-      edge,
-      numbers = [ -1, -1 ],
-      version, major, build;
+      versions = [],
+      nums, int, float, i, limit;
 
-    /**
-     * Windows 10 Edge Browser チェックを行います
-     *
-     * @class Edge
-     * @static
-     * @constructor
-     */
-    function Edge () {
-      throw new Error( 'Edge can\'t create instance.' );
-    }
+    if ( typeof version === 'undefined' ) {
 
-    var p = Edge.prototype;
-    p.constructor = Edge;
+      build = '';
+      version = -1;
+      major = -1;
 
-    /**
-     * @method init
-     * @static
-     */
-    Edge.init = function () {
+      if (Edge.is()) {
+        nums = Browser.ua().match(/edge\/(\d+)\.?(\d+)?/i);
 
-      if ( typeof edge === 'undefined' ) {
+        if (Array.isArray(nums)) {
+          // 結果が配列
+          int = wakegi.int;
+          float = wakegi.float;
 
-        edge = !!Browser.ua().match(/edge/i);
-
-      }
-
-    };
-
-    /**
-     * @method calculate
-     * @static
-     */
-    Edge.calculate = function () {
-
-      var
-        versions = [],
-        nums, int, float, i, limit;
-
-      if ( typeof version === 'undefined' ) {
-
-        build = '';
-        version = -1;
-        major = -1;
-
-        if ( Edge.is() ) {
-
-          nums = Browser.ua().match(/edge\/(\d+)\.?(\d+)?/i);
-
-          if ( Array.isArray( nums ) ) {
-
-            // 結果が配列
-            int = wakegi.int;
-            float = wakegi.float;
-
-            // 先頭削除 Edge/12.n
-            for ( i = 1, limit = nums.length; i < limit; i = (i+1)|0 ) {
-
-              versions.push( int( nums[ i ], 10 ) );
-
-            }
-
-            build = versions.join( '.' );
-            major = versions[ 0 ];
-            version = float( versions[ 0 ] + '.' + versions[ 1 ] );
-            numbers = versions;
-
+          // 先頭削除 Edge/12.n
+          for (i = 1, limit = nums.length; i < limit; i = (i + 1) | 0) {
+            versions.push(int(nums[i], 10));
           }
 
+          build = versions.join('.');
+          major = versions[0];
+          version = float( versions[0] + '.' + versions[1 ] );
+          numbers = versions;
         }
-
       }
+    }
+  };
 
-    };
+  /**
+   * edge 判定を行います
+   * @method is
+   * @static
+   * @return {boolean} true: Edge
+   */
+  Edge.is = function() {
+    Edge.init();
+    return edge;
+  };
+  /**
+   * version: float型で取得します
+   * @method version
+   * @static
+   * @return {float} N.NN で返します
+   */
+  Edge.version = function() {
+    Edge.calculate();
+    return version;
+  };
 
-    /**
-     * @method is
-     * @static
-     * @return {boolean}
-     */
-    Edge.is = function () {
+  /**
+   * version: major を取得します
+   * @method major
+   * @static
+   * @return {int} version: major を返します
+   */
+  Edge.major = function() {
+    Edge.calculate();
+    return major;
+  };
+  /**
+   * version: build ナンバーを含み取得します
+   * @method build
+   * @static
+   * @return {string} NN.NN 型（文字）で返します
+   */
+  Edge.build = function() {
+    Edge.calculate();
+    return build;
+  };
+  /**
+   * version を配列形式で取得します
+   * @method numbers
+   * @static
+   * @return {[]} [major: int, minor: int] 形式で返します
+   */
+  Edge.numbers = function() {
+    Edge.calculate();
+    return numbers;
+  };
 
-      Edge.init();
-      return edge;
-
-    };
-
-    /**
-     *
-     * @method version
-     * @static
-     * @return {float} N.NN で返します
-     */
-    Edge.version = function () {
-
-      Edge.calculate();
-      return version;
-
-    };
-
-    /**
-     * @method major
-     * @static
-     * @return {int}
-     */
-    Edge.major = function () {
-
-      Edge.calculate();
-      return major;
-
-    };
-
-    /**
-     *
-     * @method build
-     * @static
-     * @return {string} NN.NN 型（文字）で返します
-     */
-    Edge.build = function () {
-
-      Edge.calculate();
-      return build;
-
-    };
-
-    /**
-     * @method numbers
-     * @static
-     * @return {[]} [major: int, minor: int] 形式で返します
-     */
-    Edge.numbers = function () {
-
-      Edge.calculate();
-      return numbers;
-
-    };
-
-
-    return Edge;
-
-  }() );
-
-}( window ) );
+  Browser.Edge = Edge;
+}(window));

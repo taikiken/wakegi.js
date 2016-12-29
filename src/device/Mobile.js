@@ -19,82 +19,80 @@
  * @module Browser
  * @submodule Mobile
  */
-( function ( window ){
+(function(window) {
   'use strict';
   var
     wakegi = window.wakegi,
-    Browser = wakegi.Browser;
+    Browser = wakegi.Browser,
 
-  Browser.Mobile = ( function (){
-    var
-      iOS = Browser.iOS,
-      Android = Browser.Android,
-      Windows = Browser.Windows;
+    iOS = Browser.iOS,
+    Android = Browser.Android,
+    Windows = Browser.Windows;
 
-    /**
-     * Mobile detection, iOS or Android
-     * @class Mobile
-     * @static
-     * @constructor
-     */
-    function Mobile () {
-      throw new Error( 'Mobile can\'t create instance.' );
-    }
+  /**
+   * Mobile detection, iOS or Android
+   * @class Mobile
+   * @static
+   * @constructor
+   */
+  function Mobile() {
+    throw new Error('Mobile can\'t create instance.');
+  }
 
-    var p = Mobile.prototype;
-    p.constructor = Mobile;
+  var p = Mobile.prototype;
+  p.constructor = Mobile;
 
-    /**
-     * @method is
-     * @static
-     * @return {boolean}
-     */
-    Mobile.is = function () {
-
-      return iOS.is() || Android.is() || Windows.phone();
-
-    };
-    /**
-     * @method phone
-     * @static
-     * @return {boolean}
-     */
-    Mobile.phone = function () {
-
-      return iOS.iPhone() || iOS.iPod() || Android.phone() || Windows.phone();
-
-    };
-    /**
-     * @method tablet
-     * @static
-     * @return {boolean}
-     */
-    Mobile.tablet = function () {
-
-      return iOS.iPad() || Android.tablet();
-
-    };
-    /**
-     * window.onload 後に実行して下さい
-     * @method hideBar
-     * @static
-     */
-    Mobile.hideBar = function () {
-
-      setTimeout( function (){ scrollBy( 0, 1 ); }, 0 );
-
-    };
-    /**
-     * @method hideURLBar
-     * @deprecated instead of Mobile.hideBar
-     * @static
-     */
-    Mobile.hideURLBar = function () {
-
-      Mobile.hideBar();
-
-    };
-
-      return Mobile;
-  }() );
-}( window ) );
+  /**
+   * iOS / Android / Windows phone 判定
+   * @method is
+   * @static
+   * @return {boolean} true: iOS / Android / Windows phone
+   */
+  Mobile.is = function() {
+    return iOS.is() || Android.is() || Windows.phone();
+  };
+  /**
+   * スマホ・iPod touch 判定を行います
+   * @method phone
+   * @static
+   * @return {boolean} true: スマホ・iPod touch
+   */
+  Mobile.phone = function() {
+    return iOS.iPhone() || iOS.iPod() || Android.phone() || Windows.phone();
+  };
+  /**
+   * tablet 判定を行います
+   * @method tablet
+   * @static
+   * @return {boolean} true: tablet
+   */
+  Mobile.tablet = function() {
+    return iOS.iPad() || Android.tablet();
+  };
+  /**
+   * 強制的にスクロールさせ URL bar を非表示（のように）します
+   *
+   * **注意** window.onload 後に実行して下さい
+   *
+   * iOS 9 以降では実行しても無駄です
+   * @method hideBar
+   * @static
+   * @return {number} timer id を返します
+   */
+  Mobile.hideBar = function() {
+    return setTimeout(function() {
+      scrollBy(0, 1);
+    }, 0);
+  };
+  /**
+   * 強制的にスクロールさせ URL bar を非表示（のように）します
+   * @deprecated instead of Mobile.hideBar
+   * @method hideURLBar
+   * @static
+   * @return {number} timer id を返します
+   */
+  Mobile.hideURLBar = function() {
+    return Mobile.hideBar();
+  };
+  Browser.Mobile = Mobile;
+}(window));
