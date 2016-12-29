@@ -8,7 +8,7 @@
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
- * build 2016-12-29 19:05:43
+ * build 2016-12-29 19:07:43
  * version 0.9.9
  * github: https://github.com/taikiken/wakegi.js
  */
@@ -3617,4 +3617,6 @@ wakegi.float = parseFloat;
     // 互換のために残します
     return Safari.numbers();
   };
+
+  Browser.Safari = Safari;
 }(window));

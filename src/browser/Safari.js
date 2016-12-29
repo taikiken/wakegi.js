@@ -189,4 +189,6 @@
     // 互換のために残します
     return Safari.numbers();
   };
+
+  Browser.Safari = Safari;
 }(window));
