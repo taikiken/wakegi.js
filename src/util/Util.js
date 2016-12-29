@@ -19,61 +19,47 @@
  * @module wakegi
  * @submodule Util
  */
-( function( window ) {
-
+( function(window) {
   'use strict';
+  var wakegi = window.wakegi;
 
-  //var
-  //  document = window.document;
+  /**
+   * ユーティリティ
+   * @class Util
+   * @static
+   * @constructor
+   */
+  function Util() {}
 
-  window.wakegi.Util = ( function() {
+  var p = Util.prototype;
+  p.constructor = Util;
 
-    /**
-     * @class Util
-     * @static
-     * @constructor
-     */
-    function Util () {
+  /**
+   * abc-def を abcDef にします
+   *
+   * @method camelize
+   * @static
+   * @param {string} str 変換元文字列
+   * @returns {string} dash(-)連結 word を camel case へ変換し返します。
+   */
+  Util.camelize = function( str ) {
+    return str.toLowerCase().replace(/-(.)/g, function(match, group1) {
+      return group1.toUpperCase();
+    });
+  };
 
-    }
+  /**
+   * abcDef を abc-def にします
+   *
+   * @method dash
+   * @static
+   * @param {string} str 変換元文字列
+   * @returns {string} dash 変換後文字列を返します
+   */
+  Util.dash = function(str) {
+    return str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
+  };
 
-    var p = Util.prototype;
-    p.constructor = Util;
+  wakegi.Util = Util;
+}(window));
 
-    /**
-     * abc-def を abcDef にします
-     *
-     * @method camelize
-     * @static
-     * @param {string} str
-     * @returns {string} dash(-)連結 word を camel case へ変換し返します。
-     */
-    Util.camelize = function( str ) {
-
-      return str.toLowerCase().replace(/-(.)/g, function( match, group1 ) {
-
-        return group1.toUpperCase();
-
-      });
-
-    };
-
-    /**
-     * abcDef を abc-def にします
-     *
-     * @method dash
-     * @static
-     * @param {string} str
-     * @returns {string}
-     */
-    Util.dash = function( str ) {
-
-      return str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
-
-    };
-
-    return Util;
-
-  }() );
-
-}( window ) );
