@@ -147,4 +147,5 @@
     return numbers;
   };
 
+  Browser.Edge = Edge;
 }(window));

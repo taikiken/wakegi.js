@@ -1,6 +1,6 @@
 {
   "name": "wakegi.js",
-  "version": "0.9.85",
+  "version": "0.9.9",
   "description": "【Gulp Task 開発環境構築】を行い環境構築後作業します",
   "main": "gulpfile.js",
   "devDependencies": {
@@ -28,7 +28,9 @@
     "run-sequence": "^1.2.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp build",
+    "docs": "gulp script-docs"
   },
   "repository": {
     "type": "git",

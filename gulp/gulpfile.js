@@ -130,14 +130,14 @@ gulp.task( 'script-concat', function () {
 
   return gulp.src( scripts )
     .pipe( concat( libName ) )
-    .pipe( gulp.dest( dir.libs ) )
-    .pipe( rename( function ( path ) {
+    .pipe(gulp.dest( dir.libs ) )
+    .pipe(rename( function (pathObj) {
 
-      path.basename = path.basename + '-' + pkg.version;
+      pathObj.basename = pathObj.basename + '-' + pkg.version;
 
     } ) )
-    .pipe( gulp.dest( dir.libs ) )
-    .pipe( size( { title: '*** script-concat ***' } ) );
+    .pipe(gulp.dest( dir.libs ) )
+    .pipe(size( { title: '*** script-concat ***' } ) );
 
 } );
 
@@ -150,10 +150,10 @@ gulp.task( 'script-min', function (){
 
       '!' + dir.libs + '/*.min.js'
     ] )
-    .pipe( uglify( { preserveComments: 'some' } ) )
-    .pipe( rename( { suffix: '.min' } ) )
-    .pipe( gulp.dest( dir.libs ) )
-    .pipe( size( { title: '*** script-min ***' } ) );
+    .pipe(uglify( { preserveComments: 'some' } ) )
+    .pipe(rename( { suffix: '.min' } ) )
+    .pipe(gulp.dest( dir.libs ) )
+    .pipe(size( { title: '*** script-min ***' } ) );
 
 } );
 
@@ -161,9 +161,9 @@ gulp.task( 'script-min', function (){
 gulp.task( 'script-version', function () {
 
   return gulp.src( dir.libs + '/*.js' )
-    .pipe( replace( { patterns: patterns } ) )
-    .pipe( gulp.dest( dir.libs ) )
-    .pipe( size( { title: '*** script-version ***' } ) );
+    .pipe(replace( { patterns: patterns } ) )
+    .pipe(gulp.dest( dir.libs ) )
+    .pipe(size( { title: '*** script-version ***' } ) );
 
 } );
 
@@ -171,16 +171,16 @@ gulp.task( 'script-version', function () {
 gulp.task( 'script-docs', function () {
 
   return gulp.src( scripts )
-    .pipe( yuidoc.parser() )
-    .pipe( yuidoc.generator() )
-    .pipe( gulp.dest( dir.docs ) );
+    .pipe(yuidoc.parser() )
+    .pipe(yuidoc.generator() )
+    .pipe(gulp.dest( dir.docs ) );
 } );
 
 // // Lint JavaScript
 // gulp.task('js-hint', function () {
 //   return gulp.src( dir.src + '/**/*.js' )
-//     .pipe( jshint() )
-//     .pipe( jshint.reporter('jshint-stylish'));
+//     .pipe(jshint() )
+//     .pipe(jshint.reporter('jshint-stylish'));
 // });
 
 // ESLint
@@ -191,32 +191,30 @@ gulp.task('js:eslint', function() {
       configFile: '../eslint.es5.yml'
     }))
     .pipe(eslint.format())
-    .pipe( size( { title: '*** js:eslint ***' } ) );
+    .pipe(size( { title: '*** js:eslint ***' } ) );
 });
 
 
 // ----------------------------------------------------------------
 // build
 gulp.task( 'build', function () {
-
   runSequence(
     // 'js-hint',
+    'js:eslint',
     'script-concat',
     'script-min',
     'script-version'
   );
-
-} );
+});
 
 // build with docs
 gulp.task( 'build-api', function () {
-
   runSequence(
     // 'js-hint',
+    'js:eslint',
     'script-concat',
     'script-min',
     'script-version',
     'script-docs'
   );
-
-} );
+});
