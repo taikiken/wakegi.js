@@ -58,7 +58,7 @@
     var tagP;
     if ( typeof transition === 'undefined' ) {
       // transition undefined
-      p = document.createElement('p').style;
+      tagP = document.createElement('p').style;
       transition = 'transition' in tagP ||
         'WebkitTransition' in tagP ||
         'MozTransition' in tagP ||
@@ -96,7 +96,7 @@
    * @return {boolean} true: matchMedia が使用可能
    */
   Css3.matchMedia = function() {
-    if ( typeof matchMedia === 'undefined' ) {
+    if (typeof matchMedia === 'undefined') {
       // matchMedia undefined
       matchMedia = typeof window.matchMedia === 'function';
     }
@@ -110,7 +110,7 @@
    * @return {boolean} true: onorientationchange が使用可能
    */
   Css3.orientationChange = function() {
-    if ( typeof onorientationchange === 'undefined' ) {
+    if (typeof onorientationchange === 'undefined') {
       // onorientationchange undefined
       onorientationchange = 'onorientationchange' in window;
     }
@@ -124,7 +124,7 @@
    * @return {boolean} true: orientation が使用可能
    */
   Css3.orientation = function() {
-    if ( typeof orientation === 'undefined' ) {
+    if (typeof orientation === 'undefined') {
       // orientation undefined
       orientation = 'orientation' in window;
     }

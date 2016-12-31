@@ -60,7 +60,7 @@
    * @param {string} className 調査する class name
    * @return {boolean} true CSS class が存在する
    */
-  p.hasClass = function( className ) {
+  p.hasClass = function(className) {
     return Dom.hasClass(this.element, className);
   };
   /**
@@ -68,7 +68,7 @@
    * @param {string} className 対象 class 名称
    * @return {boolean} true: 追加成功
    */
-  p.addClass = function( className ) {
+  p.addClass = function(className) {
     return Dom.addClass(this.element, className);
   };
   /**

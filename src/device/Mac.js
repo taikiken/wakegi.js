@@ -58,4 +58,5 @@
     Mac.init();
     return mac;
   };
+  Browser.Mac = Mac;
 }(window));

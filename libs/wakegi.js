@@ -8,7 +8,7 @@
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
- * build 2016-12-29 19:23:13
+ * build 2016-12-31 15:58:31
  * version 0.9.9
  * github: https://github.com/taikiken/wakegi.js
  */
@@ -182,7 +182,7 @@ wakegi.float = parseFloat;
   /**
    * @method navigator
    * @static
-   * @returns {Navigator} window.navigator オブジェクトを返します
+   * @return {Navigator} window.navigator オブジェクトを返します
    */
   Browser.navigator = function() {
     return navigator;
@@ -190,7 +190,7 @@ wakegi.float = parseFloat;
   /**
    * @method ua
    * @static
-   * @returns {*|string} navigator.userAgent を返します
+   * @return {*|string} navigator.userAgent を返します
    */
   Browser.ua = function() {
     Browser.init();
@@ -199,7 +199,7 @@ wakegi.float = parseFloat;
   /**
    * @method app
    * @static
-   * @returns {*|string} navigator.appVersion を返します
+   * @return {*|string} navigator.appVersion を返します
    */
   Browser.app = function() {
     Browser.init();
@@ -209,7 +209,7 @@ wakegi.float = parseFloat;
    * userAgent regular expression of Safari
    * @method matchSafari
    * @static
-   * @returns {boolean} true: Safari
+   * @return {boolean} true: Safari
    */
   Browser.matchSafari = function() {
     Browser.init();
@@ -282,7 +282,7 @@ wakegi.float = parseFloat;
    * @param {int} r red color number
    * @param {int} g green color number
    * @param {int} b blue color number
-   * @returns {object} {h: number, s: number, l: number}
+   * @return {object} {h: number, s: number, l: number}
    */
   Iro.rgb2hsl = function(r, g, b) {
     r /= 255;
@@ -331,7 +331,7 @@ wakegi.float = parseFloat;
    * @param {number} point 変換変数
    * @param {number} q 変換変数
    * @param {number} t 変換変数
-   * @returns {number} 色成分数値を返します 0 ~ 255
+   * @return {number} 色成分数値を返します 0 ~ 255
    */
   Iro.hue2rgb = function(point, q, t) {
     if (t < 0) {
@@ -360,7 +360,7 @@ wakegi.float = parseFloat;
    * @param {number} h Hue
    * @param {number} s Saturation
    * @param {number} l luminance
-   * @returns {object} {r: number, g: number, b: number}
+   * @return {object} {r: number, g: number, b: number}
    */
   Iro.hsl2rgb = function(h, s, l) {
     var r, g, b, q, point;
@@ -391,7 +391,7 @@ wakegi.float = parseFloat;
    * @param {int} r red color number
    * @param {int} g green color number
    * @param {int} b blue color number
-   * @returns {object} {h: number, s: number, v: number}
+   * @return {object} {h: number, s: number, v: number}
    */
   Iro.rgb2hsv = function(r, g, b) {
     var red = r / 255;
@@ -441,7 +441,7 @@ wakegi.float = parseFloat;
    * @param {number} h Hue 色相
    * @param {number} s Saturation 彩度
    * @param {number} v Value 明度
-   * @returns {object} {r: number, g: number, b: number}
+   * @return {object} {r: number, g: number, b: number}
    */
   Iro.hsv2rgb = function( h, s, v ) {
     var
@@ -509,7 +509,7 @@ wakegi.float = parseFloat;
    * @method hexShort
    * @static
    * @param {string} hex CSS color 形式
-   * @returns {string|null} CSS short hand color 形式をフル変換します
+   * @return {string|null} CSS short hand color 形式をフル変換します
    * @see http://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb
    */
   Iro.hexShort = function(hex) {
@@ -530,7 +530,7 @@ wakegi.float = parseFloat;
    * @method hex2rgb
    * @static
    * @param {string} hex CSS 色設定文字 #ff0000
-   * @returns {object} {r: number, g: number, b: number}
+   * @return {object} {r: number, g: number, b: number}
    */
   Iro.hex2rgb = function(hex) {
     var hexString = Iro.hexShort( hex );
@@ -553,7 +553,7 @@ wakegi.float = parseFloat;
    * @method componentToHex
    * @static
    * @param {number} color color(red, green, blue) number
-   * @returns {string} 2桁を保障し文字列変換し返します
+   * @return {string} 2桁を保障し文字列変換し返します
    */
   Iro.componentToHex = function(color) {
     var hex = color.toString(16);
@@ -567,7 +567,7 @@ wakegi.float = parseFloat;
    * @param {int} r red color number
    * @param {int} g green color number
    * @param {int} b blue color number
-   * @returns {string} CSS color 形式文字列を返します
+   * @return {string} CSS color 形式文字列を返します
    */
   Iro.rgb2hex = function(r, g, b) {
     var
@@ -582,7 +582,7 @@ wakegi.float = parseFloat;
    * @method int2hex
    * @static
    * @param {number} num 変換元 10進数
-   * @returns {string} CSS color 16進数型文字列を返します
+   * @return {string} CSS color 16進数型文字列を返します
    */
   Iro.int2hex = function(num) {
     var
@@ -608,7 +608,7 @@ wakegi.float = parseFloat;
    * @method hex2int
    * @static
    * @param {string} hex `#fff` な 16進・文字列
-   * @returns {int|null} hex 文字列を10進数変換し返します
+   * @return {int|null} hex 文字列を10進数変換し返します
    */
   Iro.hex2int = function(hex) {
     var hexString = Iro.hexShort(hex);
@@ -664,7 +664,7 @@ wakegi.float = parseFloat;
    * @method camelize
    * @static
    * @param {string} str 変換元文字列
-   * @returns {string} dash(-)連結 word を camel case へ変換し返します。
+   * @return {string} dash(-)連結 word を camel case へ変換し返します。
    */
   Util.camelize = function( str ) {
     return str.toLowerCase().replace(/-(.)/g, function(match, group1) {
@@ -678,7 +678,7 @@ wakegi.float = parseFloat;
    * @method dash
    * @static
    * @param {string} str 変換元文字列
-   * @returns {string} dash 変換後文字列を返します
+   * @return {string} dash 変換後文字列を返します
    */
   Util.dash = function(str) {
     return str.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
@@ -740,7 +740,7 @@ wakegi.float = parseFloat;
    * @method hyphen
    * @static
    * @param {string} key key 名称(CSS property name)
-   * @returns {string} hyphen 変換後文字列を返します
+   * @return {string} hyphen 変換後文字列を返します
    */
   Patterns.hyphen = function(key) {
     return key.replace(/([A-Z])/g, '-$1').toLowerCase();
@@ -750,7 +750,7 @@ wakegi.float = parseFloat;
    * @method has
    * @static
    * @param {string} key 調べる key 名称(CSS property name)
-   * @returns {boolean} true: 存在する
+   * @return {boolean} true: 存在する
    */
   Patterns.has = function(key) {
     var keyName = Patterns.hyphen(key);
@@ -760,7 +760,7 @@ wakegi.float = parseFloat;
    * @method get
    * @static
    * @param {string} key key 名称(CSS property name)
-   * @returns {Array|undefined} CSS short hand 配列を返します
+   * @return {Array|undefined} CSS short hand 配列を返します
    */
   Patterns.get = function(key) {
     var keyName = Patterns.hyphen(key);
@@ -824,13 +824,13 @@ wakegi.float = parseFloat;
    *
    * @method transition
    * @static
-   * @returns {boolean} true: CSS3 transition 使用可能
+   * @return {boolean} true: CSS3 transition 使用可能
    */
   Css3.transition = function() {
     var tagP;
     if ( typeof transition === 'undefined' ) {
       // transition undefined
-      p = document.createElement('p').style;
+      tagP = document.createElement('p').style;
       transition = 'transition' in tagP ||
         'WebkitTransition' in tagP ||
         'MozTransition' in tagP ||
@@ -844,7 +844,7 @@ wakegi.float = parseFloat;
    *
    * @method transform
    * @static
-   * @returns {boolean} true: CSS3 transform 使用可能
+   * @return {boolean} true: CSS3 transform 使用可能
    */
   Css3.transform = function() {
     var tagP;
@@ -865,10 +865,10 @@ wakegi.float = parseFloat;
    *
    * @method matchMedia
    * @static
-   * @returns {boolean} true: matchMedia が使用可能
+   * @return {boolean} true: matchMedia が使用可能
    */
   Css3.matchMedia = function() {
-    if ( typeof matchMedia === 'undefined' ) {
+    if (typeof matchMedia === 'undefined') {
       // matchMedia undefined
       matchMedia = typeof window.matchMedia === 'function';
     }
@@ -879,10 +879,10 @@ wakegi.float = parseFloat;
    *
    * @method orientationChange
    * @static
-   * @returns {boolean} true: onorientationchange が使用可能
+   * @return {boolean} true: onorientationchange が使用可能
    */
   Css3.orientationChange = function() {
-    if ( typeof onorientationchange === 'undefined' ) {
+    if (typeof onorientationchange === 'undefined') {
       // onorientationchange undefined
       onorientationchange = 'onorientationchange' in window;
     }
@@ -893,10 +893,10 @@ wakegi.float = parseFloat;
    *
    * @method orientation
    * @static
-   * @returns {boolean} true: orientation が使用可能
+   * @return {boolean} true: orientation が使用可能
    */
   Css3.orientation = function() {
-    if ( typeof orientation === 'undefined' ) {
+    if (typeof orientation === 'undefined') {
       // orientation undefined
       orientation = 'orientation' in window;
     }
@@ -907,7 +907,7 @@ wakegi.float = parseFloat;
    *
    * @method backgroundSize
    * @static
-   * @returns {boolean} true: backgroundSize が使用可能
+   * @return {boolean} true: backgroundSize が使用可能
    */
   Css3.backgroundSize = function() {
     if (typeof backgroundSize === 'undefined') {
@@ -966,7 +966,7 @@ wakegi.float = parseFloat;
    * @method is
    * @deprecated instead of Css3.transition
    * @static
-   * @returns {boolean} true: CSS3 transition 使用可能
+   * @return {boolean} true: CSS3 transition 使用可能
    */
   Transition.is = function() {
     return Css3.transition();
@@ -1020,7 +1020,7 @@ wakegi.float = parseFloat;
    * @method is
    * @deprecated instead of Css3.transform
    * @static
-   * @returns {boolean} true: CSS3 transform 使用可能
+   * @return {boolean} true: CSS3 transform 使用可能
    */
   Transform.is = function() {
     return Css3.transform();
@@ -1078,7 +1078,7 @@ wakegi.float = parseFloat;
    *
    * @method touch
    * @static
-   * @returns {boolean} true: touch event が使用可能
+   * @return {boolean} true: touch event が使用可能
    */
   Element.touch = function() {
     if (typeof touch === 'undefined') {
@@ -1095,7 +1095,7 @@ wakegi.float = parseFloat;
    *
    * @method querySelector
    * @static
-   * @returns {boolean} true: querySelector が使用可能
+   * @return {boolean} true: querySelector が使用可能
    */
   Element.querySelector = function() {
     if (typeof querySelector === 'undefined') {
@@ -1110,7 +1110,7 @@ wakegi.float = parseFloat;
    *
    * @method canvas
    * @static
-   * @returns {boolean} true: canvas 使用可能
+   * @return {boolean} true: canvas 使用可能
    */
   Element.canvas = function() {
     if ( typeof canvas === 'undefined' ) {
@@ -1125,7 +1125,7 @@ wakegi.float = parseFloat;
    *
    * @method webgl
    * @static
-   * @returns {boolean} true: webgl 使用可能
+   * @return {boolean} true: webgl 使用可能
    */
   Element.webgl = function() {
     if (typeof webgl === 'undefined') {
@@ -1147,8 +1147,9 @@ wakegi.float = parseFloat;
    * querySelector が使えるブラウザだけ使用可能
    *
    * @method find
+   * @static
    * @param {string} searchKey `querySelector` で使用するセレクター
-   * @returns {*} HTMLElement を返します
+   * @return {*} HTMLElement を返します
    */
   Element.find = function( searchKey ) {
     var result;
@@ -1199,7 +1200,7 @@ wakegi.float = parseFloat;
    */
   function Dom(element) {
     /**
-     * @property _element
+     * @property element
      * @type {HTMLElement}
      * @private
      */
@@ -1212,7 +1213,7 @@ wakegi.float = parseFloat;
   // /**
   //  * 使用 Element を返します
   //  * @method element
-  //  * @returns {HTMLElement}
+  //  * @return {HTMLElement}
   //  */
   // p.element = function() {
   //   return this.element;
@@ -1221,23 +1222,23 @@ wakegi.float = parseFloat;
    * CSS class が存在するかを調べます
    * @method hasClass
    * @param {string} className 調査する class name
-   * @returns {boolean} true CSS class が存在する
+   * @return {boolean} true CSS class が存在する
    */
-  p.hasClass = function( className ) {
+  p.hasClass = function(className) {
     return Dom.hasClass(this.element, className);
   };
   /**
    * @method addClass
    * @param {string} className 対象 class 名称
-   * @returns {boolean} true: 追加成功
+   * @return {boolean} true: 追加成功
    */
-  p.addClass = function( className ) {
+  p.addClass = function(className) {
     return Dom.addClass(this.element, className);
   };
   /**
    * @method removeClass
    * @param {string} className 対象 class 名称
-   * @returns {boolean} true: 削除成功
+   * @return {boolean} true: 削除成功
    */
   p.removeClass = function( className ) {
     return Dom.removeClass(this.element, className);
@@ -1246,7 +1247,7 @@ wakegi.float = parseFloat;
    * element の 指定 css property 値を取得します
    * @method style
    * @param {string} [styleProp=''] css property name
-   * @returns {*} CSS 値
+   * @return {*} CSS 値
    */
   p.style = function(styleProp) {
     return Dom.getStyle(this.element, styleProp);
@@ -1257,7 +1258,7 @@ wakegi.float = parseFloat;
    * @static
    * @param {HTMLElement} element 操作対象 Element
    * @param {string} className 調査する class name
-   * @returns {boolean} true: 存在する
+   * @return {boolean} true: 存在する
    */
   Dom.hasClass = function( element, className ) {
     // categoryX があって category で検索すると match するのまずい
@@ -1276,7 +1277,7 @@ wakegi.float = parseFloat;
    * @static
    * @param {HTMLElement} element 操作対象 Element
    * @param {string} className 追加する class name
-   * @returns {boolean} true: 追加した
+   * @return {boolean} true: 追加した
    */
   Dom.addClass = function( element, className ) {
     var
@@ -1308,7 +1309,7 @@ wakegi.float = parseFloat;
    * @static
    * @param {HTMLElement} element 操作対象 Element
    * @param {string} className 削除対象 class name
-   * @returns {boolean} true: 削除した
+   * @return {boolean} true: 削除した
    */
   Dom.removeClass = function( element, className ) {
     var
@@ -1352,7 +1353,7 @@ wakegi.float = parseFloat;
    * @param {Object} defaultView `defaultView.getComputedStyle` します
    * @param {HTMLElement} el 調査対象 Element
    * @param {string} [styleProp] CSS property name
-   * @returns {CSSStyleDeclaration|*|String}
+   * @return {CSSStyleDeclaration|*|String}
    *    styleProp が null or undefined or "" の時は CSSStyleDeclaration Object<br>
    *    指定されている時は CSS 設定値(string)を返します
    */
@@ -1372,7 +1373,7 @@ wakegi.float = parseFloat;
    * @static
    * @param {HTMLElement} el 調査対象 Element
    * @param {string} [styleProp] CSS property name
-   * @returns {*} HTMLElement style value を返します
+   * @return {*} HTMLElement style value を返します
    */
   Dom.styleCurrent = function( el, styleProp ) {
     var
@@ -1413,7 +1414,7 @@ wakegi.float = parseFloat;
    * HTMLElement style value を取得します
    * @param {HTMLElement} el 調査対象 Element
    * @param {*} value CSS 値
-   * @returns {string|*} HTMLElement style value を返します
+   * @return {string|*} HTMLElement style value を返します
    */
   Dom.styleValue = function(el, value) {
     var
@@ -1436,7 +1437,7 @@ wakegi.float = parseFloat;
    * @param {Object} defaultView `defaultView.getComputedStyle` します
    * @param {HTMLElement} el 調査対象 HTML tag
    * @param {Array} patterns [string, ...]
-   * @returns {string} CSS 値を返します
+   * @return {string} CSS 値を返します
    */
   Dom.shortHand = function(defaultView, el, patterns) {
     var
@@ -1467,11 +1468,13 @@ wakegi.float = parseFloat;
   };
   /**
    * HTMLElement の css style を取得します
+   *
+   * @TODO: background していない時の background-color が rgb(0, 0, 0) になるのを解決する
    * @method getStyle
    * @static
    * @param {HTMLElement} el 調査対象 HTML tag
    * @param {string} [styleProp] CSS property name
-   * @returns {*} HTMLElement の css style を返します
+   * @return {*} HTMLElement の css style を返します
    */
   Dom.getStyle = function(el, styleProp) {
     var
@@ -1545,7 +1548,7 @@ wakegi.float = parseFloat;
    * @method parse
    * @static
    * @param {Element} element HTML document
-   * @returns {{}} dataset を取得し key: value Objectを返します
+   * @return {{}} dataset を取得し key: value Objectを返します
    */
   Dataset.parse = function( element ) {
     if (typeof element.dataset !== 'undefined') {
@@ -1562,7 +1565,7 @@ wakegi.float = parseFloat;
    * @method modern
    * @static
    * @param {Element} element HTML document
-   * @returns {{}} dataset を取得し key: value Objectを返します
+   * @return {{}} dataset を取得し key: value Objectを返します
    */
   Dataset.modern = function( element ) {
 
@@ -1601,7 +1604,7 @@ wakegi.float = parseFloat;
    * @method legacy
    * @static
    * @param {Element} element HTML document
-   * @returns {{}} dataset を取得し key: value Objectを返します
+   * @return {{}} dataset を取得し key: value Objectを返します
    */
   Dataset.legacy = function(element) {
     var
@@ -1696,7 +1699,7 @@ wakegi.float = parseFloat;
    * Windows OS 判定を行います
    * @method is
    * @static
-   * @returns {boolean} true: Windows OS
+   * @return {boolean} true: Windows OS
    */
   Windows.is = function() {
     Windows.init();
@@ -1706,7 +1709,7 @@ wakegi.float = parseFloat;
    * Windows phone 判定を行います
    * @method phone
    * @static
-   * @returns {boolean} true: Windows phone
+   * @return {boolean} true: Windows phone
    */
   Windows.phone = function() {
     Windows.init();
@@ -1835,7 +1838,7 @@ wakegi.float = parseFloat;
    * iOS 判定
    * @method is
    * @static
-   * @returns {boolean} true: iOS
+   * @return {boolean} true: iOS
    */
   iOS.is = function() {
     iOS.init();
@@ -1845,7 +1848,7 @@ wakegi.float = parseFloat;
    * iPhone 判定
    * @method iPhone
    * @static
-   * @returns {boolean} true: iPhone
+   * @return {boolean} true: iPhone
    */
   iOS.iPhone = function() {
     iOS.init();
@@ -1855,7 +1858,7 @@ wakegi.float = parseFloat;
    * iPad 判定
    * @method iPad
    * @static
-   * @returns {boolean} true: iPad
+   * @return {boolean} true: iPad
    */
   iOS.iPad = function() {
     iOS.init();
@@ -1865,7 +1868,7 @@ wakegi.float = parseFloat;
    * iPod 判定します
    * @method iPod
    * @static
-   * @returns {boolean} true: iPod
+   * @return {boolean} true: iPod
    */
   iOS.iPod = function() {
     iOS.init();
@@ -1875,7 +1878,7 @@ wakegi.float = parseFloat;
    * standalone で表示しているかを判定します
    * @method standalone
    * @static
-   * @returns {boolean} true: standalone で表示
+   * @return {boolean} true: standalone で表示
    */
   iOS.standalone = function() {
     var navigator = Browser.navigator();
@@ -1887,7 +1890,7 @@ wakegi.float = parseFloat;
    * @method fullScreen
    * @deprecated instead of iOS.standalone
    * @static
-   * @returns {boolean} true: standalone で表示
+   * @return {boolean} true: standalone で表示
    */
   iOS.fullScreen = function() {
     return iOS.standalone();
@@ -1896,7 +1899,7 @@ wakegi.float = parseFloat;
    * version: float型で取得します
    * @method version
    * @static
-   * @returns {float} N.NN で返します
+   * @return {float} N.NN で返します
    */
   iOS.version = function() {
     iOS.calculate();
@@ -1906,7 +1909,7 @@ wakegi.float = parseFloat;
    * version: build ナンバーを含み取得します
    * @method build
    * @static
-   * @returns {string} NN.NN.NN 型（文字）で返します
+   * @return {string} NN.NN.NN 型（文字）で返します
    */
   iOS.build = function() {
     iOS.calculate();
@@ -1917,7 +1920,7 @@ wakegi.float = parseFloat;
    * version: major を取得します
    * @method major
    * @static
-   * @returns {int} version: major を返します
+   * @return {int} version: major を返します
    */
   iOS.major = function() {
     iOS.calculate();
@@ -1927,7 +1930,7 @@ wakegi.float = parseFloat;
    * version を配列形式で取得します
    * @method numbers
    * @static
-   * @returns {*[]} [major: int, minor: int, build: int] 形式で返します
+   * @return {*[]} [major: int, minor: int, build: int] 形式で返します
    */
   iOS.numbers = function() {
     iOS.calculate();
@@ -1938,7 +1941,7 @@ wakegi.float = parseFloat;
    * @method number
    * @deprecated instead of Safari.numbers
    * @static
-   * @returns {*[]} [major: int, minor: int, build: int] 形式で返します
+   * @return {*[]} [major: int, minor: int, build: int] 形式で返します
    */
   iOS.number = function() {
     // 互換のために残します
@@ -1949,7 +1952,7 @@ wakegi.float = parseFloat;
    * **注意** アプリ内ブラウザ(webView)は UA 偽装可能
    * @method webView
    * @static
-   * @returns {boolean} true: アプリ内ブラウザ
+   * @return {boolean} true: アプリ内ブラウザ
    */
   iOS.webView = function() {
     iOS.init();
@@ -2013,12 +2016,13 @@ wakegi.float = parseFloat;
    * Mac OS 判定します
    * @method is
    * @static
-   * @returns {boolean} true Mac OS
+   * @return {boolean} true Mac OS
    */
   Mac.is = function() {
     Mac.init();
     return mac;
   };
+  Browser.Mac = Mac;
 }(window));
 
 /**
@@ -2161,7 +2165,7 @@ wakegi.float = parseFloat;
    * Android 判定を行います
    * @method is
    * @static
-   * @returns {boolean} true: Android
+   * @return {boolean} true: Android
    */
   Android.is = function() {
     Android.init();
@@ -2171,7 +2175,7 @@ wakegi.float = parseFloat;
    * Android 標準ブラウザ
    * @method standard
    * @static
-   * @returns {boolean} true: Android 標準ブラウザ
+   * @return {boolean} true: Android 標準ブラウザ
    */
   Android.standard = function() {
     Android.init();
@@ -2181,7 +2185,7 @@ wakegi.float = parseFloat;
    * Android Phone
    * @method phone
    * @static
-   * @returns {boolean} true: Android phone
+   * @return {boolean} true: Android phone
    */
   Android.phone = function() {
     Android.init();
@@ -2191,7 +2195,7 @@ wakegi.float = parseFloat;
    * Android Tablet
    * @method tablet
    * @static
-   * @returns {boolean} true: Android tablet
+   * @return {boolean} true: Android tablet
    */
   Android.tablet = function() {
     Android.init();
@@ -2201,7 +2205,7 @@ wakegi.float = parseFloat;
    * Android HD 端末
    * @method hd
    * @static
-   * @returns {boolean} true: Android HD
+   * @return {boolean} true: Android HD
    */
   Android.hd = function() {
     Android.init();
@@ -2211,7 +2215,7 @@ wakegi.float = parseFloat;
    * version: float型で取得します
    * @method version
    * @static
-   * @returns {float} N.NN で返します
+   * @return {float} N.NN で返します
    */
   Android.version = function() {
     Android.calculate();
@@ -2221,7 +2225,7 @@ wakegi.float = parseFloat;
    * version: build ナンバーを含み取得します
    * @method build
    * @static
-   * @returns {string} NN.NN.NN 型（文字）で返します
+   * @return {string} NN.NN.NN 型（文字）で返します
    */
   Android.build = function() {
     Android.calculate();
@@ -2231,7 +2235,7 @@ wakegi.float = parseFloat;
    * version: major を取得します
    * @method major
    * @static
-   * @returns {int} version: major を返します
+   * @return {int} version: major を返します
    */
   Android.major = function() {
     Android.calculate();
@@ -2241,7 +2245,7 @@ wakegi.float = parseFloat;
    * version を配列形式で取得します
    * @method numbers
    * @static
-   * @returns {*[]} [major: int, minor: int, build: int] 形式で返します
+   * @return {*[]} [major: int, minor: int, build: int] 形式で返します
    */
   Android.numbers = function() {
     Android.calculate();
@@ -2252,7 +2256,7 @@ wakegi.float = parseFloat;
    * @method number
    * @deprecated instead of Android.numbers
    * @static
-   * @returns {*[]} [major: int, minor: int, build: int] 形式で返します
+   * @return {*[]} [major: int, minor: int, build: int] 形式で返します
    */
   Android.number = function() {
     // 互換のために残します
@@ -2262,7 +2266,7 @@ wakegi.float = parseFloat;
    * window width / height を取得します
    * @method rect
    * @static
-   * @returns {{width: Number, height: Number}} width / height を Object 形式で返します
+   * @return {{width: Number, height: Number}} width / height を Object 形式で返します
    */
   Android.rect = function() {
     return {
@@ -2319,7 +2323,7 @@ wakegi.float = parseFloat;
    * @method is
    * @deprecated instead of Element.touch
    * @static
-   * @returns {boolean} true: touch event が利用可能
+   * @return {boolean} true: touch event が利用可能
    */
   Touch.is = function() {
     return Element.touch();
@@ -2375,7 +2379,7 @@ wakegi.float = parseFloat;
    * iOS / Android / Windows phone 判定
    * @method is
    * @static
-   * @returns {boolean} true: iOS / Android / Windows phone
+   * @return {boolean} true: iOS / Android / Windows phone
    */
   Mobile.is = function() {
     return iOS.is() || Android.is() || Windows.phone();
@@ -2384,7 +2388,7 @@ wakegi.float = parseFloat;
    * スマホ・iPod touch 判定を行います
    * @method phone
    * @static
-   * @returns {boolean} true: スマホ・iPod touch
+   * @return {boolean} true: スマホ・iPod touch
    */
   Mobile.phone = function() {
     return iOS.iPhone() || iOS.iPod() || Android.phone() || Windows.phone();
@@ -2393,7 +2397,7 @@ wakegi.float = parseFloat;
    * tablet 判定を行います
    * @method tablet
    * @static
-   * @returns {boolean} true: tablet
+   * @return {boolean} true: tablet
    */
   Mobile.tablet = function() {
     return iOS.iPad() || Android.tablet();
@@ -2406,7 +2410,7 @@ wakegi.float = parseFloat;
    * iOS 9 以降では実行しても無駄です
    * @method hideBar
    * @static
-   * @returns {number} timer id を返します
+   * @return {number} timer id を返します
    */
   Mobile.hideBar = function() {
     return setTimeout(function() {
@@ -2418,7 +2422,7 @@ wakegi.float = parseFloat;
    * @deprecated instead of Mobile.hideBar
    * @method hideURLBar
    * @static
-   * @returns {number} timer id を返します
+   * @return {number} timer id を返します
    */
   Mobile.hideURLBar = function() {
     return Mobile.hideBar();
@@ -2521,7 +2525,7 @@ wakegi.float = parseFloat;
    * iOS Firefox 判定を行います
    * @method is
    * @static
-   * @returns {boolean} true: iOS Firefox
+   * @return {boolean} true: iOS Firefox
    */
   FxiOS.is = function() {
     FxiOS.init();
@@ -2532,7 +2536,7 @@ wakegi.float = parseFloat;
    * version: float型で取得します
    * @method version
    * @static
-   * @returns {float} N.NN で返します
+   * @return {float} N.NN で返します
    */
   FxiOS.version = function() {
     FxiOS.calculate();
@@ -2543,7 +2547,7 @@ wakegi.float = parseFloat;
    * version: major を取得します
    * @method major
    * @static
-   * @returns {int} version: major を返します
+   * @return {int} version: major を返します
    */
   FxiOS.major = function() {
     FxiOS.calculate();
@@ -2554,7 +2558,7 @@ wakegi.float = parseFloat;
    * version: build ナンバーを含み取得します
    * @method build
    * @static
-   * @returns {string} NN.NN.NN.NN 型（文字）で返します
+   * @return {string} NN.NN.NN.NN 型（文字）で返します
    */
   FxiOS.build = function() {
     FxiOS.calculate();
@@ -2565,7 +2569,7 @@ wakegi.float = parseFloat;
    * version を配列形式で取得します
    * @method numbers
    * @static
-   * @returns {*[]} [major: int, minor: int, build: int] 形式で返します
+   * @return {*[]} [major: int, minor: int, build: int] 形式で返します
    */
   FxiOS.numbers = function() {
     FxiOS.calculate();
@@ -2676,7 +2680,7 @@ wakegi.float = parseFloat;
    * edge 判定を行います
    * @method is
    * @static
-   * @returns {boolean} true: Edge
+   * @return {boolean} true: Edge
    */
   Edge.is = function() {
     Edge.init();
@@ -2686,7 +2690,7 @@ wakegi.float = parseFloat;
    * version: float型で取得します
    * @method version
    * @static
-   * @returns {float} N.NN で返します
+   * @return {float} N.NN で返します
    */
   Edge.version = function() {
     Edge.calculate();
@@ -2697,7 +2701,7 @@ wakegi.float = parseFloat;
    * version: major を取得します
    * @method major
    * @static
-   * @returns {int} version: major を返します
+   * @return {int} version: major を返します
    */
   Edge.major = function() {
     Edge.calculate();
@@ -2707,7 +2711,7 @@ wakegi.float = parseFloat;
    * version: build ナンバーを含み取得します
    * @method build
    * @static
-   * @returns {string} NN.NN 型（文字）で返します
+   * @return {string} NN.NN 型（文字）で返します
    */
   Edge.build = function() {
     Edge.calculate();
@@ -2717,7 +2721,7 @@ wakegi.float = parseFloat;
    * version を配列形式で取得します
    * @method numbers
    * @static
-   * @returns {[]} [major: int, minor: int] 形式で返します
+   * @return {[]} [major: int, minor: int] 形式で返します
    */
   Edge.numbers = function() {
     Edge.calculate();
@@ -2854,7 +2858,7 @@ wakegi.float = parseFloat;
    * IE 判定
    * @method is
    * @static
-   * @returns {boolean} true: IE
+   * @return {boolean} true: IE
    */
   IE.is = function() {
     IE.init();
@@ -2864,7 +2868,7 @@ wakegi.float = parseFloat;
    * IE 6判定
    * @method is6
    * @static
-   * @returns {boolean} true: IE 6
+   * @return {boolean} true: IE 6
    */
   IE.is6 = function() {
     IE.init();
@@ -2874,7 +2878,7 @@ wakegi.float = parseFloat;
    * IE 7判定
    * @method is7
    * @static
-   * @returns {boolean} true: IE 7
+   * @return {boolean} true: IE 7
    */
   IE.is7 = function() {
     IE.init();
@@ -2884,7 +2888,7 @@ wakegi.float = parseFloat;
    * IE 8判定
    * @method is8
    * @static
-   * @returns {boolean} true: IE 8
+   * @return {boolean} true: IE 8
    */
   IE.is8 = function() {
     IE.init();
@@ -2894,7 +2898,7 @@ wakegi.float = parseFloat;
    * IE 9判定
    * @method is9
    * @static
-   * @returns {boolean} true: IE 9
+   * @return {boolean} true: IE 9
    */
   IE.is9 = function() {
     IE.init();
@@ -2904,7 +2908,7 @@ wakegi.float = parseFloat;
    * IE 10判定
    * @method is10
    * @static
-   * @returns {boolean} true: IE 10
+   * @return {boolean} true: IE 10
    */
   IE.is10 = function() {
     IE.init();
@@ -2914,7 +2918,7 @@ wakegi.float = parseFloat;
    * IE 11判定
    * @method is11
    * @static
-   * @returns {boolean} true: IE11
+   * @return {boolean} true: IE11
    */
   IE.is11 = function() {
     IE.init();
@@ -2924,7 +2928,7 @@ wakegi.float = parseFloat;
    * version float型
    * @method version
    * @static
-   * @returns {float} N.NN で返します
+   * @return {float} N.NN で返します
    */
   IE.version = function() {
     IE.calculate();
@@ -2934,7 +2938,7 @@ wakegi.float = parseFloat;
    * version 正数
    * @method major
    * @static
-   * @returns {int} version: major を返します
+   * @return {int} version: major を返します
    */
   IE.major = function() {
     return parseInt(IE.version(), 10);
@@ -2943,7 +2947,7 @@ wakegi.float = parseFloat;
    * IE 8 or 7 or 6 判定
    * @method legacy
    * @static
-   * @returns {boolean} true: IE 6 | 7 | 8
+   * @return {boolean} true: IE 6 | 7 | 8
    */
   IE.legacy = function() {
     IE.init();
@@ -3049,7 +3053,7 @@ wakegi.float = parseFloat;
    * iOS Chrome 判定を行います
    * @method is
    * @static
-   * @returns {boolean} true: iOS Chrome
+   * @return {boolean} true: iOS Chrome
    */
   CriOS.is = function() {
     CriOS.init();
@@ -3060,7 +3064,7 @@ wakegi.float = parseFloat;
    * version float 形式で取得します
    * @method version
    * @static
-   * @returns {float} N.NNN で返します
+   * @return {float} N.NNN で返します
    */
   CriOS.version = function() {
     CriOS.calculate();
@@ -3070,7 +3074,7 @@ wakegi.float = parseFloat;
    * version: build No. を含み取得します
    * @method build
    * @static
-   * @returns {string} NN.NN.NN.NN 型（文字）で返します
+   * @return {string} NN.NN.NN.NN 型（文字）で返します
    */
   CriOS.build = function() {
     CriOS.calculate();
@@ -3080,7 +3084,7 @@ wakegi.float = parseFloat;
    * version: major を取得します
    * @method major
    * @static
-   * @returns {int} version major を返します
+   * @return {int} version major を返します
    */
   CriOS.major = function() {
     CriOS.calculate();
@@ -3089,7 +3093,7 @@ wakegi.float = parseFloat;
   /**
    * @method numbers
    * @static
-   * @returns {*[]} [major: int, minor: int, build: int] 形式で返します
+   * @return {*[]} [major: int, minor: int, build: int] 形式で返します
    */
   CriOS.numbers = function() {
     CriOS.calculate();
@@ -3226,7 +3230,7 @@ wakegi.float = parseFloat;
    * Chrome 判定を行います
    * @method is
    * @static
-   * @returns {boolean} true: Chrome
+   * @return {boolean} true: Chrome
    */
   Chrome.is = function() {
     Chrome.init();
@@ -3237,7 +3241,7 @@ wakegi.float = parseFloat;
    * version N.NNN を取得します
    * @method version
    * @static
-   * @returns {float} N.NNN で返します
+   * @return {float} N.NNN で返します
    */
   Chrome.version = function() {
     Chrome.calculate();
@@ -3248,7 +3252,7 @@ wakegi.float = parseFloat;
    * version: build type を含み取得します
    * @method build
    * @static
-   * @returns {string} NN.NN.NN.NN 型（文字）で返します
+   * @return {string} NN.NN.NN.NN 型（文字）で返します
    */
   Chrome.build = function() {
     Chrome.calculate();
@@ -3258,7 +3262,7 @@ wakegi.float = parseFloat;
    * version NN を取得します
    * @method major
    * @static
-   * @returns {int} version NN を返します
+   * @return {int} version NN を返します
    */
   Chrome.major = function() {
     Chrome.calculate();
@@ -3267,7 +3271,7 @@ wakegi.float = parseFloat;
   /**
    * @method numbers
    * @static
-   * @returns {*[]} [major: int, minor: int, build: int] 形式で返します
+   * @return {*[]} [major: int, minor: int, build: int] 形式で返します
    */
   Chrome.numbers = function() {
     Chrome.calculate();
@@ -3377,7 +3381,7 @@ wakegi.float = parseFloat;
    * Firefox 判定を行います
    * @method is
    * @static
-   * @returns {boolean} true: Firefox
+   * @return {boolean} true: Firefox
    */
   Firefox.is = function() {
     Firefox.init();
@@ -3388,7 +3392,7 @@ wakegi.float = parseFloat;
    * version: float型で取得します
    * @method version
    * @static
-   * @returns {float} N.NN で返します
+   * @return {float} N.NN で返します
    */
   Firefox.version = function() {
     Firefox.calculate();
@@ -3399,7 +3403,7 @@ wakegi.float = parseFloat;
    * version: major を取得します
    * @method major
    * @static
-   * @returns {int} version: major を返します
+   * @return {int} version: major を返します
    */
   Firefox.major = function() {
     Firefox.calculate();
@@ -3410,7 +3414,7 @@ wakegi.float = parseFloat;
    *  version: build ナンバーを含み取得します
    * @method build
    * @static
-   * @returns {string} NN.NN.NN.NN 型（文字）で返します
+   * @return {string} NN.NN.NN.NN 型（文字）で返します
    */
   Firefox.build = function() {
     Firefox.calculate();
@@ -3421,7 +3425,7 @@ wakegi.float = parseFloat;
    * version を配列形式で取得します
    * @method numbers
    * @static
-   * @returns {*[]} [major: int, minor: int, build: int] 形式で返します
+   * @return {*[]} [major: int, minor: int, build: int] 形式で返します
    */
   Firefox.numbers = function() {
     Firefox.calculate();
@@ -3553,7 +3557,7 @@ wakegi.float = parseFloat;
    * Safari 判定を行います
    * @method is
    * @static
-   * @returns {boolean} true: Safari
+   * @return {boolean} true: Safari
    */
   Safari.is = function() {
     Safari.init();
@@ -3564,7 +3568,7 @@ wakegi.float = parseFloat;
    * @method set
    * @static
    * @param {boolean} bool 判定フラッグ
-   * @returns {boolean} 設置値を返します
+   * @return {boolean} 設置値を返します
    */
   Safari.set = function(bool) {
     Safari.init();
@@ -3575,7 +3579,7 @@ wakegi.float = parseFloat;
    * version: float型で取得します
    * @method version
    * @static
-   * @returns {float} N.NN で返します
+   * @return {float} N.NN で返します
    */
   Safari.version = function() {
     Safari.calculate();
@@ -3585,7 +3589,7 @@ wakegi.float = parseFloat;
    * version: major を取得します
    * @method major
    * @static
-   * @returns {int} version: major を返します
+   * @return {int} version: major を返します
    */
   Safari.major = function() {
     Safari.calculate();
@@ -3595,7 +3599,7 @@ wakegi.float = parseFloat;
    * version: build ナンバーを含み取得します
    * @method build
    * @static
-   * @returns {string} NN.NN.NN.NN 型（文字）で返します
+   * @return {string} NN.NN.NN.NN 型（文字）で返します
    */
   Safari.build = function() {
     Safari.calculate();
@@ -3605,7 +3609,7 @@ wakegi.float = parseFloat;
    * version を配列形式で取得します
    * @method numbers
    * @static
-   * @returns {*[]} [major: int, minor: int, build: int] 形式で返します
+   * @return {*[]} [major: int, minor: int, build: int] 形式で返します
    */
   Safari.numbers = function() {
     Safari.calculate();
@@ -3616,7 +3620,7 @@ wakegi.float = parseFloat;
    * @method number
    * @deprecated instead of Safari.numbers
    * @static
-   * @returns {*[]} [major: int, minor: int, build: int] 形式で返します
+   * @return {*[]} [major: int, minor: int, build: int] 形式で返します
    */
   Safari.number = function() {
     // 互換のために残します
