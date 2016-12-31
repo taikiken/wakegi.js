@@ -8,7 +8,7 @@
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
- * build 2016-12-31 15:58:31
+ * build 2016-12-31 16:07:14
  * version 0.9.9
  * github: https://github.com/taikiken/wakegi.js
  */
@@ -1260,16 +1260,16 @@ wakegi.float = parseFloat;
    * @param {string} className 調査する class name
    * @return {boolean} true: 存在する
    */
-  Dom.hasClass = function( element, className ) {
+  Dom.hasClass = function(element, className) {
     // categoryX があって category で検索すると match するのまずい
     // return !!element.className.match( new RegExp( className, 'i' ) );
     // return !!element.className.match( new RegExp( '^' + className + '$', 'g' ) );
     // return !!element.className.match( new RegExp( '\\' + className + '\\w', 'g' ) );
     var
       elementClass = element.className,
-      classes = elementClass.split( ' ' );
+      classes = elementClass.split(' ');
 
-    return classes.indexOf( className ) !== -1;
+    return classes.indexOf(className) !== -1;
   };
   /**
    * css class を追加します
@@ -1279,7 +1279,7 @@ wakegi.float = parseFloat;
    * @param {string} className 追加する class name
    * @return {boolean} true: 追加した
    */
-  Dom.addClass = function( element, className ) {
+  Dom.addClass = function(element, className) {
     var
       names = '',
       result = false,
@@ -1296,7 +1296,7 @@ wakegi.float = parseFloat;
       }
 
       names += space + className;
-      names = names.split( '  ' ).join( ' ' );
+      names = names.split('  ').join(' ');
       element.className = names;
       result = true;
     }

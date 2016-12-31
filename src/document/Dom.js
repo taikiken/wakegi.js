@@ -96,16 +96,16 @@
    * @param {string} className 調査する class name
    * @return {boolean} true: 存在する
    */
-  Dom.hasClass = function( element, className ) {
+  Dom.hasClass = function(element, className) {
     // categoryX があって category で検索すると match するのまずい
     // return !!element.className.match( new RegExp( className, 'i' ) );
     // return !!element.className.match( new RegExp( '^' + className + '$', 'g' ) );
     // return !!element.className.match( new RegExp( '\\' + className + '\\w', 'g' ) );
     var
       elementClass = element.className,
-      classes = elementClass.split( ' ' );
+      classes = elementClass.split(' ');
 
-    return classes.indexOf( className ) !== -1;
+    return classes.indexOf(className) !== -1;
   };
   /**
    * css class を追加します
@@ -115,7 +115,7 @@
    * @param {string} className 追加する class name
    * @return {boolean} true: 追加した
    */
-  Dom.addClass = function( element, className ) {
+  Dom.addClass = function(element, className) {
     var
       names = '',
       result = false,
@@ -132,7 +132,7 @@
       }
 
       names += space + className;
-      names = names.split( '  ' ).join( ' ' );
+      names = names.split('  ').join(' ');
       element.className = names;
       result = true;
     }
