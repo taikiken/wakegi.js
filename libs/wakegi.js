@@ -1,5 +1,5 @@
 /*!
- * Copyright (c) 2011-2016 inazumatv.com, inc.
+ * Copyright (c) 2011-2017 inazumatv.com, inc.
  * @author (at)taikiken / http://inazumatv.com
  * @date 2015/03/17 - 12:37
  *
@@ -8,7 +8,7 @@
  *
  * This notice shall be included in all copies or substantial portions of the Software.
  *
- * build 2016-12-31 16:07:14
+ * build 2017-5-24 19:01:24
  * version 0.9.9
  * github: https://github.com/taikiken/wakegi.js
  */
@@ -49,12 +49,14 @@ wakegi.float = parseFloat;
   // Production steps of ECMA-262, Edition 5, 15.4.4.14
   // Reference: http://es5.github.io/#x15.4.4.14
   if (!Array.prototype.indexOf) {
+    // eslint-disable-next-line
     Array.prototype.indexOf = function(searchElement, fromIndex) {
 
       var k;
 
       // 1. Let o be the result of calling ToObject passing
       //    the this value as the argument.
+      // eslint-disable-next-line
       if (this == null) {
         throw new TypeError('"this" is null or not defined');
       }
@@ -115,6 +117,7 @@ wakegi.float = parseFloat;
   // trim
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
   if (!String.prototype.trim) {
+    // eslint-disable-next-line
     String.prototype.trim = function() {
       return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
     };
@@ -1576,6 +1579,7 @@ wakegi.float = parseFloat;
       key, value,
       keyName;
 
+    // eslint-disable-next-line
     for (key in data) {
       keyName = '';
       value = '';

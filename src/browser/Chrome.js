@@ -166,7 +166,7 @@
   /**
    * @method numbers
    * @static
-   * @return {*[]} [major: int, minor: int, build: int] 形式で返します
+   * @return {Array<number>} [major: int, minor: int, build: int] 形式で返します
    */
   Chrome.numbers = function() {
     Chrome.calculate();

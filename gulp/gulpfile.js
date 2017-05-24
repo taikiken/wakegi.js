@@ -126,12 +126,12 @@ scripts.push( dir.src + '/browser/Safari.js' );
 //  task
 // ----------------------------------------------------------------
 // concat to libs
-gulp.task( 'script-concat', function () {
+gulp.task( 'script-concat', function() {
 
   return gulp.src( scripts )
     .pipe( concat( libName ) )
     .pipe(gulp.dest( dir.libs ) )
-    .pipe(rename( function (pathObj) {
+    .pipe(rename( function(pathObj) {
 
       pathObj.basename = pathObj.basename + '-' + pkg.version;
 
@@ -142,7 +142,7 @@ gulp.task( 'script-concat', function () {
 } );
 
 // min inside libs
-gulp.task( 'script-min', function (){
+gulp.task( 'script-min', function() {
 
   return gulp.src(
     [
@@ -150,7 +150,14 @@ gulp.task( 'script-min', function (){
 
       '!' + dir.libs + '/*.min.js'
     ] )
-    .pipe(uglify( { preserveComments: 'some' } ) )
+    // .pipe(uglify( { preserveComments: 'some' } ) )
+    .pipe(uglify(
+      {
+        output: {
+          comments: 'some'
+        }
+      }
+    ))
     .pipe(rename( { suffix: '.min' } ) )
     .pipe(gulp.dest( dir.libs ) )
     .pipe(size( { title: '*** script-min ***' } ) );
@@ -158,7 +165,7 @@ gulp.task( 'script-min', function (){
 } );
 
 // build time, version
-gulp.task( 'script-version', function () {
+gulp.task( 'script-version', function() {
 
   return gulp.src( dir.libs + '/*.js' )
     .pipe(replace( { patterns: patterns } ) )
@@ -168,7 +175,7 @@ gulp.task( 'script-version', function () {
 } );
 
 // YUIDocs
-gulp.task( 'script-docs', function () {
+gulp.task( 'script-docs', function() {
 
   return gulp.src( scripts )
     .pipe(yuidoc.parser() )
@@ -197,7 +204,7 @@ gulp.task('js:eslint', function() {
 
 // ----------------------------------------------------------------
 // build
-gulp.task( 'build', function () {
+gulp.task( 'build', function() {
   runSequence(
     // 'js-hint',
     'js:eslint',
@@ -208,7 +215,7 @@ gulp.task( 'build', function () {
 });
 
 // build with docs
-gulp.task( 'build-api', function () {
+gulp.task( 'build-api', function() {
   runSequence(
     // 'js-hint',
     'js:eslint',
