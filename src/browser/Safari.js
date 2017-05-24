@@ -172,7 +172,7 @@
    * version を配列形式で取得します
    * @method numbers
    * @static
-   * @return {*[]} [major: int, minor: int, build: int] 形式で返します
+   * @return {Array<number>} [major: int, minor: int, build: int] 形式で返します
    */
   Safari.numbers = function() {
     Safari.calculate();
@@ -183,7 +183,7 @@
    * @method number
    * @deprecated instead of Safari.numbers
    * @static
-   * @return {*[]} [major: int, minor: int, build: int] 形式で返します
+   * @return {Array<number>} [major: int, minor: int, build: int] 形式で返します
    */
   Safari.number = function() {
     // 互換のために残します

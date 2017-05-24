@@ -172,6 +172,7 @@ YUI.add("yuidoc-meta", function(Y) {
             "name": "Windows",
             "description": "Windows OS チェックを行います"
         }
-    ]
+    ],
+    "elements": []
 } };
 });

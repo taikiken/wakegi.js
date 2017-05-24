@@ -1,0 +1,1 @@
+extends: './eslint.es5.yml'

@@ -290,6 +290,7 @@
                 "iOS": 1,
                 "Element": 1
             },
+            "elements": {},
             "classes": {
                 "Chrome": 1,
                 "CriOS": 1,
@@ -320,6 +321,7 @@
         "Chrome": {
             "name": "Chrome",
             "submodules": {},
+            "elements": {},
             "classes": {
                 "Chrome": 1
             },
@@ -335,6 +337,7 @@
         "CriOS": {
             "name": "CriOS",
             "submodules": {},
+            "elements": {},
             "classes": {
                 "CriOS": 1
             },
@@ -350,6 +353,7 @@
         "Edge": {
             "name": "Edge",
             "submodules": {},
+            "elements": {},
             "classes": {
                 "Edge": 1
             },
@@ -365,6 +369,7 @@
         "Firefox": {
             "name": "Firefox",
             "submodules": {},
+            "elements": {},
             "classes": {
                 "Firefox": 1
             },
@@ -380,6 +385,7 @@
         "FxiOS": {
             "name": "FxiOS",
             "submodules": {},
+            "elements": {},
             "classes": {
                 "FxiOS": 1
             },
@@ -395,6 +401,7 @@
         "IE": {
             "name": "IE",
             "submodules": {},
+            "elements": {},
             "classes": {
                 "IE": 1
             },
@@ -410,6 +417,7 @@
         "Safari": {
             "name": "Safari",
             "submodules": {},
+            "elements": {},
             "classes": {
                 "Safari": 1
             },
@@ -425,6 +433,7 @@
         "Css3": {
             "name": "Css3",
             "submodules": {},
+            "elements": {},
             "classes": {
                 "Css3": 1
             },
@@ -446,6 +455,7 @@
                 "Iro": 1,
                 "Util": 1
             },
+            "elements": {},
             "classes": {
                 "Patterns": 1,
                 "Dataset": 1,
@@ -456,7 +466,7 @@
             },
             "fors": {},
             "namespaces": {},
-            "tag": "module",
+            "module": "wakegi",
             "file": "src/Browser.js",
             "line": 32,
             "description": "# Browser 機能を調べる\n# HTMLElement の CSS class 操作",
@@ -465,6 +475,7 @@
         "Patterns": {
             "name": "Patterns",
             "submodules": {},
+            "elements": {},
             "classes": {
                 "Patterns": 1
             },
@@ -480,6 +491,7 @@
         "Transform": {
             "name": "Transform",
             "submodules": {},
+            "elements": {},
             "classes": {
                 "Transform": 1
             },
@@ -495,6 +507,7 @@
         "Transition": {
             "name": "Transition",
             "submodules": {},
+            "elements": {},
             "classes": {
                 "Transition": 1
             },
@@ -510,6 +523,7 @@
         "Android": {
             "name": "Android",
             "submodules": {},
+            "elements": {},
             "classes": {
                 "Android": 1
             },
@@ -525,6 +539,7 @@
         "Mac": {
             "name": "Mac",
             "submodules": {},
+            "elements": {},
             "classes": {
                 "Mac": 1
             },
@@ -540,6 +555,7 @@
         "Mobile": {
             "name": "Mobile",
             "submodules": {},
+            "elements": {},
             "classes": {
                 "Mobile": 1
             },
@@ -555,6 +571,7 @@
         "Touch": {
             "name": "Touch",
             "submodules": {},
+            "elements": {},
             "classes": {
                 "Touch": 1
             },
@@ -570,6 +587,7 @@
         "Windows": {
             "name": "Windows",
             "submodules": {},
+            "elements": {},
             "classes": {
                 "Windows": 1
             },
@@ -585,6 +603,7 @@
         "iOS": {
             "name": "iOS",
             "submodules": {},
+            "elements": {},
             "classes": {
                 "iOS": 1
             },
@@ -600,6 +619,7 @@
         "Dataset": {
             "name": "Dataset",
             "submodules": {},
+            "elements": {},
             "classes": {
                 "Dataset": 1
             },
@@ -615,6 +635,7 @@
         "Dom": {
             "name": "Dom",
             "submodules": {},
+            "elements": {},
             "classes": {
                 "Dom": 1
             },
@@ -630,6 +651,7 @@
         "Element": {
             "name": "Element",
             "submodules": {},
+            "elements": {},
             "classes": {
                 "Element": 1
             },
@@ -645,6 +667,7 @@
         "Iro": {
             "name": "Iro",
             "submodules": {},
+            "elements": {},
             "classes": {
                 "Iro": 1
             },
@@ -660,6 +683,7 @@
         "Util": {
             "name": "Util",
             "submodules": {},
+            "elements": {},
             "classes": {
                 "Util": 1
             },
@@ -1076,6 +1100,7 @@
             "is_constructor": 1
         }
     },
+    "elements": {},
     "classitems": [
         {
             "file": "src/browser/Chrome.js",
@@ -1171,7 +1196,7 @@
             "static": 1,
             "return": {
                 "description": "[major: int, minor: int, build: int] 形式で返します",
-                "type": "*[]"
+                "type": "Array<number>"
             },
             "class": "Chrome",
             "module": "Browser",
@@ -1272,7 +1297,7 @@
             "static": 1,
             "return": {
                 "description": "[major: int, minor: int, build: int] 形式で返します",
-                "type": "*[]"
+                "type": "Array<number>"
             },
             "class": "CriOS",
             "module": "Browser",
@@ -1480,7 +1505,7 @@
             "static": 1,
             "return": {
                 "description": "[major: int, minor: int, build: int] 形式で返します",
-                "type": "*[]"
+                "type": "Array<number>"
             },
             "class": "Firefox",
             "module": "Browser",
@@ -1584,7 +1609,7 @@
             "static": 1,
             "return": {
                 "description": "[major: int, minor: int, build: int] 形式で返します",
-                "type": "*[]"
+                "type": "Array<number>"
             },
             "class": "FxiOS",
             "module": "Browser",
@@ -1889,7 +1914,7 @@
             "static": 1,
             "return": {
                 "description": "[major: int, minor: int, build: int] 形式で返します",
-                "type": "*[]"
+                "type": "Array<number>"
             },
             "class": "Safari",
             "module": "Browser",
@@ -1906,7 +1931,7 @@
             "static": 1,
             "return": {
                 "description": "[major: int, minor: int, build: int] 形式で返します",
-                "type": "*[]"
+                "type": "Array<number>"
             },
             "class": "Safari",
             "module": "Browser",
@@ -2300,7 +2325,7 @@
             "static": 1,
             "return": {
                 "description": "[major: int, minor: int, build: int] 形式で返します",
-                "type": "*[]"
+                "type": "Array<number>"
             },
             "class": "Android",
             "module": "Browser",
@@ -2317,7 +2342,7 @@
             "static": 1,
             "return": {
                 "description": "[major: int, minor: int, build: int] 形式で返します",
-                "type": "*[]"
+                "type": "Array<number>"
             },
             "class": "Android",
             "module": "Browser",
@@ -2700,7 +2725,7 @@
             "static": 1,
             "return": {
                 "description": "[major: int, minor: int, build: int] 形式で返します",
-                "type": "*[]"
+                "type": "Array<number>"
             },
             "class": "iOS",
             "module": "Browser",
@@ -2717,7 +2742,7 @@
             "static": 1,
             "return": {
                 "description": "[major: int, minor: int, build: int] 形式で返します",
-                "type": "*[]"
+                "type": "Array<number>"
             },
             "class": "iOS",
             "module": "Browser",
@@ -2760,7 +2785,8 @@
                 }
             ],
             "return": {
-                "description": "} dataset を取得し key: value Objectを返します"
+                "description": "dataset を取得し key: value Objectを返します",
+                "type": "Object"
             },
             "class": "Dataset",
             "module": "wakegi",
@@ -2781,7 +2807,8 @@
                 }
             ],
             "return": {
-                "description": "} dataset を取得し key: value Objectを返します"
+                "description": "dataset を取得し key: value Objectを返します",
+                "type": "Object"
             },
             "class": "Dataset",
             "module": "wakegi",
@@ -2789,7 +2816,7 @@
         },
         {
             "file": "src/document/Dataset.js",
-            "line": 98,
+            "line": 99,
             "description": "dataset を取得し key: value Object にします: レガシーブラウザ",
             "itemtype": "method",
             "name": "legacy",
@@ -2802,7 +2829,8 @@
                 }
             ],
             "return": {
-                "description": "} dataset を取得し key: value Objectを返します"
+                "description": "dataset を取得し key: value Objectを返します",
+                "type": "Object"
             },
             "class": "Dataset",
             "module": "wakegi",
@@ -3669,10 +3697,20 @@
         },
         {
             "file": "src/wakegi.js",
-            "line": 24,
+            "line": 25,
             "description": "builtin 関数を拡張するのを許可\n`==` 判定許可",
             "class": "",
-            "module": "wakegi"
+            "module": "wakegi",
+            "submodule": "wakegi"
+        },
+        {
+            "file": "src/wakegi.js",
+            "line": 32,
+            "description": "[global object] - wakegi",
+            "type": "{object}",
+            "class": "",
+            "module": "wakegi",
+            "submodule": "wakegi"
         }
     ],
     "warnings": [
@@ -3786,7 +3824,11 @@
         },
         {
             "message": "Missing item type\nbuiltin 関数を拡張するのを許可\n`==` 判定許可",
-            "line": " src/wakegi.js:24"
+            "line": " src/wakegi.js:25"
+        },
+        {
+            "message": "Missing item type\n[global object] - wakegi",
+            "line": " src/wakegi.js:32"
         }
     ]
 }

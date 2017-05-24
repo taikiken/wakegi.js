@@ -218,7 +218,7 @@
    * version を配列形式で取得します
    * @method numbers
    * @static
-   * @return {*[]} [major: int, minor: int, build: int] 形式で返します
+   * @return {Array<number>} [major: int, minor: int, build: int] 形式で返します
    */
   Android.numbers = function() {
     Android.calculate();
@@ -229,7 +229,7 @@
    * @method number
    * @deprecated instead of Android.numbers
    * @static
-   * @return {*[]} [major: int, minor: int, build: int] 形式で返します
+   * @return {Array<number>} [major: int, minor: int, build: int] 形式で返します
    */
   Android.number = function() {
     // 互換のために残します

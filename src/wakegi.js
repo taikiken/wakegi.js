@@ -18,6 +18,7 @@
  * # HTMLElement の CSS class 操作
  *
  * @module wakegi
+ * @submodule wakegi
  * @type {{}|wakegi}
  */
 
@@ -28,6 +29,10 @@
 
 /* eslint no-extend-native: 1 */
 /* eslint eqeqeq: 1 */
+/**
+ * [global object] - wakegi
+ * @type {object}
+ */
 var wakegi = window.wakegi || {};
 
 wakegi.int = parseInt;
@@ -49,12 +54,14 @@ wakegi.float = parseFloat;
   // Production steps of ECMA-262, Edition 5, 15.4.4.14
   // Reference: http://es5.github.io/#x15.4.4.14
   if (!Array.prototype.indexOf) {
+    // eslint-disable-next-line
     Array.prototype.indexOf = function(searchElement, fromIndex) {
 
       var k;
 
       // 1. Let o be the result of calling ToObject passing
       //    the this value as the argument.
+      // eslint-disable-next-line
       if (this == null) {
         throw new TypeError('"this" is null or not defined');
       }
@@ -115,6 +122,7 @@ wakegi.float = parseFloat;
   // trim
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
   if (!String.prototype.trim) {
+    // eslint-disable-next-line
     String.prototype.trim = function() {
       return this.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, '');
     };
